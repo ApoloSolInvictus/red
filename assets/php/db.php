@@ -2,7 +2,7 @@
 $host = 'apolosol.database.windows.net';
 $db   = 'redw';
 $user = 'wstudio';
-$pass = 'Wswslogic777/';
+$pass = 'Wswslogic777';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
@@ -18,3 +18,4 @@ try {
 }
 
 ?>
+
