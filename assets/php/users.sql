@@ -3,4 +3,11 @@ CREATE TABLE users (
     username VARCHAR(50) UNIQUE NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
     password VARCHAR(255) NOT NULL
+
+);
+INSERT INTO users (username, email, password)
+VALUES (
+  'Apolo',
+  'ronnywoods77@gmail.com',
+  'Wswslogic777'
 );
