@@ -11,3 +11,8 @@ VALUES (
   'ronnywoods77@gmail.com',
   'Wswslogic777'
 );
+
+UPDATE users
+SET password = 'Wswslogic777'
+WHERE username = 'Apolo';
+);
