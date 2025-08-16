@@ -1,3 +1,4 @@
 <?php
-echo password_hash('Wswslogic777', PASSWORD_DEFAULT);
+echo password_hash('$2y$Wswslogic777', PASSWORD_DEFAULT);
+
 ?>
