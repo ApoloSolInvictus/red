@@ -13,7 +13,7 @@ var db *sql.DB
 var server = "apolosol.database.windows.net"
 var port = 1433
 var user = "wstudio"
-var password = "<your_password>"
+var password = "Wswslogic777"
 var database = "redw"
 
 func main() {
@@ -32,4 +32,5 @@ func main() {
 		log.Fatal(err.Error())
 	}
 	fmt.Printf("Connected!")
+
 }
