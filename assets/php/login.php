@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 </head>
 <body>
-    <form class="login-container" method="post" action="login.php">
+    <form class="login-container" method="post" action="assets/php/login.php">
         <h2>Login</h2>
         <!-- Error message -->
         <?php if (isset($error)) echo '<div class="error">' . htmlspecialchars($error) . '</div>'; ?>
@@ -42,3 +42,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </form>
 </body>
 </html>
+
