@@ -26,13 +26,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!-- Simple HTML Form -->
 <html>
-<head><title>Login</title></head>
+</head>
 <body>
-<form method="post" action="">
-    Username: <input type="text" name="username" /><br/>
-    Password: <input type="password" name="password" /><br/>
-    <input type="submit" value="Login" />
-</form>
-<?php if (isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
+    <form class="login-container" method="post" action="login.php">
+        <h2>Login</h2>
+        <!-- Error message -->
+        <?php if (isset($error)) echo '<div class="error">' . htmlspecialchars($error) . '</div>'; ?>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" autocomplete="username" required>
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" autocomplete="current-password" required>
+        
+        <input type="submit" value="Login">
+    </form>
 </body>
 </html>
