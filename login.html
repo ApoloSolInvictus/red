@@ -68,8 +68,6 @@
 <body>
     <form class="login-container" method="post" action="assets/php/login.php">
         <h2>Login</h2>
-        <!-- Error message -->
-        <?php if (isset($error)) echo '<div class="error">' . htmlspecialchars($error) . '</div>'; ?>
         <label for="username">Username</label>
         <input type="text" id="username" name="username" autocomplete="username" required>
         
@@ -81,4 +79,5 @@
 </body>
 
 </html>
+
 
