@@ -10,11 +10,11 @@ import (
 )
 
 var db *sql.DB
-var server = "apolosol.database.windows.net"
+var server = "redws.database.windows.net"
 var port = 1433
 var user = "wstudio"
 var password = "Wswslogic777"
-var database = "redw"
+var database = "redws"
 
 func main() {
 	// Build connection string
@@ -34,3 +34,4 @@ func main() {
 	fmt.Printf("Connected!")
 
 }
+
