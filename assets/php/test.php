@@ -1,6 +1,6 @@
 <?php
     echo "\n";
-    $serverName = "tcp:apolosol.database.windows.net,1433";
+    $serverName = "tcp:redws.database.windows.net,1433";
 
     $connectionOptions = array("Database"=>"Wswslogic777",
         "Uid"=>"wstudio", "PWD"=>"Wswslogic777");
@@ -60,3 +60,4 @@
        
 
 ?>
+
