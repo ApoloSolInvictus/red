@@ -1,6 +1,6 @@
 <?php
-$host = 'apolosol.database.windows.net';
-$db   = 'redw';
+$host = 'redws.database.windows.net';
+$db   = 'redws';
 $user = 'wstudio';
 $pass = 'Wswslogic777';
 $charset = 'utf8mb4';
@@ -19,5 +19,6 @@ try {
 }
 
 ?>
+
 
 
