@@ -14,7 +14,7 @@ var server = "redws.database.windows.net"
 var port = 1433
 var user = "wstudio"
 var password = "Wswslogic777"
-var database = "redws"
+var database = "WStudio"
 
 func main() {
 	// Build connection string
@@ -34,4 +34,5 @@ func main() {
 	fmt.Printf("Connected!")
 
 }
+
 
