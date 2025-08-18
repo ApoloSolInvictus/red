@@ -1,6 +1,6 @@
 <?php
-$host = 'redws.database.windows.net';
-$db   = 'redws';
+$host = 'redwstudio.database.windows.net';
+$db   = 'WStudio';
 $user = 'wstudio';
 $pass = 'Wswslogic777';
 $charset = 'utf8mb4';
@@ -19,6 +19,7 @@ try {
 }
 
 ?>
+
 
 
 
