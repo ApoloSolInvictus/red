@@ -10,7 +10,7 @@ import (
 )
 
 var db *sql.DB
-var server = "redws.database.windows.net"
+var server = "redwstudio.database.windows.net"
 var port = 1433
 var user = "wstudio"
 var password = "Wswslogic777"
@@ -34,5 +34,6 @@ func main() {
 	fmt.Printf("Connected!")
 
 }
+
 
 
