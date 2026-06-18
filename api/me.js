@@ -1,4 +1,6 @@
 const { allowCors, requireMethod, sendError, sendJson } = require("./_lib/http");
+const { isAdminEmail } = require("./_lib/adminAccess");
+const { readCatalog } = require("./_lib/courses");
 const { getDb, verifyRequest } = require("./_lib/firebaseAdmin");
 
 module.exports = async function handler(req, res) {
@@ -12,6 +14,27 @@ module.exports = async function handler(req, res) {
 
   try {
     const token = await verifyRequest(req);
+    const isAdmin = isAdminEmail(token.email);
+
+    if (isAdmin) {
+      const catalog = readCatalog();
+
+      sendJson(res, 200, {
+        user: {
+          uid: token.uid,
+          email: token.email || "",
+          name: token.name || "",
+          role: "admin"
+        },
+        access: catalog.courses.map((course) => ({
+          courseId: course.id,
+          status: "active",
+          source: "admin"
+        }))
+      });
+      return;
+    }
+
     const snapshot = await getDb()
       .collection("students")
       .doc(token.uid)
@@ -23,7 +46,8 @@ module.exports = async function handler(req, res) {
       user: {
         uid: token.uid,
         email: token.email || "",
-        name: token.name || ""
+        name: token.name || "",
+        role: "student"
       },
       access: snapshot.docs.map((doc) => ({
         courseId: doc.id,

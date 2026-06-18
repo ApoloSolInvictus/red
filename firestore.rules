@@ -1,0 +1,31 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    function isAdmin() {
+      return signedIn() && request.auth.token.email == "ronnywoods77@gmail.com";
+    }
+
+    match /students/{studentId} {
+      allow read: if isOwner(studentId) || isAdmin();
+      allow write: if false;
+
+      match /courses/{courseId} {
+        allow read: if isOwner(studentId) || isAdmin();
+        allow write: if false;
+      }
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

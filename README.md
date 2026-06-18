@@ -45,6 +45,7 @@ PayPal:
 PAYPAL_CLIENT_ID=
 PAYPAL_CLIENT_SECRET=
 PAYPAL_ENV=sandbox
+ADMIN_EMAILS=ronnywoods77@gmail.com
 ```
 
 Use `PAYPAL_ENV=live` only after testing sandbox purchases.
@@ -69,6 +70,12 @@ Enable Email/Password and Google providers in Firebase Authentication. Add these
 - `learn.wstudio3d.com`
 - the Vercel preview domain
 - `localhost` for local testing
+
+Deploy the included Firestore rules with:
+
+```bash
+firebase deploy --only firestore:rules
+```
 
 ## Course Editing
 

@@ -284,7 +284,7 @@ function renderCourseCard(course) {
         </dl>
         <div class="card-bottom">
           <strong>${formatPrice(course)}</strong>
-          <a class="button button-small" href="course.html?id=${encodeURIComponent(course.id)}">${owned ? i18n.t("card.owned") : i18n.t("card.view")}</a>
+          <a class="button button-small" href="course.html?id=${encodeURIComponent(course.id)}">${owned ? i18n.t("card.enter") : i18n.t("card.view")}</a>
         </div>
       </div>
     </article>
@@ -330,7 +330,7 @@ function renderCoursePage() {
         </aside>
       </div>
     </section>
-    <section class="site-shell section course-layout">
+    <section id="curriculum" class="site-shell section course-layout">
       <div class="lesson-player">
         ${renderLessonPlayer(selectedLesson, owned)}
       </div>
@@ -366,7 +366,7 @@ function renderCoursePage() {
 
 function renderPurchasePanel(course, owned) {
   if (owned) {
-    return `<a class="button button-primary button-full" href="#curriculum">${i18n.t("course.start")}</a>`;
+    return `<a class="button button-primary button-full" href="#curriculum">${i18n.t("course.enter")}</a>`;
   }
 
   if (!state.user) {
