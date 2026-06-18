@@ -3,26 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found | W Studio Learn</title>
+  <meta name="description" content="View a W Studio Learn course, preview lessons, and unlock access with PayPal.">
+  <title>Course | W Studio Learn</title>
   <link rel="icon" href="images/w-studio-logo.png">
   <link rel="stylesheet" href="assets/css/wstudio-platform.css">
 </head>
-<body class="wstudio-app">
+<body class="wstudio-app" data-page="course">
   <header class="site-header" data-wstudio-header></header>
-  <main>
-    <section class="page-hero site-shell">
-      <p class="eyebrow">404</p>
-      <h1>Page not found</h1>
-      <p>This class path is not available yet.</p>
-      <a class="button button-primary" href="courses.html">Browse courses</a>
-    </section>
-  </main>
+  <div class="site-shell" data-notices></div>
+  <main data-course></main>
   <footer class="site-footer">
     <div class="site-shell footer-shell">
-      <p>W Studio Learn. Built for focused online classes.</p>
-      <strong>learn.wstudio3d.com</strong>
+      <p data-i18n="footer.copy">W Studio Learn. Built for focused online classes.</p>
+      <strong data-i18n="footer.domain">learn.wstudio3d.com</strong>
     </div>
   </footer>
+  <div class="status-pill" data-status>Loading...</div>
   <script src="assets/js/wstudio-i18n.js"></script>
   <script type="module" src="assets/js/wstudio-platform.js"></script>
 </body>

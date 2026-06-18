@@ -1,0 +1,17 @@
+{
+  "name": "wstudio-learn",
+  "version": "1.0.0",
+  "private": true,
+  "description": "W Studio online course platform with Firebase Auth, PayPal Checkout, and multilingual course access.",
+  "scripts": {
+    "check": "node --check api/config.js && node --check api/me.js && node --check api/paypal/create-order.js && node --check api/paypal/capture-order.js && node --check assets/js/wstudio-platform.js && node --check assets/js/wstudio-i18n.js",
+    "dev": "vercel dev",
+    "serve": "npx serve ."
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "firebase-admin": "^13.4.0"
+  }
+}

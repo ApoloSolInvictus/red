@@ -1,0 +1,301 @@
+{
+  "version": "2026-06-18",
+  "currency": "USD",
+  "courses": [
+    {
+      "id": "canva-for-entrepreneurs",
+      "price": "47.00",
+      "level": "Beginner",
+      "duration": "5h 20m",
+      "image": "images/course-canva-devices.png",
+      "accent": "#ff5a5f",
+      "tags": ["Design", "Entrepreneurship", "Marketing"],
+      "translations": {
+        "en": {
+          "title": "Canva for Entrepreneurs",
+          "subtitle": "Launch a visual brand, offer, and sales kit without getting stuck in design tools.",
+          "summary": "A practical course for creators, freelancers, and small businesses that need polished brand assets, social posts, and product pages fast.",
+          "outcomes": ["Build a reusable brand kit", "Create launch graphics for each platform", "Export assets for sales pages and email"]
+        },
+        "de": {
+          "title": "Canva fuer Unternehmer",
+          "subtitle": "Starte eine visuelle Marke, ein Angebot und ein Sales-Kit, ohne in Design-Tools stecken zu bleiben.",
+          "summary": "Ein praxisnaher Kurs fuer Creator, Freelancer und kleine Unternehmen, die schnell professionelle Markenassets brauchen.",
+          "outcomes": ["Baue ein wiederverwendbares Brand Kit", "Erstelle Launch-Grafiken fuer jede Plattform", "Exportiere Assets fuer Sales Pages und E-Mail"]
+        },
+        "es": {
+          "title": "Canva para Emprendedores",
+          "subtitle": "Lanza una marca visual, una oferta y un kit de ventas sin quedarte atrapado en herramientas de diseno.",
+          "summary": "Un curso practico para creadores, freelancers y pequenas empresas que necesitan piezas visuales profesionales rapidamente.",
+          "outcomes": ["Construye un kit de marca reutilizable", "Crea graficos de lanzamiento para cada plataforma", "Exporta assets para paginas de venta y email"]
+        }
+      },
+      "lessons": [
+        {
+          "id": "brand-foundation",
+          "preview": true,
+          "duration": "18m",
+          "translations": {
+            "en": {
+              "title": "Brand Foundation",
+              "description": "Define colors, typography, visual references, and the core offer before opening Canva."
+            },
+            "de": {
+              "title": "Markenfundament",
+              "description": "Definiere Farben, Typografie, visuelle Referenzen und das Kernangebot, bevor du Canva oeffnest."
+            },
+            "es": {
+              "title": "Fundacion de Marca",
+              "description": "Define colores, tipografia, referencias visuales y la oferta principal antes de abrir Canva."
+            }
+          }
+        },
+        {
+          "id": "social-launch-kit",
+          "preview": false,
+          "duration": "52m",
+          "translations": {
+            "en": {
+              "title": "Social Launch Kit",
+              "description": "Create posts, stories, thumbnails, and short-form covers from one flexible system."
+            },
+            "de": {
+              "title": "Social Launch Kit",
+              "description": "Erstelle Posts, Stories, Thumbnails und Short-Form-Cover aus einem flexiblen System."
+            },
+            "es": {
+              "title": "Kit de Lanzamiento Social",
+              "description": "Crea posts, historias, miniaturas y portadas verticales desde un sistema flexible."
+            }
+          }
+        },
+        {
+          "id": "sales-page-assets",
+          "preview": false,
+          "duration": "44m",
+          "translations": {
+            "en": {
+              "title": "Sales Page Assets",
+              "description": "Prepare hero images, product mockups, guarantee graphics, and author blocks for checkout pages."
+            },
+            "de": {
+              "title": "Sales-Page Assets",
+              "description": "Bereite Hero-Bilder, Produkt-Mockups, Garantie-Grafiken und Autor-Bloecke fuer Checkout-Seiten vor."
+            },
+            "es": {
+              "title": "Assets para Pagina de Venta",
+              "description": "Prepara heroes, mockups, graficos de garantia y bloques de autor para paginas de pago."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "3d-brand-studio",
+      "price": "97.00",
+      "level": "Intermediate",
+      "duration": "7h 10m",
+      "image": "images/course-img-2.jpg",
+      "accent": "#2354ff",
+      "tags": ["3D", "Branding", "Creative Direction"],
+      "translations": {
+        "en": {
+          "title": "3D Brand Studio",
+          "subtitle": "Design product scenes, brand worlds, and visual campaigns with a practical 3D workflow.",
+          "summary": "A studio course for building premium-looking 3D visuals that can support launches, portfolios, and social campaigns.",
+          "outcomes": ["Block out a brand scene", "Light and render product compositions", "Package campaign visuals for web and social"]
+        },
+        "de": {
+          "title": "3D Brand Studio",
+          "subtitle": "Gestalte Produkt-Szenen, Markenwelten und Kampagnen mit einem praktischen 3D-Workflow.",
+          "summary": "Ein Studio-Kurs fuer hochwertige 3D-Visuals fuer Launches, Portfolios und Social Campaigns.",
+          "outcomes": ["Baue eine Markenszene auf", "Beleuchte und rendere Produktkompositionen", "Bereite Kampagnenvisuals fuer Web und Social auf"]
+        },
+        "es": {
+          "title": "3D Brand Studio",
+          "subtitle": "Disena escenas de producto, mundos de marca y campanas visuales con un flujo 3D practico.",
+          "summary": "Un curso de estudio para crear visuales 3D premium para lanzamientos, portafolios y campanas sociales.",
+          "outcomes": ["Bloquea una escena de marca", "Ilumina y renderiza composiciones de producto", "Empaqueta visuales para web y redes"]
+        }
+      },
+      "lessons": [
+        {
+          "id": "scene-strategy",
+          "preview": true,
+          "duration": "24m",
+          "translations": {
+            "en": {
+              "title": "Scene Strategy",
+              "description": "Choose the visual promise, references, shapes, and materials before modeling."
+            },
+            "de": {
+              "title": "Szenenstrategie",
+              "description": "Waehle visuelles Versprechen, Referenzen, Formen und Materialien vor dem Modeling."
+            },
+            "es": {
+              "title": "Estrategia de Escena",
+              "description": "Elige promesa visual, referencias, formas y materiales antes de modelar."
+            }
+          }
+        },
+        {
+          "id": "lighting-for-products",
+          "preview": false,
+          "duration": "64m",
+          "translations": {
+            "en": {
+              "title": "Lighting for Products",
+              "description": "Build lighting setups that make simple scenes feel expensive and readable."
+            },
+            "de": {
+              "title": "Produktbeleuchtung",
+              "description": "Baue Licht-Setups, die einfache Szenen hochwertig und klar wirken lassen."
+            },
+            "es": {
+              "title": "Iluminacion para Producto",
+              "description": "Crea esquemas de luz que hagan que escenas simples se vean premium y legibles."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-content-systems",
+      "price": "67.00",
+      "level": "Beginner",
+      "duration": "4h 45m",
+      "image": "images/new/co5.jpg",
+      "accent": "#19b86a",
+      "tags": ["AI", "Content", "Workflow"],
+      "translations": {
+        "en": {
+          "title": "AI Content Systems",
+          "subtitle": "Use AI to plan, draft, translate, and repurpose content while keeping your voice intact.",
+          "summary": "A course for building repeatable content engines that support education, marketing, and product launches.",
+          "outcomes": ["Design a reusable prompt library", "Turn one idea into a content week", "Translate without losing brand tone"]
+        },
+        "de": {
+          "title": "KI Content Systeme",
+          "subtitle": "Nutze KI fuer Planung, Entwurf, Uebersetzung und Wiederverwertung, ohne deine Stimme zu verlieren.",
+          "summary": "Ein Kurs fuer wiederholbare Content-Systeme fuer Bildung, Marketing und Produktlaunches.",
+          "outcomes": ["Entwerfe eine wiederverwendbare Prompt-Bibliothek", "Mache aus einer Idee eine Content-Woche", "Uebersetze, ohne den Markenton zu verlieren"]
+        },
+        "es": {
+          "title": "Sistemas de Contenido con IA",
+          "subtitle": "Usa IA para planear, redactar, traducir y reutilizar contenido sin perder tu voz.",
+          "summary": "Un curso para construir motores de contenido repetibles para educacion, marketing y lanzamientos.",
+          "outcomes": ["Disena una biblioteca de prompts reutilizable", "Convierte una idea en una semana de contenido", "Traduce sin perder el tono de marca"]
+        }
+      },
+      "lessons": [
+        {
+          "id": "voice-map",
+          "preview": true,
+          "duration": "20m",
+          "translations": {
+            "en": {
+              "title": "Voice Map",
+              "description": "Capture tone, vocabulary, audience, and boundaries before using generative tools."
+            },
+            "de": {
+              "title": "Voice Map",
+              "description": "Erfasse Ton, Wortschatz, Zielgruppe und Grenzen vor dem Einsatz generativer Tools."
+            },
+            "es": {
+              "title": "Mapa de Voz",
+              "description": "Captura tono, vocabulario, audiencia y limites antes de usar herramientas generativas."
+            }
+          }
+        },
+        {
+          "id": "repurposing-system",
+          "preview": false,
+          "duration": "55m",
+          "translations": {
+            "en": {
+              "title": "Repurposing System",
+              "description": "Convert lessons, lives, and notes into emails, posts, scripts, and course materials."
+            },
+            "de": {
+              "title": "Repurposing-System",
+              "description": "Verwandle Lektionen, Lives und Notizen in E-Mails, Posts, Skripte und Kursmaterial."
+            },
+            "es": {
+              "title": "Sistema de Reutilizacion",
+              "description": "Convierte clases, lives y notas en emails, posts, guiones y materiales de curso."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "digital-product-launch",
+      "price": "77.00",
+      "level": "Intermediate",
+      "duration": "6h 05m",
+      "image": "images/new/course-img-7.jpg",
+      "accent": "#ffb000",
+      "tags": ["Launch", "Sales", "Product"],
+      "translations": {
+        "en": {
+          "title": "Digital Product Launch",
+          "subtitle": "Shape an offer, validate demand, and launch a course or digital product with clean assets.",
+          "summary": "A launch course focused on clear positioning, sales pages, email sequences, and delivery structure.",
+          "outcomes": ["Choose a narrow promise", "Build a launch checklist", "Connect sales assets to delivery"]
+        },
+        "de": {
+          "title": "Digital Product Launch",
+          "subtitle": "Forme ein Angebot, validiere Nachfrage und launche einen Kurs oder ein digitales Produkt mit klaren Assets.",
+          "summary": "Ein Launch-Kurs fuer Positionierung, Sales Pages, E-Mail-Sequenzen und Delivery-Struktur.",
+          "outcomes": ["Waehle ein klares Versprechen", "Baue eine Launch-Checkliste", "Verbinde Sales Assets mit Delivery"]
+        },
+        "es": {
+          "title": "Lanzamiento de Producto Digital",
+          "subtitle": "Da forma a una oferta, valida demanda y lanza un curso o producto digital con assets claros.",
+          "summary": "Un curso de lanzamiento enfocado en posicionamiento, paginas de venta, secuencias de email y estructura de entrega.",
+          "outcomes": ["Elige una promesa especifica", "Construye una lista de lanzamiento", "Conecta assets de venta con entrega"]
+        }
+      },
+      "lessons": [
+        {
+          "id": "offer-design",
+          "preview": true,
+          "duration": "26m",
+          "translations": {
+            "en": {
+              "title": "Offer Design",
+              "description": "Turn a broad topic into a concrete transformation with a believable price."
+            },
+            "de": {
+              "title": "Angebotsdesign",
+              "description": "Verwandle ein breites Thema in eine konkrete Transformation mit glaubwuerdigem Preis."
+            },
+            "es": {
+              "title": "Diseno de Oferta",
+              "description": "Convierte un tema amplio en una transformacion concreta con un precio creible."
+            }
+          }
+        },
+        {
+          "id": "checkout-path",
+          "preview": false,
+          "duration": "39m",
+          "translations": {
+            "en": {
+              "title": "Checkout Path",
+              "description": "Map the journey from promise to payment to course access."
+            },
+            "de": {
+              "title": "Checkout-Pfad",
+              "description": "Plane die Reise vom Versprechen zur Zahlung bis zum Kurszugang."
+            },
+            "es": {
+              "title": "Ruta de Checkout",
+              "description": "Mapea el camino desde la promesa hasta el pago y el acceso al curso."
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+(function () {
+  const languages = {
+    en: { label: "English", short: "EN" },
+    de: { label: "Deutsch", short: "DE" },
+    es: { label: "Espanol", short: "ES" }
+  };
+
+  const dictionary = {
+    en: {
+      "nav.courses": "Courses",
+      "nav.dashboard": "My Studio",
+      "nav.login": "Login",
+      "nav.logout": "Logout",
+      "nav.openMenu": "Open menu",
+      "hero.eyebrow": "W Studio Learn",
+      "hero.title": "Practical online courses for creators building sharper digital products.",
+      "hero.copy": "Start in English, switch languages when you need it, and unlock each course separately with secure student access.",
+      "hero.primary": "Explore courses",
+      "hero.secondary": "Student login",
+      "hero.statCourses": "courses ready",
+      "hero.statLanguages": "languages",
+      "hero.statCheckout": "PayPal checkout",
+      "section.featured": "Featured courses",
+      "section.allCourses": "All courses",
+      "section.allCoursesCopy": "Buy only the class you need. Access is attached to your Firebase student account.",
+      "section.how": "How access works",
+      "how.auth.title": "Create your student account",
+      "how.auth.copy": "Firebase Auth keeps one secure profile per student.",
+      "how.pay.title": "Purchase one course",
+      "how.pay.copy": "PayPal captures payment for the selected course only.",
+      "how.access.title": "Unlock your dashboard",
+      "how.access.copy": "Vercel APIs verify the payment and save access in Firestore.",
+      "card.view": "View course",
+      "card.owned": "Owned",
+      "card.preview": "Preview available",
+      "card.level": "Level",
+      "card.duration": "Duration",
+      "course.back": "Back to courses",
+      "course.outcomes": "What you will build",
+      "course.curriculum": "Curriculum",
+      "course.preview": "Preview",
+      "course.locked": "Locked",
+      "course.start": "Start course",
+      "course.signIn": "Sign in to buy",
+      "course.buy": "Buy this course",
+      "course.owned": "You own this course",
+      "course.selectLesson": "Select a lesson",
+      "course.lessonReady": "Lesson workspace",
+      "course.lessonNote": "This module is prepared for your private video, notes, and resources. Add secure video URLs in the course data when the final class media is uploaded.",
+      "course.lockedLesson": "Unlock this course to view the full lesson.",
+      "course.configMissing": "Checkout is waiting for PayPal and Firebase environment variables.",
+      "course.paymentSuccess": "Payment complete. Your course is unlocked.",
+      "course.paymentError": "Payment could not be completed.",
+      "auth.title": "Student Login",
+      "auth.copy": "Use the same account for every W Studio course purchase.",
+      "auth.email": "Email",
+      "auth.password": "Password",
+      "auth.name": "Name",
+      "auth.login": "Login",
+      "auth.register": "Create account",
+      "auth.google": "Continue with Google",
+      "auth.reset": "Send password reset",
+      "auth.signedIn": "Signed in",
+      "auth.signedOut": "Not signed in",
+      "auth.configMissing": "Firebase client config is missing. Add the public Firebase environment variables in Vercel.",
+      "auth.checkEmail": "Check your email for the reset link.",
+      "dashboard.title": "My Studio",
+      "dashboard.copy": "Your unlocked W Studio courses appear here.",
+      "dashboard.empty": "No courses unlocked yet.",
+      "dashboard.browse": "Browse courses",
+      "dashboard.continue": "Continue",
+      "status.loading": "Loading...",
+      "status.ready": "Ready",
+      "status.apiIssue": "The API is reachable only after Vercel environment variables are configured.",
+      "footer.copy": "W Studio Learn. Built for focused online classes.",
+      "footer.domain": "learn.wstudio3d.com"
+    },
+    de: {
+      "nav.courses": "Kurse",
+      "nav.dashboard": "Mein Studio",
+      "nav.login": "Login",
+      "nav.logout": "Logout",
+      "nav.openMenu": "Menue oeffnen",
+      "hero.eyebrow": "W Studio Learn",
+      "hero.title": "Praktische Online-Kurse fuer Creator, die staerkere digitale Produkte bauen.",
+      "hero.copy": "Starte auf Englisch, wechsle bei Bedarf die Sprache und schalte jeden Kurs einzeln mit sicherem Studentenzugang frei.",
+      "hero.primary": "Kurse ansehen",
+      "hero.secondary": "Studentenlogin",
+      "hero.statCourses": "Kurse bereit",
+      "hero.statLanguages": "Sprachen",
+      "hero.statCheckout": "PayPal Checkout",
+      "section.featured": "Ausgewaehlte Kurse",
+      "section.allCourses": "Alle Kurse",
+      "section.allCoursesCopy": "Kaufe nur den Kurs, den du brauchst. Der Zugriff ist mit deinem Firebase Studentenkonto verbunden.",
+      "section.how": "So funktioniert der Zugriff",
+      "how.auth.title": "Erstelle dein Studentenkonto",
+      "how.auth.copy": "Firebase Auth verwaltet ein sicheres Profil pro Student.",
+      "how.pay.title": "Kaufe einen Kurs",
+      "how.pay.copy": "PayPal verarbeitet die Zahlung nur fuer den gewaehlten Kurs.",
+      "how.access.title": "Schalte dein Dashboard frei",
+      "how.access.copy": "Vercel APIs pruefen die Zahlung und speichern den Zugriff in Firestore.",
+      "card.view": "Kurs ansehen",
+      "card.owned": "Gekauft",
+      "card.preview": "Vorschau verfuegbar",
+      "card.level": "Level",
+      "card.duration": "Dauer",
+      "course.back": "Zurueck zu Kursen",
+      "course.outcomes": "Was du baust",
+      "course.curriculum": "Curriculum",
+      "course.preview": "Vorschau",
+      "course.locked": "Gesperrt",
+      "course.start": "Kurs starten",
+      "course.signIn": "Einloggen zum Kaufen",
+      "course.buy": "Diesen Kurs kaufen",
+      "course.owned": "Du besitzt diesen Kurs",
+      "course.selectLesson": "Lektion waehlen",
+      "course.lessonReady": "Lektionsbereich",
+      "course.lessonNote": "Dieses Modul ist vorbereitet fuer dein privates Video, Notizen und Ressourcen. Fuege sichere Video-URLs in den Kursdaten hinzu, sobald die finalen Medien hochgeladen sind.",
+      "course.lockedLesson": "Schalte diesen Kurs frei, um die komplette Lektion zu sehen.",
+      "course.configMissing": "Checkout wartet auf PayPal- und Firebase-Umgebungsvariablen.",
+      "course.paymentSuccess": "Zahlung abgeschlossen. Dein Kurs ist freigeschaltet.",
+      "course.paymentError": "Zahlung konnte nicht abgeschlossen werden.",
+      "auth.title": "Studentenlogin",
+      "auth.copy": "Nutze dasselbe Konto fuer jeden W Studio Kurskauf.",
+      "auth.email": "E-Mail",
+      "auth.password": "Passwort",
+      "auth.name": "Name",
+      "auth.login": "Login",
+      "auth.register": "Konto erstellen",
+      "auth.google": "Mit Google fortfahren",
+      "auth.reset": "Passwort-Link senden",
+      "auth.signedIn": "Eingeloggt",
+      "auth.signedOut": "Nicht eingeloggt",
+      "auth.configMissing": "Firebase Client-Konfiguration fehlt. Fuege die oeffentlichen Firebase-Variablen in Vercel hinzu.",
+      "auth.checkEmail": "Pruefe deine E-Mail fuer den Reset-Link.",
+      "dashboard.title": "Mein Studio",
+      "dashboard.copy": "Deine freigeschalteten W Studio Kurse erscheinen hier.",
+      "dashboard.empty": "Noch keine Kurse freigeschaltet.",
+      "dashboard.browse": "Kurse ansehen",
+      "dashboard.continue": "Fortfahren",
+      "status.loading": "Laedt...",
+      "status.ready": "Bereit",
+      "status.apiIssue": "Die API funktioniert vollstaendig, sobald die Vercel-Umgebungsvariablen konfiguriert sind.",
+      "footer.copy": "W Studio Learn. Gebaut fuer fokussierte Online-Klassen.",
+      "footer.domain": "learn.wstudio3d.com"
+    },
+    es: {
+      "nav.courses": "Cursos",
+      "nav.dashboard": "Mi Studio",
+      "nav.login": "Login",
+      "nav.logout": "Salir",
+      "nav.openMenu": "Abrir menu",
+      "hero.eyebrow": "W Studio Learn",
+      "hero.title": "Cursos online practicos para creadores que construyen mejores productos digitales.",
+      "hero.copy": "Empieza en ingles, cambia de idioma cuando lo necesites y desbloquea cada curso por separado con acceso seguro de estudiante.",
+      "hero.primary": "Explorar cursos",
+      "hero.secondary": "Login de estudiante",
+      "hero.statCourses": "cursos listos",
+      "hero.statLanguages": "idiomas",
+      "hero.statCheckout": "checkout PayPal",
+      "section.featured": "Cursos destacados",
+      "section.allCourses": "Todos los cursos",
+      "section.allCoursesCopy": "Compra solo la clase que necesitas. El acceso queda unido a tu cuenta de estudiante en Firebase.",
+      "section.how": "Como funciona el acceso",
+      "how.auth.title": "Crea tu cuenta de estudiante",
+      "how.auth.copy": "Firebase Auth mantiene un perfil seguro por estudiante.",
+      "how.pay.title": "Compra un curso",
+      "how.pay.copy": "PayPal cobra solamente el curso seleccionado.",
+      "how.access.title": "Desbloquea tu dashboard",
+      "how.access.copy": "Las APIs de Vercel verifican el pago y guardan el acceso en Firestore.",
+      "card.view": "Ver curso",
+      "card.owned": "Comprado",
+      "card.preview": "Preview disponible",
+      "card.level": "Nivel",
+      "card.duration": "Duracion",
+      "course.back": "Volver a cursos",
+      "course.outcomes": "Lo que vas a construir",
+      "course.curriculum": "Curriculum",
+      "course.preview": "Preview",
+      "course.locked": "Bloqueado",
+      "course.start": "Empezar curso",
+      "course.signIn": "Inicia sesion para comprar",
+      "course.buy": "Comprar este curso",
+      "course.owned": "Este curso ya es tuyo",
+      "course.selectLesson": "Selecciona una leccion",
+      "course.lessonReady": "Area de leccion",
+      "course.lessonNote": "Este modulo esta listo para tu video privado, notas y recursos. Agrega URLs seguras en los datos del curso cuando subas los medios finales.",
+      "course.lockedLesson": "Desbloquea este curso para ver la leccion completa.",
+      "course.configMissing": "El checkout espera las variables de entorno de PayPal y Firebase.",
+      "course.paymentSuccess": "Pago completado. Tu curso esta desbloqueado.",
+      "course.paymentError": "No se pudo completar el pago.",
+      "auth.title": "Login de Estudiante",
+      "auth.copy": "Usa la misma cuenta para cada compra de curso en W Studio.",
+      "auth.email": "Email",
+      "auth.password": "Password",
+      "auth.name": "Nombre",
+      "auth.login": "Entrar",
+      "auth.register": "Crear cuenta",
+      "auth.google": "Continuar con Google",
+      "auth.reset": "Enviar reset de password",
+      "auth.signedIn": "Sesion iniciada",
+      "auth.signedOut": "Sin sesion",
+      "auth.configMissing": "Falta la configuracion cliente de Firebase. Agrega las variables publicas de Firebase en Vercel.",
+      "auth.checkEmail": "Revisa tu email para el link de reset.",
+      "dashboard.title": "Mi Studio",
+      "dashboard.copy": "Tus cursos desbloqueados de W Studio aparecen aqui.",
+      "dashboard.empty": "Todavia no tienes cursos desbloqueados.",
+      "dashboard.browse": "Explorar cursos",
+      "dashboard.continue": "Continuar",
+      "status.loading": "Cargando...",
+      "status.ready": "Listo",
+      "status.apiIssue": "La API funciona completamente cuando configures las variables de entorno en Vercel.",
+      "footer.copy": "W Studio Learn. Construido para clases online enfocadas.",
+      "footer.domain": "learn.wstudio3d.com"
+    }
+  };
+
+  function getStoredLanguage() {
+    const stored = window.localStorage.getItem("wstudio-language");
+    return languages[stored] ? stored : "en";
+  }
+
+  let currentLanguage = getStoredLanguage();
+
+  function t(key, replacements) {
+    const value = dictionary[currentLanguage][key] || dictionary.en[key] || key;
+
+    if (!replacements) {
+      return value;
+    }
+
+    return Object.keys(replacements).reduce((text, name) => {
+      return text.replaceAll(`{${name}}`, replacements[name]);
+    }, value);
+  }
+
+  function setLanguage(language) {
+    currentLanguage = languages[language] ? language : "en";
+    window.localStorage.setItem("wstudio-language", currentLanguage);
+    document.documentElement.lang = currentLanguage;
+    translate(document);
+    window.dispatchEvent(new CustomEvent("wstudio:language-changed", {
+      detail: { language: currentLanguage }
+    }));
+  }
+
+  function translate(root) {
+    root.querySelectorAll("[data-i18n]").forEach((element) => {
+      element.textContent = t(element.getAttribute("data-i18n"));
+    });
+
+    root.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+      element.setAttribute("placeholder", t(element.getAttribute("data-i18n-placeholder")));
+    });
+  }
+
+  window.WStudioI18n = {
+    languages,
+    t,
+    get language() {
+      return currentLanguage;
+    },
+    setLanguage,
+    translate
+  };
+
+  document.documentElement.lang = currentLanguage;
+})();
