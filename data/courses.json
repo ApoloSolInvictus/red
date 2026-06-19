@@ -1,6 +1,800 @@
 {
-  "version": "2026-06-19-expanded-lessons",
+  "version": "2026-06-19-links-and-progress",
   "currency": "USD",
+  "resources": {
+    "business-model-canvas": {
+      "name": "Strategyzer Business Model Canvas",
+      "url": "https://www.strategyzer.com/library/the-business-model-canvas",
+      "translations": {
+        "en": {
+          "description": "Strategyzer Business Model Canvas helps with mapping customers, value, channels, revenue, costs, and partners on one page.",
+          "setup": "Bookmark the official guide, read the setup section first, and copy only the steps that match your project."
+        },
+        "de": {
+          "description": "Strategyzer Business Model Canvas hilft bei Kunden, Wert, Kanaele, Umsatz, Kosten und Partner auf einer Seite.",
+          "setup": "Speichere den offiziellen Guide, lies zuerst den Setup-Teil und kopiere nur die Schritte, die zu deinem Projekt passen."
+        },
+        "es": {
+          "description": "Strategyzer Business Model Canvas ayuda con mapear clientes, valor, canales, ingresos, costos y aliados en una pagina.",
+          "setup": "Guarda la guia oficial, lee primero la seccion de configuracion y copia solo los pasos que encajan con tu proyecto."
+        }
+      }
+    },
+    "google-trends": {
+      "name": "Google Trends",
+      "url": "https://trends.google.com/",
+      "translations": {
+        "en": {
+          "description": "Google Trends helps with validating market demand, seasons, search language, and topic direction.",
+          "setup": "Create an account, complete the profile, create a project workspace, and save the link in your lesson checklist."
+        },
+        "de": {
+          "description": "Google Trends hilft bei Validierung von Nachfrage, Saisons, Suchsprache und Themenrichtung.",
+          "setup": "Erstelle ein Konto, vervollstaendige das Profil, lege einen Projekt-Workspace an und speichere den Link in deiner Kurs-Checkliste."
+        },
+        "es": {
+          "description": "Google Trends ayuda con validar demanda, temporadas, lenguaje de busqueda y direccion de temas.",
+          "setup": "Crea una cuenta, completa el perfil, crea un workspace del proyecto y guarda el link en tu checklist de clase."
+        }
+      }
+    },
+    "google-sheets": {
+      "name": "Google Sheets",
+      "url": "https://www.google.com/sheets/about/",
+      "translations": {
+        "en": {
+          "description": "Google Sheets helps with pricing tables, dashboards, campaign plans, SEO tracking, and CRM exports.",
+          "setup": "Create an account, complete the profile, create a project workspace, and save the link in your lesson checklist."
+        },
+        "de": {
+          "description": "Google Sheets hilft bei Preistabellen, Dashboards, Kampagnenplaene, SEO-Tracking und CRM-Exporte.",
+          "setup": "Erstelle ein Konto, vervollstaendige das Profil, lege einen Projekt-Workspace an und speichere den Link in deiner Kurs-Checkliste."
+        },
+        "es": {
+          "description": "Google Sheets ayuda con tablas de precio, dashboards, campanas, SEO y exportes de CRM.",
+          "setup": "Crea una cuenta, completa el perfil, crea un workspace del proyecto y guarda el link en tu checklist de clase."
+        }
+      }
+    },
+    "google-docs": {
+      "name": "Google Docs",
+      "url": "https://www.google.com/docs/about/",
+      "translations": {
+        "en": {
+          "description": "Google Docs helps with briefs, copy drafts, SOPs, proposals, and lesson notes.",
+          "setup": "Create an account, complete the profile, create a project workspace, and save the link in your lesson checklist."
+        },
+        "de": {
+          "description": "Google Docs hilft bei Briefings, Copy-Entwuerfen, SOPs, Angeboten und Kursnotizen.",
+          "setup": "Erstelle ein Konto, vervollstaendige das Profil, lege einen Projekt-Workspace an und speichere den Link in deiner Kurs-Checkliste."
+        },
+        "es": {
+          "description": "Google Docs ayuda con briefs, copy, SOPs, propuestas y notas de clase.",
+          "setup": "Crea una cuenta, completa el perfil, crea un workspace del proyecto y guarda el link en tu checklist de clase."
+        }
+      }
+    },
+    "hubspot-crm": {
+      "name": "HubSpot CRM",
+      "url": "https://www.hubspot.com/products/crm",
+      "translations": {
+        "en": {
+          "description": "HubSpot CRM helps with contacts, pipelines, deals, tasks, and sales follow-up.",
+          "setup": "Create an account, complete the profile, create a project workspace, and save the link in your lesson checklist."
+        },
+        "de": {
+          "description": "HubSpot CRM hilft bei Kontakten, Pipelines, Deals, Aufgaben und Sales Follow-up.",
+          "setup": "Erstelle ein Konto, vervollstaendige das Profil, lege einen Projekt-Workspace an und speichere den Link in deiner Kurs-Checkliste."
+        },
+        "es": {
+          "description": "HubSpot CRM ayuda con contactos, pipelines, negocios, tareas y seguimiento de ventas.",
+          "setup": "Crea una cuenta, completa el perfil, crea un workspace del proyecto y guarda el link en tu checklist de clase."
+        }
+      }
+    },
+    "hubspot-marketing": {
+      "name": "HubSpot Marketing",
+      "url": "https://www.hubspot.com/products/marketing",
+      "translations": {
+        "en": {
+          "description": "HubSpot Marketing helps with forms, landing pages, campaign tracking, lead capture, and reporting.",
+          "setup": "Create an account, complete the profile, create a project workspace, and save the link in your lesson checklist."
+        },
+        "de": {
+          "description": "HubSpot Marketing hilft bei Formularen, Landing Pages, Kampagnentracking, Lead Capture und Reporting.",
+          "setup": "Erstelle ein Konto, vervollstaendige das Profil, lege einen Projekt-Workspace an und speichere den Link in deiner Kurs-Checkliste."
+        },
+        "es": {
+          "description": "HubSpot Marketing ayuda con formularios, landing pages, tracking de campanas, leads y reportes.",
+          "setup": "Crea una cuenta, completa el perfil, crea un workspace del proyecto y guarda el link en tu checklist de clase."
+        }
+      }
+    },
+    "figma": {
+      "name": "Figma",
+      "url": "https://www.figma.com/",
+      "translations": {
+        "en": {
+          "description": "Figma helps with brand systems, wireframes, UI layouts, components, and client handoff.",
+          "setup": "Add logo files, colors, fonts, and approved templates before creating production assets."
+        },
+        "de": {
+          "description": "Figma hilft bei Markensystemen, Wireframes, UI-Layouts, Komponenten und Handoff.",
+          "setup": "Fuege Logos, Farben, Fonts und freigegebene Vorlagen hinzu, bevor du produktive Assets erstellst."
+        },
+        "es": {
+          "description": "Figma ayuda con sistemas de marca, wireframes, UI, componentes y entrega al cliente.",
+          "setup": "Agrega logos, colores, fuentes y plantillas aprobadas antes de crear assets finales."
+        }
+      }
+    },
+    "google-fonts": {
+      "name": "Google Fonts",
+      "url": "https://fonts.google.com/",
+      "translations": {
+        "en": {
+          "description": "Google Fonts helps with readable typography, font pairing, and web font choices.",
+          "setup": "Add logo files, colors, fonts, and approved templates before creating production assets."
+        },
+        "de": {
+          "description": "Google Fonts hilft bei lesbarer Typografie, Font Pairing und Webfont-Auswahl.",
+          "setup": "Fuege Logos, Farben, Fonts und freigegebene Vorlagen hinzu, bevor du produktive Assets erstellst."
+        },
+        "es": {
+          "description": "Google Fonts ayuda con tipografia legible, combinacion de fuentes y fuentes web.",
+          "setup": "Agrega logos, colores, fuentes y plantillas aprobadas antes de crear assets finales."
+        }
+      }
+    },
+    "adobe-color": {
+      "name": "Adobe Color",
+      "url": "https://color.adobe.com/",
+      "translations": {
+        "en": {
+          "description": "Adobe Color helps with color palettes, harmony rules, contrast checks, and brand color decisions.",
+          "setup": "Add logo files, colors, fonts, and approved templates before creating production assets."
+        },
+        "de": {
+          "description": "Adobe Color hilft bei Farbpaletten, Harmonieregeln, Kontrastchecks und Markenfarben.",
+          "setup": "Fuege Logos, Farben, Fonts und freigegebene Vorlagen hinzu, bevor du produktive Assets erstellst."
+        },
+        "es": {
+          "description": "Adobe Color ayuda con paletas, armonias, contraste y decisiones de color de marca.",
+          "setup": "Agrega logos, colores, fuentes y plantillas aprobadas antes de crear assets finales."
+        }
+      }
+    },
+    "canva": {
+      "name": "Canva",
+      "url": "https://www.canva.com/",
+      "translations": {
+        "en": {
+          "description": "Canva helps with social graphics, presentations, lead magnets, sales assets, and quick visual production.",
+          "setup": "Create an account, complete the profile, create a project workspace, and save the link in your lesson checklist."
+        },
+        "de": {
+          "description": "Canva hilft bei Social Graphics, Praesentationen, Lead Magnets, Sales Assets und schneller visueller Produktion.",
+          "setup": "Erstelle ein Konto, vervollstaendige das Profil, lege einen Projekt-Workspace an und speichere den Link in deiner Kurs-Checkliste."
+        },
+        "es": {
+          "description": "Canva ayuda con graficos sociales, presentaciones, lead magnets, ventas y produccion visual rapida.",
+          "setup": "Crea una cuenta, completa el perfil, crea un workspace del proyecto y guarda el link en tu checklist de clase."
+        }
+      }
+    },
+    "canva-brand-kit": {
+      "name": "Canva Brand Kit",
+      "url": "https://www.canva.com/brand/",
+      "translations": {
+        "en": {
+          "description": "Canva Brand Kit helps with logos, brand colors, fonts, templates, and consistent team design.",
+          "setup": "Add logo files, colors, fonts, and approved templates before creating production assets."
+        },
+        "de": {
+          "description": "Canva Brand Kit hilft bei Logos, Markenfarben, Fonts, Vorlagen und konsistentem Team-Design.",
+          "setup": "Fuege Logos, Farben, Fonts und freigegebene Vorlagen hinzu, bevor du produktive Assets erstellst."
+        },
+        "es": {
+          "description": "Canva Brand Kit ayuda con logos, colores, fuentes, plantillas y diseno consistente.",
+          "setup": "Agrega logos, colores, fuentes y plantillas aprobadas antes de crear assets finales."
+        }
+      }
+    },
+    "canva-templates": {
+      "name": "Canva Templates",
+      "url": "https://www.canva.com/templates/",
+      "translations": {
+        "en": {
+          "description": "Canva Templates helps with reusable presentation, social, document, ad, and business visual templates.",
+          "setup": "Add logo files, colors, fonts, and approved templates before creating production assets."
+        },
+        "de": {
+          "description": "Canva Templates hilft bei wiederverwendbaren Praesentations-, Social-, Dokument-, Ad- und Business-Vorlagen.",
+          "setup": "Fuege Logos, Farben, Fonts und freigegebene Vorlagen hinzu, bevor du produktive Assets erstellst."
+        },
+        "es": {
+          "description": "Canva Templates ayuda con plantillas reutilizables de presentaciones, posts, documentos, anuncios y negocio.",
+          "setup": "Agrega logos, colores, fuentes y plantillas aprobadas antes de crear assets finales."
+        }
+      }
+    },
+    "unsplash": {
+      "name": "Unsplash",
+      "url": "https://unsplash.com/",
+      "translations": {
+        "en": {
+          "description": "Unsplash helps with photo references, mockups, hero images, and clean content backgrounds.",
+          "setup": "Create an account, complete the profile, create a project workspace, and save the link in your lesson checklist."
+        },
+        "de": {
+          "description": "Unsplash hilft bei Fotoreferenzen, Mockups, Hero-Bildern und klaren Content-Hintergruenden.",
+          "setup": "Erstelle ein Konto, vervollstaendige das Profil, lege einen Projekt-Workspace an und speichere den Link in deiner Kurs-Checkliste."
+        },
+        "es": {
+          "description": "Unsplash ayuda con referencias fotograficas, mockups, heroes y fondos limpios.",
+          "setup": "Crea una cuenta, completa el perfil, crea un workspace del proyecto y guarda el link en tu checklist de clase."
+        }
+      }
+    },
+    "openai-chatgpt": {
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com/",
+      "translations": {
+        "en": {
+          "description": "ChatGPT helps with brainstorming, briefs, drafting, translation, review, and workflow support.",
+          "setup": "Create an account, complete the profile, create a project workspace, and save the link in your lesson checklist."
+        },
+        "de": {
+          "description": "ChatGPT hilft bei Ideen, Briefings, Entwuerfen, Uebersetzung, Review und Workflow-Support.",
+          "setup": "Erstelle ein Konto, vervollstaendige das Profil, lege einen Projekt-Workspace an und speichere den Link in deiner Kurs-Checkliste."
+        },
+        "es": {
+          "description": "ChatGPT ayuda con ideas, briefs, borradores, traduccion, revision y apoyo de workflow.",
+          "setup": "Crea una cuenta, completa el perfil, crea un workspace del proyecto y guarda el link en tu checklist de clase."
+        }
+      }
+    },
+    "openai-platform": {
+      "name": "OpenAI Platform",
+      "url": "https://platform.openai.com/",
+      "translations": {
+        "en": {
+          "description": "OpenAI Platform helps with API keys, model testing, assistants, usage, and production AI features.",
+          "setup": "Create the project, keep public keys in the browser config, and store secrets only in server environment variables."
+        },
+        "de": {
+          "description": "OpenAI Platform hilft bei API Keys, Modelltests, Assistenten, Usage und produktiven KI-Funktionen.",
+          "setup": "Erstelle das Projekt, nutze Public Keys nur in der Browser-Konfiguration und speichere Secrets nur serverseitig."
+        },
+        "es": {
+          "description": "OpenAI Platform ayuda con API keys, pruebas de modelos, asistentes, uso y funciones de IA en produccion.",
+          "setup": "Crea el proyecto, usa llaves publicas solo en la configuracion del navegador y guarda secretos solo en variables del servidor."
+        }
+      }
+    },
+    "openai-docs": {
+      "name": "OpenAI Docs",
+      "url": "https://platform.openai.com/docs",
+      "translations": {
+        "en": {
+          "description": "OpenAI Docs helps with models, prompting, tools, API patterns, safety, and deployment decisions.",
+          "setup": "Bookmark the official guide, read the setup section first, and copy only the steps that match your project."
+        },
+        "de": {
+          "description": "OpenAI Docs hilft bei Modellen, Prompting, Tools, API-Patterns, Sicherheit und Deployment-Entscheidungen.",
+          "setup": "Speichere den offiziellen Guide, lies zuerst den Setup-Teil und kopiere nur die Schritte, die zu deinem Projekt passen."
+        },
+        "es": {
+          "description": "OpenAI Docs ayuda con modelos, prompts, tools, API, seguridad y decisiones de deployment.",
+          "setup": "Guarda la guia oficial, lee primero la seccion de configuracion y copia solo los pasos que encajan con tu proyecto."
+        }
+      }
+    },
+    "notion": {
+      "name": "Notion",
+      "url": "https://www.notion.com/",
+      "translations": {
+        "en": {
+          "description": "Notion helps with editorial calendars, SOPs, client portals, knowledge bases, and project notes.",
+          "setup": "Create an account, complete the profile, create a project workspace, and save the link in your lesson checklist."
+        },
+        "de": {
+          "description": "Notion hilft bei Redaktionskalendern, SOPs, Kundenportalen, Wissensdatenbanken und Projektnotizen.",
+          "setup": "Erstelle ein Konto, vervollstaendige das Profil, lege einen Projekt-Workspace an und speichere den Link in deiner Kurs-Checkliste."
+        },
+        "es": {
+          "description": "Notion ayuda con calendarios editoriales, SOPs, portales, bases de conocimiento y notas.",
+          "setup": "Crea una cuenta, completa el perfil, crea un workspace del proyecto y guarda el link en tu checklist de clase."
+        }
+      }
+    },
+    "buffer": {
+      "name": "Buffer",
+      "url": "https://buffer.com/",
+      "translations": {
+        "en": {
+          "description": "Buffer helps with content calendars, social queues, publishing cadence, and weekly review.",
+          "setup": "Create an account, complete the profile, create a project workspace, and save the link in your lesson checklist."
+        },
+        "de": {
+          "description": "Buffer hilft bei Content-Kalendern, Social Queues, Publishing-Rhythmus und Wochenreview.",
+          "setup": "Erstelle ein Konto, vervollstaendige das Profil, lege einen Projekt-Workspace an und speichere den Link in deiner Kurs-Checkliste."
+        },
+        "es": {
+          "description": "Buffer ayuda con calendarios de contenido, colas sociales, ritmo de publicacion y revision semanal.",
+          "setup": "Crea una cuenta, completa el perfil, crea un workspace del proyecto y guarda el link en tu checklist de clase."
+        }
+      }
+    },
+    "capcut": {
+      "name": "CapCut",
+      "url": "https://www.capcut.com/",
+      "translations": {
+        "en": {
+          "description": "CapCut helps with short-form video editing, captions, cuts, templates, and exports.",
+          "setup": "Create an account, complete the profile, create a project workspace, and save the link in your lesson checklist."
+        },
+        "de": {
+          "description": "CapCut hilft bei Short-Form-Videoediting, Captions, Schnitten, Vorlagen und Exporten.",
+          "setup": "Erstelle ein Konto, vervollstaendige das Profil, lege einen Projekt-Workspace an und speichere den Link in deiner Kurs-Checkliste."
+        },
+        "es": {
+          "description": "CapCut ayuda con edicion de video corto, captions, cortes, plantillas y exportes.",
+          "setup": "Crea una cuenta, completa el perfil, crea un workspace del proyecto y guarda el link en tu checklist de clase."
+        }
+      }
+    },
+    "meta-business-suite": {
+      "name": "Meta Business Suite",
+      "url": "https://business.facebook.com/",
+      "translations": {
+        "en": {
+          "description": "Meta Business Suite helps with Facebook and Instagram publishing, messages, ads, page roles, and insights.",
+          "setup": "Create an account, complete the profile, create a project workspace, and save the link in your lesson checklist."
+        },
+        "de": {
+          "description": "Meta Business Suite hilft bei Facebook- und Instagram-Publishing, Nachrichten, Ads, Seitenrollen und Insights.",
+          "setup": "Erstelle ein Konto, vervollstaendige das Profil, lege einen Projekt-Workspace an und speichere den Link in deiner Kurs-Checkliste."
+        },
+        "es": {
+          "description": "Meta Business Suite ayuda con publicacion en Facebook e Instagram, mensajes, anuncios, roles e insights.",
+          "setup": "Crea una cuenta, completa el perfil, crea un workspace del proyecto y guarda el link en tu checklist de clase."
+        }
+      }
+    },
+    "youtube-studio": {
+      "name": "YouTube Studio",
+      "url": "https://studio.youtube.com/",
+      "translations": {
+        "en": {
+          "description": "YouTube Studio helps with video uploads, metadata, thumbnails, playlists, comments, and analytics.",
+          "setup": "Create an account, complete the profile, create a project workspace, and save the link in your lesson checklist."
+        },
+        "de": {
+          "description": "YouTube Studio hilft bei Video-Uploads, Metadaten, Thumbnails, Playlists, Kommentaren und Analytics.",
+          "setup": "Erstelle ein Konto, vervollstaendige das Profil, lege einen Projekt-Workspace an und speichere den Link in deiner Kurs-Checkliste."
+        },
+        "es": {
+          "description": "YouTube Studio ayuda con subida de videos, metadatos, thumbnails, playlists, comentarios y analytics.",
+          "setup": "Crea una cuenta, completa el perfil, crea un workspace del proyecto y guarda el link en tu checklist de clase."
+        }
+      }
+    },
+    "envato-elements": {
+      "name": "Envato Elements",
+      "url": "https://elements.envato.com/",
+      "translations": {
+        "en": {
+          "description": "Envato Elements helps with templates, photos, video, fonts, graphics, mockups, and creative assets.",
+          "setup": "Create an account, complete the profile, create a project workspace, and save the link in your lesson checklist."
+        },
+        "de": {
+          "description": "Envato Elements hilft bei Templates, Fotos, Video, Fonts, Grafiken, Mockups und Creative Assets.",
+          "setup": "Erstelle ein Konto, vervollstaendige das Profil, lege einen Projekt-Workspace an und speichere den Link in deiner Kurs-Checkliste."
+        },
+        "es": {
+          "description": "Envato Elements ayuda con plantillas, fotos, video, fuentes, graficos, mockups y assets creativos.",
+          "setup": "Crea una cuenta, completa el perfil, crea un workspace del proyecto y guarda el link en tu checklist de clase."
+        }
+      }
+    },
+    "envato-ai": {
+      "name": "Envato AI Tools",
+      "url": "https://labs.envato.com/",
+      "translations": {
+        "en": {
+          "description": "Envato AI Tools helps with generative images, video, music, voice, mockups, and creative production support.",
+          "setup": "Create an account, complete the profile, create a project workspace, and save the link in your lesson checklist."
+        },
+        "de": {
+          "description": "Envato AI Tools hilft bei generativen Bildern, Video, Musik, Voice, Mockups und kreativer Produktion.",
+          "setup": "Erstelle ein Konto, vervollstaendige das Profil, lege einen Projekt-Workspace an und speichere den Link in deiner Kurs-Checkliste."
+        },
+        "es": {
+          "description": "Envato AI Tools ayuda con imagenes generativas, video, musica, voz, mockups y produccion creativa.",
+          "setup": "Crea una cuenta, completa el perfil, crea un workspace del proyecto y guarda el link en tu checklist de clase."
+        }
+      }
+    },
+    "envato-license": {
+      "name": "Envato Elements License",
+      "url": "https://help.elements.envato.com/hc/en-us/articles/360000629166-Envato-Elements-License",
+      "translations": {
+        "en": {
+          "description": "Envato Elements License helps with project registration, permitted usage, client delivery, and asset compliance.",
+          "setup": "Bookmark the official guide, read the setup section first, and copy only the steps that match your project."
+        },
+        "de": {
+          "description": "Envato Elements License hilft bei Projektregistrierung, erlaubter Nutzung, Kundenauslieferung und Asset-Compliance.",
+          "setup": "Speichere den offiziellen Guide, lies zuerst den Setup-Teil und kopiere nur die Schritte, die zu deinem Projekt passen."
+        },
+        "es": {
+          "description": "Envato Elements License ayuda con registro de proyectos, uso permitido, entrega a clientes y cumplimiento de assets.",
+          "setup": "Guarda la guia oficial, lee primero la seccion de configuracion y copia solo los pasos que encajan con tu proyecto."
+        }
+      }
+    },
+    "themeforest": {
+      "name": "ThemeForest",
+      "url": "https://themeforest.net/",
+      "translations": {
+        "en": {
+          "description": "ThemeForest helps with WordPress themes, HTML templates, landing pages, plugins, and starter designs.",
+          "setup": "Create an account, complete the profile, create a project workspace, and save the link in your lesson checklist."
+        },
+        "de": {
+          "description": "ThemeForest hilft bei WordPress-Themes, HTML-Templates, Landing Pages, Plugins und Starter-Designs.",
+          "setup": "Erstelle ein Konto, vervollstaendige das Profil, lege einen Projekt-Workspace an und speichere den Link in deiner Kurs-Checkliste."
+        },
+        "es": {
+          "description": "ThemeForest ayuda con temas WordPress, plantillas HTML, landing pages, plugins y disenos base.",
+          "setup": "Crea una cuenta, completa el perfil, crea un workspace del proyecto y guarda el link en tu checklist de clase."
+        }
+      }
+    },
+    "wordpress": {
+      "name": "WordPress",
+      "url": "https://wordpress.org/",
+      "translations": {
+        "en": {
+          "description": "WordPress helps with websites, blogs, landing pages, and client-managed content.",
+          "setup": "Create the project, keep public keys in the browser config, and store secrets only in server environment variables."
+        },
+        "de": {
+          "description": "WordPress hilft bei Websites, Blogs, Landing Pages und von Kunden verwalteten Inhalten.",
+          "setup": "Erstelle das Projekt, nutze Public Keys nur in der Browser-Konfiguration und speichere Secrets nur serverseitig."
+        },
+        "es": {
+          "description": "WordPress ayuda con sitios web, blogs, landing pages y contenido administrado por clientes.",
+          "setup": "Crea el proyecto, usa llaves publicas solo en la configuracion del navegador y guarda secretos solo en variables del servidor."
+        }
+      }
+    },
+    "wordpress-themes": {
+      "name": "WordPress Theme Directory",
+      "url": "https://wordpress.org/themes/",
+      "translations": {
+        "en": {
+          "description": "WordPress Theme Directory helps with free theme research, compatibility, update history, and support review.",
+          "setup": "Bookmark the official guide, read the setup section first, and copy only the steps that match your project."
+        },
+        "de": {
+          "description": "WordPress Theme Directory hilft bei freien Themes, Kompatibilitaet, Update-Historie und Support-Review.",
+          "setup": "Speichere den offiziellen Guide, lies zuerst den Setup-Teil und kopiere nur die Schritte, die zu deinem Projekt passen."
+        },
+        "es": {
+          "description": "WordPress Theme Directory ayuda con investigacion de temas gratis, compatibilidad, updates y soporte.",
+          "setup": "Guarda la guia oficial, lee primero la seccion de configuracion y copia solo los pasos que encajan con tu proyecto."
+        }
+      }
+    },
+    "elementor": {
+      "name": "Elementor",
+      "url": "https://elementor.com/",
+      "translations": {
+        "en": {
+          "description": "Elementor helps with visual WordPress layouts, templates, sections, and client-editable pages.",
+          "setup": "Add logo files, colors, fonts, and approved templates before creating production assets."
+        },
+        "de": {
+          "description": "Elementor hilft bei visuellen WordPress-Layouts, Templates, Sektionen und kundenseitig editierbaren Seiten.",
+          "setup": "Fuege Logos, Farben, Fonts und freigegebene Vorlagen hinzu, bevor du produktive Assets erstellst."
+        },
+        "es": {
+          "description": "Elementor ayuda con layouts visuales de WordPress, plantillas, secciones y paginas editables.",
+          "setup": "Agrega logos, colores, fuentes y plantillas aprobadas antes de crear assets finales."
+        }
+      }
+    },
+    "pagespeed-insights": {
+      "name": "PageSpeed Insights",
+      "url": "https://pagespeed.web.dev/",
+      "translations": {
+        "en": {
+          "description": "PageSpeed Insights helps with Core Web Vitals, mobile speed, accessibility signals, and optimization ideas.",
+          "setup": "Create the property, connect the website, mark key events, and review the first report after deployment."
+        },
+        "de": {
+          "description": "PageSpeed Insights hilft bei Core Web Vitals, Mobile Speed, Accessibility-Signalen und Optimierungsideen.",
+          "setup": "Erstelle die Property, verbinde die Website, markiere Key Events und pruefe den ersten Report nach dem Deployment."
+        },
+        "es": {
+          "description": "PageSpeed Insights ayuda con Core Web Vitals, velocidad movil, accesibilidad e ideas de optimizacion.",
+          "setup": "Crea la propiedad, conecta el sitio, marca eventos clave y revisa el primer reporte despues del deployment."
+        }
+      }
+    },
+    "google-search-console": {
+      "name": "Google Search Console",
+      "url": "https://search.google.com/search-console/about",
+      "translations": {
+        "en": {
+          "description": "Google Search Console helps with indexing, search performance, sitemaps, page experience, and SEO monitoring.",
+          "setup": "Create the property, connect the website, mark key events, and review the first report after deployment."
+        },
+        "de": {
+          "description": "Google Search Console hilft bei Indexierung, Suchperformance, Sitemaps, Page Experience und SEO Monitoring.",
+          "setup": "Erstelle die Property, verbinde die Website, markiere Key Events und pruefe den ersten Report nach dem Deployment."
+        },
+        "es": {
+          "description": "Google Search Console ayuda con indexacion, rendimiento de busqueda, sitemaps, experiencia y monitoreo SEO.",
+          "setup": "Crea la propiedad, conecta el sitio, marca eventos clave y revisa el primer reporte despues del deployment."
+        }
+      }
+    },
+    "google-analytics": {
+      "name": "Google Analytics",
+      "url": "https://analytics.google.com/analytics/web/",
+      "translations": {
+        "en": {
+          "description": "Google Analytics helps with traffic, events, conversions, audiences, funnels, and behavior reports.",
+          "setup": "Create the property, connect the website, mark key events, and review the first report after deployment."
+        },
+        "de": {
+          "description": "Google Analytics hilft bei Traffic, Events, Conversions, Audiences, Funnels und Verhalten.",
+          "setup": "Erstelle die Property, verbinde die Website, markiere Key Events und pruefe den ersten Report nach dem Deployment."
+        },
+        "es": {
+          "description": "Google Analytics ayuda con trafico, eventos, conversiones, audiencias, funnels y comportamiento.",
+          "setup": "Crea la propiedad, conecta el sitio, marca eventos clave y revisa el primer reporte despues del deployment."
+        }
+      }
+    },
+    "google-keyword-planner": {
+      "name": "Google Keyword Planner",
+      "url": "https://ads.google.com/home/tools/keyword-planner/",
+      "translations": {
+        "en": {
+          "description": "Google Keyword Planner helps with search volume, paid intent, related ideas, and campaign planning.",
+          "setup": "Create an account, complete the profile, create a project workspace, and save the link in your lesson checklist."
+        },
+        "de": {
+          "description": "Google Keyword Planner hilft bei Suchvolumen, Paid Intent, verwandten Ideen und Kampagnenplanung.",
+          "setup": "Erstelle ein Konto, vervollstaendige das Profil, lege einen Projekt-Workspace an und speichere den Link in deiner Kurs-Checkliste."
+        },
+        "es": {
+          "description": "Google Keyword Planner ayuda con volumen de busqueda, intencion pagada, ideas relacionadas y planificacion.",
+          "setup": "Crea una cuenta, completa el perfil, crea un workspace del proyecto y guarda el link en tu checklist de clase."
+        }
+      }
+    },
+    "mailchimp": {
+      "name": "Mailchimp",
+      "url": "https://mailchimp.com/",
+      "translations": {
+        "en": {
+          "description": "Mailchimp helps with audiences, signup forms, campaigns, landing pages, and basic email automation.",
+          "setup": "Create an account, complete the profile, create a project workspace, and save the link in your lesson checklist."
+        },
+        "de": {
+          "description": "Mailchimp hilft bei Audiences, Signup-Formularen, Kampagnen, Landing Pages und E-Mail-Automation.",
+          "setup": "Erstelle ein Konto, vervollstaendige das Profil, lege einen Projekt-Workspace an und speichere den Link in deiner Kurs-Checkliste."
+        },
+        "es": {
+          "description": "Mailchimp ayuda con audiencias, formularios, campanas, landing pages y automatizacion de email.",
+          "setup": "Crea una cuenta, completa el perfil, crea un workspace del proyecto y guarda el link en tu checklist de clase."
+        }
+      }
+    },
+    "mailchimp-automation": {
+      "name": "Mailchimp Automation",
+      "url": "https://mailchimp.com/features/marketing-automation/",
+      "translations": {
+        "en": {
+          "description": "Mailchimp Automation helps with welcome flows, nurture sequences, abandoned carts, and behavior triggers.",
+          "setup": "Create an account, complete the profile, create a project workspace, and save the link in your lesson checklist."
+        },
+        "de": {
+          "description": "Mailchimp Automation hilft bei Welcome-Flows, Nurture-Sequenzen, Warenkorbabbruch und Verhaltenstriggern.",
+          "setup": "Erstelle ein Konto, vervollstaendige das Profil, lege einen Projekt-Workspace an und speichere den Link in deiner Kurs-Checkliste."
+        },
+        "es": {
+          "description": "Mailchimp Automation ayuda con flujos de bienvenida, nurture, carrito abandonado y disparadores.",
+          "setup": "Crea una cuenta, completa el perfil, crea un workspace del proyecto y guarda el link en tu checklist de clase."
+        }
+      }
+    },
+    "github": {
+      "name": "GitHub",
+      "url": "https://github.com/",
+      "translations": {
+        "en": {
+          "description": "GitHub helps with repositories, issues, branches, pull requests, and project collaboration.",
+          "setup": "Create the project, keep public keys in the browser config, and store secrets only in server environment variables."
+        },
+        "de": {
+          "description": "GitHub hilft bei Repositories, Issues, Branches, Pull Requests und Projektzusammenarbeit.",
+          "setup": "Erstelle das Projekt, nutze Public Keys nur in der Browser-Konfiguration und speichere Secrets nur serverseitig."
+        },
+        "es": {
+          "description": "GitHub ayuda con repositorios, issues, ramas, pull requests y colaboracion.",
+          "setup": "Crea el proyecto, usa llaves publicas solo en la configuracion del navegador y guarda secretos solo en variables del servidor."
+        }
+      }
+    },
+    "github-docs": {
+      "name": "GitHub Docs",
+      "url": "https://docs.github.com/",
+      "translations": {
+        "en": {
+          "description": "GitHub Docs helps with Git, repositories, pull requests, Actions, security, and collaboration workflows.",
+          "setup": "Bookmark the official guide, read the setup section first, and copy only the steps that match your project."
+        },
+        "de": {
+          "description": "GitHub Docs hilft bei Git, Repositories, Pull Requests, Actions, Sicherheit und Collaboration-Workflows.",
+          "setup": "Speichere den offiziellen Guide, lies zuerst den Setup-Teil und kopiere nur die Schritte, die zu deinem Projekt passen."
+        },
+        "es": {
+          "description": "GitHub Docs ayuda con Git, repositorios, pull requests, Actions, seguridad y colaboracion.",
+          "setup": "Guarda la guia oficial, lee primero la seccion de configuracion y copia solo los pasos que encajan con tu proyecto."
+        }
+      }
+    },
+    "vercel": {
+      "name": "Vercel",
+      "url": "https://vercel.com/",
+      "translations": {
+        "en": {
+          "description": "Vercel helps with static sites, web apps, domains, previews, serverless APIs, and deployments.",
+          "setup": "Create the project, keep public keys in the browser config, and store secrets only in server environment variables."
+        },
+        "de": {
+          "description": "Vercel hilft bei Static Sites, Web Apps, Domains, Previews, Serverless APIs und Deployments.",
+          "setup": "Erstelle das Projekt, nutze Public Keys nur in der Browser-Konfiguration und speichere Secrets nur serverseitig."
+        },
+        "es": {
+          "description": "Vercel ayuda con sitios, web apps, dominios, previews, APIs serverless y deploys.",
+          "setup": "Crea el proyecto, usa llaves publicas solo en la configuracion del navegador y guarda secretos solo en variables del servidor."
+        }
+      }
+    },
+    "vercel-docs": {
+      "name": "Vercel Docs",
+      "url": "https://vercel.com/docs",
+      "translations": {
+        "en": {
+          "description": "Vercel Docs helps with deployments, domains, environment variables, functions, logs, and rollbacks.",
+          "setup": "Bookmark the official guide, read the setup section first, and copy only the steps that match your project."
+        },
+        "de": {
+          "description": "Vercel Docs hilft bei Deployments, Domains, Environment Variables, Functions, Logs und Rollbacks.",
+          "setup": "Speichere den offiziellen Guide, lies zuerst den Setup-Teil und kopiere nur die Schritte, die zu deinem Projekt passen."
+        },
+        "es": {
+          "description": "Vercel Docs ayuda con deploys, dominios, variables, funciones, logs y rollbacks.",
+          "setup": "Guarda la guia oficial, lee primero la seccion de configuracion y copia solo los pasos que encajan con tu proyecto."
+        }
+      }
+    },
+    "firebase": {
+      "name": "Firebase",
+      "url": "https://firebase.google.com/",
+      "translations": {
+        "en": {
+          "description": "Firebase helps with authentication, Firestore, hosting, storage, functions, and app services.",
+          "setup": "Create the project, keep public keys in the browser config, and store secrets only in server environment variables."
+        },
+        "de": {
+          "description": "Firebase hilft bei Authentication, Firestore, Hosting, Storage, Functions und App-Services.",
+          "setup": "Erstelle das Projekt, nutze Public Keys nur in der Browser-Konfiguration und speichere Secrets nur serverseitig."
+        },
+        "es": {
+          "description": "Firebase ayuda con auth, Firestore, hosting, storage, functions y servicios de apps.",
+          "setup": "Crea el proyecto, usa llaves publicas solo en la configuracion del navegador y guarda secretos solo en variables del servidor."
+        }
+      }
+    },
+    "firebase-auth": {
+      "name": "Firebase Authentication",
+      "url": "https://firebase.google.com/docs/auth",
+      "translations": {
+        "en": {
+          "description": "Firebase Authentication helps with email login, Google login, user identity, tokens, and protected app access.",
+          "setup": "Create the project, keep public keys in the browser config, and store secrets only in server environment variables."
+        },
+        "de": {
+          "description": "Firebase Authentication hilft bei E-Mail Login, Google Login, User Identity, Tokens und geschuetztem App-Zugriff.",
+          "setup": "Erstelle das Projekt, nutze Public Keys nur in der Browser-Konfiguration und speichere Secrets nur serverseitig."
+        },
+        "es": {
+          "description": "Firebase Authentication ayuda con email login, Google login, identidad, tokens y acceso protegido.",
+          "setup": "Crea el proyecto, usa llaves publicas solo en la configuracion del navegador y guarda secretos solo en variables del servidor."
+        }
+      }
+    },
+    "firestore": {
+      "name": "Cloud Firestore",
+      "url": "https://firebase.google.com/docs/firestore",
+      "translations": {
+        "en": {
+          "description": "Cloud Firestore helps with student access, course progress, app data, and server-verified records.",
+          "setup": "Create the project, keep public keys in the browser config, and store secrets only in server environment variables."
+        },
+        "de": {
+          "description": "Cloud Firestore hilft bei Studentenzugriff, Kursfortschritt, App-Daten und serverseitig verifizierten Records.",
+          "setup": "Erstelle das Projekt, nutze Public Keys nur in der Browser-Konfiguration und speichere Secrets nur serverseitig."
+        },
+        "es": {
+          "description": "Cloud Firestore ayuda con acceso de estudiantes, progreso, datos de app y registros verificados.",
+          "setup": "Crea el proyecto, usa llaves publicas solo en la configuracion del navegador y guarda secretos solo en variables del servidor."
+        }
+      }
+    },
+    "paypal-developer": {
+      "name": "PayPal Developer",
+      "url": "https://developer.paypal.com/",
+      "translations": {
+        "en": {
+          "description": "PayPal Developer helps with apps, client IDs, secrets, sandbox accounts, webhooks, and API credentials.",
+          "setup": "Create the project, keep public keys in the browser config, and store secrets only in server environment variables."
+        },
+        "de": {
+          "description": "PayPal Developer hilft bei Apps, Client IDs, Secrets, Sandbox-Konten, Webhooks und API Credentials.",
+          "setup": "Erstelle das Projekt, nutze Public Keys nur in der Browser-Konfiguration und speichere Secrets nur serverseitig."
+        },
+        "es": {
+          "description": "PayPal Developer ayuda con apps, client IDs, secrets, cuentas sandbox, webhooks y credenciales API.",
+          "setup": "Crea el proyecto, usa llaves publicas solo en la configuracion del navegador y guarda secretos solo en variables del servidor."
+        }
+      }
+    },
+    "paypal-checkout": {
+      "name": "PayPal Checkout Docs",
+      "url": "https://developer.paypal.com/docs/checkout/",
+      "translations": {
+        "en": {
+          "description": "PayPal Checkout Docs helps with orders, captures, SDK loading, server validation, and checkout flow.",
+          "setup": "Bookmark the official guide, read the setup section first, and copy only the steps that match your project."
+        },
+        "de": {
+          "description": "PayPal Checkout Docs hilft bei Orders, Captures, SDK Loading, Server Validation und Checkout Flow.",
+          "setup": "Speichere den offiziellen Guide, lies zuerst den Setup-Teil und kopiere nur die Schritte, die zu deinem Projekt passen."
+        },
+        "es": {
+          "description": "PayPal Checkout Docs ayuda con ordenes, capturas, SDK, validacion del servidor y checkout.",
+          "setup": "Guarda la guia oficial, lee primero la seccion de configuracion y copia solo los pasos que encajan con tu proyecto."
+        }
+      }
+    },
+    "langchain": {
+      "name": "LangChain",
+      "url": "https://www.langchain.com/",
+      "translations": {
+        "en": {
+          "description": "LangChain helps with retrieval, agents, chatbots, evaluations, and RAG workflows.",
+          "setup": "Bookmark the official guide, read the setup section first, and copy only the steps that match your project."
+        },
+        "de": {
+          "description": "LangChain hilft bei Retrieval, Agents, Chatbots, Evaluationen und RAG-Workflows.",
+          "setup": "Speichere den offiziellen Guide, lies zuerst den Setup-Teil und kopiere nur die Schritte, die zu deinem Projekt passen."
+        },
+        "es": {
+          "description": "LangChain ayuda con retrieval, agentes, chatbots, evaluaciones y workflows RAG.",
+          "setup": "Guarda la guia oficial, lee primero la seccion de configuracion y copia solo los pasos que encajan con tu proyecto."
+        }
+      }
+    }
+  },
   "courses": [
     {
       "id": "digital-business-foundations",
@@ -105,7 +899,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/QoAOzMTLP5s",
           "videoTitle": "Business Model Canvas Explained",
-          "videoSource": "Strategyzer"
+          "videoSource": "Strategyzer",
+          "resourceIds": [
+            "business-model-canvas",
+            "google-trends",
+            "google-sheets",
+            "hubspot-crm",
+            "notion",
+            "google-docs"
+          ]
         },
         {
           "id": "market-and-persona",
@@ -160,7 +962,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/v6EWN4EjHM0",
           "videoTitle": "How To Create a Buyer Persona",
-          "videoSource": "HubSpot Marketing"
+          "videoSource": "HubSpot Marketing",
+          "resourceIds": [
+            "business-model-canvas",
+            "google-trends",
+            "google-sheets",
+            "hubspot-crm",
+            "notion",
+            "google-docs"
+          ]
         },
         {
           "id": "offer-journey",
@@ -215,7 +1025,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/68ZXwI5L4kY",
           "videoTitle": "How To Make An Effective Customer Journey Map",
-          "videoSource": "HubSpot Marketing"
+          "videoSource": "HubSpot Marketing",
+          "resourceIds": [
+            "business-model-canvas",
+            "google-trends",
+            "google-sheets",
+            "hubspot-crm",
+            "openai-chatgpt",
+            "openai-docs"
+          ]
         },
         {
           "id": "pricing-profit-model",
@@ -273,7 +1091,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/hk3l_bhBA9w",
           "videoTitle": "The Excel Guide to Profit per Unit",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "business-model-canvas",
+            "google-trends",
+            "google-sheets",
+            "hubspot-crm",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         },
         {
           "id": "funnel-metrics-dashboard",
@@ -331,7 +1157,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/POWS9wMRXB0",
           "videoTitle": "Sales Funnel Dashboard: Optimize Your Pipeline",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "business-model-canvas",
+            "google-trends",
+            "google-sheets",
+            "hubspot-crm",
+            "google-analytics",
+            "hubspot-marketing"
+          ]
         },
         {
           "id": "delivery-sops-review",
@@ -389,7 +1223,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/Ezf72VMzQZU",
           "videoTitle": "7 Steps to Write Standard Operating Procedures that Work",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "business-model-canvas",
+            "google-trends",
+            "google-sheets",
+            "hubspot-crm",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         }
       ]
     },
@@ -496,7 +1338,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/sO4te2QNsHY",
           "videoTitle": "What Is Branding? 4 Minute Crash Course",
-          "videoSource": "The Futur"
+          "videoSource": "The Futur",
+          "resourceIds": [
+            "figma",
+            "canva-brand-kit",
+            "google-fonts",
+            "adobe-color",
+            "unsplash",
+            "google-trends"
+          ]
         },
         {
           "id": "visual-rules",
@@ -551,7 +1401,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/w-r6quQx0zA",
           "videoTitle": "Build a Complete Figma Design System",
-          "videoSource": "Arnau Ros"
+          "videoSource": "Arnau Ros",
+          "resourceIds": [
+            "figma",
+            "canva-brand-kit",
+            "google-fonts",
+            "adobe-color",
+            "unsplash",
+            "google-sheets"
+          ]
         },
         {
           "id": "brand-guide",
@@ -606,7 +1464,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/AjgQBC_XyS4",
           "videoTitle": "How To Create Brand Style Guides Like A Pro",
-          "videoSource": "HubSpot Marketing"
+          "videoSource": "HubSpot Marketing",
+          "resourceIds": [
+            "figma",
+            "canva-brand-kit",
+            "google-fonts",
+            "adobe-color",
+            "unsplash",
+            "google-trends"
+          ]
         },
         {
           "id": "logo-system-and-usage",
@@ -664,7 +1530,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/l9_BM1opTj8",
           "videoTitle": "Full Logo Design Course",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "figma",
+            "canva-brand-kit",
+            "google-fonts",
+            "adobe-color",
+            "unsplash",
+            "google-sheets"
+          ]
         },
         {
           "id": "typography-color-accessibility",
@@ -722,7 +1596,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/-V1gLJSvMNA",
           "videoTitle": "Colours in Branding and Illustration",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "figma",
+            "canva-brand-kit",
+            "google-fonts",
+            "adobe-color",
+            "unsplash",
+            "google-sheets"
+          ]
         },
         {
           "id": "asset-library-governance",
@@ -780,7 +1662,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/Kw7Dc8kBA2U",
           "videoTitle": "Build a Custom Brand Kit",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "figma",
+            "canva-brand-kit",
+            "google-fonts",
+            "adobe-color",
+            "unsplash",
+            "google-search-console"
+          ]
         }
       ]
     },
@@ -887,7 +1777,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/8o9Xeha31J0",
           "videoTitle": "How to Set up your Brand Kit in Canva",
-          "videoSource": "Design with Canva"
+          "videoSource": "Design with Canva",
+          "resourceIds": [
+            "canva",
+            "canva-brand-kit",
+            "canva-templates",
+            "unsplash",
+            "figma",
+            "google-fonts"
+          ]
         },
         {
           "id": "social-templates",
@@ -942,7 +1840,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/p-QgpcN4Gd4",
           "videoTitle": "How to Use Canva for Social Media Templates",
-          "videoSource": "GuideWise"
+          "videoSource": "GuideWise",
+          "resourceIds": [
+            "canva",
+            "canva-brand-kit",
+            "canva-templates",
+            "unsplash",
+            "google-sheets",
+            "figma"
+          ]
         },
         {
           "id": "sales-assets",
@@ -997,7 +1903,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/vUj-0nPo8zg",
           "videoTitle": "The Ultimate Simple Sales System: Canva Sales Page and ConvertKit Commerce",
-          "videoSource": "Created by Wayne"
+          "videoSource": "Created by Wayne",
+          "resourceIds": [
+            "canva",
+            "canva-brand-kit",
+            "canva-templates",
+            "unsplash",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         },
         {
           "id": "workspace-brand-kit",
@@ -1055,7 +1969,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/EWmFK5yZSL8",
           "videoTitle": "How to Set Up and Use a Canva Pro Brand Kit",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "canva",
+            "canva-brand-kit",
+            "canva-templates",
+            "unsplash",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         },
         {
           "id": "lead-magnets-presentations",
@@ -1113,7 +2035,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/zMcuy4AvVpQ",
           "videoTitle": "Create On Brand Social Media Graphics in Canva",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "canva",
+            "canva-brand-kit",
+            "canva-templates",
+            "unsplash",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         },
         {
           "id": "sales-page-visuals",
@@ -1171,7 +2101,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/JqmrgGyX_ik",
           "videoTitle": "Design a Professional Logo in Canva",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "canva",
+            "canva-brand-kit",
+            "canva-templates",
+            "unsplash",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         }
       ]
     },
@@ -1278,7 +2216,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/zsC-G86HIaY",
           "videoTitle": "AI Brand Voice DNA Tutorial",
-          "videoSource": "Secret Sauce Media"
+          "videoSource": "Secret Sauce Media",
+          "resourceIds": [
+            "openai-chatgpt",
+            "openai-docs",
+            "notion",
+            "buffer",
+            "google-docs",
+            "google-trends"
+          ]
         },
         {
           "id": "prompt-library",
@@ -1333,7 +2279,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/48FdZHbwdAk",
           "videoTitle": "Build a Custom Prompt Library That Makes ChatGPT Unstoppable",
-          "videoSource": "Keith AI"
+          "videoSource": "Keith AI",
+          "resourceIds": [
+            "openai-chatgpt",
+            "openai-docs",
+            "notion",
+            "buffer",
+            "google-docs",
+            "mailchimp"
+          ]
         },
         {
           "id": "repurpose-machine",
@@ -1388,7 +2342,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/NzmPos2Wcfw",
           "videoTitle": "How to Repurpose Content for Social Media with AI",
-          "videoSource": "Dan Kieft"
+          "videoSource": "Dan Kieft",
+          "resourceIds": [
+            "openai-chatgpt",
+            "openai-docs",
+            "notion",
+            "buffer",
+            "google-docs",
+            "google-trends"
+          ]
         },
         {
           "id": "editorial-calendar-briefs",
@@ -1446,7 +2408,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/Fqh4bTxM3TU",
           "videoTitle": "The Ultimate Notion Content Planning System",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "openai-chatgpt",
+            "openai-docs",
+            "notion",
+            "buffer",
+            "google-docs",
+            "google-search-console"
+          ]
         },
         {
           "id": "prompt-review-loop",
@@ -1504,7 +2474,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/srUzcTvA-QQ",
           "videoTitle": "Use This Prompt Engineering Tool To Get Better Responses",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "openai-chatgpt",
+            "openai-docs",
+            "notion",
+            "buffer",
+            "google-docs",
+            "google-search-console"
+          ]
         },
         {
           "id": "multilingual-repurpose-workflow",
@@ -1562,7 +2540,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/BtSD3vf6NEg",
           "videoTitle": "How to Use ChatGPT for Content Creation",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "openai-chatgpt",
+            "openai-docs",
+            "notion",
+            "buffer",
+            "google-docs",
+            "google-search-console"
+          ]
         }
       ]
     },
@@ -1669,7 +2655,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/_eXA0NjBDZA",
           "videoTitle": "How to harness the power of message market fit",
-          "videoSource": "Adobe for Business"
+          "videoSource": "Adobe for Business",
+          "resourceIds": [
+            "openai-chatgpt",
+            "google-docs",
+            "hubspot-marketing",
+            "google-trends",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         },
         {
           "id": "sales-page-structure",
@@ -1724,7 +2718,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/QBaE9cC6H_w",
           "videoTitle": "How To Write A Sales Page Step-By-Step",
-          "videoSource": "Jesse Forrest"
+          "videoSource": "Jesse Forrest",
+          "resourceIds": [
+            "openai-chatgpt",
+            "google-docs",
+            "hubspot-marketing",
+            "google-trends",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         },
         {
           "id": "email-copy",
@@ -1779,7 +2781,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/hSFHPt7rrxg",
           "videoTitle": "The Perfect Automated Email Welcome Sequence",
-          "videoSource": "Alex Cattoni"
+          "videoSource": "Alex Cattoni",
+          "resourceIds": [
+            "openai-chatgpt",
+            "google-docs",
+            "hubspot-marketing",
+            "google-trends",
+            "google-analytics",
+            "google-search-console"
+          ]
         },
         {
           "id": "hooks-headlines-angles",
@@ -1837,7 +2847,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/LmXpbP7dD48",
           "videoTitle": "How to Create Irresistible Hooks",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "openai-chatgpt",
+            "google-docs",
+            "hubspot-marketing",
+            "google-trends",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         },
         {
           "id": "proof-objections-risk-reversal",
@@ -1895,7 +2913,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/72iJXFMqJpo",
           "videoTitle": "Copywriting Critique Checklist",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "openai-chatgpt",
+            "google-docs",
+            "hubspot-marketing",
+            "google-trends",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         },
         {
           "id": "proposal-client-close",
@@ -1953,7 +2979,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/TjD8MGj0oAE",
           "videoTitle": "Client Onboarding That Actually Works",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "openai-chatgpt",
+            "google-docs",
+            "hubspot-marketing",
+            "google-trends",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         }
       ]
     },
@@ -2060,7 +3094,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/5wDGFEDx414",
           "videoTitle": "How to Create Content Pillars for Social Media",
-          "videoSource": "High Season Co."
+          "videoSource": "High Season Co.",
+          "resourceIds": [
+            "capcut",
+            "meta-business-suite",
+            "youtube-studio",
+            "buffer",
+            "google-sheets",
+            "google-analytics"
+          ]
         },
         {
           "id": "short-video-scripts",
@@ -2115,7 +3157,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/LmXpbP7dD48",
           "videoTitle": "How to Create Irresistible Hooks",
-          "videoSource": "Kallaway"
+          "videoSource": "Kallaway",
+          "resourceIds": [
+            "capcut",
+            "meta-business-suite",
+            "youtube-studio",
+            "buffer",
+            "google-sheets",
+            "figma"
+          ]
         },
         {
           "id": "distribution-loop",
@@ -2170,7 +3220,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/D4CROxuBktQ",
           "videoTitle": "19 Ways To Repurpose Content For Maximum Visibility",
-          "videoSource": "Alex Cattoni"
+          "videoSource": "Alex Cattoni",
+          "resourceIds": [
+            "capcut",
+            "meta-business-suite",
+            "youtube-studio",
+            "buffer",
+            "google-analytics",
+            "hubspot-marketing"
+          ]
         },
         {
           "id": "content-calendar-sprint",
@@ -2228,7 +3286,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/R_tWmWv3EvM",
           "videoTitle": "How I Plan My Instagram Content for Growth",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "capcut",
+            "meta-business-suite",
+            "youtube-studio",
+            "buffer",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         },
         {
           "id": "short-video-production-workflow",
@@ -2286,7 +3352,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/L1V3Y6fEa-E",
           "videoTitle": "Master Talking Head Video Content",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "capcut",
+            "meta-business-suite",
+            "youtube-studio",
+            "buffer",
+            "google-sheets",
+            "google-search-console"
+          ]
         },
         {
           "id": "analytics-feedback-loop",
@@ -2344,7 +3418,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/Dnq8vTJVkEw",
           "videoTitle": "Complete Social Media Marketing Guide",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "capcut",
+            "meta-business-suite",
+            "youtube-studio",
+            "buffer",
+            "google-analytics",
+            "hubspot-marketing"
+          ]
         }
       ]
     },
@@ -2451,7 +3533,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/so26NyT7DlE",
           "videoTitle": "The AI Tools Every Creator Needs plus Exact Prompts I Use",
-          "videoSource": "Envato Tuts+"
+          "videoSource": "Envato Tuts+",
+          "resourceIds": [
+            "envato-elements",
+            "envato-ai",
+            "envato-license",
+            "canva",
+            "google-trends",
+            "notion"
+          ]
         },
         {
           "id": "template-customization",
@@ -2506,7 +3596,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/ICJv9XGfaZc",
           "videoTitle": "How to Make a Website Quickly Using Envato Elements",
-          "videoSource": "WP Venture"
+          "videoSource": "WP Venture",
+          "resourceIds": [
+            "envato-elements",
+            "envato-ai",
+            "envato-license",
+            "canva",
+            "google-analytics",
+            "hubspot-marketing"
+          ]
         },
         {
           "id": "license-packaging",
@@ -2561,7 +3659,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/4wtS-0IVQY4",
           "videoTitle": "Envato Elements Licenses Explained",
-          "videoSource": "Learn Share Photo Video"
+          "videoSource": "Learn Share Photo Video",
+          "resourceIds": [
+            "envato-elements",
+            "envato-ai",
+            "envato-license",
+            "canva",
+            "google-sheets",
+            "google-trends"
+          ]
         },
         {
           "id": "asset-selection-research",
@@ -2619,7 +3725,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/Q6audyAUjEM",
           "videoTitle": "Envato Full Tutorial for Beginners",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "envato-elements",
+            "envato-ai",
+            "envato-license",
+            "canva",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         },
         {
           "id": "license-files-delivery",
@@ -2677,7 +3791,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/1ydXQsYKuSE",
           "videoTitle": "How to Download Your License File from Envato Elements",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "envato-elements",
+            "envato-ai",
+            "envato-license",
+            "canva",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         },
         {
           "id": "template-adaptation-system",
@@ -2735,7 +3857,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/dIRUCYlBVZM",
           "videoTitle": "Envato Elements Review",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "envato-elements",
+            "envato-ai",
+            "envato-license",
+            "canva",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         }
       ]
     },
@@ -2842,7 +3972,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/by8f2vYoJAE",
           "videoTitle": "How to properly layout a website",
-          "videoSource": "Payton Clark Smith"
+          "videoSource": "Payton Clark Smith",
+          "resourceIds": [
+            "themeforest",
+            "wordpress",
+            "wordpress-themes",
+            "elementor",
+            "pagespeed-insights",
+            "google-analytics"
+          ]
         },
         {
           "id": "demo-to-brand",
@@ -2897,7 +4035,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/KMS3VwGh3HY",
           "videoTitle": "How to Choose Colors",
-          "videoSource": "Flux Academy"
+          "videoSource": "Flux Academy",
+          "resourceIds": [
+            "themeforest",
+            "wordpress",
+            "wordpress-themes",
+            "elementor",
+            "pagespeed-insights",
+            "google-analytics"
+          ]
         },
         {
           "id": "launch-readiness",
@@ -2952,7 +4098,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/6S2dXm9AH9c",
           "videoTitle": "What to Do Before You Launch Your Website",
-          "videoSource": "GoDaddy"
+          "videoSource": "GoDaddy",
+          "resourceIds": [
+            "themeforest",
+            "wordpress",
+            "wordpress-themes",
+            "elementor",
+            "pagespeed-insights",
+            "google-analytics"
+          ]
         },
         {
           "id": "site-architecture-content-map",
@@ -3010,7 +4164,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/xXa8d3O-NK0",
           "videoTitle": "WordPress Tutorial For Beginners",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "themeforest",
+            "wordpress",
+            "wordpress-themes",
+            "elementor",
+            "pagespeed-insights",
+            "google-analytics"
+          ]
         },
         {
           "id": "theme-customization-brand",
@@ -3068,7 +4230,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/RqqYYEkv78U",
           "videoTitle": "WordPress Template Editor Tutorial",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "themeforest",
+            "wordpress",
+            "wordpress-themes",
+            "elementor",
+            "pagespeed-insights",
+            "google-analytics"
+          ]
         },
         {
           "id": "launch-seo-performance",
@@ -3126,7 +4296,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/Fd5yNBWFWGM",
           "videoTitle": "Theme Customization Full Tutorial",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "themeforest",
+            "wordpress",
+            "wordpress-themes",
+            "elementor",
+            "pagespeed-insights",
+            "google-analytics"
+          ]
         }
       ]
     },
@@ -3233,7 +4411,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/_s2h7X-c2jE",
           "videoTitle": "SEO in 2025: How I would Learn it if I Were Starting Over",
-          "videoSource": "Ahrefs"
+          "videoSource": "Ahrefs",
+          "resourceIds": [
+            "google-search-console",
+            "google-analytics",
+            "google-keyword-planner",
+            "pagespeed-insights",
+            "google-sheets",
+            "hubspot-marketing"
+          ]
         },
         {
           "id": "analytics-events",
@@ -3288,7 +4474,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/R_jW24nAjX4",
           "videoTitle": "Create and manage events in Google Analytics",
-          "videoSource": "Google Analytics"
+          "videoSource": "Google Analytics",
+          "resourceIds": [
+            "google-search-console",
+            "google-analytics",
+            "google-keyword-planner",
+            "pagespeed-insights",
+            "google-sheets",
+            "hubspot-marketing"
+          ]
         },
         {
           "id": "conversion-sprints",
@@ -3343,7 +4537,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/hcPxMuxh5Tc",
           "videoTitle": "The Anatomy Of A High Converting Landing Page",
-          "videoSource": "Neil Patel"
+          "videoSource": "Neil Patel",
+          "resourceIds": [
+            "google-search-console",
+            "google-analytics",
+            "google-keyword-planner",
+            "pagespeed-insights",
+            "google-sheets",
+            "hubspot-marketing"
+          ]
         },
         {
           "id": "keyword-intent-map",
@@ -3401,7 +4603,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/zXPZ0L2cOw4",
           "videoTitle": "How to Analyze Searcher Intent",
-          "videoSource": "Ahrefs"
+          "videoSource": "Ahrefs",
+          "resourceIds": [
+            "google-search-console",
+            "google-analytics",
+            "google-keyword-planner",
+            "pagespeed-insights",
+            "google-sheets",
+            "hubspot-marketing"
+          ]
         },
         {
           "id": "search-console-indexing",
@@ -3459,7 +4669,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/dSCci6Yh5Ss",
           "videoTitle": "How to Use Google Search Console",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "google-search-console",
+            "google-analytics",
+            "google-keyword-planner",
+            "pagespeed-insights",
+            "google-sheets",
+            "hubspot-marketing"
+          ]
         },
         {
           "id": "cro-experiments-reporting",
@@ -3517,7 +4735,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/UFb1iPJ3MtU",
           "videoTitle": "CRO Class: Conversion Rate Optimization",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "google-search-console",
+            "google-analytics",
+            "google-keyword-planner",
+            "pagespeed-insights",
+            "google-sheets",
+            "hubspot-marketing"
+          ]
         }
       ]
     },
@@ -3624,7 +4850,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/7orRtqwKIBw",
           "videoTitle": "How To Create A High-Converting Lead Magnet",
-          "videoSource": "Alex Cattoni"
+          "videoSource": "Alex Cattoni",
+          "resourceIds": [
+            "mailchimp",
+            "mailchimp-automation",
+            "hubspot-crm",
+            "google-sheets",
+            "google-analytics",
+            "hubspot-marketing"
+          ]
         },
         {
           "id": "email-sequences",
@@ -3679,7 +4913,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/DBBO9Cq8X5Q",
           "videoTitle": "Mailchimp Automation Sequence For Beginners",
-          "videoSource": "Tech Express"
+          "videoSource": "Tech Express",
+          "resourceIds": [
+            "mailchimp",
+            "mailchimp-automation",
+            "hubspot-crm",
+            "google-sheets",
+            "google-analytics",
+            "hubspot-marketing"
+          ]
         },
         {
           "id": "crm-operating-system",
@@ -3734,7 +4976,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/MQKXRcfvMkA",
           "videoTitle": "How to Build a Sales Pipeline and How it Works Over Time",
-          "videoSource": "Marketing 360"
+          "videoSource": "Marketing 360",
+          "resourceIds": [
+            "mailchimp",
+            "mailchimp-automation",
+            "hubspot-crm",
+            "google-sheets",
+            "google-analytics",
+            "hubspot-marketing"
+          ]
         },
         {
           "id": "lead-magnet-form-flow",
@@ -3792,7 +5042,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/6-nPRS8hDto",
           "videoTitle": "Mailchimp Automation Tutorial for Beginners",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "mailchimp",
+            "mailchimp-automation",
+            "hubspot-crm",
+            "google-sheets",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         },
         {
           "id": "segmentation-tags",
@@ -3850,7 +5108,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/MDQVBE4T6lk",
           "videoTitle": "How to Use HubSpot CRM",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "mailchimp",
+            "mailchimp-automation",
+            "hubspot-crm",
+            "google-sheets",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         },
         {
           "id": "nurture-sales-sequences",
@@ -3908,7 +5174,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/YJl3xZs-gz0",
           "videoTitle": "How to Set up Email Campaigns in HubSpot",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "mailchimp",
+            "mailchimp-automation",
+            "hubspot-crm",
+            "google-sheets",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         }
       ]
     },
@@ -4015,7 +5289,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/e9lnsKot_SQ",
           "videoTitle": "How Git Works: Explained in 4 Minutes",
-          "videoSource": "ByteByteGo"
+          "videoSource": "ByteByteGo",
+          "resourceIds": [
+            "github",
+            "github-docs",
+            "vercel",
+            "vercel-docs",
+            "google-analytics",
+            "hubspot-marketing"
+          ]
         },
         {
           "id": "vercel-deploy",
@@ -4070,7 +5352,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/E8xaV6fiTaA",
           "videoTitle": "How To Deploy GitHub Project on Vercel",
-          "videoSource": "KnowledgeBase"
+          "videoSource": "KnowledgeBase",
+          "resourceIds": [
+            "github",
+            "github-docs",
+            "vercel",
+            "vercel-docs",
+            "google-sheets",
+            "notion"
+          ]
         },
         {
           "id": "env-and-domain",
@@ -4125,7 +5415,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/nZrAgov_-D8",
           "videoTitle": "Environments on Vercel",
-          "videoSource": "Vercel"
+          "videoSource": "Vercel",
+          "resourceIds": [
+            "github",
+            "github-docs",
+            "vercel",
+            "vercel-docs",
+            "google-trends",
+            "notion"
+          ]
         },
         {
           "id": "git-branching-pull-requests",
@@ -4183,7 +5481,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/GthkPo8xFqQ",
           "videoTitle": "How To Deploy GitHub Project on Vercel",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "github",
+            "github-docs",
+            "vercel",
+            "vercel-docs",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         },
         {
           "id": "env-vars-secrets-domains",
@@ -4241,7 +5547,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/Mh9BJNfAVsM",
           "videoTitle": "Environment Variables and Runtime Configuration",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "github",
+            "github-docs",
+            "vercel",
+            "vercel-docs",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         },
         {
           "id": "rollback-monitoring-handoff",
@@ -4299,7 +5613,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/kXtWjQowvVw",
           "videoTitle": "How To Deploy A NextJS App To Vercel",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "github",
+            "github-docs",
+            "vercel",
+            "vercel-docs",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         }
       ]
     },
@@ -4406,7 +5728,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/jC4v5AS4RIM",
           "videoTitle": "Master the Perfect ChatGPT Prompt Formula",
-          "videoSource": "Jeff Su"
+          "videoSource": "Jeff Su",
+          "resourceIds": [
+            "openai-chatgpt",
+            "openai-platform",
+            "openai-docs",
+            "notion",
+            "google-sheets",
+            "google-trends"
+          ]
         },
         {
           "id": "workflow-assistants",
@@ -4461,7 +5791,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/44eFf-tRiSg",
           "videoTitle": "Intro to Agent Builder",
-          "videoSource": "OpenAI"
+          "videoSource": "OpenAI",
+          "resourceIds": [
+            "openai-chatgpt",
+            "openai-platform",
+            "openai-docs",
+            "notion",
+            "google-sheets",
+            "google-trends"
+          ]
         },
         {
           "id": "quality-review",
@@ -4516,7 +5854,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/_2KGc4zow24",
           "videoTitle": "Evaluating the Output of Your LLM",
-          "videoSource": "Microsoft for Startups"
+          "videoSource": "Microsoft for Startups",
+          "resourceIds": [
+            "openai-chatgpt",
+            "openai-platform",
+            "openai-docs",
+            "notion",
+            "google-analytics",
+            "hubspot-marketing"
+          ]
         },
         {
           "id": "custom-instructions-memory",
@@ -4574,7 +5920,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/eIs2cpwvces",
           "videoTitle": "Prompt Engineering, ChatGPT For Marketing, Custom GPTs",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "openai-chatgpt",
+            "openai-platform",
+            "openai-docs",
+            "notion",
+            "google-sheets",
+            "google-search-console"
+          ]
         },
         {
           "id": "assistant-sops-knowledge-base",
@@ -4632,7 +5986,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/IMHBwskJqRo",
           "videoTitle": "Master Prompt Engineering for AI Success",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "openai-chatgpt",
+            "openai-platform",
+            "openai-docs",
+            "notion",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         },
         {
           "id": "evaluation-human-review",
@@ -4690,7 +6052,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/BUdwDOLQVWc",
           "videoTitle": "Prompt Engineering Tutorial For Beginners",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "openai-chatgpt",
+            "openai-platform",
+            "openai-docs",
+            "notion",
+            "google-search-console",
+            "pagespeed-insights"
+          ]
         }
       ]
     },
@@ -4797,7 +6167,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/xHnlzAPD9QI",
           "videoTitle": "Automate tasks with the Codex app",
-          "videoSource": "OpenAI"
+          "videoSource": "OpenAI",
+          "resourceIds": [
+            "github",
+            "github-docs",
+            "openai-platform",
+            "openai-docs",
+            "vercel-docs",
+            "notion"
+          ]
         },
         {
           "id": "template-refactor",
@@ -4852,7 +6230,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/H3M95i4iS5c",
           "videoTitle": "Essential AI prompts for developers",
-          "videoSource": "Visual Studio Code"
+          "videoSource": "Visual Studio Code",
+          "resourceIds": [
+            "github",
+            "github-docs",
+            "openai-platform",
+            "openai-docs",
+            "vercel-docs",
+            "figma"
+          ]
         },
         {
           "id": "verification-and-deploy",
@@ -4907,7 +6293,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/MnF-zJhyUtE",
           "videoTitle": "Things I ALWAYS Do Before Launching New Apps",
-          "videoSource": "Chris Raroque"
+          "videoSource": "Chris Raroque",
+          "resourceIds": [
+            "github",
+            "github-docs",
+            "openai-platform",
+            "openai-docs",
+            "vercel-docs",
+            "google-search-console"
+          ]
         },
         {
           "id": "repo-context-agent-instructions",
@@ -4965,7 +6359,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/tIb_TzVNbDM",
           "videoTitle": "OpenAI Codex Tutorial #1 - Introduction and Setup",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "github",
+            "github-docs",
+            "openai-platform",
+            "openai-docs",
+            "vercel-docs",
+            "google-search-console"
+          ]
         },
         {
           "id": "implementation-debugging-loop",
@@ -5023,7 +6425,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/px7XlbYgk7I",
           "videoTitle": "Getting started with Codex",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "github",
+            "github-docs",
+            "openai-platform",
+            "openai-docs",
+            "vercel-docs",
+            "google-search-console"
+          ]
         },
         {
           "id": "screenshots-tests-pull-requests",
@@ -5081,7 +6491,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/NlNuoH5PPl4",
           "videoTitle": "OpenAI Codex Tutorial #6 - Using the AGENTS.md file",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "github",
+            "github-docs",
+            "openai-platform",
+            "openai-docs",
+            "vercel-docs",
+            "google-search-console"
+          ]
         }
       ]
     },
@@ -5188,7 +6606,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/cvYhuowazh0",
           "videoTitle": "User Flow Diagram Basics",
-          "videoSource": "Jesse Showalter"
+          "videoSource": "Jesse Showalter",
+          "resourceIds": [
+            "firebase",
+            "firebase-auth",
+            "firestore",
+            "paypal-developer",
+            "openai-platform",
+            "langchain"
+          ]
         },
         {
           "id": "api-and-auth",
@@ -5243,7 +6669,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/rbuSx1yEgV8",
           "videoTitle": "Getting started with Firebase Authentication on the web",
-          "videoSource": "Firebase"
+          "videoSource": "Firebase",
+          "resourceIds": [
+            "firebase",
+            "firebase-auth",
+            "firestore",
+            "paypal-developer",
+            "openai-platform",
+            "langchain"
+          ]
         },
         {
           "id": "chatbot-mvp",
@@ -5298,7 +6732,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/XctooiH0moI",
           "videoTitle": "Build a Large Language Model AI Chatbot using Retrieval Augmented Generation",
-          "videoSource": "IBM Technology"
+          "videoSource": "IBM Technology",
+          "resourceIds": [
+            "firebase",
+            "firebase-auth",
+            "firestore",
+            "paypal-developer",
+            "openai-platform",
+            "langchain"
+          ]
         },
         {
           "id": "database-data-models",
@@ -5356,7 +6798,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/_KN_eCnZgOA",
           "videoTitle": "Installing Firebase to React Project",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "firebase",
+            "firebase-auth",
+            "firestore",
+            "paypal-developer",
+            "openai-platform",
+            "langchain"
+          ]
         },
         {
           "id": "payments-access-control",
@@ -5414,7 +6864,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/vgl6BvAVpcc",
           "videoTitle": "PayPal x Firebase Setup",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "firebase",
+            "firebase-auth",
+            "firestore",
+            "paypal-developer",
+            "openai-platform",
+            "langchain"
+          ]
         },
         {
           "id": "chatbot-knowledge-evals",
@@ -5472,7 +6930,15 @@
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/LhnCsygAvzY",
           "videoTitle": "Chatbots with RAG: LangChain Full Walkthrough",
-          "videoSource": "YouTube"
+          "videoSource": "YouTube",
+          "resourceIds": [
+            "firebase",
+            "firebase-auth",
+            "firestore",
+            "paypal-developer",
+            "openai-platform",
+            "langchain"
+          ]
         }
       ]
     }

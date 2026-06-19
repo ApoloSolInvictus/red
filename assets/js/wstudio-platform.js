@@ -5,6 +5,7 @@ const state = {
   config: null,
   firebase: null,
   firebaseFns: null,
+  progress: {},
   selectedLessonId: null,
   user: null
 };
@@ -32,6 +33,7 @@ async function init() {
 
   state.catalog = catalog;
   state.config = config;
+  state.progress = readLocalProgress();
 
   renderPage();
   await initFirebase();
@@ -104,9 +106,12 @@ async function initFirebase() {
     state.authReady = true;
 
     if (user) {
+      state.progress = readLocalProgress();
       await loadStudentAccess();
+      await loadStudentProgress();
     } else {
       state.access = new Set();
+      state.progress = readLocalProgress();
     }
 
     renderHeader();
@@ -132,6 +137,31 @@ async function loadStudentAccess() {
   } catch (error) {
     state.access = new Set();
     showNotice("api", i18n.t("status.apiIssue"));
+  }
+}
+
+async function loadStudentProgress() {
+  if (!state.user) {
+    return;
+  }
+
+  try {
+    const token = await state.user.getIdToken();
+    const response = await fetch("/api/progress", {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error("Progress API unavailable.");
+    }
+
+    const payload = await response.json();
+    state.progress = mergeProgress(state.progress, normalizeProgress(payload.progress || []));
+    saveLocalProgress();
+  } catch (error) {
+    showNotice("progress", i18n.t("progress.localOnly"));
   }
 }
 
@@ -358,8 +388,11 @@ function renderCoursePage() {
 
   const copy = localize(course);
   const owned = state.access.has(course.id);
-  const firstPlayable = course.lessons.find((lesson) => owned || lesson.preview);
-  const selectedLesson = course.lessons.find((lesson) => lesson.id === state.selectedLessonId) || firstPlayable || course.lessons[0];
+  const requestedLesson = course.lessons.find((lesson) => lesson.id === state.selectedLessonId);
+  const firstPlayable = getResumeLesson(course, owned);
+  const selectedLesson = requestedLesson && isLessonUnlocked(course, requestedLesson, owned)
+    ? requestedLesson
+    : firstPlayable || course.lessons[0];
 
   target.innerHTML = `
     <section class="course-hero">
@@ -387,12 +420,12 @@ function renderCoursePage() {
     </section>
     <section id="curriculum" class="site-shell section course-layout">
       <div class="lesson-player">
-        ${renderLessonPlayer(selectedLesson, owned)}
+        ${renderLessonPlayer(course, selectedLesson, owned)}
       </div>
       <aside class="curriculum">
         <h2>${i18n.t("course.curriculum")}</h2>
         <div class="lesson-list">
-          ${course.lessons.map((lesson) => renderLessonButton(lesson, owned, selectedLesson)).join("")}
+          ${course.lessons.map((lesson) => renderLessonButton(course, lesson, owned, selectedLesson)).join("")}
         </div>
       </aside>
     </section>
@@ -413,6 +446,15 @@ function renderCoursePage() {
     button.addEventListener("click", () => {
       state.selectedLessonId = button.dataset.lessonId;
       renderCoursePage();
+    });
+  });
+
+  target.querySelectorAll("[data-complete-lesson-id]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const lesson = course.lessons.find((item) => item.id === button.dataset.completeLessonId);
+      if (lesson) {
+        await markLessonComplete(course, lesson);
+      }
     });
   });
 
@@ -512,14 +554,22 @@ function loadPayPalScript() {
   });
 }
 
-function renderLessonButton(lesson, owned, selectedLesson) {
+function renderLessonButton(course, lesson, owned, selectedLesson) {
   const copy = localize(lesson);
-  const unlocked = owned || lesson.preview;
+  const unlocked = isLessonUnlocked(course, lesson, owned);
+  const completed = isLessonCompleted(course, lesson);
   const active = selectedLesson && selectedLesson.id === lesson.id ? " is-active" : "";
-  const status = lesson.preview ? i18n.t("course.preview") : (unlocked ? i18n.t("course.start") : i18n.t("course.locked"));
+  const completeClass = completed ? " is-completed" : "";
+  const status = completed
+    ? i18n.t("lesson.completed")
+    : lesson.preview && !owned
+      ? i18n.t("course.preview")
+      : unlocked
+        ? i18n.t("lesson.available")
+        : i18n.t("course.locked");
 
   return `
-    <button class="lesson-button${active}" type="button" data-lesson-id="${lesson.id}" ${unlocked ? "" : "disabled"}>
+    <button class="lesson-button${active}${completeClass}" type="button" data-lesson-id="${lesson.id}" ${unlocked ? "" : "disabled"}>
       <span>
         <strong>${escapeHtml(copy.title)}</strong>
         <small>${lesson.duration} - ${status}</small>
@@ -528,13 +578,13 @@ function renderLessonButton(lesson, owned, selectedLesson) {
   `;
 }
 
-function renderLessonPlayer(lesson, owned) {
+function renderLessonPlayer(course, lesson, owned) {
   if (!lesson) {
     return `<p>${i18n.t("course.selectLesson")}</p>`;
   }
 
   const copy = localize(lesson);
-  const unlocked = owned || lesson.preview;
+  const unlocked = isLessonUnlocked(course, lesson, owned);
 
   if (!unlocked) {
     return `
@@ -557,7 +607,70 @@ function renderLessonPlayer(lesson, owned) {
       <p>${escapeHtml(copy.description)}</p>
       ${media}
       ${renderLessonReading(copy.reading)}
+      ${renderLessonResources(lesson)}
+      ${renderLessonCompletion(course, lesson, owned)}
     </article>
+  `;
+}
+
+function renderLessonResources(lesson) {
+  const resources = getLessonResources(lesson);
+  if (!resources.length) {
+    return "";
+  }
+
+  return `
+    <section class="lesson-resources">
+      <div class="lesson-section-head">
+        <p class="eyebrow">${i18n.t("lesson.links")}</p>
+        <h3>${i18n.t("lesson.linksTitle")}</h3>
+      </div>
+      <div class="resource-list">
+        ${resources.map(renderResourceCard).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function renderResourceCard(resource) {
+  const copy = localize(resource);
+
+  return `
+    <article class="resource-card">
+      <div>
+        <h4>${escapeHtml(resource.name)}</h4>
+        <p>${escapeHtml(copy.description || "")}</p>
+        ${copy.setup ? `<small><strong>${i18n.t("lesson.setup")}:</strong> ${escapeHtml(copy.setup)}</small>` : ""}
+      </div>
+      <a class="button button-small" href="${escapeAttribute(resource.url)}" target="_blank" rel="noopener">${i18n.t("lesson.open")}</a>
+    </article>
+  `;
+}
+
+function renderLessonCompletion(course, lesson, owned) {
+  const completed = isLessonCompleted(course, lesson);
+  const nextLesson = getNextLesson(course, lesson);
+  const copy = completed && !owned && nextLesson
+    ? i18n.t("lesson.buyToContinue")
+    : completed
+      ? i18n.t("lesson.nextUnlocked")
+    : !owned && nextLesson
+      ? i18n.t("lesson.buyToContinue")
+      : nextLesson
+        ? i18n.t("lesson.completeCopy")
+        : i18n.t("lesson.completeLast");
+
+  return `
+    <section class="lesson-completion${completed ? " is-complete" : ""}">
+      <div>
+        <p class="eyebrow">${completed ? i18n.t("lesson.completed") : i18n.t("lesson.progress")}</p>
+        <h3>${completed ? i18n.t("lesson.completedTitle") : i18n.t("lesson.completeTitle")}</h3>
+        <p>${copy}</p>
+      </div>
+      <button class="button ${completed ? "button-ghost" : "button-primary"}" type="button" data-complete-lesson-id="${escapeAttribute(lesson.id)}" ${completed ? "disabled" : ""}>
+        ${completed ? i18n.t("lesson.completed") : i18n.t("lesson.markComplete")}
+      </button>
+    </section>
   `;
 }
 
@@ -603,6 +716,165 @@ function renderLessonReading(reading) {
       ${reading.takeaway ? `<h3>${i18n.t("lesson.takeaway")}</h3><p>${escapeHtml(reading.takeaway)}</p>` : ""}
     </section>
   `;
+}
+
+function getLessonResources(lesson) {
+  const library = state.catalog && state.catalog.resources ? state.catalog.resources : {};
+  const ids = Array.isArray(lesson.resourceIds) ? lesson.resourceIds : [];
+
+  return ids
+    .map((id) => library[id] ? { id, ...library[id] } : null)
+    .filter(Boolean);
+}
+
+function getResumeLesson(course, owned) {
+  if (!course || !Array.isArray(course.lessons)) {
+    return null;
+  }
+
+  return course.lessons.find((lesson) => {
+    return isLessonUnlocked(course, lesson, owned) && !isLessonCompleted(course, lesson);
+  }) || course.lessons.find((lesson) => isLessonUnlocked(course, lesson, owned));
+}
+
+function getNextLesson(course, lesson) {
+  const index = getLessonIndex(course, lesson);
+  return index >= 0 ? course.lessons[index + 1] || null : null;
+}
+
+function getLessonIndex(course, lesson) {
+  if (!course || !lesson || !Array.isArray(course.lessons)) {
+    return -1;
+  }
+
+  return course.lessons.findIndex((item) => item.id === lesson.id);
+}
+
+function isLessonUnlocked(course, lesson, owned) {
+  if (!lesson) {
+    return false;
+  }
+
+  if (lesson.preview && !owned) {
+    return true;
+  }
+
+  if (!owned) {
+    return false;
+  }
+
+  const index = getLessonIndex(course, lesson);
+  if (index <= 0) {
+    return true;
+  }
+
+  return course.lessons.slice(0, index).every((previousLesson) => {
+    return isLessonCompleted(course, previousLesson);
+  });
+}
+
+function isLessonCompleted(course, lesson) {
+  return getCompletedLessons(course.id).has(lesson.id);
+}
+
+function getCompletedLessons(courseId) {
+  return new Set(state.progress[courseId] || []);
+}
+
+async function markLessonComplete(course, lesson) {
+  const owned = state.access.has(course.id);
+  if (!isLessonUnlocked(course, lesson, owned)) {
+    return;
+  }
+
+  const completed = getCompletedLessons(course.id);
+  completed.add(lesson.id);
+  state.progress = {
+    ...state.progress,
+    [course.id]: [...completed]
+  };
+  saveLocalProgress();
+
+  const nextLesson = getNextLesson(course, lesson);
+  if (nextLesson && isLessonUnlocked(course, nextLesson, owned)) {
+    state.selectedLessonId = nextLesson.id;
+  }
+
+  renderCoursePage();
+  await syncLessonProgress(course.id, lesson.id);
+}
+
+async function syncLessonProgress(courseId, lessonId) {
+  if (!state.user) {
+    return;
+  }
+
+  try {
+    const token = await state.user.getIdToken();
+    const response = await fetch("/api/progress", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ courseId, lessonId })
+    });
+
+    if (!response.ok) {
+      throw new Error("Progress API unavailable.");
+    }
+  } catch (error) {
+    showNotice("progress", i18n.t("progress.localOnly"));
+  }
+}
+
+function readLocalProgress() {
+  try {
+    return normalizeProgress(JSON.parse(window.localStorage.getItem(getProgressStorageKey()) || "{}"));
+  } catch (error) {
+    return {};
+  }
+}
+
+function saveLocalProgress() {
+  try {
+    window.localStorage.setItem(getProgressStorageKey(), JSON.stringify(state.progress));
+  } catch (error) {
+    showNotice("progress-storage", i18n.t("progress.localOnly"));
+  }
+}
+
+function getProgressStorageKey() {
+  return `wstudio:lesson-progress:${state.user ? state.user.uid : "guest"}`;
+}
+
+function normalizeProgress(progress) {
+  if (Array.isArray(progress)) {
+    return progress.reduce((normalized, item) => {
+      if (item && item.courseId) {
+        normalized[item.courseId] = uniqueStrings(item.completedLessonIds || []);
+      }
+      return normalized;
+    }, {});
+  }
+
+  return Object.entries(progress || {}).reduce((normalized, [courseId, lessonIds]) => {
+    normalized[courseId] = uniqueStrings(lessonIds || []);
+    return normalized;
+  }, {});
+}
+
+function mergeProgress(...sources) {
+  return sources.reduce((merged, source) => {
+    Object.entries(normalizeProgress(source)).forEach(([courseId, lessonIds]) => {
+      merged[courseId] = uniqueStrings([...(merged[courseId] || []), ...lessonIds]);
+    });
+    return merged;
+  }, {});
+}
+
+function uniqueStrings(values) {
+  return [...new Set((Array.isArray(values) ? values : []).map(String).filter(Boolean))];
 }
 
 function renderLoginPage() {
@@ -909,6 +1181,7 @@ function renderDashboardPage() {
 
 function renderDashboardCard(course) {
   const copy = localize(course);
+  const completedCount = course.lessons.filter((lesson) => isLessonCompleted(course, lesson)).length;
   return `
     <article class="course-card">
       <a class="course-image course-image-photo" href="course.html?id=${encodeURIComponent(course.id)}" style="--course-accent: ${course.accent}">
@@ -919,7 +1192,7 @@ function renderDashboardCard(course) {
         <h3>${escapeHtml(copy.title)}</h3>
         <p>${escapeHtml(copy.summary)}</p>
         <div class="card-bottom">
-          <span>${course.duration}</span>
+          <span>${completedCount}/${course.lessons.length} ${i18n.t("dashboard.completed")}</span>
           <a class="button button-small" href="course.html?id=${encodeURIComponent(course.id)}">${i18n.t("dashboard.continue")}</a>
         </div>
       </div>

@@ -770,6 +770,87 @@ input {
   margin-top: 8px;
 }
 
+.lesson-resources,
+.lesson-completion {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: white;
+}
+
+.lesson-section-head {
+  display: grid;
+  gap: 4px;
+}
+
+.lesson-section-head h3,
+.lesson-completion h3 {
+  margin: 0;
+  font-size: 1.12rem;
+  line-height: 1.2;
+}
+
+.resource-list {
+  display: grid;
+  gap: 10px;
+}
+
+.resource-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+
+.resource-card:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.resource-card:last-child {
+  padding-bottom: 0;
+}
+
+.resource-card h4 {
+  margin: 0 0 5px;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.resource-card p,
+.resource-card small,
+.lesson-completion p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.resource-card small {
+  display: block;
+  margin-top: 7px;
+}
+
+.lesson-completion {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  background: var(--soft);
+}
+
+.lesson-completion.is-complete {
+  border-color: rgba(8, 127, 68, 0.28);
+  background: rgba(8, 127, 68, 0.06);
+}
+
+.lesson-completion .button:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
 .curriculum {
   position: sticky;
   top: 96px;
@@ -796,6 +877,11 @@ input {
 .lesson-button.is-active {
   border-color: var(--ink);
   box-shadow: inset 4px 0 0 var(--blue);
+}
+
+.lesson-button.is-completed {
+  border-color: rgba(8, 127, 68, 0.28);
+  box-shadow: inset 4px 0 0 #087f44;
 }
 
 .lesson-button:disabled {
@@ -1189,6 +1275,16 @@ input {
   .outcome-panel,
   .auth-card {
     padding: 16px;
+  }
+
+  .resource-card,
+  .lesson-completion {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-card .button,
+  .lesson-completion .button {
+    width: 100%;
   }
 
   .lesson-player {
