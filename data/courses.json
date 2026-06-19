@@ -74,11 +74,33 @@
             },
             "de": {
               "title": "Die Unternehmerkarte",
-              "description": "Definiere Geschaeftsmodell, Zielgruppe, Angebot, Kanal und Lieferung auf einer Seite."
+              "description": "Definiere Geschaeftsmodell, Zielgruppe, Angebot, Kanal und Lieferung auf einer Seite.",
+              "reading": {
+                "overview": "Ein digitales Business laesst sich leichter bauen, wenn das Modell auf eine Seite passt. Behandle Zielgruppe, Problem, Angebot, Kanal, Lieferung, Umsatz und Wochenrhythmus als ein verbundenes System.",
+                "steps": [
+                  "Schreibe das Kundensegment in einfacher Sprache.",
+                  "Definiere das dringende Problem und das Ergebnis, das das Angebot verspricht.",
+                  "Waehle einen Akquisekanal, eine Liefermethode und einen Follow-up-Kanal.",
+                  "Verwandle das Modell in einen Wochenrhythmus: veroeffentlichen, verkaufen, liefern, pruefen und verbessern."
+                ],
+                "practice": "Erstelle eine einseitige Unternehmerkarte fuer ein Angebot mit hoechstens sieben Feldern.",
+                "takeaway": "Klarheit schlaegt Tool-Sammeln. Eine einfache Karte haelt jede spaetere Entscheidung ausgerichtet."
+              }
             },
             "es": {
               "title": "El Mapa del Emprendedor",
-              "description": "Define modelo de negocio, audiencia, oferta, canal y entrega en una sola pagina."
+              "description": "Define modelo de negocio, audiencia, oferta, canal y entrega en una sola pagina.",
+              "reading": {
+                "overview": "Un negocio digital es mas facil de construir cuando el modelo cabe en una sola pagina. Trata audiencia, problema, oferta, canal, entrega, ingresos y ritmo semanal como un solo sistema conectado.",
+                "steps": [
+                  "Escribe el segmento de cliente en lenguaje simple.",
+                  "Define el problema urgente y el resultado que promete la oferta.",
+                  "Elige un canal de adquisicion, un metodo de entrega y un canal de seguimiento.",
+                  "Convierte el modelo en un ritmo semanal: publicar, vender, entregar, revisar y mejorar."
+                ],
+                "practice": "Crea un mapa del emprendedor de una pagina para una oferta, usando no mas de siete bloques.",
+                "takeaway": "La claridad vence a la coleccion de herramientas. Un mapa simple mantiene alineada cada decision posterior."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/QoAOzMTLP5s",
@@ -107,11 +129,33 @@
             },
             "de": {
               "title": "Markt und Persona",
-              "description": "Finde ein enges Kaeuferprofil und das dringende Problem, das deine Botschaft verkaufbar macht."
+              "description": "Finde ein enges Kaeuferprofil und das dringende Problem, das deine Botschaft verkaufbar macht.",
+              "reading": {
+                "overview": "Eine Persona ist nuetzlich, wenn sie dir hilft zu entscheiden, was du sagst, wo du veroeffentlichst und welchen Beweis du zeigst. Fokussiere Kaufsituation, Schmerz, Einwaende, Wunschresultat und Ausloeser.",
+                "steps": [
+                  "Beginne mit einem echten Kaeufertyp, nicht mit einer breiten Demografie.",
+                  "Liste den schmerzhaften Moment auf, der den Kaeufer suchen oder vergleichen laesst.",
+                  "Sammle Einwaende in der Sprache des Kunden.",
+                  "Entscheide, welcher Beweis diesen Kaeufer vor dem Kauf sicherer fuehlen laesst."
+                ],
+                "practice": "Interviewe einen Idealkunden oder pruefe fuenf oeffentliche Kommentare und extrahiere genaue Formulierungen.",
+                "takeaway": "Die beste Persona ist ein Entscheidungswerkzeug, keine fiktive Biografie."
+              }
             },
             "es": {
               "title": "Mercado y Persona",
-              "description": "Encuentra un perfil de comprador especifico y el problema urgente que hace vendible tu mensaje."
+              "description": "Encuentra un perfil de comprador especifico y el problema urgente que hace vendible tu mensaje.",
+              "reading": {
+                "overview": "Una persona es util cuando te ayuda a decidir que decir, donde publicar y que prueba mostrar. Enfocate en la situacion del comprador, dolor, objeciones, resultado deseado y disparadores.",
+                "steps": [
+                  "Empieza con un tipo de comprador real, no con una demografia amplia.",
+                  "Enumera el momento doloroso que hace que el comprador busque o compare.",
+                  "Captura objeciones con la voz del cliente.",
+                  "Decide que prueba haria que este comprador se sienta mas seguro antes de comprar."
+                ],
+                "practice": "Entrevista a un cliente ideal o revisa cinco comentarios publicos y extrae frases exactas.",
+                "takeaway": "La mejor persona es una herramienta de decision, no una biografia ficticia."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/v6EWN4EjHM0",
@@ -140,11 +184,33 @@
             },
             "de": {
               "title": "Angebotsreise",
-              "description": "Verbinde Versprechen, Beweis, Preis, Checkout, Lieferung und Follow-up in einem Pfad."
+              "description": "Verbinde Versprechen, Beweis, Preis, Checkout, Lieferung und Follow-up in einem Pfad.",
+              "reading": {
+                "overview": "Die Customer Journey verbindet Aufmerksamkeit mit Vertrauen, Vertrauen mit Kauf und Kauf mit Lieferung. Eine starke Journey entfernt Verwirrung in jedem Schritt.",
+                "steps": [
+                  "Mappe die Phasen: bewusst, interessiert, vergleichend, kaufend, Onboarding, Nutzung und Rueckkehr.",
+                  "Schreibe die Frage auf, die der Kaeufer in jeder Phase stellt.",
+                  "Ordne jeder Phase ein Asset zu: Post, Seite, E-Mail, Checkout, Lektion oder Follow-up.",
+                  "Entferne jeden Schritt, der kein Risiko reduziert oder den Kaeufer nicht weiterbringt."
+                ],
+                "practice": "Zeichne die Journey vom ersten Klick bis zum ersten Ergebnis und markiere den schwaechsten Uebergang.",
+                "takeaway": "Gute Journeys fuehlen sich logisch an, weil jeder Schritt die naechste Frage beantwortet."
+              }
             },
             "es": {
               "title": "Ruta de Oferta",
-              "description": "Conecta promesa, prueba, precio, checkout, entrega y seguimiento en una sola ruta."
+              "description": "Conecta promesa, prueba, precio, checkout, entrega y seguimiento en una sola ruta.",
+              "reading": {
+                "overview": "El viaje del cliente conecta atencion con confianza, confianza con compra y compra con entrega. Un viaje fuerte elimina confusion en cada paso.",
+                "steps": [
+                  "Mapea las etapas: consciente, interesado, comparando, comprando, onboarding, usando y regresando.",
+                  "Escribe la pregunta que el comprador hace en cada etapa.",
+                  "Asigna un asset a cada etapa: post, pagina, email, checkout, leccion o seguimiento.",
+                  "Elimina cualquier paso que no reduzca riesgo o no mueva al comprador hacia adelante."
+                ],
+                "practice": "Dibuja el viaje desde el primer clic hasta el primer resultado y marca el traspaso mas debil.",
+                "takeaway": "Los grandes viajes se sienten obvios porque cada paso responde la siguiente pregunta."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/68ZXwI5L4kY",
@@ -225,11 +291,33 @@
             },
             "de": {
               "title": "Markenposition",
-              "description": "Klaere, warum die Marke existiert, wem sie dient und wofuer sie bekannt sein soll."
+              "description": "Klaere, warum die Marke existiert, wem sie dient und wofuer sie bekannt sein soll.",
+              "reading": {
+                "overview": "Die Markenposition ist das Versprechen, an das sich der Markt erinnern soll. Sie verbindet, wem du hilfst, welches Problem du loest, warum du anders bist und warum man dir vertrauen kann.",
+                "steps": [
+                  "Benenne die Zielgruppe so fokussiert, dass sich eine echte Person erkennt.",
+                  "Formuliere die Transformation in praktischer Sprache.",
+                  "Waehle drei Beweissignale: Prozess, Beispiele, Ergebnisse, Werte oder Erfahrung.",
+                  "Schreibe einen Positionierungssatz, der Website, Content und Angebote fuehrt."
+                ],
+                "practice": "Schreibe drei Versionen deines Positionierungssatzes und waehle die klarste.",
+                "takeaway": "Eine Marke wird staerker, wenn Visuals und Botschaft auf dieselbe erinnerbare Position zeigen."
+              }
             },
             "es": {
               "title": "Posicion de Marca",
-              "description": "Aclara por que existe la marca, a quien sirve y por que debe ser recordada."
+              "description": "Aclara por que existe la marca, a quien sirve y por que debe ser recordada.",
+              "reading": {
+                "overview": "La posicion de marca es la promesa que quieres que el mercado recuerde. Combina a quien ayudas, que problema resuelves, como eres diferente y por que se puede confiar en ti.",
+                "steps": [
+                  "Nombra la audiencia con suficiente enfoque para que una persona real se reconozca.",
+                  "Expresa la transformacion en lenguaje practico.",
+                  "Elige tres senales de prueba: proceso, ejemplos, resultados, valores o experiencia.",
+                  "Escribe una frase de posicionamiento que guie el sitio, el contenido y las propuestas."
+                ],
+                "practice": "Escribe tres versiones de tu frase de posicionamiento y elige la mas clara.",
+                "takeaway": "Una marca se fortalece cuando visuales y mensaje apuntan a la misma posicion recordable."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/sO4te2QNsHY",
@@ -258,11 +346,33 @@
             },
             "de": {
               "title": "Visuelle Regeln",
-              "description": "Waehle Palette, Typohierarchie, Abstand, Bildstil und wiederverwendbare Muster."
+              "description": "Waehle Palette, Typohierarchie, Abstand, Bildstil und wiederverwendbare Muster.",
+              "reading": {
+                "overview": "Visuelle Regeln verwandeln Geschmack in ein wiederholbares System. Farben, Schriftgroessen, Abstaende, Bildstil, Buttons und Layout-Rhythmus sollen Entscheidungen reduzieren.",
+                "steps": [
+                  "Waehle eine begrenzte Palette mit klaren Rollen.",
+                  "Definiere Textgroessen fuer Hero, Abschnittstitel, Kartentitel, Fliesstext, Caption und Buttons.",
+                  "Lege Abstandsregeln fuer Abschnitte, Karten, Formulare und Grids fest.",
+                  "Sammle Referenzbilder und beschreibe den gemeinsamen Stil mit objektiven Worten."
+                ],
+                "practice": "Erstelle eine Seite mit visuellen Regeln: Farben, Typorollen, Abstandstokens und Bildrichtung.",
+                "takeaway": "Konsistenz ist ein System, das ein kleines Business an jedem Kontaktpunkt serioes wirken laesst."
+              }
             },
             "es": {
               "title": "Reglas Visuales",
-              "description": "Elige paleta, jerarquia tipografica, espaciado, estilo de imagen y patrones reutilizables."
+              "description": "Elige paleta, jerarquia tipografica, espaciado, estilo de imagen y patrones reutilizables.",
+              "reading": {
+                "overview": "Las reglas visuales convierten el gusto en un sistema repetible. Colores, escala tipografica, espaciado, estilo de imagen, botones y ritmo de layout deben reducir decisiones.",
+                "steps": [
+                  "Elige una paleta limitada con roles claros.",
+                  "Define tamanos de texto para hero, titulo de seccion, titulo de tarjeta, cuerpo, caption y botones.",
+                  "Crea reglas de espaciado para secciones, tarjetas, formularios y grids.",
+                  "Reune imagenes de referencia y describe el estilo compartido con palabras objetivas."
+                ],
+                "practice": "Crea una hoja de reglas visuales con colores, roles tipograficos, tokens de espaciado y direccion de imagen.",
+                "takeaway": "La consistencia es un sistema que hace que un negocio pequeno se vea serio en cada punto de contacto."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/w-r6quQx0zA",
@@ -291,11 +401,33 @@
             },
             "de": {
               "title": "Mini Brand Guide",
-              "description": "Verpacke das System in ein kurzes Dokument, das kuenftige Designs konsistent haelt."
+              "description": "Verpacke das System in ein kurzes Dokument, das kuenftige Designs konsistent haelt.",
+              "reading": {
+                "overview": "Ein Mini Brand Guide buendelt Entscheidungen, damit du schneller gestaltest und mit weniger Verwirrung delegierst. Er sollte kurz genug fuer den Alltag und klar genug gegen Design-Drift sein.",
+                "steps": [
+                  "Beginne mit Position, Stimme, Zielgruppe und Kernversprechen.",
+                  "Fuege Logo-Nutzung, Farben, Typografie, Bildstil und Layout-Beispiele hinzu.",
+                  "Zeige falsche Nutzung, damit zukuenftige Assets typische Fehler vermeiden.",
+                  "Speichere den Guide mit Templates, Exporten und Links zu Arbeitsdateien."
+                ],
+                "practice": "Baue einen Brand Guide mit fuenf Abschnitten in einem Dokument oder Canva Deck.",
+                "takeaway": "Ein nuetzlicher Brand Guide ist ein Produktionswerkzeug, keine Zeremonie."
+              }
             },
             "es": {
               "title": "Mini Guia de Marca",
-              "description": "Empaqueta el sistema en un documento corto que mantiene consistentes los disenos futuros."
+              "description": "Empaqueta el sistema en un documento corto que mantiene consistentes los disenos futuros.",
+              "reading": {
+                "overview": "Una mini guia de marca empaqueta decisiones para disenar mas rapido y delegar con menos confusion. Debe ser lo bastante corta para usarse y lo bastante clara para evitar deriva visual.",
+                "steps": [
+                  "Empieza con posicion, voz, audiencia y promesa central.",
+                  "Agrega uso del logo, colores, tipografia, estilo de imagen y ejemplos de layout.",
+                  "Muestra usos incorrectos para evitar errores comunes en futuros assets.",
+                  "Guarda la guia con templates, exportaciones y enlaces a archivos de trabajo."
+                ],
+                "practice": "Construye una guia de marca de cinco secciones en un documento o deck de Canva.",
+                "takeaway": "Una guia de marca util es una herramienta de produccion, no una ceremonia."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/AjgQBC_XyS4",
@@ -376,11 +508,33 @@
             },
             "de": {
               "title": "Brand Kit Setup",
-              "description": "Lade deine Markenregeln in Canva, damit jedes Asset aus dem richtigen System startet."
+              "description": "Lade deine Markenregeln in Canva, damit jedes Asset aus dem richtigen System startet.",
+              "reading": {
+                "overview": "Das Canva Brand Kit macht Markenregeln in der taeglichen Produktion nutzbar. Wenn Farben, Schriften, Logos und wiederverwendbare Elemente geladen sind, startet jedes Asset naeher am fertigen Ergebnis.",
+                "steps": [
+                  "Lade freigegebene Logo-Dateien hoch und organisiere Versionen fuer helle und dunkle Hintergruende.",
+                  "Fuege Markenfarben mit genauen Hex-Werten und klaren Rollen hinzu.",
+                  "Lege Schriften fuer Titel, Untertitel und Fliesstext fest, bevor du Templates gestaltest.",
+                  "Erstelle Startseiten fuer Posts, Stories, Praesentationen, Lead Magnets und Sales-Grafiken."
+                ],
+                "practice": "Richte ein Canva Brand Kit ein und dupliziere ein Template in drei Plattformgroessen.",
+                "takeaway": "Ein Brand Kit spart Zeit, weil Designentscheidungen einmal getroffen und taeglich wiederverwendet werden."
+              }
             },
             "es": {
               "title": "Configuracion del Brand Kit",
-              "description": "Carga tus reglas de marca en Canva para que cada asset nazca del sistema correcto."
+              "description": "Carga tus reglas de marca en Canva para que cada asset nazca del sistema correcto.",
+              "reading": {
+                "overview": "El brand kit de Canva es donde las reglas de marca se vuelven usables en la produccion diaria. Cuando colores, fuentes, logos y elementos reutilizables estan cargados, cada asset empieza mas cerca de estar terminado.",
+                "steps": [
+                  "Sube archivos de logo aprobados y organiza versiones para fondos claros y oscuros.",
+                  "Agrega colores de marca con valores hex exactos y roles claros.",
+                  "Define fuentes para titulo, subtitulo y cuerpo antes de disenar templates.",
+                  "Crea paginas base para posts, historias, presentaciones, lead magnets y graficos de venta."
+                ],
+                "practice": "Configura un brand kit en Canva y duplica un template en tres tamanos de plataforma.",
+                "takeaway": "Un brand kit ahorra tiempo porque las decisiones de diseno se toman una vez y se reutilizan cada dia."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/8o9Xeha31J0",
@@ -409,11 +563,33 @@
             },
             "de": {
               "title": "Social Templates",
-              "description": "Erstelle Posts, Stories, Thumbnails und Short-Form-Cover aus einem flexiblen System."
+              "description": "Erstelle Posts, Stories, Thumbnails und Short-Form-Cover aus einem flexiblen System.",
+              "reading": {
+                "overview": "Social Templates sollen Veroeffentlichen erleichtern, ohne dass jeder Post gleich aussieht. Ein gutes System hat Struktur fuer Markenkonsistenz und Flexibilitaet fuer verschiedene Botschaften.",
+                "steps": [
+                  "Definiere wiederkehrende Content-Typen: Tipp, Beweis, Story, Angebot, Zitat, Checkliste und Ankuendigung.",
+                  "Erstelle eine Template-Familie mit gemeinsamen Raendern, Schriftgroessen, Farbnutzung und Bildregeln.",
+                  "Bereite Mobile-first-Versionen vor, weil Social Content meist vertikal konsumiert wird.",
+                  "Exportiere mit Namen, die Plattform, Format, Datum und Kampagne enthalten."
+                ],
+                "practice": "Gestalte sechs Templates fuer eine Kampagne und halte dieselben visuellen Regeln ein.",
+                "takeaway": "Templates sind Container, die starke Ideen konsistent ausliefern."
+              }
             },
             "es": {
               "title": "Plantillas Sociales",
-              "description": "Crea posts, historias, miniaturas y portadas verticales desde un sistema flexible."
+              "description": "Crea posts, historias, miniaturas y portadas verticales desde un sistema flexible.",
+              "reading": {
+                "overview": "Los templates sociales deben facilitar publicar sin hacer que cada post se vea identico. Un buen sistema tiene estructura para consistencia de marca y flexibilidad para mensajes distintos.",
+                "steps": [
+                  "Define tipos de contenido recurrentes: tip, prueba, historia, oferta, cita, checklist y anuncio.",
+                  "Crea una familia de templates con margenes, escala tipografica, color e imagen compartidos.",
+                  "Prepara versiones mobile-first porque la mayor parte del contenido social se consume verticalmente.",
+                  "Exporta con nombres que incluyan plataforma, formato, fecha y campana."
+                ],
+                "practice": "Disena seis templates para una campana manteniendo las mismas reglas visuales.",
+                "takeaway": "Los templates son contenedores que ayudan a publicar ideas fuertes con consistencia."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/p-QgpcN4Gd4",
@@ -442,11 +618,33 @@
             },
             "de": {
               "title": "Sales Assets",
-              "description": "Bereite Hero-Bilder, Produkt-Mockups, Garantie-Grafiken und Autor-Bloecke fuer Checkout-Seiten vor."
+              "description": "Bereite Hero-Bilder, Produkt-Mockups, Garantie-Grafiken und Autor-Bloecke fuer Checkout-Seiten vor.",
+              "reading": {
+                "overview": "Sales Assets unterstuetzen die Kaufentscheidung. Hero-Bilder, Produkt-Mockups, Garantien, Autorenbereiche und Checkout-Grafiken sollen das Angebot klar und sicher wirken lassen.",
+                "steps": [
+                  "Liste jedes Visual fuer die Sales Page auf: Hero, Transformation, Beweis, Module, Boni, Garantie und Checkout.",
+                  "Erstelle Mockups, die zeigen, was der Kaeufer bekommt, ohne nicht uebersetzbaren Text ins Bild zu setzen.",
+                  "Nutze konsistente Exportgroessen fuer Website, E-Mail, Social und Ads.",
+                  "Speichere Quelldateien und finale Exporte in Ordnern, die dem Launch-Flow folgen."
+                ],
+                "practice": "Baue ein Mini Sales Kit: Hero-Bild, Modul-Grafik, Garantie-Karte und Checkout-Thumbnail.",
+                "takeaway": "Sales Visuals sollen Unsicherheit reduzieren und zeigen, was enthalten ist."
+              }
             },
             "es": {
               "title": "Assets de Venta",
-              "description": "Prepara heroes, mockups, graficos de garantia y bloques de autor para paginas de pago."
+              "description": "Prepara heroes, mockups, graficos de garantia y bloques de autor para paginas de pago.",
+              "reading": {
+                "overview": "Los assets de venta apoyan la decision de compra. Imagenes hero, mockups de producto, garantias, bloques de autor y graficos de checkout deben hacer que la oferta se sienta clara y segura.",
+                "steps": [
+                  "Lista cada visual necesario en la pagina de venta: hero, transformacion, prueba, modulos, bonus, garantia y checkout.",
+                  "Crea mockups que muestren lo que recibe el comprador sin agregar texto no traducible dentro de la imagen.",
+                  "Usa tamanos de exportacion consistentes para sitio, email, social y anuncios.",
+                  "Guarda fuentes y exportaciones finales en carpetas que sigan el flujo de lanzamiento."
+                ],
+                "practice": "Construye un mini kit de venta: imagen hero, grafico de modulo, tarjeta de garantia y thumbnail de checkout.",
+                "takeaway": "Los visuales de venta deben reducir incertidumbre y mostrar que esta incluido."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/vUj-0nPo8zg",
@@ -527,11 +725,33 @@
             },
             "de": {
               "title": "Voice Map",
-              "description": "Erfasse Ton, Wortschatz, Zielgruppe und Grenzen vor dem Einsatz generativer Tools."
+              "description": "Erfasse Ton, Wortschatz, Zielgruppe und Grenzen vor dem Einsatz generativer Tools.",
+              "reading": {
+                "overview": "KI-Content wird besser, wenn er eine klare Voice Map bekommt. Die Map sagt dem Modell, wer die Marke ist, mit wem sie spricht, was sie vermeidet und wie fertige Arbeit wirken soll.",
+                "steps": [
+                  "Sammle Schreibbeispiele, die richtig klingen, und Beispiele, die falsch klingen.",
+                  "Definiere Tonmerkmale mit Belegen, zum Beispiel direkt, warm, kompetent, spielerisch oder knapp.",
+                  "Schreibe Zielgruppenkontext, verbotene Phrasen, Formatpraeferenzen und Beweisstandards auf.",
+                  "Teste die Voice Map, indem du KI einen Post im gewuenschten Stil umschreiben laesst."
+                ],
+                "practice": "Erstelle eine einseitige Voice Map und nutze sie fuer drei Versionen desselben Posts.",
+                "takeaway": "Eine Voice Map schuetzt Konsistenz, wenn das Content-Volumen steigt."
+              }
             },
             "es": {
               "title": "Mapa de Voz",
-              "description": "Captura tono, vocabulario, audiencia y limites antes de usar herramientas generativas."
+              "description": "Captura tono, vocabulario, audiencia y limites antes de usar herramientas generativas.",
+              "reading": {
+                "overview": "El contenido con IA mejora cuando recibe un mapa de voz claro. El mapa le dice al modelo quien es la marca, a quien habla, que evita y como debe sentirse el trabajo final.",
+                "steps": [
+                  "Reune ejemplos de escritura que suenan correctos y ejemplos que suenan mal.",
+                  "Define rasgos de tono con evidencia, como directo, calido, experto, jugueton o conciso.",
+                  "Escribe contexto de audiencia, frases prohibidas, preferencias de formato y estandares de prueba.",
+                  "Prueba el mapa pidiendo a la IA que reescriba un post con el estilo deseado."
+                ],
+                "practice": "Crea un mapa de voz de una pagina y usalo para generar tres versiones del mismo post.",
+                "takeaway": "Un mapa de voz protege la consistencia cuando aumenta el volumen de contenido."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/zsC-G86HIaY",
@@ -560,11 +780,33 @@
             },
             "de": {
               "title": "Prompt-Bibliothek",
-              "description": "Erstelle Prompts fuer Ideen, Hooks, Skripte, E-Mails, Posts und Uebersetzungen."
+              "description": "Erstelle Prompts fuer Ideen, Hooks, Skripte, E-Mails, Posts und Uebersetzungen.",
+              "reading": {
+                "overview": "Eine Prompt-Bibliothek verwandelt wiederholtes Denken in wiederverwendbare Workflows. Statt jedes Mal neu zu fragen, baust du Prompts fuer Recherche, Entwurf, Bearbeitung, Review und Planung.",
+                "steps": [
+                  "Gruppiere Prompts nach Job: Strategie, Content, Design, Sales, Operations, Review und Support.",
+                  "Fuege Kontextfelder hinzu, die der Nutzer vor dem Ausfuehren ausfuellen muss.",
+                  "Ergaenze Regeln fuer das Ausgabeformat, damit Ergebnisse leicht nutzbar und vergleichbar sind.",
+                  "Versioniere die besten Prompts und entferne Prompts mit vagen Ergebnissen."
+                ],
+                "practice": "Schreibe fuenf wiederverwendbare Prompts fuer eine Business-Aufgabe und teste sie mit demselben Briefing.",
+                "takeaway": "Eine Bibliothek ist wertvoll, wenn sie Wiederholbarkeit verbessert, nicht wenn sie nur clevere Prompts speichert."
+              }
             },
             "es": {
               "title": "Biblioteca de Prompts",
-              "description": "Crea prompts para ideas, hooks, guiones, emails, posts y traducciones."
+              "description": "Crea prompts para ideas, hooks, guiones, emails, posts y traducciones.",
+              "reading": {
+                "overview": "Una biblioteca de prompts convierte pensamiento repetido en flujos reutilizables. En vez de pedir desde cero cada vez, construye prompts para investigar, redactar, editar, revisar y planificar.",
+                "steps": [
+                  "Agrupa prompts por trabajo: estrategia, contenido, diseno, ventas, operaciones, revision y soporte.",
+                  "Incluye campos de contexto que el usuario debe llenar antes de ejecutar el prompt.",
+                  "Agrega reglas de formato de salida para que los resultados sean faciles de usar y comparar.",
+                  "Versiona los mejores prompts y elimina los que producen respuestas vagas."
+                ],
+                "practice": "Escribe cinco prompts reutilizables para una tarea de negocio y pruebalos con el mismo brief.",
+                "takeaway": "Una biblioteca vale cuando mejora la repeticion, no cuando solo guarda prompts ingeniosos."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/48FdZHbwdAk",
@@ -593,11 +835,33 @@
             },
             "de": {
               "title": "Repurpose Maschine",
-              "description": "Verwandle Lektionen, Lives und Notizen in E-Mails, Posts, Skripte und Kursmaterial."
+              "description": "Verwandle Lektionen, Lives und Notizen in E-Mails, Posts, Skripte und Kursmaterial.",
+              "reading": {
+                "overview": "Repurposing macht aus einer starken Idee viele nuetzliche Assets. KI kann Winkel, Hooks, Captions, E-Mails, Karussells und Skripte extrahieren, waehrend die Ursprungsidee erhalten bleibt.",
+                "steps": [
+                  "Beginne mit einem Quellasset: Video, Lektion, Blogpost, Live Call oder Kundengespraech.",
+                  "Extrahiere Kernidee, Zielgruppe, Versprechen, Einwaende, Beispiele und Beweise.",
+                  "Erzeuge Formate fuer verschiedene Kanaele, statt denselben Text ueberall zu posten.",
+                  "Pruefe jede Ausgabe auf Genauigkeit, Stimme und Plattformfit vor der Veroeffentlichung."
+                ],
+                "practice": "Verwandle eine lange Idee in Post, E-Mail, Kurzvideo-Skript, Karussell-Outline und FAQ-Antwort.",
+                "takeaway": "Repurposing soll nuetzliche Ideen vermehren, nicht minderwertiges Rauschen."
+              }
             },
             "es": {
               "title": "Maquina de Reutilizacion",
-              "description": "Convierte clases, lives y notas en emails, posts, guiones y materiales de curso."
+              "description": "Convierte clases, lives y notas en emails, posts, guiones y materiales de curso.",
+              "reading": {
+                "overview": "Repurposing es convertir una idea fuerte en muchos assets utiles. La IA puede extraer angulos, hooks, captions, emails, carruseles y guiones manteniendo intacto el mensaje original.",
+                "steps": [
+                  "Empieza con un asset fuente: video, leccion, blog post, llamada en vivo o conversacion con cliente.",
+                  "Extrae la idea central, audiencia, promesa, objeciones, ejemplos y pruebas.",
+                  "Genera formatos para distintos canales en vez de publicar el mismo copy en todas partes.",
+                  "Revisa cada salida por precision, voz y ajuste a la plataforma antes de publicar."
+                ],
+                "practice": "Convierte una idea larga en post, email, guion de video corto, outline de carrusel y respuesta FAQ.",
+                "takeaway": "Repurposing debe multiplicar ideas utiles, no ruido de baja calidad."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/NzmPos2Wcfw",
@@ -678,11 +942,33 @@
             },
             "de": {
               "title": "Message-Market Fit",
-              "description": "Verwandle Schmerz, Wunsch und Kundensprache in klare Positionierung."
+              "description": "Verwandle Schmerz, Wunsch und Kundensprache in klare Positionierung.",
+              "reading": {
+                "overview": "Message-Market-Fit entsteht, wenn der Markt sein Problem in deinen Worten erkennt. Der Kaeufer soll sich verstanden fuehlen, bevor du Aufmerksamkeit, Vertrauen oder Geld verlangst.",
+                "steps": [
+                  "Sammle Kundensprache aus Reviews, Kommentaren, Calls und Support-Fragen.",
+                  "Identifiziere Vorher-Zustand, Wunschzustand und die verborgene Angst hinter dem Kauf.",
+                  "Schreibe Headlines, die das Problem nennen, ein Ergebnis versprechen und Unsicherheit reduzieren.",
+                  "Teste Botschaften in Posts, E-Mails, Ads und Gespraechen, bevor du das ganze Angebot umbaust."
+                ],
+                "practice": "Schreibe zehn Headline-Varianten mit Kundensprache und behalte die drei spezifischsten.",
+                "takeaway": "Copy konvertiert besser, wenn sie wie der Markt klingt, nicht wie ein Business, das sich selbst beeindrucken will."
+              }
             },
             "es": {
               "title": "Mensaje y Mercado",
-              "description": "Convierte dolor, deseo y lenguaje del cliente en posicionamiento claro."
+              "description": "Convierte dolor, deseo y lenguaje del cliente en posicionamiento claro.",
+              "reading": {
+                "overview": "El ajuste mensaje-mercado ocurre cuando el mercado reconoce su problema en tus palabras. El comprador debe sentirse entendido antes de que pidas atencion, confianza o dinero.",
+                "steps": [
+                  "Recolecta lenguaje del cliente desde reviews, comentarios, llamadas y preguntas de soporte.",
+                  "Identifica el estado antes, el estado deseado y el miedo oculto detras de la compra.",
+                  "Escribe titulares que nombren el problema, prometan un resultado y reduzcan incertidumbre.",
+                  "Prueba mensajes en posts, emails, anuncios y conversaciones antes de reconstruir la oferta."
+                ],
+                "practice": "Escribe diez variaciones de titular usando lenguaje del cliente y conserva las tres mas especificas.",
+                "takeaway": "El copy convierte mejor cuando suena como el mercado, no como el negocio tratando de impresionarse."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/OyGKFhTf0go",
@@ -711,11 +997,33 @@
             },
             "de": {
               "title": "Sales-Page Struktur",
-              "description": "Baue die Reihenfolge von Headline bis Beweis, Angebot, FAQ und Checkout."
+              "description": "Baue die Reihenfolge von Headline bis Beweis, Angebot, FAQ und Checkout.",
+              "reading": {
+                "overview": "Eine Sales Page ist ein gefuehrtes Argument. Sie fuehrt von Relevanz zu Wunsch, von Beweis zu Klarheit und von Klarheit zu Handlung, ohne den Kaeufer zu ueberfordern.",
+                "steps": [
+                  "Starte mit Problem, Zielgruppe, Ergebnis und Grund zum Weiterlesen.",
+                  "Zeige Transformation, Umfang, fuer wen es ist und fuer wen nicht.",
+                  "Beantworte Einwaende mit Beweis, Beispielen, Garantien, FAQs oder klaren Grenzen.",
+                  "Schliesse mit einem direkten Call to Action und erklaere, was nach dem Kauf passiert."
+                ],
+                "practice": "Skizziere eine Sales Page mit zwoelf Abschnitten, bevor du finalen Copy schreibst.",
+                "takeaway": "Struktur haelt Persuasion ethisch, weil sie dem richtigen Kaeufer sicher entscheiden hilft."
+              }
             },
             "es": {
               "title": "Estructura de Pagina de Venta",
-              "description": "Construye el orden desde titular hasta prueba, oferta, FAQ y checkout."
+              "description": "Construye el orden desde titular hasta prueba, oferta, FAQ y checkout.",
+              "reading": {
+                "overview": "Una pagina de venta es un argumento guiado. Debe pasar de relevancia a deseo, de prueba a claridad y de claridad a accion sin hacer trabajar demasiado al comprador.",
+                "steps": [
+                  "Abre con el problema, la audiencia, el resultado y la razon para seguir leyendo.",
+                  "Muestra la transformacion, que incluye, para quien es y para quien no es.",
+                  "Responde objeciones con prueba, ejemplos, garantias, FAQs o limites transparentes.",
+                  "Cierra con un llamado a la accion directo y que pasa despues de la compra."
+                ],
+                "practice": "Bosqueja una pagina de venta con doce secciones antes de escribir el copy final.",
+                "takeaway": "La estructura mantiene la persuasion etica porque ayuda al comprador correcto a decidir con confianza."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/QBaE9cC6H_w",
@@ -744,11 +1052,33 @@
             },
             "de": {
               "title": "E-Mail Copy Bloecke",
-              "description": "Schreibe Welcome, Nurture, Launch, Reminder und Follow-up E-Mails."
+              "description": "Schreibe Welcome, Nurture, Launch, Reminder und Follow-up E-Mails.",
+              "reading": {
+                "overview": "E-Mail-Copy vertieft Vertrauen nach dem ersten Klick. Eine Sequenz soll begruessen, lehren, beweisen, einladen und nachfassen, ohne wie Dauerverkauf zu klingen.",
+                "steps": [
+                  "Definiere das Ziel der Sequenz: Onboarding, Nurturing, Verkauf, Reaktivierung oder Support.",
+                  "Schreibe eine Kernidee pro E-Mail mit klarer Betreffzeile und einfachem CTA.",
+                  "Nutze Stories, Beweise, nuetzliches Lehren und Einwandbehandlung ueber die Sequenz hinweg.",
+                  "Messe Antworten, Klicks und Conversions, um mit der Zeit besser zu werden."
+                ],
+                "practice": "Entwirf eine fuenfteilige Willkommenssequenz fuer einen Lead Magnet oder ein Kursangebot.",
+                "takeaway": "E-Mail funktioniert am besten, wenn jede Nachricht die naechste Oeffnung verdient."
+              }
             },
             "es": {
               "title": "Bloques de Email Copy",
-              "description": "Escribe emails de bienvenida, nutricion, lanzamiento, recordatorio y seguimiento."
+              "description": "Escribe emails de bienvenida, nutricion, lanzamiento, recordatorio y seguimiento.",
+              "reading": {
+                "overview": "El copy de email profundiza la confianza despues del primer clic. Una secuencia debe dar bienvenida, educar, probar, invitar y hacer seguimiento sin sonar como venta constante.",
+                "steps": [
+                  "Define el objetivo de la secuencia: onboarding, nutricion, venta, reactivacion o soporte.",
+                  "Escribe una idea central por email con asunto claro y CTA simple.",
+                  "Usa historias, prueba, ensenanza util y manejo de objeciones a lo largo de la secuencia.",
+                  "Mide respuestas, clics y conversiones para mejorar con el tiempo."
+                ],
+                "practice": "Redacta una secuencia de bienvenida de cinco emails para un lead magnet u oferta de curso.",
+                "takeaway": "El email funciona mejor cuando cada mensaje se gana la siguiente apertura."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/hSFHPt7rrxg",
@@ -829,11 +1159,33 @@
             },
             "de": {
               "title": "Content-Saeulen",
-              "description": "Waehle Themen, die jede Woche bilden, beweisen, verkaufen und Vertrauen bauen."
+              "description": "Waehle Themen, die jede Woche bilden, beweisen, verkaufen und Vertrauen bauen.",
+              "reading": {
+                "overview": "Content Pillars verhindern zufaelliges Posten. Sie verbinden Business-Ziele mit wiederkehrenden Themen, damit die Zielgruppe wiederholt sieht, was du glaubst, lehrst, beweist, verkaufst und unterstuetzt.",
+                "steps": [
+                  "Waehle drei bis fuenf Pillars, die Angebot und Audience Journey stuetzen.",
+                  "Gib jedem Pillar einen Zweck: Awareness, Vertrauen, Beweis, Bildung, Community oder Conversion.",
+                  "Erstelle wiederholbare Post-Formate fuer jeden Pillar, damit Produktion schneller wird.",
+                  "Pruefe die Leistung monatlich und entferne Pillars, die das Business nicht unterstuetzen."
+                ],
+                "practice": "Baue einen 30-Tage-Content-Plan mit fuenf Pillars und drei Formaten pro Pillar.",
+                "takeaway": "Konsistenz wird leichter, wenn Strategie entscheidet, worueber du sprichst, bevor der Kalender beginnt."
+              }
             },
             "es": {
               "title": "Pilares de Contenido",
-              "description": "Elige temas que eduquen, prueben, vendan y construyan confianza cada semana."
+              "description": "Elige temas que eduquen, prueben, vendan y construyan confianza cada semana.",
+              "reading": {
+                "overview": "Los pilares de contenido evitan publicar al azar. Conectan objetivos de negocio con temas recurrentes para que la audiencia vea repetidamente lo que crees, ensenas, pruebas, vendes y apoyas.",
+                "steps": [
+                  "Elige de tres a cinco pilares que apoyen la oferta y el viaje de audiencia.",
+                  "Asigna un proposito a cada pilar: awareness, confianza, prueba, educacion, comunidad o conversion.",
+                  "Crea formatos repetibles para cada pilar para producir mas rapido.",
+                  "Revisa rendimiento cada mes y elimina pilares que no apoyen el negocio."
+                ],
+                "practice": "Construye un mapa de contenido de treinta dias con cinco pilares y tres formatos por pilar.",
+                "takeaway": "La consistencia es mas facil cuando la estrategia decide de que hablas antes de llenar el calendario."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/5wDGFEDx414",
@@ -862,11 +1214,33 @@
             },
             "de": {
               "title": "Kurzvideo Skripte",
-              "description": "Nutze Hooks, Beats, Beweis und CTA fuer wiederholbare Videoformate."
+              "description": "Nutze Hooks, Beats, Beweis und CTA fuer wiederholbare Videoformate.",
+              "reading": {
+                "overview": "Kurzvideo-Skripte brauchen Tempo, Kontrast und eine klare Idee. Der Zuschauer soll in den ersten Sekunden verstehen, warum er weiterschauen sollte.",
+                "steps": [
+                  "Oeffne mit einem Hook, der Problem, Ueberraschung, Fehler, Ergebnis oder starke Meinung nennt.",
+                  "Liefere eine Idee mit einem Beispiel, statt alles lehren zu wollen.",
+                  "Nutze einfache visuelle Beats: Setup, Beweis, Reveal, Schritt und Call to Action.",
+                  "Streiche jede Zeile, die den Zuschauer nicht naeher zum Punkt bringt."
+                ],
+                "practice": "Schreibe fuenf Skripte unter 120 Woertern zum selben Thema, jedes mit anderem Hook.",
+                "takeaway": "Kurzvideo ist komprimiertes Aufmerksamkeitsdesign."
+              }
             },
             "es": {
               "title": "Guiones de Video Corto",
-              "description": "Usa hooks, pasos, prueba y llamados a la accion para formatos repetibles."
+              "description": "Usa hooks, pasos, prueba y llamados a la accion para formatos repetibles.",
+              "reading": {
+                "overview": "Los guiones de video corto necesitan velocidad, contraste y una idea clara. El espectador debe entender por que seguir mirando en los primeros segundos.",
+                "steps": [
+                  "Abre con un hook que nombre un problema, sorpresa, error, resultado u opinion fuerte.",
+                  "Entrega una idea con un ejemplo en vez de intentar ensenar todo.",
+                  "Usa beats visuales simples: setup, prueba, revelacion, paso y llamado a la accion.",
+                  "Corta toda linea que no acerque al espectador al punto."
+                ],
+                "practice": "Escribe cinco guiones de menos de 120 palabras para el mismo tema, cada uno con un hook distinto.",
+                "takeaway": "El video corto es diseno de atencion comprimida."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/LmXpbP7dD48",
@@ -895,11 +1269,33 @@
             },
             "de": {
               "title": "Distribution Loop",
-              "description": "Publiziere, verwende neu, sammle Signale und passe den naechsten Sprint an."
+              "description": "Publiziere, verwende neu, sammle Signale und passe den naechsten Sprint an.",
+              "reading": {
+                "overview": "Distribution verwandelt veroeffentlichten Content in eine Schleife. Eine Idee soll durch Kanaele reisen, Feedback sammeln, Gespraeche erzeugen und als besserer Content oder besseres Angebot zurueckkommen.",
+                "steps": [
+                  "Waehle den Hauptkanal, auf dem die urspruengliche Idee lebt.",
+                  "Verwandle die Idee in native Formate fuer Social, E-Mail, Community und Sales Assets.",
+                  "Verfolge, was gespeichert, geteilt, beantwortet, geklickt oder gekauft wird.",
+                  "Fuehre Fragen der Zielgruppe in den naechsten Content-Batch zurueck."
+                ],
+                "practice": "Erstelle eine Distributions-Checkliste fuer einen langen Post und plane fuenf abgeleitete Assets.",
+                "takeaway": "Distribution ist ein System, kein Last-Minute-Share-Button."
+              }
             },
             "es": {
               "title": "Loop de Distribucion",
-              "description": "Publica, reutiliza, recoge senales y ajusta el siguiente sprint de contenido."
+              "description": "Publica, reutiliza, recoge senales y ajusta el siguiente sprint de contenido.",
+              "reading": {
+                "overview": "La distribucion convierte contenido publicado en un ciclo. Una idea debe viajar por canales, recoger feedback, crear conversaciones y volver como mejor contenido o mejor oferta.",
+                "steps": [
+                  "Elige el canal principal donde vivira la idea original.",
+                  "Convierte la idea en formatos nativos para social, email, comunidad y venta.",
+                  "Mide que se guarda, comparte, responde, clickea o compra.",
+                  "Devuelve las preguntas de la audiencia al siguiente lote de contenido."
+                ],
+                "practice": "Crea un checklist de distribucion para un post largo y agenda cinco assets derivados.",
+                "takeaway": "La distribucion es un sistema, no un boton de compartir de ultimo minuto."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/D4CROxuBktQ",
@@ -980,11 +1376,33 @@
             },
             "de": {
               "title": "Asset Recherche",
-              "description": "Suche nach Kampagnenziel, Format, Zielgruppe, Stimmung und Produktionsbedarf."
+              "description": "Suche nach Kampagnenziel, Format, Zielgruppe, Stimmung und Produktionsbedarf.",
+              "reading": {
+                "overview": "Asset-Recherche verbindet kreative Qualitaet mit dem echten Job. Das beste Asset ist nicht das schoenste, sondern das, was zu Marke, Lizenz, Format, Budget und Zeitplan passt.",
+                "steps": [
+                  "Definiere den Asset-Job vor der Suche: Hero, Mockup, Template, Video, Icon, Musik oder Dokument.",
+                  "Nutze Filter fuer Format, Ausrichtung, Stil, Software und kommerzielle Passung.",
+                  "Speichere Shortlists mit Notizen, warum jedes Asset funktioniert oder scheitert.",
+                  "Pruefe Lizenzanforderungen, bevor du ein Asset einem Kunden praesentierst oder lieferst."
+                ],
+                "practice": "Baue eine Shortlist mit zehn Assets fuer eine Landing Page und waehle die besten drei mit Begruendung.",
+                "takeaway": "Professionelle Asset-Recherche ist Auswahl-Disziplin. Sie spart Designzeit und schuetzt Vertrauen."
+              }
             },
             "es": {
               "title": "Investigacion de Assets",
-              "description": "Busca por objetivo de campana, formato, audiencia, estilo y necesidad de produccion."
+              "description": "Busca por objetivo de campana, formato, audiencia, estilo y necesidad de produccion.",
+              "reading": {
+                "overview": "La investigacion de assets consiste en conectar calidad creativa con el trabajo real. El mejor asset no es el mas bonito; es el que encaja con marca, licencia, formato, presupuesto y tiempo.",
+                "steps": [
+                  "Define el trabajo del asset antes de buscar: hero, mockup, template, video, icono, musica o documento.",
+                  "Usa filtros por formato, orientacion, estilo, software y encaje comercial.",
+                  "Guarda shortlists con notas sobre por que cada asset funciona o falla.",
+                  "Revisa requisitos de licencia antes de presentar o entregar el asset a un cliente."
+                ],
+                "practice": "Construye una shortlist de diez assets para una landing y elige los tres mejores con razones.",
+                "takeaway": "La investigacion profesional de assets es disciplina de seleccion. Ahorra tiempo de diseno y protege la confianza."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/so26NyT7DlE",
@@ -1013,11 +1431,33 @@
             },
             "de": {
               "title": "Template Anpassung",
-              "description": "Aendere Struktur, Farbe, Bilder, Typografie und Sektionen, damit Templates eigenstaendig wirken."
+              "description": "Aendere Struktur, Farbe, Bilder, Typografie und Sektionen, damit Templates eigenstaendig wirken.",
+              "reading": {
+                "overview": "Template-Anpassung verwandelt ein fertiges Design in originale Kundenarbeit. Struktur spart Zeit, aber Marke, Copy, Bilder, Hierarchie und Conversion-Ziele muessen angepasst werden.",
+                "steps": [
+                  "Auditiere die Template-Struktur und entferne Abschnitte, die das Angebot nicht unterstuetzen.",
+                  "Ersetze Farben, Schrift, Bilder, Icons und Abstaende durch das Markensystem.",
+                  "Schreibe Copy rund um Zielgruppe, Beweis und Call to Action des Kunden neu.",
+                  "Teste Responsiveness und Performance nach jeder groesseren Anpassung."
+                ],
+                "practice": "Waehle einen Template-Abschnitt und gestalte ihn fuer eine andere Business-Kategorie um.",
+                "takeaway": "Ein Template ist ein Startpunkt. Der Wert liegt in der Anpassung, nicht im Kopieren."
+              }
             },
             "es": {
               "title": "Personalizacion de Plantillas",
-              "description": "Cambia estructura, color, imagenes, tipografia y secciones para crear trabajo original."
+              "description": "Cambia estructura, color, imagenes, tipografia y secciones para crear trabajo original.",
+              "reading": {
+                "overview": "La personalizacion de templates convierte un diseno listo en trabajo original para cliente. La estructura ahorra tiempo, pero marca, copy, imagenes, jerarquia y conversion deben adaptarse.",
+                "steps": [
+                  "Audita la estructura del template y elimina secciones que no apoyan la oferta.",
+                  "Reemplaza colores, tipografia, imagenes, iconos y espaciado con el sistema de marca.",
+                  "Reescribe el copy alrededor de audiencia, prueba y llamado a la accion del cliente.",
+                  "Prueba responsividad y rendimiento despues de cada cambio grande."
+                ],
+                "practice": "Elige una seccion de template y redisenala para una categoria de negocio distinta.",
+                "takeaway": "Un template es punto de partida. El valor esta en la adaptacion, no en la copia."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/ICJv9XGfaZc",
@@ -1046,11 +1486,33 @@
             },
             "de": {
               "title": "Lizenz und Lieferung",
-              "description": "Organisiere Downloads, Quelldateien, Exporte und Liefernotizen fuer Kunden."
+              "description": "Organisiere Downloads, Quelldateien, Exporte und Liefernotizen fuer Kunden.",
+              "reading": {
+                "overview": "Lizenzen schuetzen das Projekt nach der Uebergabe. Freelancer muessen wissen, was genutzt wurde, woher es kommt, wie es lizenziert ist und was der Kunde sicher wiederverwenden darf.",
+                "steps": [
+                  "Dokumentiere jedes Stock Asset, Template, jede Schrift, jedes Icon, jede Audiodatei und jedes Plugin.",
+                  "Speichere Lizenzzertifikate oder Download-Nachweise im Projektordner.",
+                  "Trenne editierbare Quelldateien von finalen Exporten, damit die Uebergabe klar ist.",
+                  "Erklaere Nutzungsgrenzen dem Kunden in einfacher Sprache."
+                ],
+                "practice": "Erstelle einen Lieferordner mit Quelldateien, Exporten, Lizenznotizen und kurzem Handoff-Dokument.",
+                "takeaway": "Ein schoenes Projekt ist erst komplett, wenn der Kunde weiss, was er legal nutzen darf."
+              }
             },
             "es": {
               "title": "Licencia y Entrega",
-              "description": "Organiza descargas, archivos fuente, exports y notas de entrega para clientes."
+              "description": "Organiza descargas, archivos fuente, exports y notas de entrega para clientes.",
+              "reading": {
+                "overview": "Las licencias protegen el proyecto despues de la entrega. Un freelancer debe saber que se uso, de donde vino, como esta licenciado y que puede reutilizar el cliente con seguridad.",
+                "steps": [
+                  "Registra cada asset stock, template, fuente, icono, audio y plugin usado.",
+                  "Guarda certificados de licencia o prueba de descarga en la carpeta del proyecto.",
+                  "Separa archivos fuente editables de exportaciones finales para que el handoff sea claro.",
+                  "Explica limites de uso al cliente en lenguaje simple."
+                ],
+                "practice": "Crea una carpeta de entrega con fuentes, exportaciones, notas de licencia y un documento breve de handoff.",
+                "takeaway": "Un proyecto hermoso no esta completo hasta que el cliente sabe que puede usar legalmente."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/4wtS-0IVQY4",
@@ -1131,11 +1593,33 @@
             },
             "de": {
               "title": "Template Audit",
-              "description": "Pruefe UX, Responsiveness, Sektionen, Speed, Code-Qualitaet und Business-Fit."
+              "description": "Pruefe UX, Responsiveness, Sektionen, Speed, Code-Qualitaet und Business-Fit.",
+              "reading": {
+                "overview": "Ein Template-Audit hilft dir strategisch zu waehlen, nicht aus Begeisterung. Pruefe Architektur, Responsiveness, Hierarchie, Speed-Risiko, Plugin-Abhaengigkeit und Conversion-Fit.",
+                "steps": [
+                  "Pruefe, ob die Abschnitte zum Business-Ziel und zur Buyer Journey passen.",
+                  "Pruefe Mobile Layout, Navigation, Speed-Risiko und Accessibility-Grundlagen.",
+                  "Identifiziere Abschnitte, die neu geschrieben, ersetzt oder entfernt werden muessen.",
+                  "Bewerte das Template nach Fit, Flexibilitaet, Geschwindigkeit und Wartungsrisiko."
+                ],
+                "practice": "Auditiere drei Templates fuer dasselbe Kundenbriefing und waehle eines mit schriftlicher Scorecard.",
+                "takeaway": "Das beste Template braucht den geringsten Kampf, um zur richtigen Website zu werden."
+              }
             },
             "es": {
               "title": "Auditoria de Plantilla",
-              "description": "Revisa UX, responsividad, secciones, velocidad, calidad de codigo y encaje de negocio."
+              "description": "Revisa UX, responsividad, secciones, velocidad, calidad de codigo y encaje de negocio.",
+              "reading": {
+                "overview": "Una auditoria de template te ayuda a elegir con estrategia, no con emocion. Revisa arquitectura, responsividad, jerarquia, riesgo de velocidad, dependencia de plugins y encaje de conversion.",
+                "steps": [
+                  "Comprueba si las secciones coinciden con el objetivo del negocio y el viaje del comprador.",
+                  "Revisa layout movil, navegacion, riesgo de velocidad y bases de accesibilidad.",
+                  "Identifica secciones que necesitan reescritura, reemplazo o eliminacion.",
+                  "Califica el template por encaje, flexibilidad, velocidad y riesgo de mantenimiento."
+                ],
+                "practice": "Audita tres templates para el mismo brief de cliente y elige uno usando un scorecard escrito.",
+                "takeaway": "El mejor template es el que menos pelea necesita para convertirse en el sitio correcto."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/by8f2vYoJAE",
@@ -1164,11 +1648,33 @@
             },
             "de": {
               "title": "Demo zu Marke",
-              "description": "Ersetze Demo-Seiten mit echten Angeboten, Beweis, Service-Sektionen und Conversion Copy."
+              "description": "Ersetze Demo-Seiten mit echten Angeboten, Beweis, Service-Sektionen und Conversion Copy.",
+              "reading": {
+                "overview": "Demo-to-Brand ersetzt generischen Template-Glanz durch spezifische Markenbedeutung. Behalte nuetzliche Struktur, waehrend du Signale aenderst, die die Seite nach jemand anderem wirken lassen.",
+                "steps": [
+                  "Ersetze Demo-Copy durch angebotspezifische Headlines, Beweise, Einwaende und CTAs.",
+                  "Wende das Markenfarbsystem sparsam an, damit Hierarchie klar bleibt.",
+                  "Tausche Bilder gegen Fotos, Mockups oder Illustrationen, die zur echten Zielgruppe passen.",
+                  "Passe Abstaende, Buttons und Abschnittsrhythmus an, bis das Template bewusst wirkt."
+                ],
+                "practice": "Nimm einen Demo-Hero-Abschnitt und passe ihn fuer ein lokales Service-Business an.",
+                "takeaway": "Anpassung ist fertig, wenn sich das Template nicht mehr wie eine Demo anfuehlt."
+              }
             },
             "es": {
               "title": "De Demo a Marca",
-              "description": "Reemplaza paginas demo con ofertas reales, prueba, servicios y copy de conversion."
+              "description": "Reemplaza paginas demo con ofertas reales, prueba, servicios y copy de conversion.",
+              "reading": {
+                "overview": "Demo-to-brand reemplaza el pulido generico de un template con significado especifico de marca. Conserva la estructura util mientras cambias las senales que hacen que el sitio parezca de otra persona.",
+                "steps": [
+                  "Reemplaza el copy demo con titulares, prueba, objeciones y CTAs especificos de la oferta.",
+                  "Aplica el sistema de color de marca con moderacion para mantener jerarquia clara.",
+                  "Cambia imagenes por fotos, mockups o ilustraciones que encajen con la audiencia real.",
+                  "Ajusta espaciado, botones y ritmo de secciones hasta que el template se sienta intencional."
+                ],
+                "practice": "Toma una seccion hero demo y adaptala para un negocio local de servicios.",
+                "takeaway": "La personalizacion esta completa cuando el template ya no se siente como demo."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/KMS3VwGh3HY",
@@ -1197,11 +1703,33 @@
             },
             "de": {
               "title": "Launch Bereitschaft",
-              "description": "Bereite Domain, Redirects, Analytics, Formulare, SEO-Basics und Backups vor."
+              "description": "Bereite Domain, Redirects, Analytics, Formulare, SEO-Basics und Backups vor.",
+              "reading": {
+                "overview": "Launch Readiness ist der finale Qualitaetscheck ueber Content, Design, Technik, SEO, Analytics, Geschwindigkeit, Formulare, Zahlungen und Vertrauenssignale.",
+                "steps": [
+                  "Teste jeden Link, jedes Formular, jeden Button, Checkout-Pfad, E-Mail-Hinweis und Login-Flow.",
+                  "Pruefe mobile Screens, Browser-Kompatibilitaet, Ladezeit, Bildgewicht und Layout Shifts.",
+                  "Fuege SEO-Titel, Beschreibungen, Favicon, Social Previews, Analytics und Conversion Events hinzu.",
+                  "Erstelle eine Post-Launch-Liste fuer Fehler, Feedback und schnelle Verbesserungen."
+                ],
+                "practice": "Fuehre eine 20-Punkte-Launch-Checkliste an einer lokalen oder Live-Website aus und notiere Fixes.",
+                "takeaway": "Ein Launch ist kontrollierte Veroeffentlichung mit Verifikation, nicht nur Hochladen."
+              }
             },
             "es": {
               "title": "Listo para Lanzar",
-              "description": "Prepara dominio, redirects, analytics, formularios, SEO basico y respaldos."
+              "description": "Prepara dominio, redirects, analytics, formularios, SEO basico y respaldos.",
+              "reading": {
+                "overview": "La preparacion de lanzamiento es una revision final de contenido, diseno, setup tecnico, SEO, analitica, velocidad, formularios, pagos y senales de confianza.",
+                "steps": [
+                  "Prueba cada enlace, formulario, boton, checkout, notificacion de email y flujo de login.",
+                  "Revisa pantallas moviles, compatibilidad de navegador, velocidad, peso de imagenes y cambios de layout.",
+                  "Agrega titulos SEO, descripciones, favicon, previews sociales, analitica y eventos de conversion.",
+                  "Crea una lista post-lanzamiento para errores, feedback y mejoras rapidas."
+                ],
+                "practice": "Ejecuta un checklist de veinte puntos en un sitio local o vivo y registra los arreglos.",
+                "takeaway": "Un lanzamiento es publicacion controlada con verificacion, no solo subir el sitio."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/6S2dXm9AH9c",
@@ -1282,11 +1810,33 @@
             },
             "de": {
               "title": "SEO Map",
-              "description": "Verbinde Suchintention, Seitentyp, Titelstruktur und interne Links."
+              "description": "Verbinde Suchintention, Seitentyp, Titelstruktur und interne Links.",
+              "reading": {
+                "overview": "Eine SEO Map verbindet Suchintention mit Seiten. Bevor du Keywords jagst, entscheide, welche Fragen deine Zielgruppe stellt und welche Seiten sie besser beantworten sollen als die Konkurrenz.",
+                "steps": [
+                  "Gruppiere Keywords nach Intention: lernen, vergleichen, loesen, kaufen und lokale oder Service-Beduerfnisse.",
+                  "Ordne jede Gruppe einer Seite zu, statt ueberlappende Seiten konkurrieren zu lassen.",
+                  "Plane interne Links, damit Autoritaet und Nutzerfluss das Hauptangebot unterstuetzen.",
+                  "Schreibe Titel und Outlines, bevor du ganze Seiten schreibst."
+                ],
+                "practice": "Erstelle eine SEO Map mit zehn Keywords, fuenf Intentionen und einer Zielseite pro Gruppe.",
+                "takeaway": "SEO beginnt als Architektur. Jede Seite braucht einen klaren Suchjob."
+              }
             },
             "es": {
               "title": "Mapa SEO",
-              "description": "Conecta intencion de busqueda, tipo de pagina, estructura de titulo y enlaces internos."
+              "description": "Conecta intencion de busqueda, tipo de pagina, estructura de titulo y enlaces internos.",
+              "reading": {
+                "overview": "Un mapa SEO conecta intencion de busqueda con paginas. Antes de perseguir keywords, decide que preguntas hace tu audiencia y que paginas deben responderlas mejor que la competencia.",
+                "steps": [
+                  "Agrupa keywords por intencion: aprender, comparar, resolver, comprar y necesidades locales o de servicio.",
+                  "Asigna cada grupo a una pagina para evitar paginas que compiten entre si.",
+                  "Planifica enlaces internos para que autoridad y flujo de usuario apoyen la oferta principal.",
+                  "Escribe titulos y outlines antes de redactar paginas completas."
+                ],
+                "practice": "Crea un mapa SEO con diez keywords, cinco intenciones y una pagina objetivo para cada grupo.",
+                "takeaway": "SEO empieza como arquitectura. Cada pagina necesita un trabajo de busqueda claro."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/_s2h7X-c2jE",
@@ -1315,11 +1865,33 @@
             },
             "de": {
               "title": "Analytics Events",
-              "description": "Tracke Klicks, Formulare, Checkout-Intent, Kursinteresse und Lead-Qualitaet."
+              "description": "Tracke Klicks, Formulare, Checkout-Intent, Kursinteresse und Lead-Qualitaet.",
+              "reading": {
+                "overview": "Analytics Events verwandeln Nutzerverhalten in Signale. Zaehle nicht nur Besuche, sondern Aktionen, die Interesse, Reibung, Intention und Conversion zeigen.",
+                "steps": [
+                  "Liste die Entscheidungen auf, die Analytics unterstuetzen soll, bevor du Events hinzufuegst.",
+                  "Messe sinnvolle Aktionen: Klicks, Formulare, Checkout-Starts, Logins, Video Plays und Downloads.",
+                  "Benenne Events konsistent, damit Reports spaeter leicht lesbar sind.",
+                  "Pruefe Events woechentlich und verbinde Erkenntnisse mit Design- oder Copy-Aenderungen."
+                ],
+                "practice": "Schreibe einen Event-Plan fuer eine Course Sales Page mit mindestens acht Events und ihrer Business-Bedeutung.",
+                "takeaway": "Gute Analytics misst Entscheidungen, nicht Eitelkeit."
+              }
             },
             "es": {
               "title": "Eventos de Analytics",
-              "description": "Mide clics, formularios, intencion de checkout, interes en cursos y calidad de leads."
+              "description": "Mide clics, formularios, intencion de checkout, interes en cursos y calidad de leads.",
+              "reading": {
+                "overview": "Los eventos de analitica convierten comportamiento en senales. En vez de contar solo visitas, mide acciones que muestran interes, friccion, intencion y conversion.",
+                "steps": [
+                  "Lista las decisiones que la analitica debe apoyar antes de agregar eventos.",
+                  "Mide acciones significativas: clics, formularios, inicios de checkout, logins, reproducciones y descargas.",
+                  "Nombra eventos de forma consistente para que los reportes sean faciles de leer.",
+                  "Revisa eventos semanalmente y conecta aprendizajes con cambios de diseno o copy."
+                ],
+                "practice": "Escribe un plan de eventos para una pagina de venta con al menos ocho eventos y su significado.",
+                "takeaway": "La buena analitica mide decisiones, no vanidad."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/R_jW24nAjX4",
@@ -1348,11 +1920,33 @@
             },
             "de": {
               "title": "Conversion Sprints",
-              "description": "Nutze kleine Experimente fuer Headlines, Angebote, Formulare und CTAs."
+              "description": "Nutze kleine Experimente fuer Headlines, Angebote, Formulare und CTAs.",
+              "reading": {
+                "overview": "Conversion-Verbesserung funktioniert am besten in kleinen Sprints. Waehle einen Reibungspunkt, formuliere eine Hypothese, aendere eine Sache, messe das Ergebnis und lerne.",
+                "steps": [
+                  "Finde Reibung in Analytics, Aufzeichnungen, Nutzerfeedback oder Bereichen mit wenigen Klicks.",
+                  "Schreibe eine Hypothese, die eine Aenderung mit einem messbaren Ergebnis verbindet.",
+                  "Aendere ein wichtiges Element: Headline, Beweis, CTA, Preis-Klarheit, Formular oder Seitenreihenfolge.",
+                  "Pruefe Ergebnisse und entscheide, ob du behaelst, zurueckdrehst oder erneut testest."
+                ],
+                "practice": "Plane einen sieben Tage Conversion Sprint mit Hypothese, Aenderung, Metrik und Entscheidungsregel.",
+                "takeaway": "Conversion waechst durch diszipliniertes Lernen, nicht durch zufaellige Redesigns."
+              }
             },
             "es": {
               "title": "Sprints de Conversion",
-              "description": "Usa experimentos pequenos para mejorar titulares, ofertas, formularios y CTAs."
+              "description": "Usa experimentos pequenos para mejorar titulares, ofertas, formularios y CTAs.",
+              "reading": {
+                "overview": "La mejora de conversion funciona mejor en sprints pequenos. Elige un punto de friccion, formula una hipotesis, cambia una cosa, mide el resultado y aprende.",
+                "steps": [
+                  "Encuentra friccion en analitica, grabaciones, feedback o secciones con pocos clics.",
+                  "Escribe una hipotesis que conecte un cambio con un resultado medible.",
+                  "Cambia un elemento importante: titular, prueba, CTA, claridad de precio, formulario u orden de pagina.",
+                  "Revisa resultados y decide si mantener, revertir o probar de nuevo."
+                ],
+                "practice": "Planifica un sprint de conversion de siete dias con hipotesis, cambio, metrica y regla de decision.",
+                "takeaway": "La conversion crece con aprendizaje disciplinado, no con redisenos aleatorios."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/hcPxMuxh5Tc",
@@ -1433,11 +2027,33 @@
             },
             "de": {
               "title": "Lead Capture Flow",
-              "description": "Designe Formulare, Danke-Seiten, Tags und erste E-Mail-Auslieferung."
+              "description": "Designe Formulare, Danke-Seiten, Tags und erste E-Mail-Auslieferung.",
+              "reading": {
+                "overview": "Lead Capture funktioniert, wenn der kostenlose Wert spezifisch, schnell und mit dem bezahlten Angebot verbunden ist. Ein Lead Magnet soll ein dringendes Mikroproblem loesen und den naechsten Schritt erzeugen.",
+                "steps": [
+                  "Waehle einen Kaeuferschmerz, der schnell geholfen werden kann, ohne das bezahlte Angebot zu ersetzen.",
+                  "Erstelle ein einfaches Format: Checkliste, Template, Rechner, Mini-Lektion, Quiz oder Guide.",
+                  "Schreibe eine Landing Page, die das Ergebnis erklaert, nicht nur den Dateityp.",
+                  "Verbinde die Lieferung mit einer E-Mail-Sequenz, die das Gespraech fortsetzt."
+                ],
+                "practice": "Skizziere einen Lead Magnet und schreibe Headline, Bullets und CTA fuer die Dankeseite.",
+                "takeaway": "Ein starker Lead Magnet ist der erste nuetzliche Schritt in der Buyer Journey."
+              }
             },
             "es": {
               "title": "Flujo de Captura",
-              "description": "Disena formularios, paginas de gracias, tags y entrega del primer email."
+              "description": "Disena formularios, paginas de gracias, tags y entrega del primer email.",
+              "reading": {
+                "overview": "La captura de leads funciona cuando el valor gratuito es especifico, rapido y conectado a la oferta pagada. Un lead magnet debe resolver un microproblema urgente y crear el siguiente paso.",
+                "steps": [
+                  "Elige un dolor del comprador que pueda ayudarse rapido sin reemplazar la oferta pagada.",
+                  "Crea un formato simple: checklist, template, calculadora, mini leccion, quiz o guia.",
+                  "Escribe una landing que explique el resultado, no solo el tipo de archivo.",
+                  "Conecta la entrega con una secuencia de email que continue la conversacion."
+                ],
+                "practice": "Bosqueja un lead magnet y escribe titular, bullets y CTA de la pagina de gracias.",
+                "takeaway": "Un lead magnet fuerte es el primer paso util en el viaje del comprador."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/7orRtqwKIBw",
@@ -1466,11 +2082,33 @@
             },
             "de": {
               "title": "E-Mail Sequenzen",
-              "description": "Erstelle Welcome, Nurture, Sales, Onboarding und Reaktivierung."
+              "description": "Erstelle Welcome, Nurture, Sales, Onboarding und Reaktivierung.",
+              "reading": {
+                "overview": "Automationssequenzen liefern die richtige Nachricht nach dem richtigen Ausloeser. Ziel ist, Abonnenten nach Verhalten zu unterstuetzen, nicht allen fuer immer dieselbe Timeline zu senden.",
+                "steps": [
+                  "Definiere den Trigger: Anmeldung, Kauf, abgebrochener Checkout, Inaktivitaet oder abgeschlossene Lektion.",
+                  "Mappe das Ziel jeder E-Mail, bevor du Copy schreibst.",
+                  "Nutze Segmentierung, um irrelevante Nachrichten an Kaeufer oder inaktive Leads zu vermeiden.",
+                  "Messe Oeffnungen, Klicks, Antworten, Abmeldungen und Conversions pro Sequenz."
+                ],
+                "practice": "Entwirf eine Automation Map mit einem Trigger, fuenf E-Mails, Wartezeiten und Exit-Bedingungen.",
+                "takeaway": "Automation soll zeitlich passend und hilfreich wirken, nicht roboterhaft."
+              }
             },
             "es": {
               "title": "Secuencias de Email",
-              "description": "Crea flujos de bienvenida, nutricion, venta, onboarding y reactivacion."
+              "description": "Crea flujos de bienvenida, nutricion, venta, onboarding y reactivacion.",
+              "reading": {
+                "overview": "Las secuencias de automatizacion entregan el mensaje correcto despues del disparador correcto. El objetivo es apoyar al suscriptor segun comportamiento, no enviar lo mismo a todos para siempre.",
+                "steps": [
+                  "Define el disparador: registro, compra, checkout abandonado, inactividad o leccion completada.",
+                  "Mapea el objetivo de cada email antes de escribir copy.",
+                  "Usa segmentacion para evitar mensajes irrelevantes a compradores o leads inactivos.",
+                  "Mide aperturas, clics, respuestas, bajas y conversiones por secuencia."
+                ],
+                "practice": "Disena un mapa de automatizacion con un disparador, cinco emails, tiempos de espera y condiciones de salida.",
+                "takeaway": "La automatizacion debe sentirse oportuna y util, no robotica."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/DBBO9Cq8X5Q",
@@ -1499,11 +2137,33 @@
             },
             "de": {
               "title": "CRM Betriebssystem",
-              "description": "Tracke Prospects, Kunden, Kurskaeufer, Follow-ups und Chancen."
+              "description": "Tracke Prospects, Kunden, Kurskaeufer, Follow-ups und Chancen.",
+              "reading": {
+                "overview": "Ein CRM-Betriebssystem verhindert, dass Chancen verschwinden. Es verfolgt Kontakte, Phase, naechste Aktion, Notizen, Wert und Follow-up, damit Sales ein gemanagter Prozess wird.",
+                "steps": [
+                  "Definiere Pipeline-Phasen, die zu deinem echten Verkaufsprozess passen.",
+                  "Erfasse jeden Lead mit Quelle, Bedarf, Fit, Wert und naechster Aktion.",
+                  "Nutze Erinnerungen und Status-Reviews, damit aktive Chancen nicht kalt werden.",
+                  "Verbinde CRM-Erkenntnisse mit Content, Angeboten und E-Mail-Automation."
+                ],
+                "practice": "Baue eine CRM-Tabelle mit Phasen, Lead-Quelle, naechster Aktion, Verantwortlichem, Faelligkeit und Status.",
+                "takeaway": "Ein CRM ist nuetzlich, wenn es Verhalten veraendert, nicht wenn es eine Datenbank wird, die niemand pflegt."
+              }
             },
             "es": {
               "title": "Sistema Operativo CRM",
-              "description": "Controla prospectos, clientes, compradores de cursos, follow-ups y oportunidades."
+              "description": "Controla prospectos, clientes, compradores de cursos, follow-ups y oportunidades.",
+              "reading": {
+                "overview": "Un sistema operativo CRM evita que las oportunidades desaparezcan. Registra contactos, etapa, siguiente accion, notas, valor y seguimiento para que ventas sea un proceso gestionado.",
+                "steps": [
+                  "Define etapas de pipeline que coincidan con tu proceso real de venta.",
+                  "Registra cada lead con fuente, necesidad, encaje, valor y siguiente accion.",
+                  "Usa recordatorios y revisiones de estado para que oportunidades activas no se enfrien.",
+                  "Conecta aprendizajes del CRM con contenido, ofertas y automatizacion de email."
+                ],
+                "practice": "Construye una tabla CRM con etapas, fuente del lead, siguiente accion, responsable, fecha limite y estado.",
+                "takeaway": "Un CRM es util cuando cambia comportamiento, no cuando se vuelve una base de datos que nadie actualiza."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/MQKXRcfvMkA",
@@ -1584,11 +2244,33 @@
             },
             "de": {
               "title": "Repository Basics",
-              "description": "Verstehe Dateien, Commits, Branches, Pull Requests und saubere Projektordner."
+              "description": "Verstehe Dateien, Commits, Branches, Pull Requests und saubere Projektordner.",
+              "reading": {
+                "overview": "Ein Repository ist das Zuhause der Projektgeschichte. Commits, Branches, Dateien und Remote-Sync zu verstehen gibt Unternehmern Sicherheit beim Veroeffentlichen oder Zusammenarbeiten.",
+                "steps": [
+                  "Erstelle ein sauberes Repository mit klarem README und organisierten Ordnern.",
+                  "Commite kleine Aenderungen mit Nachrichten, die erklaeren, warum die Aenderung wichtig ist.",
+                  "Nutze Branches fuer Experimente oder groessere Aenderungen, bevor du in main mergst.",
+                  "Pushe zu GitHub, damit Deployment-Tools und Kollaboratoren Zugriff haben."
+                ],
+                "practice": "Erstelle ein Beispiel-Repo, bearbeite eine Datei, committe die Aenderung und pushe sie zu GitHub.",
+                "takeaway": "Git ist ein Sicherheitssystem fuer digitale Arbeit, nicht nur ein Programmierertool."
+              }
             },
             "es": {
               "title": "Bases de Repositorio",
-              "description": "Entiende archivos, commits, branches, pull requests y carpetas limpias."
+              "description": "Entiende archivos, commits, branches, pull requests y carpetas limpias.",
+              "reading": {
+                "overview": "Un repositorio es la casa del historial del proyecto. Entender commits, ramas, archivos y sincronizacion remota da confianza para publicar o colaborar.",
+                "steps": [
+                  "Crea un repositorio limpio con README claro y carpetas organizadas.",
+                  "Haz commits pequenos con mensajes que expliquen por que importa el cambio.",
+                  "Usa ramas para experimentos o cambios grandes antes de unir a main.",
+                  "Haz push a GitHub para que herramientas de deploy y colaboradores accedan al proyecto."
+                ],
+                "practice": "Crea un repo de ejemplo, edita un archivo, haz commit y subelo a GitHub.",
+                "takeaway": "Git es un sistema de seguridad para trabajo digital, no solo una herramienta de programadores."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/e9lnsKot_SQ",
@@ -1617,11 +2299,33 @@
             },
             "de": {
               "title": "Vercel Deploy",
-              "description": "Verbinde GitHub, deploye Previews, lies Logs und liefere Production sicher."
+              "description": "Verbinde GitHub, deploye Previews, lies Logs und liefere Production sicher.",
+              "reading": {
+                "overview": "Vercel verbindet ein Repository mit einer Live-URL. Wenn der Workflow richtig eingerichtet ist, kann jeder freigegebene Push bauen, voranzeigen und deployen, ohne Dateien manuell hochzuladen.",
+                "steps": [
+                  "Importiere das GitHub-Repository in Vercel und bestaetige die Framework-Einstellungen.",
+                  "Pruefe Build Command, Output Directory und Install Command vor dem ersten Deploy.",
+                  "Nutze Preview Deployments, um Aenderungen vor Produktion zu inspizieren.",
+                  "Beobachte Deploy-Logs fuer fehlende Variablen, Paketfehler oder kaputte Routen."
+                ],
+                "practice": "Deploye ein kleines statisches Projekt von GitHub zu Vercel und speichere Preview- und Produktions-URLs.",
+                "takeaway": "Deployment wird professionell, wenn jede Aenderung einen sichtbaren, testbaren Weg in Produktion hat."
+              }
             },
             "es": {
               "title": "Deploy en Vercel",
-              "description": "Conecta GitHub, despliega previews, revisa logs y publica produccion con seguridad."
+              "description": "Conecta GitHub, despliega previews, revisa logs y publica produccion con seguridad.",
+              "reading": {
+                "overview": "Vercel conecta un repositorio con una URL viva. Cuando el flujo esta bien configurado, cada push aprobado puede construir, previsualizar y desplegar sin subir archivos manualmente.",
+                "steps": [
+                  "Importa el repositorio de GitHub en Vercel y confirma la configuracion del framework.",
+                  "Revisa comando de build, carpeta de salida y comando de instalacion antes del primer deploy.",
+                  "Usa preview deployments para inspeccionar cambios antes de produccion.",
+                  "Observa logs de deploy para variables faltantes, errores de paquetes o rutas rotas."
+                ],
+                "practice": "Despliega un proyecto estatico pequeno desde GitHub a Vercel y guarda URLs de preview y produccion.",
+                "takeaway": "El deploy se vuelve profesional cuando cada cambio tiene camino visible y testeable hacia produccion."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/E8xaV6fiTaA",
@@ -1650,11 +2354,33 @@
             },
             "de": {
               "title": "Environment und Domain",
-              "description": "Setze Domains, DNS, API Keys, Env Vars und Deployment-Einstellungen."
+              "description": "Setze Domains, DNS, API Keys, Env Vars und Deployment-Einstellungen.",
+              "reading": {
+                "overview": "Environment Variables und Domains machen ein Projekt produktionsbereit. Variablen schuetzen Secrets und Konfiguration; Domains machen das Projekt vertrauenswuerdig.",
+                "steps": [
+                  "Trenne oeffentliche Variablen von privaten Server-Variablen und expose niemals Secrets im Client-JavaScript.",
+                  "Konfiguriere Werte fuer Development, Preview und Production bewusst.",
+                  "Fuege die Custom Domain hinzu, verifiziere DNS und bestaetige aktives HTTPS.",
+                  "Teste Auth Provider, Payment Redirects, APIs und Webhooks nach Domain-Aenderungen erneut."
+                ],
+                "practice": "Erstelle eine Deployment-Checkliste fuer Variablen, Domain, DNS, HTTPS, Auth-Domains und Payment Redirects.",
+                "takeaway": "Viele Produktionsbugs sind Konfigurationsbugs. Behandle Environment Setup als Teil des Produkts."
+              }
             },
             "es": {
               "title": "Entorno y Dominio",
-              "description": "Configura dominios, DNS, API keys, variables de entorno y settings de deploy."
+              "description": "Configura dominios, DNS, API keys, variables de entorno y settings de deploy.",
+              "reading": {
+                "overview": "Variables de entorno y dominios son donde un proyecto se vuelve listo para produccion. Las variables protegen secretos y configuracion; los dominios hacen el proyecto confiable.",
+                "steps": [
+                  "Separa variables publicas de variables privadas de servidor y nunca expongas secretos en JavaScript cliente.",
+                  "Configura valores de desarrollo, preview y produccion con intencion.",
+                  "Agrega el dominio personalizado, verifica DNS y confirma HTTPS activo.",
+                  "Reprueba auth, redirects de pago, APIs y webhooks despues de cambios de dominio."
+                ],
+                "practice": "Crea un checklist de deploy para variables, dominio, DNS, HTTPS, dominios de auth y redirects de pago.",
+                "takeaway": "Muchos bugs de produccion son bugs de configuracion. Trata el entorno como parte del producto."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/nZrAgov_-D8",
@@ -1735,11 +2461,33 @@
             },
             "de": {
               "title": "Prompt Briefs",
-              "description": "Gib ChatGPT Rolle, Kontext, Grenzen, Beispiele und Ausgabeformat."
+              "description": "Gib ChatGPT Rolle, Kontext, Grenzen, Beispiele und Ausgabeformat.",
+              "reading": {
+                "overview": "Ein Prompt-Brief gibt KI genug Kontext fuer nuetzliche Arbeit. Er enthaelt Rolle, Aufgabe, Zielgruppe, Grenzen, Beispiele, Quellmaterial und Ausgabeformat.",
+                "steps": [
+                  "Beschreibe das Business-Ziel und den Nutzer, der vom Ergebnis profitiert.",
+                  "Gib Quellfakten, Beispiele, Tonregeln und nicht verhandelbare Grenzen.",
+                  "Fordere eine spezifische Ausgabestruktur statt einer vagen Antwort.",
+                  "Pruefe das erste Ergebnis und verfeinere den Brief, statt das Modell zu beschuldigen."
+                ],
+                "practice": "Schreibe einen wiederverwendbaren Prompt-Brief fuer eine Landing-Page-Sektion aus Kursnotizen.",
+                "takeaway": "Bessere Prompts sind bessere Projektbriefings. KI-Qualitaet beginnt mit klaren Anweisungen."
+              }
             },
             "es": {
               "title": "Briefs de Prompt",
-              "description": "Dale a ChatGPT rol, contexto, limites, ejemplos y formato de salida."
+              "description": "Dale a ChatGPT rol, contexto, limites, ejemplos y formato de salida.",
+              "reading": {
+                "overview": "Un brief de prompt da a la IA suficiente contexto para producir trabajo util. Incluye rol, tarea, audiencia, restricciones, ejemplos, material fuente y formato de salida.",
+                "steps": [
+                  "Describe el objetivo de negocio y el usuario que se beneficiara del resultado.",
+                  "Da hechos fuente, ejemplos, reglas de tono y restricciones no negociables.",
+                  "Pide una estructura de salida especifica en vez de una respuesta vaga.",
+                  "Revisa el primer resultado y refina el brief en vez de culpar al modelo."
+                ],
+                "practice": "Escribe un brief reutilizable para crear una seccion de landing desde notas de curso.",
+                "takeaway": "Mejores prompts son mejores briefs de proyecto. La calidad de IA empieza con instrucciones claras."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/jC4v5AS4RIM",
@@ -1768,11 +2516,33 @@
             },
             "de": {
               "title": "Workflow Assistenten",
-              "description": "Erstelle Assistenten fuer Content, Support, Recherche und Planung."
+              "description": "Erstelle Assistenten fuer Content, Support, Recherche und Planung.",
+              "reading": {
+                "overview": "Workflow-Assistenten helfen bei wiederholbaren Business-Prozessen. Sie funktionieren am besten, wenn Aufgabe, Inputs, Schritte, Tools, Regeln und Erfolgskriterien klar sind.",
+                "steps": [
+                  "Waehle einen Workflow, der oft wiederkehrt und ein vorhersehbares Ergebnis hat.",
+                  "Definiere Inputs, Outputs, Entscheidungsregeln und was der Assistent nie tun darf.",
+                  "Teile den Workflow in Schritte, die separat getestet werden koennen.",
+                  "Fuege menschliches Review dort hinzu, wo Urteil, Geld, Datenschutz oder Markenrisiko wichtig sind."
+                ],
+                "practice": "Entwirf einen Assistenten-Workflow fuer Content Review, Kundenaufnahme oder Kurs-Support.",
+                "takeaway": "Automation soll repetitive Arbeit entfernen und menschliches Urteil dort lassen, wo es zaehlt."
+              }
             },
             "es": {
               "title": "Asistentes de Workflow",
-              "description": "Crea asistentes para contenido, soporte, investigacion y planificacion."
+              "description": "Crea asistentes para contenido, soporte, investigacion y planificacion.",
+              "reading": {
+                "overview": "Los asistentes de workflow ayudan con procesos repetibles de negocio. Funcionan mejor cuando la tarea tiene inputs, pasos, herramientas, reglas y criterios de exito claros.",
+                "steps": [
+                  "Elige un workflow que se repita seguido y tenga resultado predecible.",
+                  "Define inputs, outputs, reglas de decision y lo que el asistente nunca debe hacer.",
+                  "Divide el workflow en pasos que puedan probarse por separado.",
+                  "Agrega revision humana donde haya juicio, dinero, privacidad o riesgo de marca."
+                ],
+                "practice": "Disena un workflow asistente para revision de contenido, intake de cliente o soporte de curso.",
+                "takeaway": "La automatizacion debe quitar trabajo repetitivo y dejar el juicio humano donde importa."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/44eFf-tRiSg",
@@ -1801,11 +2571,33 @@
             },
             "de": {
               "title": "Qualitaetsreview",
-              "description": "Nutze Checklisten, Beispiele und Feedback-Loops fuer bessere KI-Ausgaben."
+              "description": "Nutze Checklisten, Beispiele und Feedback-Loops fuer bessere KI-Ausgaben.",
+              "reading": {
+                "overview": "KI-Ausgaben brauchen Review, bevor sie Business-Ausgaben werden. Qualitaetschecks schuetzen Genauigkeit, Stimme, Nutzen, Compliance und Nutzervertrauen.",
+                "steps": [
+                  "Definiere vor dem Generieren, was gute Ausgabe bedeutet: genau, spezifisch, markengerecht, vollstaendig und umsetzbar.",
+                  "Pruefe Fakten, Annahmen, fehlenden Kontext, Ton, Formatierung und Nutzersicherheit.",
+                  "Vergleiche KI-Ausgaben mit Beispielen freigegebener Arbeit.",
+                  "Speichere wiederkehrende Fehler, damit Prompts, Regeln oder Review-Schritte besser werden."
+                ],
+                "practice": "Erstelle eine zehn Punkte Qualitaetscheckliste und pruefe damit eine KI-geschriebene Sales E-Mail.",
+                "takeaway": "KI-Geschwindigkeit ist nur wertvoll mit einem Review-System, das Vertrauen schuetzt."
+              }
             },
             "es": {
               "title": "Revision de Calidad",
-              "description": "Usa checklists, ejemplos y loops de feedback para mejorar resultados IA."
+              "description": "Usa checklists, ejemplos y loops de feedback para mejorar resultados IA.",
+              "reading": {
+                "overview": "La salida de IA necesita revision antes de convertirse en salida de negocio. Los controles de calidad protegen precision, voz, utilidad, cumplimiento y confianza del usuario.",
+                "steps": [
+                  "Define que significa buena salida antes de generar: precisa, especifica, de marca, completa y accionable.",
+                  "Revisa hechos, supuestos, contexto faltante, tono, formato y seguridad del usuario.",
+                  "Compara la salida de IA con ejemplos de trabajo aprobado.",
+                  "Guarda errores recurrentes para mejorar prompts, reglas o pasos de revision."
+                ],
+                "practice": "Crea un checklist de diez puntos y usalo para revisar un email de venta escrito por IA.",
+                "takeaway": "La velocidad de IA solo vale cuando va unida a un sistema de revision que protege la confianza."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/_2KGc4zow24",
@@ -1886,11 +2678,33 @@
             },
             "de": {
               "title": "Codex Kontext",
-              "description": "Gib Codex Ziele, Dateien, Grenzen und Verifikationsschritte fuer Website-Arbeit."
+              "description": "Gib Codex Ziele, Dateien, Grenzen und Verifikationsschritte fuer Website-Arbeit.",
+              "reading": {
+                "overview": "Codex funktioniert am besten, wenn es Repository, Ziel und Grenzen versteht. Kontextdateien, klare Aufgaben und kleine Verifikationsschleifen helfen dem Agenten, sicherer zu aendern.",
+                "steps": [
+                  "Beschreibe Ziel, betroffene Dateien, Grenzen und was nicht geaendert werden soll.",
+                  "Lass Codex das Projekt inspizieren, bevor du Implementierungsentscheidungen verlangst.",
+                  "Bitte um fokussierte Aenderungen und Verifikation statt breiter Neuschreibungen.",
+                  "Pruefe Diffs, Tests und Screenshots vor Merge oder Deploy."
+                ],
+                "practice": "Schreibe ein Codex-Briefing fuer eine Website-Funktion, inklusive Dateien zur Inspektion und auszufuehrender Checks.",
+                "takeaway": "Gute Agentenarbeit haengt von Kontext, Scope und Verifikation ab."
+              }
             },
             "es": {
               "title": "Contexto para Codex",
-              "description": "Dale a Codex objetivos, archivos, limites y pasos de verificacion para trabajo web."
+              "description": "Dale a Codex objetivos, archivos, limites y pasos de verificacion para trabajo web.",
+              "reading": {
+                "overview": "Codex funciona mejor cuando entiende el repositorio, el objetivo y las restricciones. Archivos de contexto, tareas claras y ciclos pequenos de verificacion ayudan al agente a hacer cambios mas seguros.",
+                "steps": [
+                  "Describe el objetivo, archivos afectados, restricciones y lo que no debe cambiar.",
+                  "Deja que Codex inspeccione el proyecto antes de pedir decisiones de implementacion.",
+                  "Pide cambios enfocados y verificacion en vez de reescrituras amplias.",
+                  "Revisa diffs, tests y capturas antes de hacer merge o deploy."
+                ],
+                "practice": "Escribe un brief para Codex para agregar una funcion a un sitio, incluyendo archivos a inspeccionar y checks a correr.",
+                "takeaway": "El buen trabajo con agentes depende de contexto, alcance y verificacion."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/xHnlzAPD9QI",
@@ -1919,11 +2733,33 @@
             },
             "de": {
               "title": "Template Refactor",
-              "description": "Verwandle ein unordentliches Template in klare Seiten, Daten und wartbare Assets."
+              "description": "Verwandle ein unordentliches Template in klare Seiten, Daten und wartbare Assets.",
+              "reading": {
+                "overview": "Template-Refactoring verbessert eine Website, ohne zu verlieren, was bereits funktioniert. Ziel ist weniger Duplikation, bessere Namen, saubereres Layout und erhaltenes Verhalten.",
+                "steps": [
+                  "Identifiziere wiederholte Abschnitte, hart codierte Werte, ungenutzte Assets und inkonsistente Styles.",
+                  "Refactore jeweils eine Komponente oder ein Muster, damit Fehler leicht zu finden sind.",
+                  "Halte visuelle Aenderungen bewusst und verifiziere Responsiveness nach dem Edit.",
+                  "Nutze Versionskontrolle, um Vorher und Nachher zu vergleichen."
+                ],
+                "practice": "Waehle ein wiederholtes Kartenlayout und refactore es in ein saubereres wiederverwendbares Muster.",
+                "takeaway": "Ein Refactor ist erfolgreich, wenn die Website leichter zu warten ist, ohne den Nutzer zu ueberraschen."
+              }
             },
             "es": {
               "title": "Refactor de Plantilla",
-              "description": "Convierte una plantilla desordenada en paginas limpias, datos reutilizables y assets mantenibles."
+              "description": "Convierte una plantilla desordenada en paginas limpias, datos reutilizables y assets mantenibles.",
+              "reading": {
+                "overview": "Refactorizar templates mejora un sitio sin perder lo que ya funciona. El objetivo es reducir duplicacion, mejorar nombres, limpiar layout y preservar comportamiento.",
+                "steps": [
+                  "Identifica secciones repetidas, valores hard-coded, assets sin uso y estilos inconsistentes.",
+                  "Refactoriza un componente o patron a la vez para encontrar errores facilmente.",
+                  "Mantiene cambios visuales intencionales y verifica comportamiento responsive despues de editar.",
+                  "Usa control de versiones para comparar antes y despues."
+                ],
+                "practice": "Elige un layout de tarjeta repetido y refactorizalo en un patron reutilizable mas limpio.",
+                "takeaway": "Un refactor tiene exito cuando el sitio es mas facil de mantener sin sorprender al usuario."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/H3M95i4iS5c",
@@ -1952,11 +2788,33 @@
             },
             "de": {
               "title": "Verifikation und Deploy",
-              "description": "Fuehre Checks aus, pruefe Screenshots, committe Aenderungen und deploye mit Vercel."
+              "description": "Fuehre Checks aus, pruefe Screenshots, committe Aenderungen und deploye mit Vercel.",
+              "reading": {
+                "overview": "Verifikation macht aus einem Build ein Release. Vor dem Deploy testest du kritische Pfade, Responsive Layout, Console Errors, API Responses, Payment, Auth und Produktionskonfiguration.",
+                "steps": [
+                  "Liste die User Journeys auf, die funktionieren muessen, damit das Produkt nutzbar ist.",
+                  "Fuehre lokale Checks, Browser-Checks, Mobile-Checks und vorhandene automatisierte Tests aus.",
+                  "Pruefe Logs und Netzwerkantworten auf stille Fehler.",
+                  "Deploye, smoke-teste Produktion und notiere Follow-up-Fixes."
+                ],
+                "practice": "Erstelle eine Launch-Checkliste fuer eine Web App und fuehre sie gegen Local oder Staging aus.",
+                "takeaway": "Deployment ist nicht die Ziellinie. Verifiziertes Produktionsverhalten ist es."
+              }
             },
             "es": {
               "title": "Verificacion y Deploy",
-              "description": "Corre checks, revisa capturas, haz commit y despliega con Vercel."
+              "description": "Corre checks, revisa capturas, haz commit y despliega con Vercel.",
+              "reading": {
+                "overview": "La verificacion convierte un build en release. Antes de deploy, prueba rutas criticas, responsive, errores de consola, respuestas API, pago, auth y configuracion de produccion.",
+                "steps": [
+                  "Lista los viajes de usuario que deben funcionar para que el producto sea usable.",
+                  "Ejecuta checks locales, de navegador, moviles y cualquier test automatizado disponible.",
+                  "Inspecciona logs y respuestas de red para fallos silenciosos.",
+                  "Despliega, prueba produccion rapidamente y registra arreglos pendientes."
+                ],
+                "practice": "Crea un checklist de lanzamiento para una web app y ejec?talo contra local o staging.",
+                "takeaway": "El deploy no es la meta final. El comportamiento verificado en produccion si lo es."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/MnF-zJhyUtE",
@@ -2037,11 +2895,33 @@
             },
             "de": {
               "title": "App Idee zu Flow",
-              "description": "Verwandle ein Business-Problem in Inputs, Outputs, Screens, States und Erfolgsmetrik."
+              "description": "Verwandle ein Business-Problem in Inputs, Outputs, Screens, States und Erfolgsmetrik.",
+              "reading": {
+                "overview": "Eine App-Idee wird baubar, wenn sie zu einem User Flow wird. Der Flow zeigt, wer ankommt, was gebraucht wird, welche Entscheidungen fallen und welches Ergebnis beweist, dass die App funktioniert.",
+                "steps": [
+                  "Schreibe Nutzer, Problem, Versprechen und erstes wertvolles Ergebnis jeweils in einen Satz.",
+                  "Mappe Screens vom Einstieg bis Erfolg, inklusive Empty, Loading, Error und Success States.",
+                  "Entferne Screens, die die erste nuetzliche Version nicht unterstuetzen.",
+                  "Verwandle den Flow in einen Backlog kleiner baubarer Features."
+                ],
+                "practice": "Zeichne den User Flow fuer einen Chatbot oder Kurs-Dashboard vom ersten Besuch bis zur erledigten Aufgabe.",
+                "takeaway": "Ein klarer Flow verhindert, dass schoene Screens gebaut werden, die den Nutzer nicht weiterbringen."
+              }
             },
             "es": {
               "title": "De Idea a Flujo",
-              "description": "Convierte un problema de negocio en inputs, outputs, pantallas, estados y metrica de exito."
+              "description": "Convierte un problema de negocio en inputs, outputs, pantallas, estados y metrica de exito.",
+              "reading": {
+                "overview": "Una idea de app se vuelve construible cuando se convierte en flujo de usuario. El flujo muestra quien llega, que necesita, que decisiones toma y que resultado prueba que la app funciono.",
+                "steps": [
+                  "Escribe usuario, problema, promesa y primer resultado valioso en una frase cada uno.",
+                  "Mapea pantallas desde entrada hasta exito, incluyendo estados vacio, cargando, error y exito.",
+                  "Elimina pantallas que no apoyan la primera version util.",
+                  "Convierte el flujo en un backlog de funciones pequenas construibles."
+                ],
+                "practice": "Dibuja el flujo de usuario para un chatbot o dashboard de curso desde primera visita hasta tarea completada.",
+                "takeaway": "Un flujo claro evita construir pantallas bonitas que no mueven al usuario hacia adelante."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/cvYhuowazh0",
@@ -2070,11 +2950,33 @@
             },
             "de": {
               "title": "API und Auth Basics",
-              "description": "Verstehe Client/Server-Grenzen, sichere Env Vars, Login und geschuetzte Aktionen."
+              "description": "Verstehe Client/Server-Grenzen, sichere Env Vars, Login und geschuetzte Aktionen.",
+              "reading": {
+                "overview": "APIs und Auth definieren, was die App fuer jeden Nutzer sicher tun darf. Auth identifiziert den Nutzer; API-Routen entscheiden, auf welche Daten und Aktionen dieser Nutzer zugreifen darf.",
+                "steps": [
+                  "Waehle die Login-Methode und konfiguriere autorisierte Domains vor Produktionstests.",
+                  "Halte private Keys und Admin-Operationen auf dem Server, niemals im Client-JavaScript.",
+                  "Verifiziere ID Tokens auf geschuetzten API-Routen, bevor private Daten zurueckgegeben werden.",
+                  "Schreibe Security Rules und Access Checks, die zum Produktmodell passen."
+                ],
+                "practice": "Entwirf den Auth- und API-Flow fuer einen bezahlten Kurs: Login, Kauf, Freischaltung und Kurszugriff.",
+                "takeaway": "Sichere Apps werden von Anfang an rund um Identitaet und Berechtigungen gestaltet."
+              }
             },
             "es": {
               "title": "Bases de API y Auth",
-              "description": "Entiende limites cliente/servidor, variables seguras, login y acciones protegidas."
+              "description": "Entiende limites cliente/servidor, variables seguras, login y acciones protegidas.",
+              "reading": {
+                "overview": "APIs y auth definen lo que la app puede hacer con seguridad para cada usuario. Auth identifica al usuario; las rutas API deciden que datos y acciones puede acceder.",
+                "steps": [
+                  "Elige el metodo de login y configura dominios autorizados antes de probar produccion.",
+                  "Mantiene llaves privadas y operaciones admin en el servidor, nunca en JavaScript cliente.",
+                  "Verifica ID tokens en rutas API protegidas antes de devolver datos privados.",
+                  "Escribe reglas de seguridad y checks de acceso que coincidan con el modelo del producto."
+                ],
+                "practice": "Disena el flujo de auth y API para un curso pagado: login, compra, desbloqueo y acceso.",
+                "takeaway": "Las apps seguras se disenan alrededor de identidad y permisos desde el inicio."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/rbuSx1yEgV8",
@@ -2103,11 +3005,33 @@
             },
             "de": {
               "title": "Chatbot MVP",
-              "description": "Baue einen fokussierten Assistenten, der antwortet, qualifiziert, empfiehlt oder Assets generiert."
+              "description": "Baue einen fokussierten Assistenten, der antwortet, qualifiziert, empfiehlt oder Assets generiert.",
+              "reading": {
+                "overview": "Ein Chatbot MVP soll eine nuetzliche Support- oder Sales-Aufgabe loesen, bevor es ein allgemeiner Assistent wird. Starte mit enger Wissensbasis, klaren Zielen und sicherem Fallback.",
+                "steps": [
+                  "Definiere den Job des Chatbots: Kursfragen beantworten, Leads qualifizieren, Onboarding fuehren oder Kunden unterstuetzen.",
+                  "Sammle freigegebenes Quellmaterial und entscheide, was der Bot sagen darf.",
+                  "Entwirf Gespraechszustaende fuer Begruessung, Antwort, Unsicherheit, Eskalation und CTA.",
+                  "Teste mit echten Fragen und dokumentiere Fehler vor dem oeffentlichen Launch."
+                ],
+                "practice": "Schreibe Scope, Datenquellen, Fallback-Nachricht und die ersten zehn Testfragen fuer einen Kurs-Support-Chatbot.",
+                "takeaway": "Ein starkes Chatbot MVP ist eng, nuetzlich, testbar und ehrlich darueber, was es nicht weiss."
+              }
             },
             "es": {
               "title": "MVP de Chatbot",
-              "description": "Construye un asistente enfocado que responde, califica, recomienda o genera un asset de negocio."
+              "description": "Construye un asistente enfocado que responde, califica, recomienda o genera un asset de negocio.",
+              "reading": {
+                "overview": "Un MVP de chatbot debe resolver una tarea util de soporte o ventas antes de volverse asistente general. Empieza con base de conocimiento estrecha, objetivos claros y fallback seguro.",
+                "steps": [
+                  "Define el trabajo del chatbot: responder preguntas del curso, calificar leads, guiar onboarding o apoyar clientes.",
+                  "Reune material fuente aprobado y decide que puede decir el bot.",
+                  "Disena estados de conversacion para saludo, respuesta, incertidumbre, escalamiento y CTA.",
+                  "Prueba con preguntas reales y registra fallos antes de lanzarlo publicamente."
+                ],
+                "practice": "Escribe alcance, fuentes de datos, mensaje de fallback y las primeras diez preguntas de prueba para un chatbot de soporte de curso.",
+                "takeaway": "Un buen MVP de chatbot es estrecho, util, testeable y honesto sobre lo que no sabe."
+              }
             }
           },
           "videoUrl": "https://www.youtube-nocookie.com/embed/XctooiH0moI",
