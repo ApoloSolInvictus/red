@@ -11,6 +11,7 @@ const state = {
 
 const i18n = window.WStudioI18n;
 const page = document.body.dataset.page || "home";
+const phaseOrder = ["foundation", "creative", "marketing", "automation", "web", "pro-ai"];
 
 document.addEventListener("DOMContentLoaded", init);
 window.addEventListener("wstudio:language-changed", () => {
@@ -225,7 +226,7 @@ function renderHome() {
         <h2>${i18n.t("section.allCourses")}</h2>
       </div>
       <div class="course-grid">
-        ${state.catalog.courses.slice(0, 4).map(renderCourseCard).join("")}
+        ${getCourses().slice(0, 4).map(renderCourseCard).join("")}
       </div>
     </section>
     <section class="section section-band">
@@ -256,9 +257,19 @@ function renderCoursesPage() {
       <h1>${i18n.t("section.allCourses")}</h1>
       <p>${i18n.t("section.allCoursesCopy")}</p>
     </section>
+    <section class="site-shell roadmap-section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">${i18n.t("section.roadmap")}</p>
+          <h2>${i18n.t("section.roadmap")}</h2>
+        </div>
+        <p>${i18n.t("section.roadmapCopy")}</p>
+      </div>
+      ${renderRoadmap()}
+    </section>
     <section class="site-shell section">
       <div class="course-grid">
-        ${state.catalog.courses.map(renderCourseCard).join("")}
+        ${getCourses().map(renderCourseCard).join("")}
       </div>
     </section>
   `;
@@ -268,6 +279,7 @@ function renderCourseCard(course) {
   const copy = localize(course);
   const owned = state.access.has(course.id);
   const tagList = course.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
+  const phase = getPhaseLabel(course.phase);
 
   return `
     <article class="course-card">
@@ -275,6 +287,10 @@ function renderCourseCard(course) {
         <img src="${course.image}" alt="">
       </a>
       <div class="course-card-body">
+        <div class="course-card-top">
+          <span class="phase-pill">${escapeHtml(phase)}</span>
+          <span class="course-order">${String(course.order || "").padStart(2, "0")}</span>
+        </div>
         <div class="tag-row">${tagList}</div>
         <h3>${escapeHtml(copy.title)}</h3>
         <p>${escapeHtml(copy.subtitle)}</p>
@@ -313,7 +329,7 @@ function renderCoursePage() {
       <div class="site-shell course-hero-grid">
         <div>
           <a class="back-link" href="courses.html">${i18n.t("course.back")}</a>
-          <p class="eyebrow">${course.tags.map(escapeHtml).join(" / ")}</p>
+          <p class="eyebrow">${getPhaseLabel(course.phase)} / ${course.tags.map(escapeHtml).join(" / ")}</p>
           <h1>${escapeHtml(copy.title)}</h1>
           <p>${escapeHtml(copy.subtitle)}</p>
           <div class="course-hero-meta">
@@ -653,7 +669,7 @@ function renderDashboardPage() {
     return;
   }
 
-  const ownedCourses = state.catalog.courses.filter((course) => state.access.has(course.id));
+  const ownedCourses = getCourses().filter((course) => state.access.has(course.id));
   const ownedHtml = ownedCourses.length
     ? `<div class="course-grid">${ownedCourses.map(renderDashboardCard).join("")}</div>`
     : `<div class="empty-state"><p>${i18n.t("dashboard.empty")}</p><a class="button button-primary" href="courses.html">${i18n.t("dashboard.browse")}</a></div>`;
@@ -692,8 +708,54 @@ function renderDashboardCard(course) {
 
 function getCurrentCourse() {
   const params = new URLSearchParams(window.location.search);
-  const courseId = params.get("id") || params.get("course") || state.catalog.courses[0].id;
+  const courseId = params.get("id") || params.get("course") || getCourses()[0].id;
   return state.catalog.courses.find((course) => course.id === courseId);
+}
+
+function getCourses() {
+  return [...state.catalog.courses].sort((a, b) => {
+    return (a.order || 0) - (b.order || 0);
+  });
+}
+
+function getPhaseLabel(phase) {
+  return i18n.t(`phase.${phase || "foundation"}`);
+}
+
+function renderRoadmap() {
+  const courses = getCourses();
+  const grouped = new Map();
+
+  phaseOrder.forEach((phase) => grouped.set(phase, []));
+  courses.forEach((course) => {
+    const phase = course.phase || "foundation";
+    if (!grouped.has(phase)) {
+      grouped.set(phase, []);
+    }
+    grouped.get(phase).push(course);
+  });
+
+  return `
+    <div class="roadmap-grid">
+      ${[...grouped.entries()]
+        .filter(([, phaseCourses]) => phaseCourses.length)
+        .map(([phase, phaseCourses], index) => renderRoadmapPhase(phase, phaseCourses, index + 1))
+        .join("")}
+    </div>
+  `;
+}
+
+function renderRoadmapPhase(phase, courses, index) {
+  return `
+    <article class="roadmap-card">
+      <span class="roadmap-number">${String(index).padStart(2, "0")}</span>
+      <h3>${getPhaseLabel(phase)}</h3>
+      <p>${i18n.t(`phase.${phase}Copy`)}</p>
+      <ol>
+        ${courses.map((course) => `<li><a href="course.html?id=${encodeURIComponent(course.id)}">${escapeHtml(localize(course).title)}</a></li>`).join("")}
+      </ol>
+    </article>
+  `;
 }
 
 function localize(item) {

@@ -1,6 +1,8 @@
 node_modules/
 .edge-test-profile*/
+.edge-*/
 wstudio-*.png
+wstudio-*.jpg
 .env
 .env.local
 .vercel/

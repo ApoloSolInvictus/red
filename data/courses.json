@@ -1,170 +1,204 @@
 {
-  "version": "2026-06-18",
+  "version": "2026-06-19",
   "currency": "USD",
   "courses": [
     {
-      "id": "canva-for-entrepreneurs",
-      "price": "47.00",
+      "id": "digital-business-foundations",
+      "order": 1,
+      "phase": "foundation",
+      "price": "37.00",
       "level": "Beginner",
-      "duration": "5h 20m",
-      "image": "images/course-canva-devices.png",
-      "accent": "#ff5a5f",
-      "tags": ["Design", "Entrepreneurship", "Marketing"],
+      "duration": "3h 40m",
+      "image": "images/shop-img-8.jpg",
+      "accent": "#2354ff",
+      "tags": ["Business", "Strategy", "Mindset"],
       "translations": {
         "en": {
-          "title": "Canva for Entrepreneurs",
-          "subtitle": "Launch a visual brand, offer, and sales kit without getting stuck in design tools.",
-          "summary": "A practical course for creators, freelancers, and small businesses that need polished brand assets, social posts, and product pages fast.",
-          "outcomes": ["Build a reusable brand kit", "Create launch graphics for each platform", "Export assets for sales pages and email"]
+          "title": "Digital Business Foundations",
+          "subtitle": "Start with the map: audience, offer, positioning, channels, and a simple operating rhythm.",
+          "summary": "A zero-to-clarity course for entrepreneurs who need to understand what they sell, who they serve, and how the digital pieces connect before buying tools.",
+          "outcomes": ["Choose a focused market", "Write a simple offer promise", "Map the customer journey", "Build a weekly execution plan"]
         },
         "de": {
-          "title": "Canva fuer Unternehmer",
-          "subtitle": "Starte eine visuelle Marke, ein Angebot und ein Sales-Kit, ohne in Design-Tools stecken zu bleiben.",
-          "summary": "Ein praxisnaher Kurs fuer Creator, Freelancer und kleine Unternehmen, die schnell professionelle Markenassets brauchen.",
-          "outcomes": ["Baue ein wiederverwendbares Brand Kit", "Erstelle Launch-Grafiken fuer jede Plattform", "Exportiere Assets fuer Sales Pages und E-Mail"]
+          "title": "Digitale Business Grundlagen",
+          "subtitle": "Starte mit der Karte: Zielgruppe, Angebot, Positionierung, Kanaele und ein einfacher Arbeitsrhythmus.",
+          "summary": "Ein Klarheitskurs fuer Unternehmer, die verstehen muessen, was sie verkaufen, wem sie dienen und wie die digitalen Bausteine zusammenhaengen.",
+          "outcomes": ["Waehle einen fokussierten Markt", "Schreibe ein klares Angebotsversprechen", "Plane die Customer Journey", "Baue einen Wochenplan fuer Umsetzung"]
         },
         "es": {
-          "title": "Canva para Emprendedores",
-          "subtitle": "Lanza una marca visual, una oferta y un kit de ventas sin quedarte atrapado en herramientas de diseno.",
-          "summary": "Un curso practico para creadores, freelancers y pequenas empresas que necesitan piezas visuales profesionales rapidamente.",
-          "outcomes": ["Construye un kit de marca reutilizable", "Crea graficos de lanzamiento para cada plataforma", "Exporta assets para paginas de venta y email"]
+          "title": "Fundamentos de Negocio Digital",
+          "subtitle": "Empieza con el mapa: audiencia, oferta, posicionamiento, canales y un ritmo simple de trabajo.",
+          "summary": "Un curso desde cero para entender que vendes, a quien ayudas y como se conectan las piezas digitales antes de comprar herramientas.",
+          "outcomes": ["Elegir un mercado enfocado", "Escribir una promesa de oferta clara", "Mapear el viaje del cliente", "Construir un plan semanal de ejecucion"]
         }
       },
       "lessons": [
         {
-          "id": "brand-foundation",
+          "id": "entrepreneur-map",
           "preview": true,
-          "duration": "18m",
+          "duration": "24m",
           "translations": {
-            "en": {
-              "title": "Brand Foundation",
-              "description": "Define colors, typography, visual references, and the core offer before opening Canva."
-            },
-            "de": {
-              "title": "Markenfundament",
-              "description": "Definiere Farben, Typografie, visuelle Referenzen und das Kernangebot, bevor du Canva oeffnest."
-            },
-            "es": {
-              "title": "Fundacion de Marca",
-              "description": "Define colores, tipografia, referencias visuales y la oferta principal antes de abrir Canva."
-            }
+            "en": { "title": "The Entrepreneur Map", "description": "Define the business model, audience, offer, channel, and delivery path in one page." },
+            "de": { "title": "Die Unternehmerkarte", "description": "Definiere Geschaeftsmodell, Zielgruppe, Angebot, Kanal und Lieferung auf einer Seite." },
+            "es": { "title": "El Mapa del Emprendedor", "description": "Define modelo de negocio, audiencia, oferta, canal y entrega en una sola pagina." }
           }
         },
         {
-          "id": "social-launch-kit",
+          "id": "market-and-persona",
           "preview": false,
-          "duration": "52m",
+          "duration": "38m",
           "translations": {
-            "en": {
-              "title": "Social Launch Kit",
-              "description": "Create posts, stories, thumbnails, and short-form covers from one flexible system."
-            },
-            "de": {
-              "title": "Social Launch Kit",
-              "description": "Erstelle Posts, Stories, Thumbnails und Short-Form-Cover aus einem flexiblen System."
-            },
-            "es": {
-              "title": "Kit de Lanzamiento Social",
-              "description": "Crea posts, historias, miniaturas y portadas verticales desde un sistema flexible."
-            }
+            "en": { "title": "Market and Persona", "description": "Find a narrow buyer profile and the urgent problem that makes your message easier to sell." },
+            "de": { "title": "Markt und Persona", "description": "Finde ein enges Kaeuferprofil und das dringende Problem, das deine Botschaft verkaufbar macht." },
+            "es": { "title": "Mercado y Persona", "description": "Encuentra un perfil de comprador especifico y el problema urgente que hace vendible tu mensaje." }
           }
         },
         {
-          "id": "sales-page-assets",
+          "id": "offer-journey",
           "preview": false,
-          "duration": "44m",
+          "duration": "42m",
           "translations": {
-            "en": {
-              "title": "Sales Page Assets",
-              "description": "Prepare hero images, product mockups, guarantee graphics, and author blocks for checkout pages."
-            },
-            "de": {
-              "title": "Sales-Page Assets",
-              "description": "Bereite Hero-Bilder, Produkt-Mockups, Garantie-Grafiken und Autor-Bloecke fuer Checkout-Seiten vor."
-            },
-            "es": {
-              "title": "Assets para Pagina de Venta",
-              "description": "Prepara heroes, mockups, graficos de garantia y bloques de autor para paginas de pago."
-            }
+            "en": { "title": "Offer Journey", "description": "Connect promise, proof, price, checkout, delivery, and follow-up into one simple path." },
+            "de": { "title": "Angebotsreise", "description": "Verbinde Versprechen, Beweis, Preis, Checkout, Lieferung und Follow-up in einem Pfad." },
+            "es": { "title": "Ruta de Oferta", "description": "Conecta promesa, prueba, precio, checkout, entrega y seguimiento en una sola ruta." }
           }
         }
       ]
     },
     {
-      "id": "3d-brand-studio",
-      "price": "97.00",
-      "level": "Intermediate",
-      "duration": "7h 10m",
-      "image": "images/course-img-2.jpg",
-      "accent": "#2354ff",
-      "tags": ["3D", "Branding", "Creative Direction"],
+      "id": "brand-identity-systems",
+      "order": 2,
+      "phase": "foundation",
+      "price": "47.00",
+      "level": "Beginner",
+      "duration": "4h 15m",
+      "image": "images/portfolio-img-6.jpg",
+      "accent": "#ff5a5f",
+      "tags": ["Branding", "Design", "Identity"],
       "translations": {
         "en": {
-          "title": "3D Brand Studio",
-          "subtitle": "Design product scenes, brand worlds, and visual campaigns with a practical 3D workflow.",
-          "summary": "A studio course for building premium-looking 3D visuals that can support launches, portfolios, and social campaigns.",
-          "outcomes": ["Block out a brand scene", "Light and render product compositions", "Package campaign visuals for web and social"]
+          "title": "Brand Identity Systems",
+          "subtitle": "Create a visual language that makes every post, page, and proposal feel like one serious brand.",
+          "summary": "A practical brand system course for entrepreneurs and freelancers who need consistent visuals without designing from zero every time.",
+          "outcomes": ["Define brand voice and values", "Choose colors and type styles", "Build reusable visual rules", "Create a simple brand guide"]
         },
         "de": {
-          "title": "3D Brand Studio",
-          "subtitle": "Gestalte Produkt-Szenen, Markenwelten und Kampagnen mit einem praktischen 3D-Workflow.",
-          "summary": "Ein Studio-Kurs fuer hochwertige 3D-Visuals fuer Launches, Portfolios und Social Campaigns.",
-          "outcomes": ["Baue eine Markenszene auf", "Beleuchte und rendere Produktkompositionen", "Bereite Kampagnenvisuals fuer Web und Social auf"]
+          "title": "Markenidentitaet Systeme",
+          "subtitle": "Erstelle eine visuelle Sprache, damit Posts, Seiten und Angebote wie eine starke Marke wirken.",
+          "summary": "Ein praxisnaher Kurs fuer Unternehmer und Freelancer, die konsistente Visuals brauchen, ohne jedes Mal von null zu starten.",
+          "outcomes": ["Definiere Markenstimme und Werte", "Waehle Farben und Typografie", "Baue wiederverwendbare Designregeln", "Erstelle einen einfachen Brand Guide"]
         },
         "es": {
-          "title": "3D Brand Studio",
-          "subtitle": "Disena escenas de producto, mundos de marca y campanas visuales con un flujo 3D practico.",
-          "summary": "Un curso de estudio para crear visuales 3D premium para lanzamientos, portafolios y campanas sociales.",
-          "outcomes": ["Bloquea una escena de marca", "Ilumina y renderiza composiciones de producto", "Empaqueta visuales para web y redes"]
+          "title": "Sistemas de Identidad de Marca",
+          "subtitle": "Crea un lenguaje visual para que cada post, pagina y propuesta se sienta como una marca seria.",
+          "summary": "Un curso practico para emprendedores y freelancers que necesitan visuales consistentes sin disenar desde cero cada vez.",
+          "outcomes": ["Definir voz y valores de marca", "Elegir colores y tipografias", "Construir reglas visuales reutilizables", "Crear una guia de marca simple"]
         }
       },
       "lessons": [
         {
-          "id": "scene-strategy",
+          "id": "brand-position",
           "preview": true,
-          "duration": "24m",
+          "duration": "26m",
           "translations": {
-            "en": {
-              "title": "Scene Strategy",
-              "description": "Choose the visual promise, references, shapes, and materials before modeling."
-            },
-            "de": {
-              "title": "Szenenstrategie",
-              "description": "Waehle visuelles Versprechen, Referenzen, Formen und Materialien vor dem Modeling."
-            },
-            "es": {
-              "title": "Estrategia de Escena",
-              "description": "Elige promesa visual, referencias, formas y materiales antes de modelar."
-            }
+            "en": { "title": "Brand Position", "description": "Clarify why the brand exists, who it serves, and what it must be known for." },
+            "de": { "title": "Markenposition", "description": "Klaere, warum die Marke existiert, wem sie dient und wofuer sie bekannt sein soll." },
+            "es": { "title": "Posicion de Marca", "description": "Aclara por que existe la marca, a quien sirve y por que debe ser recordada." }
           }
         },
         {
-          "id": "lighting-for-products",
+          "id": "visual-rules",
           "preview": false,
-          "duration": "64m",
+          "duration": "48m",
           "translations": {
-            "en": {
-              "title": "Lighting for Products",
-              "description": "Build lighting setups that make simple scenes feel expensive and readable."
-            },
-            "de": {
-              "title": "Produktbeleuchtung",
-              "description": "Baue Licht-Setups, die einfache Szenen hochwertig und klar wirken lassen."
-            },
-            "es": {
-              "title": "Iluminacion para Producto",
-              "description": "Crea esquemas de luz que hagan que escenas simples se vean premium y legibles."
-            }
+            "en": { "title": "Visual Rules", "description": "Choose palettes, type hierarchy, spacing, image style, and reusable design patterns." },
+            "de": { "title": "Visuelle Regeln", "description": "Waehle Palette, Typohierarchie, Abstand, Bildstil und wiederverwendbare Muster." },
+            "es": { "title": "Reglas Visuales", "description": "Elige paleta, jerarquia tipografica, espaciado, estilo de imagen y patrones reutilizables." }
+          }
+        },
+        {
+          "id": "brand-guide",
+          "preview": false,
+          "duration": "44m",
+          "translations": {
+            "en": { "title": "Mini Brand Guide", "description": "Package the system into a short document that keeps future designs consistent." },
+            "de": { "title": "Mini Brand Guide", "description": "Verpacke das System in ein kurzes Dokument, das kuenftige Designs konsistent haelt." },
+            "es": { "title": "Mini Guia de Marca", "description": "Empaqueta el sistema en un documento corto que mantiene consistentes los disenos futuros." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "canva-for-entrepreneurs",
+      "order": 3,
+      "phase": "creative",
+      "price": "47.00",
+      "level": "Beginner",
+      "duration": "5h 20m",
+      "image": "images/course-canva-devices.png",
+      "accent": "#ffb000",
+      "tags": ["Canva", "Design", "Marketing"],
+      "translations": {
+        "en": {
+          "title": "Canva for Entrepreneurs",
+          "subtitle": "Launch a visual brand, offer, and sales kit without getting stuck in design tools.",
+          "summary": "A practical course for creators, freelancers, and small businesses that need polished brand assets, social posts, and product pages fast.",
+          "outcomes": ["Build a reusable brand kit", "Create launch graphics for each platform", "Export assets for sales pages and email", "Organize templates for reuse"]
+        },
+        "de": {
+          "title": "Canva fuer Unternehmer",
+          "subtitle": "Starte eine visuelle Marke, ein Angebot und ein Sales-Kit, ohne in Design-Tools stecken zu bleiben.",
+          "summary": "Ein praxisnaher Kurs fuer Creator, Freelancer und kleine Unternehmen, die schnell professionelle Markenassets brauchen.",
+          "outcomes": ["Baue ein wiederverwendbares Brand Kit", "Erstelle Launch-Grafiken fuer jede Plattform", "Exportiere Assets fuer Sales Pages und E-Mail", "Organisiere Templates fuer Wiederverwendung"]
+        },
+        "es": {
+          "title": "Canva para Emprendedores",
+          "subtitle": "Lanza una marca visual, una oferta y un kit de ventas sin quedarte atrapado en herramientas de diseno.",
+          "summary": "Un curso practico para creadores, freelancers y pequenas empresas que necesitan piezas visuales profesionales rapidamente.",
+          "outcomes": ["Construir un kit de marca reutilizable", "Crear graficos de lanzamiento por plataforma", "Exportar assets para paginas de venta y email", "Organizar plantillas reutilizables"]
+        }
+      },
+      "lessons": [
+        {
+          "id": "brand-kit-setup",
+          "preview": true,
+          "duration": "28m",
+          "translations": {
+            "en": { "title": "Brand Kit Setup", "description": "Load your brand rules into Canva so every asset starts from the right system." },
+            "de": { "title": "Brand Kit Setup", "description": "Lade deine Markenregeln in Canva, damit jedes Asset aus dem richtigen System startet." },
+            "es": { "title": "Configuracion del Brand Kit", "description": "Carga tus reglas de marca en Canva para que cada asset nazca del sistema correcto." }
+          }
+        },
+        {
+          "id": "social-templates",
+          "preview": false,
+          "duration": "52m",
+          "translations": {
+            "en": { "title": "Social Templates", "description": "Create posts, stories, thumbnails, and short-form covers from one flexible system." },
+            "de": { "title": "Social Templates", "description": "Erstelle Posts, Stories, Thumbnails und Short-Form-Cover aus einem flexiblen System." },
+            "es": { "title": "Plantillas Sociales", "description": "Crea posts, historias, miniaturas y portadas verticales desde un sistema flexible." }
+          }
+        },
+        {
+          "id": "sales-assets",
+          "preview": false,
+          "duration": "44m",
+          "translations": {
+            "en": { "title": "Sales Assets", "description": "Prepare hero images, product mockups, guarantee graphics, and author blocks for checkout pages." },
+            "de": { "title": "Sales Assets", "description": "Bereite Hero-Bilder, Produkt-Mockups, Garantie-Grafiken und Autor-Bloecke fuer Checkout-Seiten vor." },
+            "es": { "title": "Assets de Venta", "description": "Prepara heroes, mockups, graficos de garantia y bloques de autor para paginas de pago." }
           }
         }
       ]
     },
     {
       "id": "ai-content-systems",
+      "order": 4,
+      "phase": "creative",
       "price": "67.00",
       "level": "Beginner",
       "duration": "4h 45m",
-      "image": "images/new/co5.jpg",
+      "image": "images/new/event3.jpg",
       "accent": "#19b86a",
       "tags": ["AI", "Content", "Workflow"],
       "translations": {
@@ -172,19 +206,19 @@
           "title": "AI Content Systems",
           "subtitle": "Use AI to plan, draft, translate, and repurpose content while keeping your voice intact.",
           "summary": "A course for building repeatable content engines that support education, marketing, and product launches.",
-          "outcomes": ["Design a reusable prompt library", "Turn one idea into a content week", "Translate without losing brand tone"]
+          "outcomes": ["Design a reusable prompt library", "Turn one idea into a content week", "Translate without losing brand tone", "Build a content calendar"]
         },
         "de": {
           "title": "KI Content Systeme",
           "subtitle": "Nutze KI fuer Planung, Entwurf, Uebersetzung und Wiederverwertung, ohne deine Stimme zu verlieren.",
           "summary": "Ein Kurs fuer wiederholbare Content-Systeme fuer Bildung, Marketing und Produktlaunches.",
-          "outcomes": ["Entwerfe eine wiederverwendbare Prompt-Bibliothek", "Mache aus einer Idee eine Content-Woche", "Uebersetze, ohne den Markenton zu verlieren"]
+          "outcomes": ["Entwerfe eine Prompt-Bibliothek", "Mache aus einer Idee eine Content-Woche", "Uebersetze mit Markenton", "Baue einen Content-Kalender"]
         },
         "es": {
           "title": "Sistemas de Contenido con IA",
           "subtitle": "Usa IA para planear, redactar, traducir y reutilizar contenido sin perder tu voz.",
           "summary": "Un curso para construir motores de contenido repetibles para educacion, marketing y lanzamientos.",
-          "outcomes": ["Disena una biblioteca de prompts reutilizable", "Convierte una idea en una semana de contenido", "Traduce sin perder el tono de marca"]
+          "outcomes": ["Disenar una biblioteca de prompts", "Convertir una idea en una semana de contenido", "Traducir sin perder tono", "Construir un calendario editorial"]
         }
       },
       "lessons": [
@@ -193,106 +227,659 @@
           "preview": true,
           "duration": "20m",
           "translations": {
-            "en": {
-              "title": "Voice Map",
-              "description": "Capture tone, vocabulary, audience, and boundaries before using generative tools."
-            },
-            "de": {
-              "title": "Voice Map",
-              "description": "Erfasse Ton, Wortschatz, Zielgruppe und Grenzen vor dem Einsatz generativer Tools."
-            },
-            "es": {
-              "title": "Mapa de Voz",
-              "description": "Captura tono, vocabulario, audiencia y limites antes de usar herramientas generativas."
-            }
+            "en": { "title": "Voice Map", "description": "Capture tone, vocabulary, audience, and boundaries before using generative tools." },
+            "de": { "title": "Voice Map", "description": "Erfasse Ton, Wortschatz, Zielgruppe und Grenzen vor dem Einsatz generativer Tools." },
+            "es": { "title": "Mapa de Voz", "description": "Captura tono, vocabulario, audiencia y limites antes de usar herramientas generativas." }
           }
         },
         {
-          "id": "repurposing-system",
+          "id": "prompt-library",
+          "preview": false,
+          "duration": "46m",
+          "translations": {
+            "en": { "title": "Prompt Library", "description": "Create prompts for ideas, hooks, scripts, emails, posts, and translations." },
+            "de": { "title": "Prompt-Bibliothek", "description": "Erstelle Prompts fuer Ideen, Hooks, Skripte, E-Mails, Posts und Uebersetzungen." },
+            "es": { "title": "Biblioteca de Prompts", "description": "Crea prompts para ideas, hooks, guiones, emails, posts y traducciones." }
+          }
+        },
+        {
+          "id": "repurpose-machine",
           "preview": false,
           "duration": "55m",
           "translations": {
-            "en": {
-              "title": "Repurposing System",
-              "description": "Convert lessons, lives, and notes into emails, posts, scripts, and course materials."
-            },
-            "de": {
-              "title": "Repurposing-System",
-              "description": "Verwandle Lektionen, Lives und Notizen in E-Mails, Posts, Skripte und Kursmaterial."
-            },
-            "es": {
-              "title": "Sistema de Reutilizacion",
-              "description": "Convierte clases, lives y notas en emails, posts, guiones y materiales de curso."
-            }
+            "en": { "title": "Repurpose Machine", "description": "Convert lessons, lives, and notes into emails, posts, scripts, and course materials." },
+            "de": { "title": "Repurpose Maschine", "description": "Verwandle Lektionen, Lives und Notizen in E-Mails, Posts, Skripte und Kursmaterial." },
+            "es": { "title": "Maquina de Reutilizacion", "description": "Convierte clases, lives y notas en emails, posts, guiones y materiales de curso." }
           }
         }
       ]
     },
     {
-      "id": "digital-product-launch",
-      "price": "77.00",
-      "level": "Intermediate",
-      "duration": "6h 05m",
-      "image": "images/new/course-img-7.jpg",
-      "accent": "#ffb000",
-      "tags": ["Launch", "Sales", "Product"],
+      "id": "copywriting-offer-design",
+      "order": 5,
+      "phase": "marketing",
+      "price": "67.00",
+      "level": "Beginner",
+      "duration": "4h 30m",
+      "image": "images/shop-img-5.jpg",
+      "accent": "#ff5a5f",
+      "tags": ["Copywriting", "Offers", "Sales"],
       "translations": {
         "en": {
-          "title": "Digital Product Launch",
-          "subtitle": "Shape an offer, validate demand, and launch a course or digital product with clean assets.",
-          "summary": "A launch course focused on clear positioning, sales pages, email sequences, and delivery structure.",
-          "outcomes": ["Choose a narrow promise", "Build a launch checklist", "Connect sales assets to delivery"]
+          "title": "Copywriting and Offer Design",
+          "subtitle": "Write the words that make people understand the value, trust the promise, and take action.",
+          "summary": "A practical copy course for landing pages, emails, ads, captions, and freelance proposals.",
+          "outcomes": ["Write hooks and headlines", "Structure persuasive offers", "Handle objections with proof", "Create reusable sales copy blocks"]
         },
         "de": {
-          "title": "Digital Product Launch",
-          "subtitle": "Forme ein Angebot, validiere Nachfrage und launche einen Kurs oder ein digitales Produkt mit klaren Assets.",
-          "summary": "Ein Launch-Kurs fuer Positionierung, Sales Pages, E-Mail-Sequenzen und Delivery-Struktur.",
-          "outcomes": ["Waehle ein klares Versprechen", "Baue eine Launch-Checkliste", "Verbinde Sales Assets mit Delivery"]
+          "title": "Copywriting und Angebotsdesign",
+          "subtitle": "Schreibe Worte, die Wert erklaeren, Vertrauen schaffen und Handlung ausloesen.",
+          "summary": "Ein praktischer Copy-Kurs fuer Landing Pages, E-Mails, Ads, Captions und Freelancer-Angebote.",
+          "outcomes": ["Schreibe Hooks und Headlines", "Strukturiere starke Angebote", "Beantworte Einwaende mit Beweis", "Erstelle wiederverwendbare Sales-Bloecke"]
         },
         "es": {
-          "title": "Lanzamiento de Producto Digital",
-          "subtitle": "Da forma a una oferta, valida demanda y lanza un curso o producto digital con assets claros.",
-          "summary": "Un curso de lanzamiento enfocado en posicionamiento, paginas de venta, secuencias de email y estructura de entrega.",
-          "outcomes": ["Elige una promesa especifica", "Construye una lista de lanzamiento", "Conecta assets de venta con entrega"]
+          "title": "Copywriting y Diseno de Oferta",
+          "subtitle": "Escribe palabras que expliquen el valor, construyan confianza y lleven a la accion.",
+          "summary": "Un curso practico de copy para landing pages, emails, anuncios, captions y propuestas freelance.",
+          "outcomes": ["Escribir hooks y titulares", "Estructurar ofertas persuasivas", "Responder objeciones con prueba", "Crear bloques de venta reutilizables"]
         }
       },
       "lessons": [
         {
-          "id": "offer-design",
+          "id": "message-market-fit",
           "preview": true,
-          "duration": "26m",
+          "duration": "25m",
           "translations": {
-            "en": {
-              "title": "Offer Design",
-              "description": "Turn a broad topic into a concrete transformation with a believable price."
-            },
-            "de": {
-              "title": "Angebotsdesign",
-              "description": "Verwandle ein breites Thema in eine konkrete Transformation mit glaubwuerdigem Preis."
-            },
-            "es": {
-              "title": "Diseno de Oferta",
-              "description": "Convierte un tema amplio en una transformacion concreta con un precio creible."
-            }
+            "en": { "title": "Message-Market Fit", "description": "Turn customer pain, desire, and language into clear positioning." },
+            "de": { "title": "Message-Market Fit", "description": "Verwandle Schmerz, Wunsch und Kundensprache in klare Positionierung." },
+            "es": { "title": "Mensaje y Mercado", "description": "Convierte dolor, deseo y lenguaje del cliente en posicionamiento claro." }
           }
         },
         {
-          "id": "checkout-path",
+          "id": "sales-page-structure",
           "preview": false,
-          "duration": "39m",
+          "duration": "50m",
           "translations": {
-            "en": {
-              "title": "Checkout Path",
-              "description": "Map the journey from promise to payment to course access."
-            },
-            "de": {
-              "title": "Checkout-Pfad",
-              "description": "Plane die Reise vom Versprechen zur Zahlung bis zum Kurszugang."
-            },
-            "es": {
-              "title": "Ruta de Checkout",
-              "description": "Mapea el camino desde la promesa hasta el pago y el acceso al curso."
-            }
+            "en": { "title": "Sales Page Structure", "description": "Build the order of sections from headline to proof, offer, FAQ, and checkout." },
+            "de": { "title": "Sales-Page Struktur", "description": "Baue die Reihenfolge von Headline bis Beweis, Angebot, FAQ und Checkout." },
+            "es": { "title": "Estructura de Pagina de Venta", "description": "Construye el orden desde titular hasta prueba, oferta, FAQ y checkout." }
+          }
+        },
+        {
+          "id": "email-copy",
+          "preview": false,
+          "duration": "40m",
+          "translations": {
+            "en": { "title": "Email Copy Blocks", "description": "Write welcome, nurture, launch, reminder, and follow-up emails." },
+            "de": { "title": "E-Mail Copy Bloecke", "description": "Schreibe Welcome, Nurture, Launch, Reminder und Follow-up E-Mails." },
+            "es": { "title": "Bloques de Email Copy", "description": "Escribe emails de bienvenida, nutricion, lanzamiento, recordatorio y seguimiento." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "social-video-content-machine",
+      "order": 6,
+      "phase": "marketing",
+      "price": "77.00",
+      "level": "Intermediate",
+      "duration": "5h 15m",
+      "image": "images/new/event6.jpg",
+      "accent": "#a855f7",
+      "tags": ["Social", "Video", "Growth"],
+      "translations": {
+        "en": {
+          "title": "Social and Short-Form Video Machine",
+          "subtitle": "Turn strategy into posts, reels, shorts, carousels, and community actions that compound.",
+          "summary": "A system for entrepreneurs who need consistent publishing without becoming full-time content editors.",
+          "outcomes": ["Plan a weekly content mix", "Script short-form videos", "Repurpose long content", "Measure what actually grows"]
+        },
+        "de": {
+          "title": "Social und Short-Form Video Maschine",
+          "subtitle": "Verwandle Strategie in Posts, Reels, Shorts, Carousels und Community-Aktionen.",
+          "summary": "Ein System fuer Unternehmer, die konstant publizieren muessen, ohne Vollzeit-Editor zu werden.",
+          "outcomes": ["Plane einen Wochenmix", "Skripte kurze Videos", "Verwerte langen Content neu", "Messe echtes Wachstum"]
+        },
+        "es": {
+          "title": "Maquina Social y Video Corto",
+          "subtitle": "Convierte estrategia en posts, reels, shorts, carruseles y acciones de comunidad.",
+          "summary": "Un sistema para emprendedores que necesitan publicar constante sin volverse editores de tiempo completo.",
+          "outcomes": ["Planear mezcla semanal", "Guionar videos cortos", "Reutilizar contenido largo", "Medir crecimiento real"]
+        }
+      },
+      "lessons": [
+        {
+          "id": "content-pillars",
+          "preview": true,
+          "duration": "28m",
+          "translations": {
+            "en": { "title": "Content Pillars", "description": "Choose themes that educate, prove, sell, and build trust every week." },
+            "de": { "title": "Content-Saeulen", "description": "Waehle Themen, die jede Woche bilden, beweisen, verkaufen und Vertrauen bauen." },
+            "es": { "title": "Pilares de Contenido", "description": "Elige temas que eduquen, prueben, vendan y construyan confianza cada semana." }
+          }
+        },
+        {
+          "id": "short-video-scripts",
+          "preview": false,
+          "duration": "45m",
+          "translations": {
+            "en": { "title": "Short Video Scripts", "description": "Use hooks, beats, proof, and calls to action for repeatable video formats." },
+            "de": { "title": "Kurzvideo Skripte", "description": "Nutze Hooks, Beats, Beweis und CTA fuer wiederholbare Videoformate." },
+            "es": { "title": "Guiones de Video Corto", "description": "Usa hooks, pasos, prueba y llamados a la accion para formatos repetibles." }
+          }
+        },
+        {
+          "id": "distribution-loop",
+          "preview": false,
+          "duration": "42m",
+          "translations": {
+            "en": { "title": "Distribution Loop", "description": "Publish, reuse, collect signals, and adjust the next content sprint." },
+            "de": { "title": "Distribution Loop", "description": "Publiziere, verwende neu, sammle Signale und passe den naechsten Sprint an." },
+            "es": { "title": "Loop de Distribucion", "description": "Publica, reutiliza, recoge senales y ajusta el siguiente sprint de contenido." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "envato-creative-assets",
+      "order": 7,
+      "phase": "creative",
+      "price": "77.00",
+      "level": "Intermediate",
+      "duration": "5h 30m",
+      "image": "images/shop-img-2.jpg",
+      "accent": "#19b86a",
+      "tags": ["Envato", "Assets", "Templates"],
+      "translations": {
+        "en": {
+          "title": "Envato Creative Asset Workflow",
+          "subtitle": "Use Envato assets and AI tools to build polished brand visuals, mockups, videos, and templates faster.",
+          "summary": "A workflow course for using assets responsibly, adapting templates, organizing licenses, and producing client-ready materials.",
+          "outcomes": ["Search assets with intent", "Customize templates without looking generic", "Track licenses and deliverables", "Use AI tools for faster creative drafts"]
+        },
+        "de": {
+          "title": "Envato Creative Asset Workflow",
+          "subtitle": "Nutze Envato Assets und KI-Tools fuer hochwertige Visuals, Mockups, Videos und Templates.",
+          "summary": "Ein Workflow-Kurs fuer verantwortliche Asset-Nutzung, Template-Anpassung, Lizenzordnung und Kundenmaterial.",
+          "outcomes": ["Suche Assets mit Absicht", "Passe Templates hochwertig an", "Verfolge Lizenzen und Deliverables", "Nutze KI-Tools fuer schnelle Entwuerfe"]
+        },
+        "es": {
+          "title": "Flujo Creativo con Envato",
+          "subtitle": "Usa assets y herramientas IA de Envato para crear visuales, mockups, videos y plantillas mas rapido.",
+          "summary": "Un curso de flujo de trabajo para usar assets responsablemente, adaptar plantillas, ordenar licencias y entregar material profesional.",
+          "outcomes": ["Buscar assets con intencion", "Personalizar plantillas sin verse generico", "Controlar licencias y entregables", "Usar IA para borradores creativos"]
+        }
+      },
+      "lessons": [
+        {
+          "id": "asset-research",
+          "preview": true,
+          "duration": "30m",
+          "translations": {
+            "en": { "title": "Asset Research", "description": "Search by campaign goal, format, audience, mood, and production need." },
+            "de": { "title": "Asset Recherche", "description": "Suche nach Kampagnenziel, Format, Zielgruppe, Stimmung und Produktionsbedarf." },
+            "es": { "title": "Investigacion de Assets", "description": "Busca por objetivo de campana, formato, audiencia, estilo y necesidad de produccion." }
+          }
+        },
+        {
+          "id": "template-customization",
+          "preview": false,
+          "duration": "55m",
+          "translations": {
+            "en": { "title": "Template Customization", "description": "Change structure, color, images, typography, and sections so templates become original work." },
+            "de": { "title": "Template Anpassung", "description": "Aendere Struktur, Farbe, Bilder, Typografie und Sektionen, damit Templates eigenstaendig wirken." },
+            "es": { "title": "Personalizacion de Plantillas", "description": "Cambia estructura, color, imagenes, tipografia y secciones para crear trabajo original." }
+          }
+        },
+        {
+          "id": "license-packaging",
+          "preview": false,
+          "duration": "34m",
+          "translations": {
+            "en": { "title": "License and Delivery", "description": "Organize downloads, source files, exports, and client delivery notes." },
+            "de": { "title": "Lizenz und Lieferung", "description": "Organisiere Downloads, Quelldateien, Exporte und Liefernotizen fuer Kunden." },
+            "es": { "title": "Licencia y Entrega", "description": "Organiza descargas, archivos fuente, exports y notas de entrega para clientes." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "themeforest-website-blueprint",
+      "order": 8,
+      "phase": "web",
+      "price": "87.00",
+      "level": "Intermediate",
+      "duration": "6h 05m",
+      "image": "images/course-img-7.jpg",
+      "accent": "#2354ff",
+      "tags": ["ThemeForest", "Web Design", "Templates"],
+      "translations": {
+        "en": {
+          "title": "ThemeForest Website Blueprint",
+          "subtitle": "Turn premium templates into client-ready websites with structure, brand adaptation, and launch discipline.",
+          "summary": "A course for entrepreneurs and freelancers who want to transform ready-made designs into serious business websites.",
+          "outcomes": ["Evaluate template quality", "Adapt layouts to a real business", "Replace demo content with strategy", "Prepare a launch checklist"]
+        },
+        "de": {
+          "title": "ThemeForest Website Blueprint",
+          "subtitle": "Verwandle Premium-Templates mit Struktur, Markenanpassung und Launch-Disziplin in Kunden-Websites.",
+          "summary": "Ein Kurs fuer Unternehmer und Freelancer, die fertige Designs in serioese Business-Websites verwandeln wollen.",
+          "outcomes": ["Bewerte Template-Qualitaet", "Passe Layouts an ein echtes Business an", "Ersetze Demo-Content strategisch", "Bereite eine Launch-Checkliste vor"]
+        },
+        "es": {
+          "title": "Blueprint Web con ThemeForest",
+          "subtitle": "Convierte plantillas premium en sitios para clientes con estructura, marca y disciplina de lanzamiento.",
+          "summary": "Un curso para emprendedores y freelancers que quieren transformar disenos listos en sitios web serios para empresas.",
+          "outcomes": ["Evaluar calidad de plantillas", "Adaptar layouts a negocios reales", "Reemplazar demo content con estrategia", "Preparar checklist de lanzamiento"]
+        }
+      },
+      "lessons": [
+        {
+          "id": "template-audit",
+          "preview": true,
+          "duration": "35m",
+          "translations": {
+            "en": { "title": "Template Audit", "description": "Check UX, responsiveness, sections, speed, code quality, and business fit." },
+            "de": { "title": "Template Audit", "description": "Pruefe UX, Responsiveness, Sektionen, Speed, Code-Qualitaet und Business-Fit." },
+            "es": { "title": "Auditoria de Plantilla", "description": "Revisa UX, responsividad, secciones, velocidad, calidad de codigo y encaje de negocio." }
+          }
+        },
+        {
+          "id": "demo-to-brand",
+          "preview": false,
+          "duration": "55m",
+          "translations": {
+            "en": { "title": "Demo to Brand", "description": "Replace demo pages with real offers, proof, service sections, and conversion copy." },
+            "de": { "title": "Demo zu Marke", "description": "Ersetze Demo-Seiten mit echten Angeboten, Beweis, Service-Sektionen und Conversion Copy." },
+            "es": { "title": "De Demo a Marca", "description": "Reemplaza paginas demo con ofertas reales, prueba, servicios y copy de conversion." }
+          }
+        },
+        {
+          "id": "launch-readiness",
+          "preview": false,
+          "duration": "42m",
+          "translations": {
+            "en": { "title": "Launch Readiness", "description": "Prepare domain, redirects, analytics, forms, SEO basics, and backup files." },
+            "de": { "title": "Launch Bereitschaft", "description": "Bereite Domain, Redirects, Analytics, Formulare, SEO-Basics und Backups vor." },
+            "es": { "title": "Listo para Lanzar", "description": "Prepara dominio, redirects, analytics, formularios, SEO basico y respaldos." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "seo-analytics-conversion",
+      "order": 9,
+      "phase": "marketing",
+      "price": "77.00",
+      "level": "Intermediate",
+      "duration": "5h 25m",
+      "image": "images/new/co8.jpg",
+      "accent": "#0ea5e9",
+      "tags": ["SEO", "Analytics", "Conversion"],
+      "translations": {
+        "en": {
+          "title": "SEO, Analytics and Conversion",
+          "subtitle": "Make pages discoverable, measurable, and easier to improve after launch.",
+          "summary": "A practical analytics course for entrepreneurs who need to know what is working without becoming data scientists.",
+          "outcomes": ["Plan keyword intent", "Set tracking events", "Read conversion metrics", "Create improvement experiments"]
+        },
+        "de": {
+          "title": "SEO, Analytics und Conversion",
+          "subtitle": "Mache Seiten auffindbar, messbar und nach dem Launch leichter zu verbessern.",
+          "summary": "Ein praktischer Analytics-Kurs fuer Unternehmer, die verstehen wollen, was funktioniert.",
+          "outcomes": ["Plane Keyword-Intent", "Setze Tracking Events", "Lies Conversion-Metriken", "Erstelle Verbesserungs-Experimente"]
+        },
+        "es": {
+          "title": "SEO, Analytics y Conversion",
+          "subtitle": "Haz que las paginas se encuentren, se midan y mejoren despues del lanzamiento.",
+          "summary": "Un curso practico de analytics para emprendedores que necesitan saber que funciona sin volverse cientificos de datos.",
+          "outcomes": ["Planear intencion de busqueda", "Configurar eventos de tracking", "Leer metricas de conversion", "Crear experimentos de mejora"]
+        }
+      },
+      "lessons": [
+        {
+          "id": "seo-map",
+          "preview": true,
+          "duration": "32m",
+          "translations": {
+            "en": { "title": "SEO Map", "description": "Connect search intent, page type, title structure, and internal links." },
+            "de": { "title": "SEO Map", "description": "Verbinde Suchintention, Seitentyp, Titelstruktur und interne Links." },
+            "es": { "title": "Mapa SEO", "description": "Conecta intencion de busqueda, tipo de pagina, estructura de titulo y enlaces internos." }
+          }
+        },
+        {
+          "id": "analytics-events",
+          "preview": false,
+          "duration": "48m",
+          "translations": {
+            "en": { "title": "Analytics Events", "description": "Track clicks, form submits, checkout intent, course interest, and lead quality." },
+            "de": { "title": "Analytics Events", "description": "Tracke Klicks, Formulare, Checkout-Intent, Kursinteresse und Lead-Qualitaet." },
+            "es": { "title": "Eventos de Analytics", "description": "Mide clics, formularios, intencion de checkout, interes en cursos y calidad de leads." }
+          }
+        },
+        {
+          "id": "conversion-sprints",
+          "preview": false,
+          "duration": "44m",
+          "translations": {
+            "en": { "title": "Conversion Sprints", "description": "Use small experiments to improve headlines, offers, forms, and calls to action." },
+            "de": { "title": "Conversion Sprints", "description": "Nutze kleine Experimente fuer Headlines, Angebote, Formulare und CTAs." },
+            "es": { "title": "Sprints de Conversion", "description": "Usa experimentos pequenos para mejorar titulares, ofertas, formularios y CTAs." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "email-automation-crm",
+      "order": 10,
+      "phase": "automation",
+      "price": "87.00",
+      "level": "Intermediate",
+      "duration": "5h 40m",
+      "image": "images/index/communication.png",
+      "accent": "#f97316",
+      "tags": ["Email", "CRM", "Automation"],
+      "translations": {
+        "en": {
+          "title": "Email Automation and CRM",
+          "subtitle": "Capture leads, segment buyers, and create simple automations that follow up without manual chaos.",
+          "summary": "A systems course for building the backend of a small digital business: forms, lists, sequences, tags, and customer notes.",
+          "outcomes": ["Design a lead magnet flow", "Write nurture sequences", "Segment buyers and leads", "Document a CRM workflow"]
+        },
+        "de": {
+          "title": "E-Mail Automation und CRM",
+          "subtitle": "Sammle Leads, segmentiere Kaeufer und erstelle Automationen ohne manuelles Chaos.",
+          "summary": "Ein Systemkurs fuer das Backend eines kleinen digitalen Business: Formulare, Listen, Sequenzen, Tags und Kundennotizen.",
+          "outcomes": ["Designe einen Lead-Magnet Flow", "Schreibe Nurture-Sequenzen", "Segmentiere Kaeufer und Leads", "Dokumentiere einen CRM Workflow"]
+        },
+        "es": {
+          "title": "Email Automation y CRM",
+          "subtitle": "Captura leads, segmenta compradores y crea automatizaciones simples sin caos manual.",
+          "summary": "Un curso de sistemas para construir el backend de un negocio digital: formularios, listas, secuencias, tags y notas de clientes.",
+          "outcomes": ["Disenar un flujo de lead magnet", "Escribir secuencias de nutricion", "Segmentar compradores y leads", "Documentar un flujo CRM"]
+        }
+      },
+      "lessons": [
+        {
+          "id": "lead-capture",
+          "preview": true,
+          "duration": "35m",
+          "translations": {
+            "en": { "title": "Lead Capture Flow", "description": "Design forms, thank-you pages, tags, and first-email delivery." },
+            "de": { "title": "Lead Capture Flow", "description": "Designe Formulare, Danke-Seiten, Tags und erste E-Mail-Auslieferung." },
+            "es": { "title": "Flujo de Captura", "description": "Disena formularios, paginas de gracias, tags y entrega del primer email." }
+          }
+        },
+        {
+          "id": "email-sequences",
+          "preview": false,
+          "duration": "52m",
+          "translations": {
+            "en": { "title": "Email Sequences", "description": "Create welcome, nurture, sales, onboarding, and reactivation flows." },
+            "de": { "title": "E-Mail Sequenzen", "description": "Erstelle Welcome, Nurture, Sales, Onboarding und Reaktivierung." },
+            "es": { "title": "Secuencias de Email", "description": "Crea flujos de bienvenida, nutricion, venta, onboarding y reactivacion." }
+          }
+        },
+        {
+          "id": "crm-operating-system",
+          "preview": false,
+          "duration": "45m",
+          "translations": {
+            "en": { "title": "CRM Operating System", "description": "Track prospects, customers, course buyers, follow-ups, and opportunities." },
+            "de": { "title": "CRM Betriebssystem", "description": "Tracke Prospects, Kunden, Kurskaeufer, Follow-ups und Chancen." },
+            "es": { "title": "Sistema Operativo CRM", "description": "Controla prospectos, clientes, compradores de cursos, follow-ups y oportunidades." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "github-vercel-deployment",
+      "order": 11,
+      "phase": "web",
+      "price": "97.00",
+      "level": "Advanced",
+      "duration": "6h 20m",
+      "image": "images/index/fi_6578930.png",
+      "accent": "#111827",
+      "tags": ["GitHub", "Vercel", "Deployment"],
+      "translations": {
+        "en": {
+          "title": "GitHub and Vercel Deployment",
+          "subtitle": "Learn the modern publishing workflow: repo, branches, commits, deploys, domains, environment variables, and rollbacks.",
+          "summary": "A bridge from no-code marketing work into professional web delivery using GitHub and Vercel.",
+          "outcomes": ["Create and organize a repo", "Deploy with Vercel", "Connect a custom domain", "Use environment variables safely"]
+        },
+        "de": {
+          "title": "GitHub und Vercel Deployment",
+          "subtitle": "Lerne den modernen Publishing-Workflow: Repo, Branches, Commits, Deploys, Domains, Env Vars und Rollbacks.",
+          "summary": "Eine Bruecke von Marketing-Arbeit zu professioneller Web-Auslieferung mit GitHub und Vercel.",
+          "outcomes": ["Erstelle und organisiere ein Repo", "Deploye mit Vercel", "Verbinde eine Custom Domain", "Nutze Env Vars sicher"]
+        },
+        "es": {
+          "title": "Deployment con GitHub y Vercel",
+          "subtitle": "Aprende el flujo moderno: repo, branches, commits, deploys, dominios, variables de entorno y rollbacks.",
+          "summary": "Un puente desde marketing/no-code hacia entrega web profesional usando GitHub y Vercel.",
+          "outcomes": ["Crear y organizar un repo", "Desplegar con Vercel", "Conectar dominio personalizado", "Usar variables de entorno con seguridad"]
+        }
+      },
+      "lessons": [
+        {
+          "id": "repo-basics",
+          "preview": true,
+          "duration": "36m",
+          "translations": {
+            "en": { "title": "Repository Basics", "description": "Understand files, commits, branches, pull requests, and clean project folders." },
+            "de": { "title": "Repository Basics", "description": "Verstehe Dateien, Commits, Branches, Pull Requests und saubere Projektordner." },
+            "es": { "title": "Bases de Repositorio", "description": "Entiende archivos, commits, branches, pull requests y carpetas limpias." }
+          }
+        },
+        {
+          "id": "vercel-deploy",
+          "preview": false,
+          "duration": "50m",
+          "translations": {
+            "en": { "title": "Vercel Deploy", "description": "Connect GitHub, deploy previews, inspect logs, and ship production safely." },
+            "de": { "title": "Vercel Deploy", "description": "Verbinde GitHub, deploye Previews, lies Logs und liefere Production sicher." },
+            "es": { "title": "Deploy en Vercel", "description": "Conecta GitHub, despliega previews, revisa logs y publica produccion con seguridad." }
+          }
+        },
+        {
+          "id": "env-and-domain",
+          "preview": false,
+          "duration": "46m",
+          "translations": {
+            "en": { "title": "Environment and Domain", "description": "Set domains, DNS, API keys, environment variables, and deployment settings." },
+            "de": { "title": "Environment und Domain", "description": "Setze Domains, DNS, API Keys, Env Vars und Deployment-Einstellungen." },
+            "es": { "title": "Entorno y Dominio", "description": "Configura dominios, DNS, API keys, variables de entorno y settings de deploy." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "chatgpt-business-systems",
+      "order": 12,
+      "phase": "automation",
+      "price": "97.00",
+      "level": "Advanced",
+      "duration": "6h 10m",
+      "image": "images/index/fi_3930356.png",
+      "accent": "#19b86a",
+      "tags": ["ChatGPT", "AI", "Systems"],
+      "translations": {
+        "en": {
+          "title": "ChatGPT Business Systems",
+          "subtitle": "Use ChatGPT to research, plan, write, review, document, and improve business workflows.",
+          "summary": "A course for turning ChatGPT into a reliable assistant for strategy, marketing, support, SOPs, and creative production.",
+          "outcomes": ["Write business prompts", "Build SOP assistants", "Review marketing assets", "Create reusable AI workflows"]
+        },
+        "de": {
+          "title": "ChatGPT Business Systeme",
+          "subtitle": "Nutze ChatGPT fuer Recherche, Planung, Schreiben, Review, Dokumentation und Workflows.",
+          "summary": "Ein Kurs, um ChatGPT als Assistent fuer Strategie, Marketing, Support, SOPs und kreative Produktion zu nutzen.",
+          "outcomes": ["Schreibe Business-Prompts", "Baue SOP-Assistenten", "Reviewe Marketing-Assets", "Erstelle wiederverwendbare KI-Workflows"]
+        },
+        "es": {
+          "title": "Sistemas de Negocio con ChatGPT",
+          "subtitle": "Usa ChatGPT para investigar, planear, escribir, revisar, documentar y mejorar workflows.",
+          "summary": "Un curso para convertir ChatGPT en asistente confiable de estrategia, marketing, soporte, SOPs y produccion creativa.",
+          "outcomes": ["Escribir prompts de negocio", "Crear asistentes SOP", "Revisar assets de marketing", "Construir workflows IA reutilizables"]
+        }
+      },
+      "lessons": [
+        {
+          "id": "prompt-briefs",
+          "preview": true,
+          "duration": "34m",
+          "translations": {
+            "en": { "title": "Prompt Briefs", "description": "Give ChatGPT clear role, context, constraints, examples, and output format." },
+            "de": { "title": "Prompt Briefs", "description": "Gib ChatGPT Rolle, Kontext, Grenzen, Beispiele und Ausgabeformat." },
+            "es": { "title": "Briefs de Prompt", "description": "Dale a ChatGPT rol, contexto, limites, ejemplos y formato de salida." }
+          }
+        },
+        {
+          "id": "workflow-assistants",
+          "preview": false,
+          "duration": "55m",
+          "translations": {
+            "en": { "title": "Workflow Assistants", "description": "Create reusable assistants for content, customer support, research, and planning." },
+            "de": { "title": "Workflow Assistenten", "description": "Erstelle Assistenten fuer Content, Support, Recherche und Planung." },
+            "es": { "title": "Asistentes de Workflow", "description": "Crea asistentes para contenido, soporte, investigacion y planificacion." }
+          }
+        },
+        {
+          "id": "quality-review",
+          "preview": false,
+          "duration": "44m",
+          "translations": {
+            "en": { "title": "Quality Review", "description": "Use checklists, examples, and feedback loops to improve AI output." },
+            "de": { "title": "Qualitaetsreview", "description": "Nutze Checklisten, Beispiele und Feedback-Loops fuer bessere KI-Ausgaben." },
+            "es": { "title": "Revision de Calidad", "description": "Usa checklists, ejemplos y loops de feedback para mejorar resultados IA." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "codex-web-builder",
+      "order": 13,
+      "phase": "web",
+      "price": "127.00",
+      "level": "Advanced",
+      "duration": "7h 45m",
+      "image": "images/new/co2.jpg",
+      "accent": "#0f172a",
+      "tags": ["Codex", "Websites", "GitHub"],
+      "translations": {
+        "en": {
+          "title": "Codex Web Builder",
+          "subtitle": "Use Codex as a coding partner to inspect templates, edit code, test pages, and ship improvements through GitHub.",
+          "summary": "A practical course for entrepreneurs and freelancers who want AI-assisted website production without losing control of quality.",
+          "outcomes": ["Read a codebase with Codex", "Ask for scoped website edits", "Verify changes before shipping", "Use GitHub commits and deploys"]
+        },
+        "de": {
+          "title": "Codex Web Builder",
+          "subtitle": "Nutze Codex als Coding-Partner fuer Template-Analyse, Code-Edits, Tests und GitHub-Deploys.",
+          "summary": "Ein praktischer Kurs fuer KI-gestuetzte Website-Produktion mit Qualitaetskontrolle.",
+          "outcomes": ["Lies Codebases mit Codex", "Fordere klare Website-Edits an", "Pruefe Aenderungen vor Shipping", "Nutze GitHub Commits und Deploys"]
+        },
+        "es": {
+          "title": "Codex Web Builder",
+          "subtitle": "Usa Codex como socio de codigo para revisar plantillas, editar codigo, probar paginas y subir mejoras con GitHub.",
+          "summary": "Un curso practico para producir sitios web con IA sin perder control de calidad.",
+          "outcomes": ["Leer un codebase con Codex", "Pedir cambios web bien definidos", "Verificar antes de publicar", "Usar commits y deploys con GitHub"]
+        }
+      },
+      "lessons": [
+        {
+          "id": "codex-context",
+          "preview": true,
+          "duration": "38m",
+          "translations": {
+            "en": { "title": "Codex Context", "description": "Give Codex clear goals, files, constraints, and verification steps for website work." },
+            "de": { "title": "Codex Kontext", "description": "Gib Codex Ziele, Dateien, Grenzen und Verifikationsschritte fuer Website-Arbeit." },
+            "es": { "title": "Contexto para Codex", "description": "Dale a Codex objetivos, archivos, limites y pasos de verificacion para trabajo web." }
+          }
+        },
+        {
+          "id": "template-refactor",
+          "preview": false,
+          "duration": "62m",
+          "translations": {
+            "en": { "title": "Template Refactor", "description": "Turn a messy template into cleaner pages, reusable data, and maintainable assets." },
+            "de": { "title": "Template Refactor", "description": "Verwandle ein unordentliches Template in klare Seiten, Daten und wartbare Assets." },
+            "es": { "title": "Refactor de Plantilla", "description": "Convierte una plantilla desordenada en paginas limpias, datos reutilizables y assets mantenibles." }
+          }
+        },
+        {
+          "id": "verification-and-deploy",
+          "preview": false,
+          "duration": "58m",
+          "translations": {
+            "en": { "title": "Verification and Deploy", "description": "Run checks, inspect screenshots, commit changes, and deploy through Vercel." },
+            "de": { "title": "Verifikation und Deploy", "description": "Fuehre Checks aus, pruefe Screenshots, committe Aenderungen und deploye mit Vercel." },
+            "es": { "title": "Verificacion y Deploy", "description": "Corre checks, revisa capturas, haz commit y despliega con Vercel." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-web-apps-chatbots",
+      "order": 14,
+      "phase": "pro-ai",
+      "price": "147.00",
+      "level": "Pro",
+      "duration": "8h 30m",
+      "image": "images/course-img-8.jpg",
+      "accent": "#7c3aed",
+      "tags": ["Web Apps", "Chatbots", "Vercel"],
+      "translations": {
+        "en": {
+          "title": "AI Web Apps and Chatbots",
+          "subtitle": "Build simple AI-powered tools, forms, assistants, and chatbots that connect a business workflow to a web app.",
+          "summary": "The advanced path for turning marketing knowledge into interactive apps with authentication, APIs, deployment, and a real user journey.",
+          "outcomes": ["Design an app workflow", "Create API-backed interactions", "Protect keys and user data", "Ship an MVP on Vercel"]
+        },
+        "de": {
+          "title": "KI Web Apps und Chatbots",
+          "subtitle": "Baue einfache KI-Tools, Formulare, Assistenten und Chatbots fuer echte Business-Workflows.",
+          "summary": "Der Advanced-Pfad fuer interaktive Apps mit Auth, APIs, Deployment und User Journey.",
+          "outcomes": ["Designe einen App-Workflow", "Erstelle API-Interaktionen", "Schuetze Keys und Userdaten", "Shippe ein MVP auf Vercel"]
+        },
+        "es": {
+          "title": "Web Apps y Chatbots con IA",
+          "subtitle": "Construye herramientas IA, formularios, asistentes y chatbots conectados a workflows de negocio.",
+          "summary": "La ruta avanzada para convertir marketing en apps interactivas con auth, APIs, deployment y experiencia de usuario real.",
+          "outcomes": ["Disenar un workflow de app", "Crear interacciones con API", "Proteger keys y datos", "Publicar un MVP en Vercel"]
+        }
+      },
+      "lessons": [
+        {
+          "id": "app-idea-to-flow",
+          "preview": true,
+          "duration": "42m",
+          "translations": {
+            "en": { "title": "App Idea to Flow", "description": "Convert a business problem into inputs, outputs, screens, states, and a success metric." },
+            "de": { "title": "App Idee zu Flow", "description": "Verwandle ein Business-Problem in Inputs, Outputs, Screens, States und Erfolgsmetrik." },
+            "es": { "title": "De Idea a Flujo", "description": "Convierte un problema de negocio en inputs, outputs, pantallas, estados y metrica de exito." }
+          }
+        },
+        {
+          "id": "api-and-auth",
+          "preview": false,
+          "duration": "70m",
+          "translations": {
+            "en": { "title": "API and Auth Basics", "description": "Understand client/server boundaries, secure environment variables, login, and protected actions." },
+            "de": { "title": "API und Auth Basics", "description": "Verstehe Client/Server-Grenzen, sichere Env Vars, Login und geschuetzte Aktionen." },
+            "es": { "title": "Bases de API y Auth", "description": "Entiende limites cliente/servidor, variables seguras, login y acciones protegidas." }
+          }
+        },
+        {
+          "id": "chatbot-mvp",
+          "preview": false,
+          "duration": "78m",
+          "translations": {
+            "en": { "title": "Chatbot MVP", "description": "Build a focused assistant that answers, qualifies, recommends, or generates a business asset." },
+            "de": { "title": "Chatbot MVP", "description": "Baue einen fokussierten Assistenten, der antwortet, qualifiziert, empfiehlt oder Assets generiert." },
+            "es": { "title": "MVP de Chatbot", "description": "Construye un asistente enfocado que responde, califica, recomienda o genera un asset de negocio." }
           }
         }
       ]

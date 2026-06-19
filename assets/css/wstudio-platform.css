@@ -344,6 +344,31 @@ input {
   padding: 18px;
 }
 
+.course-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.phase-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 850;
+}
+
+.course-order {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
 .course-card h3 {
   margin: 0;
   font-size: 1.28rem;
@@ -413,6 +438,75 @@ input {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+}
+
+.roadmap-section {
+  padding: 42px 0 24px;
+}
+
+.roadmap-section .section-head p:last-child {
+  max-width: 560px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.roadmap-card {
+  min-height: 100%;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: white;
+  box-shadow: 0 10px 34px rgba(16, 17, 20, 0.06);
+}
+
+.roadmap-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  background: var(--yellow);
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.roadmap-card h3 {
+  margin: 20px 0 8px;
+  font-size: 1.22rem;
+  line-height: 1.12;
+}
+
+.roadmap-card p {
+  min-height: 68px;
+  margin: 0 0 16px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.roadmap-card ol {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.roadmap-card li {
+  color: var(--muted);
+  font-weight: 750;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.roadmap-card a:hover {
+  color: var(--blue);
 }
 
 .step-card {
@@ -867,8 +961,14 @@ input {
   .page-hero p,
   .course-hero p,
   .auth-copy p,
-  .hero-panel {
+  .hero-panel,
+  .roadmap-section .section-head p:last-child,
+  .roadmap-card {
     max-width: 340px;
+  }
+
+  .roadmap-card p {
+    min-height: 0;
   }
 
   .section,
@@ -878,6 +978,7 @@ input {
 
   .course-grid,
   .steps-grid,
+  .roadmap-grid,
   .auth-buttons {
     grid-template-columns: 1fr;
   }
