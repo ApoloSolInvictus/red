@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-label="">
+  <rect width="640" height="640" fill="#ffffff"/>
+  <circle cx="96" cy="100" r="150" fill="#0f172a" opacity=".12"/>
+  <circle cx="540" cy="120" r="170" fill="#ffb000" opacity=".14"/>
+  <circle cx="520" cy="560" r="190" fill="#0f172a" opacity=".10"/>
+  <circle cx="110" cy="540" r="160" fill="#ffb000" opacity=".12"/>
+  <g opacity=".55">
+    <path d="M 34 74 C 124 20, 210 100, 304 54" fill="none" stroke="#0f172a" stroke-width="8" stroke-linecap="round" opacity=".26"/>
+    <path d="M 358 564 C 480 480, 560 522, 612 426" fill="none" stroke="#ffb000" stroke-width="8" stroke-linecap="round" opacity=".24"/>
+  </g>
+  <g>
+    
+        <rect x="140" y="195" width="252" height="164" rx="24" fill="white" stroke="#111827" stroke-width="10"/>
+        <path d="M 203 250 L 170 270 L 203 290" fill="none" stroke="#ffb000" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M 309 250 L 342 270 L 309 290" fill="none" stroke="#ffb000" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="245" y1="309" x2="274" y2="231" fill="none" stroke="#0f172a" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+      
+  </g>
+</svg>

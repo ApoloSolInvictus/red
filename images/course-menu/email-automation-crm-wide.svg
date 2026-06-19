@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-label="">
+  <rect width="960" height="540" fill="#ffffff"/>
+  <circle cx="120" cy="80" r="150" fill="#f97316" opacity=".12"/>
+  <circle cx="820" cy="80" r="170" fill="#2354ff" opacity=".14"/>
+  <circle cx="760" cy="470" r="210" fill="#f97316" opacity=".10"/>
+  <circle cx="180" cy="480" r="190" fill="#2354ff" opacity=".12"/>
+  <g opacity=".55">
+    <path d="M 42 72 C 190 22, 242 116, 356 58" fill="none" stroke="#f97316" stroke-width="8" stroke-linecap="round" opacity=".26"/>
+    <path d="M 612 492 C 732 390, 824 460, 916 348" fill="none" stroke="#2354ff" stroke-width="8" stroke-linecap="round" opacity=".24"/>
+  </g>
+  <g>
+    
+        <rect x="344" y="156" width="252" height="148" rx="24" fill="white" stroke="#111827" stroke-width="10"/>
+        <path d="M 366 182 L 470 256 L 574 182" fill="none" stroke="#2354ff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="556" cy="298" r="34" fill="#f97316" opacity=".78"/>
+        <path d="M 542 298 L 552 310 L 574 284" fill="none" stroke="white" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+      
+  </g>
+</svg>

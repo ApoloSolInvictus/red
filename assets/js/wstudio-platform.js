@@ -85,6 +85,18 @@ async function initFirebase() {
   state.firebase = { app, auth };
   state.firebaseFns = authModule;
 
+  if (page === "login" && typeof authModule.getRedirectResult === "function") {
+    authModule.getRedirectResult(auth)
+      .then((result) => {
+        if (result && result.user) {
+          goToNext();
+        }
+      })
+      .catch((error) => {
+        setFormMessage(formatAuthError(error), true);
+      });
+  }
+
   authModule.onAuthStateChanged(auth, async (user) => {
     state.user = user;
     state.authReady = true;
@@ -226,7 +238,7 @@ function renderHome() {
         <h2>${i18n.t("section.allCourses")}</h2>
       </div>
       <div class="course-grid">
-        ${getCourses().slice(0, 4).map(renderCourseCard).join("")}
+        ${getCourses().slice(0, 4).map((course) => renderCourseCard(course)).join("")}
       </div>
     </section>
     <section class="section section-band">
@@ -269,22 +281,32 @@ function renderCoursesPage() {
     </section>
     <section class="site-shell section">
       <div class="course-grid">
-        ${getCourses().map(renderCourseCard).join("")}
+        ${getCourses().map((course) => renderCourseCard(course, { useMenuAsset: true })).join("")}
       </div>
     </section>
   `;
 }
 
-function renderCourseCard(course) {
+function renderCourseCard(course, options = {}) {
   const copy = localize(course);
   const owned = state.access.has(course.id);
   const tagList = course.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
   const phase = getPhaseLabel(course.phase);
+  const useMenuAsset = options && options.useMenuAsset === true;
+  const imageClass = useMenuAsset ? "course-image course-image-menu" : "course-image";
+  const imageMarkup = useMenuAsset
+    ? `
+        <picture>
+          <source media="(max-width: 640px)" srcset="${getCourseMenuImage(course, "square")}">
+          <img src="${getCourseMenuImage(course, "wide")}" alt="">
+        </picture>
+      `
+    : `<img src="${course.image}" alt="">`;
 
   return `
     <article class="course-card">
-      <a class="course-image" href="course.html?id=${encodeURIComponent(course.id)}" style="--course-accent: ${course.accent}">
-        <img src="${course.image}" alt="">
+      <a class="${imageClass}" href="course.html?id=${encodeURIComponent(course.id)}" style="--course-accent: ${course.accent}">
+        ${imageMarkup}
       </a>
       <div class="course-card-body">
         <div class="course-card-top">
@@ -305,6 +327,10 @@ function renderCourseCard(course) {
       </div>
     </article>
   `;
+}
+
+function getCourseMenuImage(course, variant) {
+  return `images/course-menu/${course.id}-${variant}.svg`;
 }
 
 function renderCoursePage() {
@@ -598,7 +624,7 @@ async function handleEmailAuth(event, mode) {
     }
     goToNext();
   } catch (error) {
-    setFormMessage(error.message, true);
+    setFormMessage(formatAuthError(error), true);
   }
 }
 
@@ -610,10 +636,15 @@ async function handleGoogleAuth() {
 
   try {
     const provider = new state.firebaseFns.GoogleAuthProvider();
+    if (shouldUseAuthRedirect() && typeof state.firebaseFns.signInWithRedirect === "function") {
+      await state.firebaseFns.signInWithRedirect(state.firebase.auth, provider);
+      return;
+    }
+
     await state.firebaseFns.signInWithPopup(state.firebase.auth, provider);
     goToNext();
   } catch (error) {
-    setFormMessage(error.message, true);
+    setFormMessage(formatAuthError(error), true);
   }
 }
 
@@ -635,8 +666,32 @@ async function handleResetPassword() {
     await state.firebaseFns.sendPasswordResetEmail(state.firebase.auth, email);
     setFormMessage(i18n.t("auth.checkEmail"), false);
   } catch (error) {
-    setFormMessage(error.message, true);
+    setFormMessage(formatAuthError(error), true);
   }
+}
+
+function shouldUseAuthRedirect() {
+  const mobileViewport = window.matchMedia && window.matchMedia("(max-width: 700px)").matches;
+  const mobileAgent = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent || "");
+  return mobileViewport || mobileAgent;
+}
+
+function formatAuthError(error) {
+  const code = error && error.code;
+
+  if (code === "auth/unauthorized-domain") {
+    return i18n.t("auth.googleUnauthorizedDomain");
+  }
+
+  if (code === "auth/operation-not-allowed") {
+    return i18n.t("auth.googleProviderDisabled");
+  }
+
+  if (code === "auth/popup-blocked" || code === "auth/popup-closed-by-user") {
+    return i18n.t("auth.popupBlocked");
+  }
+
+  return (error && error.message) || String(error);
 }
 
 function goToNext() {
