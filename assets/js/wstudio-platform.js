@@ -12,6 +12,8 @@ const state = {
 const i18n = window.WStudioI18n;
 const page = document.body.dataset.page || "home";
 const phaseOrder = ["foundation", "creative", "marketing", "automation", "web", "pro-ai"];
+const siteUrl = "https://learn.wstudio3d.com";
+const socialImageUrl = `${siteUrl}/images/social/learn-social-preview.jpg`;
 
 document.addEventListener("DOMContentLoaded", init);
 window.addEventListener("wstudio:language-changed", () => {
@@ -204,6 +206,7 @@ function renderPage() {
   }
 
   i18n.translate(document);
+  updateRuntimeSeo();
 }
 
 function renderHome() {
@@ -980,6 +983,97 @@ function localize(item) {
   const fallback = item.translations.en || {};
   const localized = item.translations[i18n.language] || {};
   return { ...fallback, ...localized };
+}
+
+function updateRuntimeSeo() {
+  if (page !== "course" || !state.catalog) {
+    return;
+  }
+
+  const course = getCurrentCourse();
+  if (!course) {
+    return;
+  }
+
+  const copy = course.translations.en || localize(course);
+  const title = `${copy.title} | W Studio Learn`;
+  const description = copy.summary || copy.subtitle || "Preview a W Studio Learn course and unlock access with secure student login and PayPal checkout.";
+  const url = `${siteUrl}/course?id=${encodeURIComponent(course.id)}`;
+  const imageAlt = `${copy.title} course preview from W Studio Learn`;
+
+  document.title = title;
+  setMeta("name", "description", description);
+  setCanonical(url);
+  setMeta("property", "og:title", title);
+  setMeta("property", "og:description", description);
+  setMeta("property", "og:url", url);
+  setMeta("property", "og:image", socialImageUrl);
+  setMeta("property", "og:image:secure_url", socialImageUrl);
+  setMeta("property", "og:image:alt", imageAlt);
+  setMeta("name", "twitter:title", title);
+  setMeta("name", "twitter:description", description);
+  setMeta("name", "twitter:image", socialImageUrl);
+  setMeta("name", "twitter:image:alt", imageAlt);
+  setCourseStructuredData(course, copy, url);
+}
+
+function setMeta(attribute, key, content) {
+  let element = document.head.querySelector(`meta[${attribute}="${key}"]`);
+
+  if (!element) {
+    element = document.createElement("meta");
+    element.setAttribute(attribute, key);
+    document.head.appendChild(element);
+  }
+
+  element.setAttribute("content", content);
+}
+
+function setCanonical(url) {
+  let element = document.head.querySelector('link[rel="canonical"]');
+
+  if (!element) {
+    element = document.createElement("link");
+    element.setAttribute("rel", "canonical");
+    document.head.appendChild(element);
+  }
+
+  element.setAttribute("href", url);
+}
+
+function setCourseStructuredData(course, copy, url) {
+  const scriptId = "runtime-course-schema";
+  let script = document.getElementById(scriptId);
+
+  if (!script) {
+    script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = scriptId;
+    document.head.appendChild(script);
+  }
+
+  script.textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: copy.title,
+    description: copy.summary || copy.subtitle,
+    url,
+    image: socialImageUrl,
+    provider: {
+      "@type": "Organization",
+      name: "W Studio Learn",
+      url: siteUrl
+    },
+    offers: {
+      "@type": "Offer",
+      url,
+      price: course.price,
+      priceCurrency: state.catalog.currency || "USD",
+      availability: "https://schema.org/InStock",
+      category: "Online course"
+    },
+    inLanguage: ["en", "de", "es"]
+  });
 }
 
 function formatPrice(course) {
