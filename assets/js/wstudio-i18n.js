@@ -102,7 +102,10 @@
       "status.ready": "Ready",
       "status.apiIssue": "The API is reachable only after Vercel environment variables are configured.",
       "footer.copy": "W Studio Learn. Built for focused online classes.",
-      "footer.domain": "learn.wstudio3d.com"
+      "footer.domain": "learn.wstudio3d.com",
+      "footer.privacy": "Privacy",
+      "footer.terms": "Terms",
+      "footer.refund": "Refunds"
     },
     de: {
       "nav.courses": "Kurse",
@@ -200,7 +203,10 @@
       "status.ready": "Bereit",
       "status.apiIssue": "Die API funktioniert vollstaendig, sobald die Vercel-Umgebungsvariablen konfiguriert sind.",
       "footer.copy": "W Studio Learn. Gebaut fuer fokussierte Online-Klassen.",
-      "footer.domain": "learn.wstudio3d.com"
+      "footer.domain": "learn.wstudio3d.com",
+      "footer.privacy": "Datenschutz",
+      "footer.terms": "Bedingungen",
+      "footer.refund": "Rueckerstattung"
     },
     es: {
       "nav.courses": "Cursos",
@@ -298,7 +304,10 @@
       "status.ready": "Listo",
       "status.apiIssue": "La API funciona completamente cuando configures las variables de entorno en Vercel.",
       "footer.copy": "W Studio Learn. Construido para clases online enfocadas.",
-      "footer.domain": "learn.wstudio3d.com"
+      "footer.domain": "learn.wstudio3d.com",
+      "footer.privacy": "Privacidad",
+      "footer.terms": "Terminos",
+      "footer.refund": "Reembolsos"
     }
   };
 

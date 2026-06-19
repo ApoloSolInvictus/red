@@ -940,6 +940,105 @@ input {
   color: rgba(255, 255, 255, 0.72);
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.footer-links a:hover {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.legal-page {
+  padding-bottom: 72px;
+}
+
+.legal-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.legal-toc {
+  position: sticky;
+  top: 100px;
+  display: grid;
+  gap: 10px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.legal-toc a {
+  color: var(--muted);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.legal-toc a:hover {
+  color: var(--blue);
+}
+
+.legal-content {
+  display: grid;
+  gap: 32px;
+  max-width: 820px;
+}
+
+.legal-section {
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.legal-section:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.legal-section h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  line-height: 1.08;
+}
+
+.legal-section p,
+.legal-section li {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.legal-section ul,
+.legal-section ol {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.legal-updated {
+  margin-top: 18px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.legal-contact {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  margin-top: 8px;
+  color: var(--blue);
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .status-pill {
   position: fixed;
   right: 18px;
@@ -965,7 +1064,8 @@ input {
   .course-hero-grid,
   .course-layout,
   .auth-page,
-  .outcome-panel {
+  .outcome-panel,
+  .legal-layout {
     grid-template-columns: 1fr;
   }
 
@@ -974,6 +1074,10 @@ input {
   }
 
   .curriculum {
+    position: static;
+  }
+
+  .legal-toc {
     position: static;
   }
 }
