@@ -9,7 +9,7 @@
       "price": "37.00",
       "level": "Beginner",
       "duration": "3h 40m",
-      "image": "images/shop-img-8.jpg",
+      "image": "images/course-photos/digital-business-foundations-square.jpg",
       "accent": "#2354ff",
       "tags": ["Business", "Strategy", "Mindset"],
       "translations": {
@@ -72,7 +72,7 @@
       "price": "47.00",
       "level": "Beginner",
       "duration": "4h 15m",
-      "image": "images/portfolio-img-6.jpg",
+      "image": "images/course-photos/brand-identity-systems-square.jpg",
       "accent": "#ff5a5f",
       "tags": ["Branding", "Design", "Identity"],
       "translations": {
@@ -135,7 +135,7 @@
       "price": "47.00",
       "level": "Beginner",
       "duration": "5h 20m",
-      "image": "images/course-canva-devices.png",
+      "image": "images/course-photos/canva-for-entrepreneurs-square.jpg",
       "accent": "#ffb000",
       "tags": ["Canva", "Design", "Marketing"],
       "translations": {
@@ -198,7 +198,7 @@
       "price": "67.00",
       "level": "Beginner",
       "duration": "4h 45m",
-      "image": "images/new/event3.jpg",
+      "image": "images/course-photos/ai-content-systems-square.jpg",
       "accent": "#19b86a",
       "tags": ["AI", "Content", "Workflow"],
       "translations": {
@@ -261,7 +261,7 @@
       "price": "67.00",
       "level": "Beginner",
       "duration": "4h 30m",
-      "image": "images/shop-img-5.jpg",
+      "image": "images/course-photos/copywriting-offer-design-square.jpg",
       "accent": "#ff5a5f",
       "tags": ["Copywriting", "Offers", "Sales"],
       "translations": {
@@ -324,7 +324,7 @@
       "price": "77.00",
       "level": "Intermediate",
       "duration": "5h 15m",
-      "image": "images/new/event6.jpg",
+      "image": "images/course-photos/social-video-content-machine-square.jpg",
       "accent": "#a855f7",
       "tags": ["Social", "Video", "Growth"],
       "translations": {
@@ -387,7 +387,7 @@
       "price": "77.00",
       "level": "Intermediate",
       "duration": "5h 30m",
-      "image": "images/shop-img-2.jpg",
+      "image": "images/course-photos/envato-creative-assets-square.jpg",
       "accent": "#19b86a",
       "tags": ["Envato", "Assets", "Templates"],
       "translations": {
@@ -450,7 +450,7 @@
       "price": "87.00",
       "level": "Intermediate",
       "duration": "6h 05m",
-      "image": "images/course-img-7.jpg",
+      "image": "images/course-photos/themeforest-website-blueprint-square.jpg",
       "accent": "#2354ff",
       "tags": ["ThemeForest", "Web Design", "Templates"],
       "translations": {
@@ -513,7 +513,7 @@
       "price": "77.00",
       "level": "Intermediate",
       "duration": "5h 25m",
-      "image": "images/new/co8.jpg",
+      "image": "images/course-photos/seo-analytics-conversion-square.jpg",
       "accent": "#0ea5e9",
       "tags": ["SEO", "Analytics", "Conversion"],
       "translations": {
@@ -576,7 +576,7 @@
       "price": "87.00",
       "level": "Intermediate",
       "duration": "5h 40m",
-      "image": "images/index/communication.png",
+      "image": "images/course-photos/email-automation-crm-square.jpg",
       "accent": "#f97316",
       "tags": ["Email", "CRM", "Automation"],
       "translations": {
@@ -639,7 +639,7 @@
       "price": "97.00",
       "level": "Advanced",
       "duration": "6h 20m",
-      "image": "images/index/fi_6578930.png",
+      "image": "images/course-photos/github-vercel-deployment-square.jpg",
       "accent": "#111827",
       "tags": ["GitHub", "Vercel", "Deployment"],
       "translations": {
@@ -702,7 +702,7 @@
       "price": "97.00",
       "level": "Advanced",
       "duration": "6h 10m",
-      "image": "images/index/fi_3930356.png",
+      "image": "images/course-photos/chatgpt-business-systems-square.jpg",
       "accent": "#19b86a",
       "tags": ["ChatGPT", "AI", "Systems"],
       "translations": {
@@ -765,7 +765,7 @@
       "price": "127.00",
       "level": "Advanced",
       "duration": "7h 45m",
-      "image": "images/new/co2.jpg",
+      "image": "images/course-photos/codex-web-builder-square.jpg",
       "accent": "#0f172a",
       "tags": ["Codex", "Websites", "GitHub"],
       "translations": {
@@ -828,7 +828,7 @@
       "price": "147.00",
       "level": "Pro",
       "duration": "8h 30m",
-      "image": "images/course-img-8.jpg",
+      "image": "images/course-photos/ai-web-apps-chatbots-square.jpg",
       "accent": "#7c3aed",
       "tags": ["Web Apps", "Chatbots", "Vercel"],
       "translations": {

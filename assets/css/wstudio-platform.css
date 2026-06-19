@@ -244,8 +244,27 @@ input {
   box-shadow: var(--shadow);
 }
 
+.hero-photo {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.hero-photo picture,
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-photo img {
+  object-fit: cover;
+}
+
 .hero-logo {
-  width: min(100%, 420px);
+  width: min(48%, 180px);
   margin: 0 auto 8px;
 }
 
@@ -316,8 +335,9 @@ input {
 
 .course-image {
   position: relative;
-  aspect-ratio: 16 / 10;
-  background: var(--course-accent, var(--blue));
+  aspect-ratio: 16 / 9;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
 }
 
 .course-image picture {
@@ -326,33 +346,14 @@ input {
   height: 100%;
 }
 
-.course-image.course-image-menu {
-  aspect-ratio: 16 / 9;
-  border-bottom: 1px solid var(--line);
-  background: #fff;
-}
-
 .course-image::after {
-  position: absolute;
-  inset: auto 16px 16px auto;
-  width: 46px;
-  height: 6px;
-  background: var(--yellow);
-  content: "";
+  display: none;
 }
 
 .course-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  mix-blend-mode: multiply;
-}
-
-.course-image.course-image-menu::after {
-  display: none;
-}
-
-.course-image.course-image-menu img {
   mix-blend-mode: normal;
 }
 
@@ -617,10 +618,26 @@ input {
   padding: 18px;
 }
 
-.checkout-panel img {
-  width: 100%;
-  aspect-ratio: 16 / 10;
+.course-detail-image {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
   border-radius: var(--radius);
+  background: #fff;
+}
+
+.course-detail-image picture,
+.course-detail-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.course-detail-image picture {
+  display: block;
+}
+
+.course-detail-image img {
+  aspect-ratio: 16 / 10;
   object-fit: cover;
 }
 
@@ -1003,7 +1020,8 @@ input {
     grid-template-columns: 1fr;
   }
 
-  .course-image.course-image-menu {
+  .course-image.course-image-photo,
+  .course-detail-image {
     aspect-ratio: 1 / 1;
   }
 

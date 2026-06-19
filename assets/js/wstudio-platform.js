@@ -212,6 +212,8 @@ function renderHome() {
     return;
   }
 
+  const heroCourse = getCourses().find((course) => course.id === "canva-for-entrepreneurs") || getCourses()[0];
+
   target.innerHTML = `
     <section class="hero">
       <div class="site-shell hero-grid">
@@ -225,6 +227,9 @@ function renderHome() {
           </div>
         </div>
         <div class="hero-panel" aria-label="W Studio course stats">
+          <div class="hero-photo">
+            ${renderCoursePicture(heroCourse)}
+          </div>
           <img src="images/w-studio-logo.png" alt="" class="hero-logo">
           <div class="hero-stat"><strong>${state.catalog.courses.length}</strong><span>${i18n.t("hero.statCourses")}</span></div>
           <div class="hero-stat"><strong>EN / DE / ES</strong><span>${i18n.t("hero.statLanguages")}</span></div>
@@ -238,7 +243,7 @@ function renderHome() {
         <h2>${i18n.t("section.allCourses")}</h2>
       </div>
       <div class="course-grid">
-        ${getCourses().slice(0, 4).map((course) => renderCourseCard(course)).join("")}
+        ${getCourses().slice(0, 4).map(renderCourseCard).join("")}
       </div>
     </section>
     <section class="section section-band">
@@ -281,32 +286,22 @@ function renderCoursesPage() {
     </section>
     <section class="site-shell section">
       <div class="course-grid">
-        ${getCourses().map((course) => renderCourseCard(course, { useMenuAsset: true })).join("")}
+        ${getCourses().map(renderCourseCard).join("")}
       </div>
     </section>
   `;
 }
 
-function renderCourseCard(course, options = {}) {
+function renderCourseCard(course) {
   const copy = localize(course);
   const owned = state.access.has(course.id);
   const tagList = course.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
   const phase = getPhaseLabel(course.phase);
-  const useMenuAsset = options && options.useMenuAsset === true;
-  const imageClass = useMenuAsset ? "course-image course-image-menu" : "course-image";
-  const imageMarkup = useMenuAsset
-    ? `
-        <picture>
-          <source media="(max-width: 640px)" srcset="${getCourseMenuImage(course, "square")}">
-          <img src="${getCourseMenuImage(course, "wide")}" alt="">
-        </picture>
-      `
-    : `<img src="${course.image}" alt="">`;
 
   return `
     <article class="course-card">
-      <a class="${imageClass}" href="course.html?id=${encodeURIComponent(course.id)}" style="--course-accent: ${course.accent}">
-        ${imageMarkup}
+      <a class="course-image course-image-photo" href="course.html?id=${encodeURIComponent(course.id)}" style="--course-accent: ${course.accent}">
+        ${renderCoursePicture(course)}
       </a>
       <div class="course-card-body">
         <div class="course-card-top">
@@ -329,8 +324,21 @@ function renderCourseCard(course, options = {}) {
   `;
 }
 
-function getCourseMenuImage(course, variant) {
-  return `images/course-menu/${course.id}-${variant}.svg`;
+function renderCoursePicture(course) {
+  return `
+    <picture>
+      <source media="(max-width: 640px)" srcset="${getCoursePhotoImage(course, "square")}">
+      <img src="${getCoursePhotoImage(course, "wide")}" alt="">
+    </picture>
+  `;
+}
+
+function getCoursePhotoImage(course, variant) {
+  if (variant === "wide") {
+    return `images/course-photos/${course.id}-wide.jpg`;
+  }
+
+  return course.image || `images/course-photos/${course.id}-square.jpg`;
 }
 
 function renderCoursePage() {
@@ -365,7 +373,9 @@ function renderCoursePage() {
           </div>
         </div>
         <aside class="checkout-panel">
-          <img src="${course.image}" alt="">
+          <div class="course-detail-image">
+            ${renderCoursePicture(course)}
+          </div>
           <h2>${owned ? i18n.t("course.owned") : i18n.t("course.buy")}</h2>
           <p>${escapeHtml(copy.summary)}</p>
           <div data-purchase-panel>${renderPurchasePanel(course, owned)}</div>
@@ -745,8 +755,8 @@ function renderDashboardCard(course) {
   const copy = localize(course);
   return `
     <article class="course-card">
-      <a class="course-image" href="course.html?id=${encodeURIComponent(course.id)}" style="--course-accent: ${course.accent}">
-        <img src="${course.image}" alt="">
+      <a class="course-image course-image-photo" href="course.html?id=${encodeURIComponent(course.id)}" style="--course-accent: ${course.accent}">
+        ${renderCoursePicture(course)}
       </a>
       <div class="course-card-body">
         <p class="eyebrow">${i18n.t("card.owned")}</p>
