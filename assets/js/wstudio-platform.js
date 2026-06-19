@@ -3,6 +3,7 @@ const state = {
   authReady: false,
   catalog: null,
   config: null,
+  examResults: {},
   firebase: null,
   firebaseFns: null,
   progress: {},
@@ -34,6 +35,7 @@ async function init() {
   state.catalog = catalog;
   state.config = config;
   state.progress = readLocalProgress();
+  state.examResults = readLocalExamResults();
 
   renderPage();
   await initFirebase();
@@ -107,11 +109,13 @@ async function initFirebase() {
 
     if (user) {
       state.progress = readLocalProgress();
+      state.examResults = readLocalExamResults();
       await loadStudentAccess();
       await loadStudentProgress();
     } else {
       state.access = new Set();
       state.progress = readLocalProgress();
+      state.examResults = readLocalExamResults();
     }
 
     renderHeader();
@@ -159,7 +163,9 @@ async function loadStudentProgress() {
 
     const payload = await response.json();
     state.progress = mergeProgress(state.progress, normalizeProgress(payload.progress || []));
+    state.examResults = mergeExamResults(state.examResults, normalizeExamResults(payload.examResults || []));
     saveLocalProgress();
+    saveLocalExamResults();
   } catch (error) {
     showNotice("progress", i18n.t("progress.localOnly"));
   }
@@ -429,6 +435,7 @@ function renderCoursePage() {
         </div>
       </aside>
     </section>
+    ${renderCourseExam(course, owned)}
     <section class="site-shell section">
       <div class="outcome-panel">
         <div>
@@ -457,6 +464,14 @@ function renderCoursePage() {
       }
     });
   });
+
+  const examForm = target.querySelector("[data-exam-form]");
+  if (examForm) {
+    examForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      await submitCourseExam(course, examForm);
+    });
+  }
 
   renderPayPalButtons(course, owned);
 }
@@ -674,6 +689,109 @@ function renderLessonCompletion(course, lesson, owned) {
   `;
 }
 
+function renderCourseExam(course, owned) {
+  if (!course.exam || !Array.isArray(course.exam.questions)) {
+    return "";
+  }
+
+  const exam = course.exam;
+  const copy = localize(exam);
+  const ready = owned && areAllLessonsCompleted(course);
+  const result = getExamResult(course.id);
+  const passed = result && result.passed;
+
+  return `
+    <section id="exam" class="site-shell section">
+      <div class="exam-panel${passed ? " is-passed" : ""}">
+        <div class="exam-head">
+          <div>
+            <p class="eyebrow">${i18n.t("exam.eyebrow")}</p>
+            <h2>${escapeHtml(copy.title)}</h2>
+            <p>${escapeHtml(copy.description)}</p>
+          </div>
+          <div class="exam-score-card">
+            <strong>${exam.passingScore}/${exam.questions.length}</strong>
+            <span>${i18n.t("exam.passingScore")}</span>
+          </div>
+        </div>
+        ${renderExamBody(course, ready, result)}
+      </div>
+    </section>
+  `;
+}
+
+function renderExamBody(course, ready, result) {
+  if (!state.access.has(course.id)) {
+    return `
+      <div class="exam-locked">
+        <h3>${i18n.t("exam.lockedTitle")}</h3>
+        <p>${i18n.t("exam.buyRequired")}</p>
+      </div>
+    `;
+  }
+
+  if (!ready) {
+    return `
+      <div class="exam-locked">
+        <h3>${i18n.t("exam.lockedTitle")}</h3>
+        <p>${i18n.t("exam.completeLessonsFirst")}</p>
+      </div>
+    `;
+  }
+
+  if (result && result.passed) {
+    return `
+      <div class="exam-result is-passed">
+        <strong>${result.score}/${result.questionCount}</strong>
+        <div>
+          <h3>${i18n.t("exam.passedTitle")}</h3>
+          <p>${i18n.t("exam.passedCopy")}</p>
+        </div>
+      </div>
+    `;
+  }
+
+  return `
+    ${result ? `
+      <div class="exam-result is-failed">
+        <strong>${result.score}/${result.questionCount}</strong>
+        <div>
+          <h3>${i18n.t("exam.failedTitle")}</h3>
+          <p>${i18n.t("exam.failedCopy")}</p>
+        </div>
+      </div>
+    ` : ""}
+    <form class="exam-form" data-exam-form>
+      ${course.exam.questions.map((question, index) => renderExamQuestion(question, index)).join("")}
+      <div class="exam-actions">
+        <p data-exam-message></p>
+        <button class="button button-primary" type="submit">${i18n.t("exam.submit")}</button>
+      </div>
+    </form>
+  `;
+}
+
+function renderExamQuestion(question, index) {
+  const copy = localize(question);
+
+  return `
+    <fieldset class="exam-question">
+      <legend>
+        <span>${String(index + 1).padStart(2, "0")}</span>
+        ${escapeHtml(copy.question)}
+      </legend>
+      <div class="exam-options">
+        ${copy.options.map((option, optionIndex) => `
+          <label>
+            <input type="radio" name="exam-${escapeAttribute(question.id)}" value="${optionIndex}">
+            <span>${escapeHtml(option)}</span>
+          </label>
+        `).join("")}
+      </div>
+    </fieldset>
+  `;
+}
+
 function renderVideoCredit(lesson) {
   if (!lesson.videoTitle && !lesson.videoSource) {
     return "";
@@ -777,6 +895,10 @@ function isLessonCompleted(course, lesson) {
   return getCompletedLessons(course.id).has(lesson.id);
 }
 
+function areAllLessonsCompleted(course) {
+  return course.lessons.every((lesson) => isLessonCompleted(course, lesson));
+}
+
 function getCompletedLessons(courseId) {
   return new Set(state.progress[courseId] || []);
 }
@@ -828,6 +950,93 @@ async function syncLessonProgress(courseId, lessonId) {
   }
 }
 
+async function submitCourseExam(course, form) {
+  const answers = collectExamAnswers(course, form);
+  if (!answers) {
+    setExamMessage(i18n.t("exam.answerAll"), true);
+    return;
+  }
+
+  const result = gradeCourseExam(course, answers);
+  state.examResults = {
+    ...state.examResults,
+    [course.id]: result
+  };
+  saveLocalExamResults();
+  renderCoursePage();
+  await syncExamResult(course.id, answers);
+}
+
+function collectExamAnswers(course, form) {
+  const formData = new FormData(form);
+  const answers = {};
+
+  for (const question of course.exam.questions) {
+    const value = formData.get(`exam-${question.id}`);
+    if (value === null) {
+      return null;
+    }
+    answers[question.id] = Number(value);
+  }
+
+  return answers;
+}
+
+function gradeCourseExam(course, answers) {
+  const score = course.exam.questions.reduce((sum, question) => {
+    return sum + (answers[question.id] === question.correctOption ? 1 : 0);
+  }, 0);
+  const questionCount = course.exam.questions.length;
+  const passingScore = course.exam.passingScore || Math.ceil(questionCount * 0.7);
+
+  return {
+    score,
+    questionCount,
+    passingScore,
+    passed: score >= passingScore,
+    answers,
+    submittedAt: new Date().toISOString()
+  };
+}
+
+async function syncExamResult(courseId, answers) {
+  if (!state.user) {
+    return;
+  }
+
+  try {
+    const token = await state.user.getIdToken();
+    const response = await fetch("/api/progress", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ courseId, examAnswers: answers })
+    });
+    const payload = await response.json();
+
+    if (!response.ok) {
+      throw new Error(payload.error || "Progress API unavailable.");
+    }
+
+    if (payload.examResult) {
+      state.examResults = {
+        ...state.examResults,
+        [courseId]: normalizeExamResult(payload.examResult)
+      };
+      saveLocalExamResults();
+      renderCoursePage();
+    }
+  } catch (error) {
+    showNotice("progress", i18n.t("progress.localOnly"));
+  }
+}
+
+function getExamResult(courseId) {
+  return state.examResults[courseId] || null;
+}
+
 function readLocalProgress() {
   try {
     return normalizeProgress(JSON.parse(window.localStorage.getItem(getProgressStorageKey()) || "{}"));
@@ -846,6 +1055,26 @@ function saveLocalProgress() {
 
 function getProgressStorageKey() {
   return `wstudio:lesson-progress:${state.user ? state.user.uid : "guest"}`;
+}
+
+function readLocalExamResults() {
+  try {
+    return normalizeExamResults(JSON.parse(window.localStorage.getItem(getExamStorageKey()) || "{}"));
+  } catch (error) {
+    return {};
+  }
+}
+
+function saveLocalExamResults() {
+  try {
+    window.localStorage.setItem(getExamStorageKey(), JSON.stringify(state.examResults));
+  } catch (error) {
+    showNotice("exam-storage", i18n.t("progress.localOnly"));
+  }
+}
+
+function getExamStorageKey() {
+  return `wstudio:exam-results:${state.user ? state.user.uid : "guest"}`;
 }
 
 function normalizeProgress(progress) {
@@ -871,6 +1100,59 @@ function mergeProgress(...sources) {
     });
     return merged;
   }, {});
+}
+
+function normalizeExamResults(results) {
+  if (Array.isArray(results)) {
+    return results.reduce((normalized, result) => {
+      const examResult = normalizeExamResult(result);
+      if (examResult && result.courseId) {
+        normalized[result.courseId] = examResult;
+      }
+      return normalized;
+    }, {});
+  }
+
+  return Object.entries(results || {}).reduce((normalized, [courseId, result]) => {
+    const examResult = normalizeExamResult(result);
+    if (examResult) {
+      normalized[courseId] = examResult;
+    }
+    return normalized;
+  }, {});
+}
+
+function normalizeExamResult(result) {
+  if (!result || typeof result !== "object") {
+    return null;
+  }
+
+  return {
+    score: Number(result.score || 0),
+    questionCount: Number(result.questionCount || 0),
+    passingScore: Number(result.passingScore || 0),
+    passed: Boolean(result.passed),
+    answers: result.answers || {},
+    submittedAt: result.submittedAt || ""
+  };
+}
+
+function mergeExamResults(...sources) {
+  return sources.reduce((merged, source) => {
+    Object.entries(normalizeExamResults(source)).forEach(([courseId, result]) => {
+      const existing = merged[courseId];
+      if (!existing || isNewerExamResult(result, existing)) {
+        merged[courseId] = result;
+      }
+    });
+    return merged;
+  }, {});
+}
+
+function isNewerExamResult(result, existing) {
+  const resultTime = Date.parse(result.submittedAt || "") || 0;
+  const existingTime = Date.parse(existing.submittedAt || "") || 0;
+  return resultTime >= existingTime;
 }
 
 function uniqueStrings(values) {
@@ -1182,6 +1464,10 @@ function renderDashboardPage() {
 function renderDashboardCard(course) {
   const copy = localize(course);
   const completedCount = course.lessons.filter((lesson) => isLessonCompleted(course, lesson)).length;
+  const examResult = getExamResult(course.id);
+  const progressLabel = examResult && examResult.passed
+    ? i18n.t("dashboard.examPassed")
+    : `${completedCount}/${course.lessons.length} ${i18n.t("dashboard.completed")}`;
   return `
     <article class="course-card">
       <a class="course-image course-image-photo" href="course.html?id=${encodeURIComponent(course.id)}" style="--course-accent: ${course.accent}">
@@ -1192,7 +1478,7 @@ function renderDashboardCard(course) {
         <h3>${escapeHtml(copy.title)}</h3>
         <p>${escapeHtml(copy.summary)}</p>
         <div class="card-bottom">
-          <span>${completedCount}/${course.lessons.length} ${i18n.t("dashboard.completed")}</span>
+          <span>${escapeHtml(progressLabel)}</span>
           <a class="button button-small" href="course.html?id=${encodeURIComponent(course.id)}">${i18n.t("dashboard.continue")}</a>
         </div>
       </div>
@@ -1403,6 +1689,16 @@ function setPaymentMessage(message, status) {
 
   target.textContent = message;
   target.className = `payment-message is-${status}`;
+}
+
+function setExamMessage(message, isError) {
+  const target = document.querySelector("[data-exam-message]");
+  if (!target) {
+    return;
+  }
+
+  target.textContent = message;
+  target.classList.toggle("is-error", Boolean(isError));
 }
 
 function escapeHtml(value) {
