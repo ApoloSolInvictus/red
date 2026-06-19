@@ -635,7 +635,7 @@ function renderLoginPage() {
         </label>
         <div class="auth-buttons">
           <button class="button button-primary" type="submit" data-auth-mode="login">${i18n.t("auth.login")}</button>
-          <button class="button button-secondary" type="button" data-auth-mode="register">${i18n.t("auth.register")}</button>
+          <button class="button button-secondary" type="submit" data-auth-mode="register">${i18n.t("auth.register")}</button>
         </div>
         <button class="button button-google" type="button" data-auth-mode="google">${i18n.t("auth.google")}</button>
         <button class="text-button" type="button" data-auth-mode="reset">${i18n.t("auth.reset")}</button>
@@ -645,11 +645,17 @@ function renderLoginPage() {
   `;
 
   const form = target.querySelector("[data-auth-form]");
-  form.addEventListener("submit", (event) => handleEmailAuth(event, "login"));
+  form.addEventListener("submit", handleAuthSubmit);
 
-  target.querySelector("[data-auth-mode='register']").addEventListener("click", () => handleEmailAuth(null, "register"));
   target.querySelector("[data-auth-mode='google']").addEventListener("click", handleGoogleAuth);
   target.querySelector("[data-auth-mode='reset']").addEventListener("click", handleResetPassword);
+}
+
+async function handleAuthSubmit(event) {
+  event.preventDefault();
+  const submitter = event.submitter;
+  const mode = submitter && submitter.dataset.authMode === "register" ? "register" : "login";
+  await handleEmailAuth(event, mode);
 }
 
 async function handleEmailAuth(event, mode) {
@@ -662,10 +668,19 @@ async function handleEmailAuth(event, mode) {
     return;
   }
 
-  const form = document.querySelector("[data-auth-form]");
+  const form = getAuthForm(event);
+  if (!form) {
+    return;
+  }
+
+  const credentials = getValidatedAuthCredentials(form);
+  if (!credentials) {
+    return;
+  }
+
   const data = new FormData(form);
-  const email = String(data.get("email") || "").trim();
-  const password = String(data.get("password") || "");
+  const email = credentials.email;
+  const password = credentials.password;
   const name = String(data.get("name") || "").trim();
 
   try {
@@ -681,6 +696,77 @@ async function handleEmailAuth(event, mode) {
   } catch (error) {
     setFormMessage(formatAuthError(error), true);
   }
+}
+
+function getAuthForm(event) {
+  if (event && event.currentTarget && event.currentTarget.matches("[data-auth-form]")) {
+    return event.currentTarget;
+  }
+
+  return document.querySelector("[data-auth-form]");
+}
+
+function getValidatedAuthCredentials(form) {
+  const emailInput = form.elements.email;
+  const passwordInput = form.elements.password;
+  const email = String(emailInput && emailInput.value || "").trim().toLowerCase();
+  const password = String(passwordInput && passwordInput.value || "");
+
+  if (emailInput) {
+    emailInput.value = email;
+    emailInput.setCustomValidity("");
+  }
+
+  if (passwordInput) {
+    passwordInput.setCustomValidity("");
+  }
+
+  if (!isValidEmail(email)) {
+    showInputError(emailInput, i18n.t("auth.invalidEmail"));
+    return null;
+  }
+
+  if (password.length < 6) {
+    showInputError(passwordInput, i18n.t("auth.passwordLength"));
+    return null;
+  }
+
+  setFormMessage("", false);
+  return { email, password };
+}
+
+function getValidatedAuthEmail(form) {
+  const emailInput = form.elements.email;
+  const email = String(emailInput && emailInput.value || "").trim().toLowerCase();
+
+  if (emailInput) {
+    emailInput.value = email;
+    emailInput.setCustomValidity("");
+  }
+
+  if (!isValidEmail(email)) {
+    showInputError(emailInput, i18n.t("auth.invalidEmail"));
+    return "";
+  }
+
+  setFormMessage("", false);
+  return email;
+}
+
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function showInputError(input, message) {
+  setFormMessage(message, true);
+
+  if (!input) {
+    return;
+  }
+
+  input.setCustomValidity(message);
+  input.reportValidity();
+  input.addEventListener("input", () => input.setCustomValidity(""), { once: true });
 }
 
 async function handleGoogleAuth() {
@@ -709,11 +795,13 @@ async function handleResetPassword() {
     return;
   }
 
-  const form = document.querySelector("[data-auth-form]");
-  const email = String(new FormData(form).get("email") || "").trim();
+  const form = getAuthForm();
+  if (!form) {
+    return;
+  }
 
+  const email = getValidatedAuthEmail(form);
   if (!email) {
-    setFormMessage(i18n.t("auth.email"), true);
     return;
   }
 
@@ -740,6 +828,26 @@ function formatAuthError(error) {
 
   if (code === "auth/operation-not-allowed") {
     return i18n.t("auth.googleProviderDisabled");
+  }
+
+  if (code === "auth/invalid-email" || code === "auth/missing-email") {
+    return i18n.t("auth.invalidEmail");
+  }
+
+  if (code === "auth/email-already-in-use") {
+    return i18n.t("auth.emailInUse");
+  }
+
+  if (code === "auth/weak-password" || code === "auth/missing-password") {
+    return i18n.t("auth.passwordLength");
+  }
+
+  if (code === "auth/invalid-credential" || code === "auth/user-not-found" || code === "auth/wrong-password") {
+    return i18n.t("auth.invalidCredentials");
+  }
+
+  if (code === "auth/too-many-requests") {
+    return i18n.t("auth.tooManyRequests");
   }
 
   if (code === "auth/popup-blocked" || code === "auth/popup-closed-by-user") {
