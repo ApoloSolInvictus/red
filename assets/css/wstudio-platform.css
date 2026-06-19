@@ -703,6 +703,12 @@ input {
   color: white;
 }
 
+.lesson-player iframe {
+  display: block;
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+}
+
 .lesson-brief,
 .locked-player {
   display: grid;
@@ -720,6 +726,48 @@ input {
 .locked-player p {
   max-width: 560px;
   color: rgba(255, 255, 255, 0.78);
+}
+
+.lesson-reading {
+  display: grid;
+  gap: 14px;
+  margin-top: 26px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--soft);
+}
+
+.lesson-video-credit {
+  margin: 10px 0 0;
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.lesson-video-credit a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.lesson-reading p,
+.lesson-reading ol {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.lesson-reading h3 {
+  margin: 4px 0 -4px;
+  font-size: 1rem;
+}
+
+.lesson-reading ol {
+  padding-left: 22px;
+}
+
+.lesson-reading li + li {
+  margin-top: 8px;
 }
 
 .curriculum {

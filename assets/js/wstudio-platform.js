@@ -544,7 +544,7 @@ function renderLessonPlayer(lesson, owned) {
   }
 
   const media = lesson.videoUrl
-    ? `<iframe src="${escapeAttribute(lesson.videoUrl)}" title="${escapeAttribute(copy.title)}" allowfullscreen></iframe>`
+    ? `<iframe src="${escapeAttribute(lesson.videoUrl)}" title="${escapeAttribute(copy.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>${renderVideoCredit(lesson)}`
     : `<div class="lesson-brief"><span>${i18n.t("course.lessonReady")}</span><p>${i18n.t("course.lessonNote")}</p></div>`;
 
   return `
@@ -553,7 +553,52 @@ function renderLessonPlayer(lesson, owned) {
       <h2>${escapeHtml(copy.title)}</h2>
       <p>${escapeHtml(copy.description)}</p>
       ${media}
+      ${renderLessonReading(copy.reading)}
     </article>
+  `;
+}
+
+function renderVideoCredit(lesson) {
+  if (!lesson.videoTitle && !lesson.videoSource) {
+    return "";
+  }
+
+  const title = lesson.videoTitle || i18n.t("lesson.video");
+  const source = lesson.videoSource ? ` - ${escapeHtml(lesson.videoSource)}` : "";
+  const watchUrl = getYouTubeWatchUrl(lesson.videoUrl);
+  const label = `${i18n.t("lesson.video")}: ${escapeHtml(title)}${source}`;
+
+  return watchUrl
+    ? `<p class="lesson-video-credit"><a href="${escapeAttribute(watchUrl)}" target="_blank" rel="noopener">${label}</a></p>`
+    : `<p class="lesson-video-credit">${label}</p>`;
+}
+
+function getYouTubeWatchUrl(embedUrl) {
+  if (!embedUrl) {
+    return "";
+  }
+
+  const match = String(embedUrl).match(/embed\/([^?&/]+)/);
+  return match ? `https://www.youtube.com/watch?v=${encodeURIComponent(match[1])}` : "";
+}
+
+function renderLessonReading(reading) {
+  if (!reading) {
+    return "";
+  }
+
+  const steps = Array.isArray(reading.steps)
+    ? `<ol>${reading.steps.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}</ol>`
+    : "";
+
+  return `
+    <section class="lesson-reading">
+      <p class="eyebrow">${i18n.t("lesson.reading")}</p>
+      ${reading.overview ? `<p>${escapeHtml(reading.overview)}</p>` : ""}
+      ${steps ? `<h3>${i18n.t("lesson.steps")}</h3>${steps}` : ""}
+      ${reading.practice ? `<h3>${i18n.t("lesson.practice")}</h3><p>${escapeHtml(reading.practice)}</p>` : ""}
+      ${reading.takeaway ? `<h3>${i18n.t("lesson.takeaway")}</h3><p>${escapeHtml(reading.takeaway)}</p>` : ""}
+    </section>
   `;
 }
 
@@ -824,7 +869,9 @@ function renderRoadmapPhase(phase, courses, index) {
 }
 
 function localize(item) {
-  return item.translations[i18n.language] || item.translations.en;
+  const fallback = item.translations.en || {};
+  const localized = item.translations[i18n.language] || {};
+  return { ...fallback, ...localized };
 }
 
 function formatPrice(course) {
