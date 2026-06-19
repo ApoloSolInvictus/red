@@ -251,8 +251,6 @@ function renderHome() {
     return;
   }
 
-  const heroCourse = getCourses().find((course) => course.id === "canva-for-entrepreneurs") || getCourses()[0];
-
   target.innerHTML = `
     <section class="hero">
       <div class="site-shell hero-grid">
@@ -267,7 +265,7 @@ function renderHome() {
         </div>
         <div class="hero-panel" aria-label="W Studio course stats">
           <div class="hero-photo">
-            ${renderCoursePicture(heroCourse)}
+            <img src="images/landing-futuristic-workstation.png" alt="">
           </div>
           <img src="images/w-studio-logo.png" alt="" class="hero-logo">
           <div class="hero-stat"><strong>${state.catalog.courses.length}</strong><span>${i18n.t("hero.statCourses")}</span></div>
