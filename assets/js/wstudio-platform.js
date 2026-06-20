@@ -274,6 +274,8 @@ function renderHome() {
         </div>
       </div>
     </section>
+    ${renderLandingLevels()}
+    ${renderAiGuideSection()}
     <section class="site-shell section">
       <div class="section-head">
         <p class="eyebrow">${i18n.t("section.featured")}</p>
@@ -293,6 +295,125 @@ function renderHome() {
           ${renderStep("01", i18n.t("how.auth.title"), i18n.t("how.auth.copy"))}
           ${renderStep("02", i18n.t("how.pay.title"), i18n.t("how.pay.copy"))}
           ${renderStep("03", i18n.t("how.access.title"), i18n.t("how.access.copy"))}
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+function renderLandingLevels() {
+  const levels = [
+    {
+      key: "beginner",
+      className: "level-white",
+      image: "images/landing-level-beginner.png",
+      courseIds: [
+        "digital-business-foundations",
+        "brand-identity-systems",
+        "canva-for-entrepreneurs",
+        "ai-content-systems",
+        "copywriting-offer-design"
+      ]
+    },
+    {
+      key: "intermediate",
+      className: "level-yellow is-reversed",
+      image: "images/landing-level-intermediate.png",
+      courseIds: [
+        "social-video-content-machine",
+        "envato-creative-assets",
+        "themeforest-website-blueprint",
+        "seo-analytics-conversion",
+        "email-automation-crm"
+      ]
+    },
+    {
+      key: "advanced",
+      className: "level-black",
+      image: "images/landing-level-advanced.png",
+      courseIds: [
+        "github-vercel-deployment",
+        "chatgpt-business-systems",
+        "codex-web-builder",
+        "ai-web-apps-chatbots"
+      ]
+    }
+  ];
+
+  return `
+    <section class="level-intro site-shell section">
+      <p class="eyebrow">${i18n.t("levels.eyebrow")}</p>
+      <h2>${i18n.t("levels.title")}</h2>
+      <p>${i18n.t("levels.copy")}</p>
+    </section>
+    ${levels.map(renderLandingLevel).join("")}
+  `;
+}
+
+function renderLandingLevel(level) {
+  const courses = level.courseIds
+    .map((courseId) => state.catalog.courses.find((course) => course.id === courseId))
+    .filter(Boolean);
+
+  return `
+    <section class="level-band ${level.className}">
+      <div class="site-shell level-grid">
+        <div class="level-copy">
+          <p class="eyebrow">${i18n.t(`level.${level.key}.eyebrow`)}</p>
+          <h2>${i18n.t(`level.${level.key}.title`)}</h2>
+          <p>${i18n.t(`level.${level.key}.copy`)}</p>
+          <ul class="level-points">
+            <li>${i18n.t(`level.${level.key}.point1`)}</li>
+            <li>${i18n.t(`level.${level.key}.point2`)}</li>
+            <li>${i18n.t(`level.${level.key}.point3`)}</li>
+          </ul>
+          <div class="level-course-list" aria-label="${escapeAttribute(i18n.t("levels.includes"))}">
+            <span>${i18n.t("levels.includes")}</span>
+            ${courses.map((course) => `<a href="course.html?id=${encodeURIComponent(course.id)}">${escapeHtml(localize(course).title)}</a>`).join("")}
+          </div>
+        </div>
+        <div class="level-visual">
+          <img src="${escapeAttribute(level.image)}" alt="">
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+function renderAiGuideSection() {
+  return `
+    <section class="ai-guide-band">
+      <div class="site-shell ai-guide-grid">
+        <div class="ai-guide-copy">
+          <p class="eyebrow">${i18n.t("aiGuide.eyebrow")}</p>
+          <h2>${i18n.t("aiGuide.title")}</h2>
+          <p>${i18n.t("aiGuide.copy")}</p>
+          <div class="ai-guide-prompt">
+            <span>${i18n.t("aiGuide.promptLabel")}</span>
+            <strong>${i18n.t("aiGuide.prompt")}</strong>
+          </div>
+        </div>
+        <div class="ai-guide-console" aria-label="OpenAI API course assistant preview">
+          <div class="voice-lane">
+            <div>
+              <span class="voice-dot"></span>
+              <strong>${i18n.t("aiGuide.student")}</strong>
+              <p>${i18n.t("aiGuide.studentCopy")}</p>
+            </div>
+            <button class="voice-button" type="button" disabled>${i18n.t("aiGuide.mic")}</button>
+          </div>
+          <div class="voice-wave" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="voice-lane">
+            <div>
+              <span class="voice-dot voice-dot-blue"></span>
+              <strong>${i18n.t("aiGuide.ai")}</strong>
+              <p>${i18n.t("aiGuide.aiCopy")}</p>
+            </div>
+            <button class="voice-button voice-button-dark" type="button" disabled>${i18n.t("aiGuide.voice")}</button>
+          </div>
+          <p class="ai-guide-status">${i18n.t("aiGuide.status")}</p>
         </div>
       </div>
     </section>
