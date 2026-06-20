@@ -1,5 +1,8 @@
 const state = {
   access: new Set(),
+  aiGuideBusy: false,
+  aiGuideMessages: [],
+  aiGuideVoiceEnabled: true,
   authReady: false,
   catalog: null,
   config: null,
@@ -299,6 +302,8 @@ function renderHome() {
       </div>
     </section>
   `;
+
+  bindAiGuideControls(target);
 }
 
 function renderLandingLevels() {
@@ -381,8 +386,11 @@ function renderLandingLevel(level) {
 }
 
 function renderAiGuideSection() {
+  const voiceLabel = state.aiGuideVoiceEnabled ? i18n.t("aiGuide.voiceOn") : i18n.t("aiGuide.voiceOff");
+  const disabled = state.aiGuideBusy ? " disabled" : "";
+
   return `
-    <section class="ai-guide-band">
+    <section class="ai-guide-band" data-ai-guide-section>
       <div class="site-shell ai-guide-grid">
         <div class="ai-guide-copy">
           <p class="eyebrow">${i18n.t("aiGuide.eyebrow")}</p>
@@ -393,31 +401,264 @@ function renderAiGuideSection() {
             <strong>${i18n.t("aiGuide.prompt")}</strong>
           </div>
         </div>
-        <div class="ai-guide-console" aria-label="OpenAI API course assistant preview">
-          <div class="voice-lane">
-            <div>
-              <span class="voice-dot"></span>
-              <strong>${i18n.t("aiGuide.student")}</strong>
-              <p>${i18n.t("aiGuide.studentCopy")}</p>
-            </div>
-            <button class="voice-button" type="button" disabled>${i18n.t("aiGuide.mic")}</button>
+        <div class="ai-guide-console" aria-label="OpenAI API course assistant">
+          <div class="ai-chat-log" data-ai-chat-log>
+            ${renderAiGuideMessages()}
           </div>
           <div class="voice-wave" aria-hidden="true">
             <span></span><span></span><span></span><span></span><span></span>
           </div>
-          <div class="voice-lane">
-            <div>
-              <span class="voice-dot voice-dot-blue"></span>
-              <strong>${i18n.t("aiGuide.ai")}</strong>
-              <p>${i18n.t("aiGuide.aiCopy")}</p>
+          <form class="ai-guide-form" data-ai-guide-form>
+            <textarea class="ai-guide-input" data-ai-guide-input rows="3" maxlength="900" placeholder="${escapeAttribute(i18n.t("aiGuide.inputPlaceholder"))}"${disabled}></textarea>
+            <div class="ai-guide-actions">
+              <button class="voice-button" type="button" data-ai-mic${disabled}>${i18n.t("aiGuide.micStart")}</button>
+              <button class="voice-button voice-button-dark" type="button" data-ai-voice-toggle aria-pressed="${state.aiGuideVoiceEnabled ? "true" : "false"}">${voiceLabel}</button>
+              <button class="button button-primary" type="submit"${disabled}>${state.aiGuideBusy ? i18n.t("aiGuide.thinking") : i18n.t("aiGuide.send")}</button>
             </div>
-            <button class="voice-button voice-button-dark" type="button" disabled>${i18n.t("aiGuide.voice")}</button>
-          </div>
-          <p class="ai-guide-status">${i18n.t("aiGuide.status")}</p>
+          </form>
+          <p class="ai-guide-status" data-ai-status>${state.aiGuideBusy ? i18n.t("aiGuide.thinking") : i18n.t("aiGuide.status")}</p>
         </div>
       </div>
     </section>
   `;
+}
+
+function renderAiGuideMessages() {
+  const messages = state.aiGuideMessages.length
+    ? state.aiGuideMessages
+    : [{ role: "assistant", content: i18n.t("aiGuide.greeting") }];
+
+  return messages.map(renderAiGuideMessage).join("");
+}
+
+function renderAiGuideMessage(message) {
+  const role = message.role === "user" ? "user" : "assistant";
+  const label = role === "user" ? i18n.t("aiGuide.student") : i18n.t("aiGuide.ai");
+
+  return `
+    <article class="ai-message ai-message-${role}">
+      <span>${label}</span>
+      <p>${formatAiMessage(message.content)}</p>
+    </article>
+  `;
+}
+
+function formatAiMessage(value) {
+  return escapeHtml(value).replace(/\n/g, "<br>");
+}
+
+function bindAiGuideControls(root) {
+  const form = root.querySelector("[data-ai-guide-form]");
+  if (!form) {
+    return;
+  }
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    await submitAiGuideQuestion(form);
+  });
+
+  const micButton = form.querySelector("[data-ai-mic]");
+  if (micButton) {
+    micButton.addEventListener("click", () => startAiGuideRecognition(form));
+  }
+
+  const voiceButton = form.querySelector("[data-ai-voice-toggle]");
+  if (voiceButton) {
+    voiceButton.addEventListener("click", () => {
+      state.aiGuideVoiceEnabled = !state.aiGuideVoiceEnabled;
+      rerenderAiGuide();
+    });
+  }
+
+  scrollAiGuideLog();
+}
+
+async function submitAiGuideQuestion(form) {
+  if (state.aiGuideBusy) {
+    return;
+  }
+
+  const input = form.querySelector("[data-ai-guide-input]");
+  const message = input ? input.value.trim() : "";
+  if (!message) {
+    setAiGuideStatus(i18n.t("aiGuide.empty"));
+    return;
+  }
+
+  const history = state.aiGuideMessages.slice(-8);
+  state.aiGuideMessages.push({ role: "user", content: message });
+  state.aiGuideBusy = true;
+  rerenderAiGuide();
+
+  try {
+    const answer = await requestAiGuideAnswer(message, history);
+    state.aiGuideMessages.push({ role: "assistant", content: answer });
+    state.aiGuideBusy = false;
+    rerenderAiGuide();
+
+    if (state.aiGuideVoiceEnabled) {
+      await playAiGuideSpeech(answer);
+    }
+  } catch (error) {
+    state.aiGuideBusy = false;
+    state.aiGuideMessages.push({
+      role: "assistant",
+      content: error.message || i18n.t("aiGuide.error")
+    });
+    rerenderAiGuide();
+  }
+}
+
+async function requestAiGuideAnswer(message, history) {
+  const response = await fetch("/api/ai/course-guide", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      message,
+      history,
+      language: i18n.language
+    })
+  });
+
+  const payload = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    throw new Error(payload.error || i18n.t("aiGuide.error"));
+  }
+
+  const answer = String(payload.answer || "").trim();
+  if (!answer) {
+    throw new Error(i18n.t("aiGuide.error"));
+  }
+
+  return answer;
+}
+
+function startAiGuideRecognition(form) {
+  const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!Recognition) {
+    setAiGuideStatus(i18n.t("aiGuide.unsupportedMic"));
+    return;
+  }
+
+  const recognition = new Recognition();
+  recognition.lang = getSpeechLanguage();
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
+
+  recognition.onstart = () => setAiGuideStatus(i18n.t("aiGuide.listening"));
+  recognition.onerror = () => setAiGuideStatus(i18n.t("aiGuide.error"));
+  recognition.onresult = (event) => {
+    const transcript = Array.from(event.results || [])
+      .map((result) => result[0] && result[0].transcript)
+      .filter(Boolean)
+      .join(" ")
+      .trim();
+
+    const input = form.querySelector("[data-ai-guide-input]");
+    if (input) {
+      input.value = transcript;
+    }
+
+    if (transcript) {
+      if (typeof form.requestSubmit === "function") {
+        form.requestSubmit();
+      } else {
+        submitAiGuideQuestion(form);
+      }
+    }
+  };
+
+  recognition.start();
+}
+
+async function playAiGuideSpeech(text) {
+  setAiGuideStatus(i18n.t("aiGuide.voiceLoading"));
+
+  try {
+    const response = await fetch("/api/ai/speech", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        text,
+        language: i18n.language
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error("Speech API unavailable.");
+    }
+
+    const audioBlob = await response.blob();
+    const audioUrl = URL.createObjectURL(audioBlob);
+    const audio = new Audio(audioUrl);
+    audio.addEventListener("ended", () => URL.revokeObjectURL(audioUrl), { once: true });
+    await audio.play();
+    setAiGuideStatus(i18n.t("aiGuide.status"));
+  } catch (error) {
+    fallbackSpeak(text);
+  }
+}
+
+function fallbackSpeak(text) {
+  if (!window.speechSynthesis || !window.SpeechSynthesisUtterance) {
+    setAiGuideStatus(i18n.t("aiGuide.voiceFallback"));
+    return;
+  }
+
+  const utterance = new window.SpeechSynthesisUtterance(text);
+  utterance.lang = getSpeechLanguage();
+  utterance.voice = chooseSpeechVoice(utterance.lang);
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(utterance);
+  setAiGuideStatus(i18n.t("aiGuide.voiceFallback"));
+}
+
+function chooseSpeechVoice(language) {
+  const voices = window.speechSynthesis.getVoices();
+  const exact = voices.find((voice) => voice.lang === language && isLikelyFemaleVoice(voice.name));
+  const sameLanguage = voices.find((voice) => voice.lang && voice.lang.startsWith(language.slice(0, 2)) && isLikelyFemaleVoice(voice.name));
+  return exact || sameLanguage || voices.find((voice) => voice.lang && voice.lang.startsWith(language.slice(0, 2))) || null;
+}
+
+function isLikelyFemaleVoice(name) {
+  return /female|woman|samantha|monica|paulina|helena|google us english|nova|shimmer/i.test(name || "");
+}
+
+function getSpeechLanguage() {
+  return {
+    de: "de-DE",
+    es: "es-ES",
+    en: "en-US"
+  }[i18n.language] || "en-US";
+}
+
+function setAiGuideStatus(message) {
+  const target = document.querySelector("[data-ai-status]");
+  if (target) {
+    target.textContent = message;
+  }
+}
+
+function rerenderAiGuide() {
+  const section = document.querySelector("[data-ai-guide-section]");
+  if (!section) {
+    return;
+  }
+
+  section.outerHTML = renderAiGuideSection();
+  bindAiGuideControls(document);
+}
+
+function scrollAiGuideLog() {
+  const log = document.querySelector("[data-ai-chat-log]");
+  if (log) {
+    log.scrollTop = log.scrollHeight;
+  }
 }
 
 function renderCoursesPage() {

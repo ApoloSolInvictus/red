@@ -41,7 +41,8 @@ a {
 }
 
 button,
-input {
+input,
+textarea {
   font: inherit;
 }
 
@@ -505,6 +506,77 @@ input {
   box-shadow: var(--shadow);
 }
 
+.ai-chat-log {
+  display: grid;
+  gap: 12px;
+  max-height: 360px;
+  overflow-y: auto;
+  padding: 2px;
+}
+
+.ai-message {
+  display: grid;
+  gap: 6px;
+  max-width: 86%;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--soft);
+}
+
+.ai-message-user {
+  justify-self: end;
+  background: #fff7cf;
+  border-color: rgba(255, 210, 31, 0.72);
+}
+
+.ai-message-assistant {
+  justify-self: start;
+  background: #f7fbff;
+  border-color: rgba(35, 84, 255, 0.18);
+}
+
+.ai-message span {
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.ai-message p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.ai-guide-form {
+  display: grid;
+  gap: 12px;
+}
+
+.ai-guide-input {
+  width: 100%;
+  min-height: 94px;
+  resize: vertical;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+  color: var(--ink);
+  background: white;
+  line-height: 1.5;
+}
+
+.ai-guide-input:focus {
+  outline: 3px solid rgba(35, 84, 255, 0.16);
+  border-color: var(--blue);
+}
+
+.ai-guide-actions {
+  display: grid;
+  grid-template-columns: minmax(116px, auto) minmax(136px, auto) minmax(138px, 1fr);
+  gap: 10px;
+  align-items: stretch;
+}
+
 .voice-lane {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -547,11 +619,18 @@ input {
   background: var(--yellow);
   color: var(--ink);
   font-weight: 900;
+  cursor: pointer;
 }
 
 .voice-button-dark {
   background: var(--ink);
   color: white;
+}
+
+.voice-button[disabled],
+.ai-guide-actions .button[disabled] {
+  cursor: progress;
+  opacity: 0.68;
 }
 
 .voice-wave {
@@ -577,6 +656,7 @@ input {
 .ai-guide-status {
   margin: 0;
   text-align: center;
+  line-height: 1.4;
 }
 
 .section-head {
@@ -1739,6 +1819,14 @@ input {
 
   .voice-lane {
     grid-template-columns: 1fr;
+  }
+
+  .ai-guide-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-message {
+    max-width: 100%;
   }
 
   .voice-button {
