@@ -182,7 +182,7 @@ async function issueCertificate(token) {
 
   const issuedAt = new Date().toISOString();
   const certificateId = makeCertificateId(token, issuedAt);
-  const verificationUrl = `${SITE_URL}/certificate.html?id=${encodeURIComponent(certificateId)}`;
+  const verificationUrl = `${SITE_URL}/certificate?id=${encodeURIComponent(certificateId)}`;
   const certificate = {
     certificateId,
     programId: PROGRAM_ID,
