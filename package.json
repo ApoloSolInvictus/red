@@ -4,7 +4,7 @@
   "private": true,
   "description": "W Studio online course platform with Firebase Auth, PayPal Checkout, and multilingual course access.",
   "scripts": {
-    "check": "node --check api/_lib/adminAccess.js && node --check api/config.js && node --check api/me.js && node --check api/progress.js && node --check api/paypal/create-order.js && node --check api/paypal/capture-order.js && node --check api/ai/course-guide.js && node --check api/ai/speech.js && node --check assets/js/wstudio-platform.js && node --check assets/js/wstudio-i18n.js",
+    "check": "node --check api/_lib/adminAccess.js && node --check api/config.js && node --check api/me.js && node --check api/progress.js && node --check api/certificate.js && node --check api/paypal/create-order.js && node --check api/paypal/capture-order.js && node --check api/ai/course-guide.js && node --check api/ai/speech.js && node --check assets/js/wstudio-platform.js && node --check assets/js/wstudio-i18n.js",
     "dev": "vercel dev",
     "serve": "npx serve ."
   },

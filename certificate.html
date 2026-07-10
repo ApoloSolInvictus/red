@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, follow">
+  <title>Verify Certificate | W Studio Learn</title>
+  <link rel="icon" href="images/w-studio-logo.png">
+  <link rel="stylesheet" href="assets/css/wstudio-platform.css">
+</head>
+<body class="wstudio-app certificate-verify-page">
+  <main class="site-shell certificate-verify-shell">
+    <section class="certificate-verify-card">
+      <img src="images/w-studio-logo.png" alt="W Studio">
+      <p class="eyebrow">W Studio Learn</p>
+      <h1>Verify Certificate</h1>
+      <p>Enter a W Studio Learn certificate ID to confirm its public validation status.</p>
+      <form class="certificate-verify-form" data-certificate-verify-form>
+        <input type="text" name="certificateId" placeholder="WST-AIBIZ-2026-XXXXXXXXXX" autocomplete="off" required>
+        <button class="button button-primary" type="submit">Verify</button>
+      </form>
+      <div class="certificate-verify-result" data-certificate-result>Waiting for certificate ID.</div>
+    </section>
+  </main>
+  <script>
+    (function () {
+      const form = document.querySelector("[data-certificate-verify-form]");
+      const input = form.elements.certificateId;
+      const result = document.querySelector("[data-certificate-result]");
+      const params = new URLSearchParams(window.location.search);
+      const initialId = params.get("id") || "";
+
+      if (initialId) {
+        input.value = initialId;
+        verifyCertificate(initialId);
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        verifyCertificate(input.value);
+      });
+
+      async function verifyCertificate(certificateId) {
+        const id = String(certificateId || "").trim().toUpperCase();
+        if (!id) {
+          result.textContent = "Enter a certificate ID.";
+          result.className = "certificate-verify-result is-error";
+          return;
+        }
+
+        result.textContent = "Checking certificate...";
+        result.className = "certificate-verify-result";
+
+        try {
+          const response = await fetch("/api/certificate?id=" + encodeURIComponent(id), { cache: "no-store" });
+          const payload = await response.json();
+
+          if (!response.ok || !payload.valid || !payload.certificate) {
+            throw new Error(payload.error || "Certificate not found.");
+          }
+
+          const certificate = payload.certificate;
+          result.className = "certificate-verify-result is-valid";
+          result.innerHTML = [
+            "<strong>Valid certificate</strong>",
+            "<span>ID: " + escapeHtml(certificate.certificateId) + "</span>",
+            "<span>Student: " + escapeHtml(certificate.studentName) + "</span>",
+            "<span>Program: " + escapeHtml(certificate.programTitleEs || certificate.programTitle) + "</span>",
+            "<span>Issued: " + escapeHtml(formatDate(certificate.issuedAt)) + "</span>",
+            "<span>Average score: " + escapeHtml(String(certificate.averageScore)) + "%</span>"
+          ].join("");
+        } catch (error) {
+          result.textContent = error.message || "Certificate could not be verified.";
+          result.className = "certificate-verify-result is-error";
+        }
+      }
+
+      function formatDate(value) {
+        if (!value) {
+          return "Pending";
+        }
+
+        return new Intl.DateTimeFormat("en-US", {
+          year: "numeric",
+          month: "short",
+          day: "2-digit"
+        }).format(new Date(value));
+      }
+
+      function escapeHtml(value) {
+        return String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+      }
+    })();
+  </script>
+</body>
+</html>

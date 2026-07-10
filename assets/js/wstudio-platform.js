@@ -5,6 +5,7 @@ const state = {
   aiGuideVoiceEnabled: true,
   authReady: false,
   catalog: null,
+  certificate: null,
   config: null,
   examResults: {},
   firebase: null,
@@ -117,6 +118,7 @@ async function initFirebase() {
       await loadStudentProgress();
     } else {
       state.access = new Set();
+      state.certificate = null;
       state.progress = readLocalProgress();
       state.examResults = readLocalExamResults();
     }
@@ -169,8 +171,34 @@ async function loadStudentProgress() {
     state.examResults = mergeExamResults(state.examResults, normalizeExamResults(payload.examResults || []));
     saveLocalProgress();
     saveLocalExamResults();
+    await loadStudentCertificate();
   } catch (error) {
     showNotice("progress", i18n.t("progress.localOnly"));
+  }
+}
+
+async function loadStudentCertificate() {
+  if (!state.user) {
+    state.certificate = null;
+    return;
+  }
+
+  try {
+    const token = await state.user.getIdToken();
+    const response = await fetch("/api/certificate", {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error("Certificate API unavailable.");
+    }
+
+    const payload = await response.json();
+    state.certificate = payload.certificate || null;
+  } catch (error) {
+    state.certificate = null;
   }
 }
 
@@ -1815,10 +1843,181 @@ function renderDashboardPage() {
       <h1>${i18n.t("dashboard.title")}</h1>
       <p>${i18n.t("dashboard.copy")}</p>
     </section>
-    <section class="site-shell section">
+    ${renderFinalCertificateSection()}
+    <section class="site-shell section dashboard-courses-section">
       ${ownedHtml}
     </section>
   `;
+
+  bindDashboardActions(target);
+}
+
+function renderFinalCertificateSection() {
+  const eligibility = getCertificateEligibility();
+  const certificate = state.certificate || buildLocalCertificate(eligibility);
+
+  if (!eligibility.eligible) {
+    return `
+      <section class="site-shell section certificate-section">
+        <div class="certificate-gate">
+          <div>
+            <p class="eyebrow">${i18n.t("certificate.eyebrow")}</p>
+            <h2>${i18n.t("certificate.lockedTitle")}</h2>
+            <p>${i18n.t("certificate.lockedCopy")}</p>
+          </div>
+          <div class="certificate-progress">
+            <strong>${eligibility.completedCount}/${eligibility.courseCount}</strong>
+            <span>${i18n.t("certificate.completedCourses")}</span>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  return `
+    <section class="site-shell section certificate-section">
+      <article class="certificate-panel">
+        <div class="certificate-top">
+          <img src="images/w-studio-logo.png" alt="W Studio">
+          <div>
+            <span>${i18n.t("certificate.validLabel")}</span>
+            <strong>${escapeHtml(certificate.certificateId || i18n.t("certificate.pendingId"))}</strong>
+          </div>
+        </div>
+        <div class="certificate-body">
+          <p class="eyebrow">${i18n.t("certificate.eyebrow")}</p>
+          <h2>${i18n.t("certificate.title")}</h2>
+          <p>${i18n.t("certificate.certifies")}</p>
+          <h3>${escapeHtml(certificate.studentName || getStudentCertificateName())}</h3>
+          <p>${i18n.t("certificate.program")}</p>
+          <strong>${i18n.t("certificate.programName")}</strong>
+        </div>
+        <dl class="certificate-meta">
+          <div><dt>${i18n.t("certificate.courseCount")}</dt><dd>${eligibility.courseCount}</dd></div>
+          <div><dt>${i18n.t("certificate.average")}</dt><dd>${formatPercent(certificate.averageScore || eligibility.averageScore)}</dd></div>
+          <div><dt>${i18n.t("certificate.minimum")}</dt><dd>70%</dd></div>
+          <div><dt>${i18n.t("certificate.issuedAt")}</dt><dd>${formatCertificateDate(certificate.issuedAt)}</dd></div>
+        </dl>
+        <p class="certificate-verification">
+          ${i18n.t("certificate.verify")} ${certificate.verificationUrl ? `<a href="${escapeAttribute(certificate.verificationUrl)}" target="_blank" rel="noopener">${escapeHtml(certificate.verificationUrl)}</a>` : i18n.t("certificate.pendingVerification")}
+        </p>
+        <div class="certificate-actions">
+          ${state.certificate ? "" : `<button class="button button-primary" type="button" data-issue-certificate>${i18n.t("certificate.issue")}</button>`}
+          <button class="button button-secondary" type="button" data-print-certificate>${i18n.t("certificate.print")}</button>
+        </div>
+      </article>
+    </section>
+  `;
+}
+
+function bindDashboardActions(target) {
+  const issueButton = target.querySelector("[data-issue-certificate]");
+  if (issueButton) {
+    issueButton.addEventListener("click", issueFinalCertificate);
+  }
+
+  const printButton = target.querySelector("[data-print-certificate]");
+  if (printButton) {
+    printButton.addEventListener("click", printFinalCertificate);
+  }
+}
+
+function getCertificateEligibility() {
+  const courses = getCourses();
+  const completedCourses = courses.filter((course) => {
+    const result = getExamResult(course.id);
+    return areAllLessonsCompleted(course)
+      && result
+      && result.passed
+      && result.score >= getCoursePassingScore(course);
+  });
+  const averageScore = completedCourses.length
+    ? completedCourses.reduce((sum, course) => {
+      const result = getExamResult(course.id);
+      return sum + (result.questionCount ? (result.score / result.questionCount) * 100 : 0);
+    }, 0) / completedCourses.length
+    : 0;
+
+  return {
+    eligible: completedCourses.length === courses.length,
+    completedCount: completedCourses.length,
+    courseCount: courses.length,
+    averageScore
+  };
+}
+
+function getCoursePassingScore(course) {
+  if (course.exam && course.exam.passingScore) {
+    return course.exam.passingScore;
+  }
+
+  return Math.ceil(((course.exam && course.exam.questions || []).length || 10) * 0.7);
+}
+
+function buildLocalCertificate(eligibility) {
+  return {
+    certificateId: "",
+    studentName: getStudentCertificateName(),
+    averageScore: eligibility.averageScore,
+    issuedAt: "",
+    verificationUrl: ""
+  };
+}
+
+function getStudentCertificateName() {
+  return state.user && (state.user.displayName || state.user.email)
+    ? state.user.displayName || state.user.email
+    : "W Studio Student";
+}
+
+async function issueFinalCertificate() {
+  if (!state.user) {
+    return;
+  }
+
+  try {
+    const token = await state.user.getIdToken(true);
+    const response = await fetch("/api/certificate", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+    const payload = await response.json();
+
+    if (!response.ok) {
+      throw new Error(payload.error || i18n.t("certificate.issueError"));
+    }
+
+    state.certificate = payload.certificate;
+    renderDashboardPage();
+  } catch (error) {
+    showNotice("certificate", error.message || i18n.t("certificate.issueError"));
+  }
+}
+
+function printFinalCertificate() {
+  document.body.classList.add("print-certificate");
+  window.addEventListener("afterprint", () => {
+    document.body.classList.remove("print-certificate");
+  }, { once: true });
+  window.print();
+}
+
+function formatPercent(value) {
+  return `${Math.round(Number(value || 0) * 10) / 10}%`;
+}
+
+function formatCertificateDate(value) {
+  if (!value) {
+    return i18n.t("certificate.pendingIssue");
+  }
+
+  return new Intl.DateTimeFormat(i18n.language === "de" ? "de-DE" : i18n.language === "es" ? "es-CR" : "en-US", {
+    year: "numeric",
+    month: "short",
+    day: "2-digit"
+  }).format(new Date(value));
 }
 
 function renderDashboardCard(course) {

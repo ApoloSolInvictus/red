@@ -1534,6 +1534,263 @@ textarea {
   color: var(--muted);
 }
 
+.certificate-section {
+  padding-bottom: 20px;
+}
+
+.certificate-gate {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(255, 210, 31, 0.28), transparent 38%),
+    var(--soft);
+}
+
+.certificate-gate h2 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  line-height: 1;
+}
+
+.certificate-gate p {
+  max-width: 760px;
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.certificate-progress {
+  min-width: 170px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: white;
+  text-align: center;
+}
+
+.certificate-progress strong {
+  display: block;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.certificate-progress span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.certificate-panel {
+  display: grid;
+  gap: 24px;
+  padding: clamp(24px, 5vw, 44px);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(255, 32, 40, 0.1), transparent 28%),
+    linear-gradient(135deg, transparent 58%, rgba(35, 84, 255, 0.12)),
+    #fff;
+  box-shadow: var(--shadow);
+}
+
+.certificate-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.certificate-top img {
+  width: 118px;
+  height: auto;
+}
+
+.certificate-top div {
+  display: grid;
+  gap: 5px;
+  text-align: right;
+}
+
+.certificate-top span,
+.certificate-meta dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.certificate-top strong {
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.certificate-body {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.certificate-body h2 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4.4rem);
+  line-height: 0.95;
+}
+
+.certificate-body h3 {
+  margin: 10px 0 0;
+  font-size: clamp(1.7rem, 4vw, 3.2rem);
+  line-height: 1;
+}
+
+.certificate-body p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.certificate-body strong {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+.certificate-meta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+
+.certificate-meta div {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.certificate-meta dd {
+  margin: 8px 0 0;
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.certificate-verification {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+.certificate-verification a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.certificate-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.certificate-verify-page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  background:
+    linear-gradient(135deg, rgba(255, 210, 31, 0.22), transparent 38%),
+    linear-gradient(135deg, transparent 62%, rgba(35, 84, 255, 0.12)),
+    var(--soft);
+}
+
+.certificate-verify-shell {
+  padding: 42px 0;
+}
+
+.certificate-verify-card {
+  display: grid;
+  gap: 14px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 42px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.certificate-verify-card img {
+  width: 116px;
+}
+
+.certificate-verify-card h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  line-height: 0.95;
+}
+
+.certificate-verify-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.certificate-verify-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.certificate-verify-form input {
+  min-height: 48px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0 12px;
+  font: inherit;
+}
+
+.certificate-verify-result {
+  display: grid;
+  gap: 7px;
+  min-height: 56px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--soft);
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.certificate-verify-result.is-valid {
+  border-color: rgba(8, 127, 68, 0.28);
+  background: rgba(8, 127, 68, 0.07);
+  color: var(--ink);
+}
+
+.certificate-verify-result.is-error {
+  border-color: rgba(197, 22, 37, 0.28);
+  background: rgba(197, 22, 37, 0.07);
+  color: #c51625;
+}
+
+.certificate-verify-result span {
+  color: var(--muted);
+  font-weight: 750;
+}
+
 .notice {
   margin: 12px 0;
   padding: 12px 14px;
@@ -1871,7 +2128,25 @@ textarea {
   .resource-card,
   .lesson-completion,
   .exam-head,
-  .exam-result {
+  .exam-result,
+  .certificate-gate {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .certificate-top div {
+    text-align: left;
+  }
+
+  .certificate-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-verify-form {
     grid-template-columns: 1fr;
   }
 
@@ -1892,5 +2167,33 @@ textarea {
 
   .lesson-player {
     min-height: 0;
+  }
+}
+
+@media print {
+  body.print-certificate .site-header,
+  body.print-certificate .page-hero,
+  body.print-certificate .dashboard-courses-section,
+  body.print-certificate .site-footer,
+  body.print-certificate .status-pill,
+  body.print-certificate .certificate-gate,
+  body.print-certificate .certificate-actions {
+    display: none !important;
+  }
+
+  body.print-certificate {
+    background: white;
+  }
+
+  body.print-certificate .certificate-section {
+    width: 100%;
+    padding: 0;
+  }
+
+  body.print-certificate .certificate-panel {
+    min-height: 94vh;
+    border: 3px solid #101114;
+    border-radius: 0;
+    box-shadow: none;
   }
 }
