@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deck de Ventas para Rectoria | W Studio Learn</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #e8eaef;
+      color: #101114;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.35;
+    }
+
+    .slide {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 297mm;
+      height: 210mm;
+      margin: 0 auto 18px;
+      padding: 16mm 18mm 14mm;
+      overflow: hidden;
+      page-break-after: always;
+      background: #ffffff;
+    }
+
+    .slide:last-child {
+      page-break-after: auto;
+    }
+
+    .slide.dark {
+      background: #101114;
+      color: #ffffff;
+    }
+
+    .slide.yellow {
+      background: #ffd21f;
+      color: #101114;
+    }
+
+    .slide.soft {
+      background: #f6f7f9;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin-bottom: 20px;
+      font-size: 52px;
+      line-height: 0.98;
+      letter-spacing: -0.01em;
+    }
+
+    h2 {
+      max-width: 850px;
+      margin-bottom: 18px;
+      font-size: 38px;
+      line-height: 1.02;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      margin-bottom: 9px;
+      font-size: 15px;
+      line-height: 1.16;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    p {
+      max-width: 780px;
+      color: #5e646f;
+      font-size: 19px;
+    }
+
+    .dark p,
+    .dark li,
+    .dark .muted {
+      color: #e8ebf2;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 17px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+
+    th,
+    td {
+      padding: 11px 12px;
+      border-bottom: 1px solid #dde2eb;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: #5e646f;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: #f6f7f9;
+    }
+
+    .dark th {
+      color: #ffffff;
+      background: #1f242d;
+      border-bottom-color: #3a414f;
+    }
+
+    .dark td {
+      border-bottom-color: #2a303b;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .logo {
+      width: 112px;
+      height: auto;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #101114;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .tag.yellow {
+      background: #ffd21f;
+      color: #101114;
+    }
+
+    .tag.blue {
+      background: #2354ff;
+      color: #ffffff;
+    }
+
+    .tag.red {
+      background: #ff2028;
+      color: #ffffff;
+    }
+
+    .kicker {
+      margin-bottom: 8px;
+      color: #2354ff;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .dark .kicker {
+      color: #65f20a;
+    }
+
+    .yellow .kicker {
+      color: #2354ff;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1.04fr 0.96fr;
+      gap: 24px;
+      align-items: stretch;
+      flex: 1;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      align-items: stretch;
+      flex: 1;
+    }
+
+    .card {
+      padding: 20px;
+      border: 1px solid #dfe3ec;
+      border-radius: 14px;
+      background: #ffffff;
+    }
+
+    .card.dark {
+      border-color: #2d3440;
+      background: #171b22;
+      color: #ffffff;
+    }
+
+    .card.yellow {
+      border-color: #e0b800;
+      background: #ffd21f;
+      color: #101114;
+    }
+
+    .card.blue {
+      border-color: #2354ff;
+      background: #2354ff;
+      color: #ffffff;
+    }
+
+    .card.green {
+      border-color: #46d400;
+      background: #65f20a;
+      color: #101114;
+    }
+
+    .card p,
+    .card li {
+      font-size: 16px;
+    }
+
+    .card p {
+      color: inherit;
+    }
+
+    .metric-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: auto;
+    }
+
+    .metric {
+      min-height: 96px;
+      padding: 18px;
+      border: 1px solid #dfe3ec;
+      border-radius: 14px;
+      background: #ffffff;
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 32px;
+      line-height: 1;
+    }
+
+    .metric span {
+      color: #5e646f;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .path {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr 1.05fr 0.95fr;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .path-step {
+      position: relative;
+      min-height: 210px;
+      padding: 18px;
+      border-radius: 14px;
+      background: #ffffff;
+      border: 1px solid #dfe3ec;
+    }
+
+    .path-step strong {
+      display: block;
+      margin-bottom: 10px;
+      color: #2354ff;
+      font-size: 36px;
+      line-height: 1;
+    }
+
+    .path-step p,
+    .path-step li {
+      font-size: 15px;
+    }
+
+    .price {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #101114;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .proposal {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .big-number {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 70px;
+      font-weight: 900;
+      line-height: 0.9;
+    }
+
+    .quote {
+      max-width: 900px;
+      padding: 26px 30px;
+      border-left: 9px solid #ffd21f;
+      background: #f6f7f9;
+      font-size: 30px;
+      font-weight: 900;
+      line-height: 1.1;
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: auto;
+      color: #737985;
+      font-size: 11px;
+    }
+
+    .dark .footer {
+      color: #b9c0cd;
+    }
+
+    .slide-number {
+      font-weight: 900;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      .slide {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="slide">
+    <div class="topbar">
+      <img class="logo" src="../images/w-studio-logo.png" alt="W Studio">
+      <span class="tag yellow">Deck para rector&iacute;a | Julio 2026</span>
+    </div>
+    <div class="grid-2">
+      <div>
+        <p class="kicker">W Studio Learn</p>
+        <h1>Future Business Lab para colegios internacionales de Costa Rica.</h1>
+        <p>Programa extracurricular triling&uuml;e para que estudiantes de secundaria aprendan emprendimiento digital, IA, marketing, dise&ntilde;o, GitHub, Vercel, Codex, web apps y chatbots antes de llegar a la universidad.</p>
+      </div>
+      <div class="card dark">
+        <span class="tag blue">Tesis</span>
+        <h2 style="font-size:34px;margin-top:20px;">El colegio puede vender preparaci&oacute;n para el futuro profesional, no solo actividades extracurriculares.</h2>
+        <ul>
+          <li>Diferenciaci&oacute;n acad&eacute;mica visible.</li>
+          <li>Valor pr&aacute;ctico para padres.</li>
+          <li>Portafolio real para estudiantes.</li>
+          <li>Entrega inmediata por plataforma.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer"><span>learn.wstudio3d.com</span><span class="slide-number">01</span></div>
+  </section>
+
+  <section class="slide soft">
+    <div class="topbar">
+      <span class="tag blue">Por qu&eacute; ahora</span>
+      <img class="logo" src="../images/w-studio-logo.png" alt="W Studio">
+    </div>
+    <p class="kicker">Contexto para rector&iacute;a</p>
+    <h2>Los estudiantes van a la universidad con talento, pero muchas veces sin pr&aacute;ctica real de negocio digital.</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Brecha de preparaci&oacute;n</h3>
+        <p>Aprenden materias importantes, pero no siempre practican c&oacute;mo transformar una carrera universitaria en una oferta, empresa, producto digital o servicio profesional.</p>
+      </div>
+      <div class="card yellow">
+        <h3>Herramientas nuevas</h3>
+        <p>IA, automatizaci&oacute;n, contenido, dise&ntilde;o, web apps y despliegue cambiaron la forma de crear negocios. El colegio puede ense&ntilde;ar criterio antes de la universidad.</p>
+      </div>
+      <div class="card">
+        <h3>Expectativa de padres</h3>
+        <p>Las familias quieren educaci&oacute;n internacional, pero tambi&eacute;n quieren resultados visibles: portafolio, empleabilidad, autonom&iacute;a y visi&oacute;n emprendedora.</p>
+      </div>
+    </div>
+    <div class="footer"><span>Problema que resuelve W Studio Learn</span><span class="slide-number">02</span></div>
+  </section>
+
+  <section class="slide dark">
+    <div class="topbar">
+      <span class="tag yellow">El reto del colegio</span>
+      <img class="logo" src="../images/w-studio-logo.png" alt="W Studio">
+    </div>
+    <h2>Innovar sin cargar al equipo docente con un curr&iacute;culo nuevo desde cero.</h2>
+    <div class="grid-2">
+      <div class="quote">&ldquo;Necesitamos una oferta moderna, medible y lista para ejecutar, que padres y estudiantes entiendan como inversi&oacute;n en futuro.&rdquo;</div>
+      <div class="card dark">
+        <h3>Necesidades de rector&iacute;a</h3>
+        <ul>
+          <li>Diferenciar al colegio frente a otras instituciones privadas.</li>
+          <li>Activar un programa extracurricular con bajo riesgo operativo.</li>
+          <li>Mostrar evidencia de aprendizaje y progreso.</li>
+          <li>Conectar tecnolog&iacute;a con vocaci&oacute;n, universidad y empresa.</li>
+          <li>Ofrecer valor en ingl&eacute;s, alem&aacute;n y espa&ntilde;ol.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer"><span>Venta consultiva B2B escolar</span><span class="slide-number">03</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topbar">
+      <span class="tag green">La soluci&oacute;n</span>
+      <img class="logo" src="../images/w-studio-logo.png" alt="W Studio">
+    </div>
+    <p class="kicker">W Studio Future Business Lab</p>
+    <h2>Un laboratorio extracurricular de negocios digitales e inteligencia artificial listo para entregar.</h2>
+    <div class="grid-3">
+      <div class="card blue">
+        <span class="big-number">14</span>
+        <h3>Cursos online</h3>
+        <p>Ruta completa desde fundamentos de negocio hasta web apps y chatbots con IA.</p>
+      </div>
+      <div class="card yellow">
+        <span class="big-number">3</span>
+        <h3>Idiomas</h3>
+        <p>Contenido preparado para estudiantes en ingl&eacute;s, alem&aacute;n y espa&ntilde;ol.</p>
+      </div>
+      <div class="card green">
+        <span class="big-number">70%</span>
+        <h3>Evaluaci&oacute;n</h3>
+        <p>Ex&aacute;menes finales por curso con nota m&iacute;nima de aprobaci&oacute;n y progreso paso a paso.</p>
+      </div>
+    </div>
+    <div class="footer"><span>Entrega inmediata en plataforma W Studio Learn</span><span class="slide-number">04</span></div>
+  </section>
+
+  <section class="slide soft">
+    <div class="topbar">
+      <span class="tag blue">Ruta acad&eacute;mica</span>
+      <img class="logo" src="../images/w-studio-logo.png" alt="W Studio">
+    </div>
+    <h2>El estudiante avanza desde idea de negocio hasta proyecto web con IA.</h2>
+    <div class="path">
+      <div class="path-step">
+        <strong>01</strong>
+        <h3>Principiante</h3>
+        <ul>
+          <li>Fundamentos de negocio.</li>
+          <li>Marca y Canva.</li>
+          <li>Contenido con IA.</li>
+          <li>Copy y oferta.</li>
+        </ul>
+      </div>
+      <div class="path-step">
+        <strong>02</strong>
+        <h3>Medio</h3>
+        <ul>
+          <li>Video corto.</li>
+          <li>Envato y ThemeForest.</li>
+          <li>SEO y anal&iacute;ticas.</li>
+          <li>Email y CRM.</li>
+        </ul>
+      </div>
+      <div class="path-step">
+        <strong>03</strong>
+        <h3>Avanzado</h3>
+        <ul>
+          <li>GitHub y Vercel.</li>
+          <li>ChatGPT para sistemas.</li>
+          <li>Codex para sitios web.</li>
+          <li>Calidad de despliegue.</li>
+        </ul>
+      </div>
+      <div class="path-step">
+        <strong>04</strong>
+        <h3>Pro</h3>
+        <ul>
+          <li>Firebase.</li>
+          <li>PayPal.</li>
+          <li>APIs.</li>
+          <li>Web apps y chatbots.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer"><span>Ruta de aprendizaje escalable por nivel escolar</span><span class="slide-number">05</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topbar">
+      <span class="tag red">C&oacute;mo funciona</span>
+      <img class="logo" src="../images/w-studio-logo.png" alt="W Studio">
+    </div>
+    <h2>El colegio no tiene que construir la plataforma: solo activa la cohorte.</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Experiencia del estudiante</h3>
+        <ul>
+          <li>Ingreso con cuenta de estudiante.</li>
+          <li>Selecci&oacute;n de idioma EN/DE/ES.</li>
+          <li>Clases con videos, lectura, links y pr&aacute;ctica.</li>
+          <li>Bot&oacute;n de clase completada para desbloquear avance.</li>
+          <li>Examen final de 10 preguntas por curso.</li>
+          <li>Asistente IA libre para preguntas sobre las clases.</li>
+        </ul>
+      </div>
+      <div class="card yellow">
+        <h3>Experiencia del colegio</h3>
+        <ul>
+          <li>Lista de estudiantes y correos.</li>
+          <li>Activaci&oacute;n de accesos en la plataforma.</li>
+          <li>Onboarding para estudiantes.</li>
+          <li>Ruta sugerida seg&uacute;n nivel.</li>
+          <li>Reporte mensual de progreso.</li>
+          <li>Renovaci&oacute;n por cohorte, semestre o a&ntilde;o.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer"><span>Firebase + Vercel + PayPal + OpenAI</span><span class="slide-number">06</span></div>
+  </section>
+
+  <section class="slide yellow">
+    <div class="topbar">
+      <span class="tag">Piloto recomendado</span>
+      <img class="logo" src="../images/w-studio-logo.png" alt="W Studio">
+    </div>
+    <h2>Empezar con un piloto de 8 semanas permite validar demanda, aprendizaje y adopci&oacute;n antes de una licencia anual.</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Formato</h3>
+        <ul>
+          <li>25 a 40 estudiantes.</li>
+          <li>9.&ordm; a 12.&ordm; grado.</li>
+          <li>1 sesi&oacute;n semanal de acompa&ntilde;amiento.</li>
+          <li>Trabajo online entre sesiones.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Contenido inicial</h3>
+        <ul>
+          <li>Idea de negocio.</li>
+          <li>Cliente meta.</li>
+          <li>Marca y Canva.</li>
+          <li>Contenido con IA.</li>
+          <li>Oferta y pitch.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Resultado visible</h3>
+        <ul>
+          <li>Mini proyecto por estudiante/equipo.</li>
+          <li>Presentaci&oacute;n tipo Demo Day.</li>
+          <li>Avance y nota de examen.</li>
+          <li>Testimonios para padres.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer"><span>Puerta de entrada para Anglo American, Humboldt, SEK y colegios similares</span><span class="slide-number">07</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="topbar">
+      <span class="tag blue">Precio y valor</span>
+      <img class="logo" src="../images/w-studio-logo.png" alt="W Studio">
+    </div>
+    <h2>El precio institucional se presenta como descuento por volumen sobre el valor retail real.</h2>
+    <div class="proposal">
+      <div class="card">
+        <h3>Referencia de valor actual</h3>
+        <table>
+          <thead>
+            <tr><th>Oferta</th><th>Contenido</th><th>Precio</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Cursos individuales</td><td>14 cursos con precios entre USD 37 y USD 147.</td><td><span class="price">USD 37-147</span></td></tr>
+            <tr><td>Ruta completa retail</td><td>Compra individual de todos los cursos por estudiante.</td><td><span class="price">USD 1,138</span></td></tr>
+            <tr><td>Piloto escolar</td><td>8 semanas, cohorte de 25-40 estudiantes, ruta inicial.</td><td><span class="price">USD 149-249</span></td></tr>
+            <tr><td>Licencia anual</td><td>Acceso a los 14 cursos, ex&aacute;menes y asistente IA.</td><td><span class="price">USD 299-499</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card dark">
+        <h3>Opciones de compra</h3>
+        <ul>
+          <li>Colegio paga una licencia institucional por cohorte.</li>
+          <li>Modelo mixto: colegio paga implementaci&oacute;n y padres pagan acceso.</li>
+          <li>Familias compran cursos individuales desde PayPal.</li>
+        </ul>
+        <p style="margin-top:18px;">La recomendaci&oacute;n comercial es cerrar un piloto primero y luego convertirlo en programa anual.</p>
+      </div>
+    </div>
+    <div class="footer"><span>Precios sugeridos sujetos a tama&ntilde;o de cohorte y soporte requerido</span><span class="slide-number">08</span></div>
+  </section>
+
+  <section class="slide soft">
+    <div class="topbar">
+      <span class="tag green">Implementaci&oacute;n</span>
+      <img class="logo" src="../images/w-studio-logo.png" alt="W Studio">
+    </div>
+    <h2>La activaci&oacute;n puede hacerse en 10 d&iacute;as despu&eacute;s de aprobar el piloto.</h2>
+    <div class="path">
+      <div class="path-step">
+        <strong>01</strong>
+        <h3>D&iacute;a 1</h3>
+        <p>Aprobaci&oacute;n de piloto, alcance, cohorte, calendario y responsable interno.</p>
+      </div>
+      <div class="path-step">
+        <strong>02</strong>
+        <h3>D&iacute;as 2-4</h3>
+        <p>Lista de estudiantes, correos, idioma preferido y ruta inicial de aprendizaje.</p>
+      </div>
+      <div class="path-step">
+        <strong>03</strong>
+        <h3>D&iacute;as 5-7</h3>
+        <p>Activaci&oacute;n de accesos, prueba t&eacute;cnica, demo de login y revisi&oacute;n con coordinaci&oacute;n.</p>
+      </div>
+      <div class="path-step">
+        <strong>04</strong>
+        <h3>D&iacute;as 8-10</h3>
+        <p>Onboarding de estudiantes, arranque del programa y primer reporte de asistencia.</p>
+      </div>
+    </div>
+    <div class="footer"><span>Entrega inmediata con plataforma existente</span><span class="slide-number">09</span></div>
+  </section>
+
+  <section class="slide dark">
+    <div class="topbar">
+      <span class="tag yellow">Decisi&oacute;n solicitada</span>
+      <img class="logo" src="../images/w-studio-logo.png" alt="W Studio">
+    </div>
+    <h2>Propuesta para rector&iacute;a: aprobar una demo privada y definir el piloto inicial.</h2>
+    <div class="grid-2">
+      <div class="card dark">
+        <h3>Pr&oacute;ximo paso recomendado</h3>
+        <ul>
+          <li>Reuni&oacute;n demo de 20 minutos con direcci&oacute;n y coordinaci&oacute;n.</li>
+          <li>Selecci&oacute;n de una cohorte piloto de 25 a 40 estudiantes.</li>
+          <li>Definici&oacute;n de fecha de inicio y responsable interno.</li>
+          <li>Validaci&oacute;n de precio por estudiante o presupuesto institucional.</li>
+          <li>Onboarding y arranque en 10 d&iacute;as.</li>
+        </ul>
+      </div>
+      <div class="card yellow">
+        <h3>Cierre de presentaci&oacute;n</h3>
+        <p style="font-size:24px;font-weight:900;">W Studio Learn ayuda al colegio a preparar estudiantes que no solo entren a la universidad, sino que lleguen con criterio para crear proyectos, empresas y soluciones digitales desde el primer a&ntilde;o.</p>
+        <p><strong>Contacto:</strong> W Studio Learn | learn.wstudio3d.com</p>
+      </div>
+    </div>
+    <div class="footer"><span>Deck de ventas para rector&iacute;a</span><span class="slide-number">10</span></div>
+  </section>
+</body>
+</html>

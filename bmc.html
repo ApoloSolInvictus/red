@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Business Model Canvas | W Studio Learn para Colegios Internacionales de Costa Rica</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 10mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #e8eaef;
+      color: #111318;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.38;
+    }
+
+    .page {
+      width: 277mm;
+      min-height: 190mm;
+      margin: 0 auto 16px;
+      padding: 12mm;
+      page-break-after: always;
+      background: #ffffff;
+      position: relative;
+      overflow: visible;
+    }
+
+    .page:last-child {
+      page-break-after: auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 38px;
+      line-height: 0.98;
+      letter-spacing: -0.01em;
+      max-width: 720px;
+    }
+
+    h2 {
+      font-size: 25px;
+      line-height: 1.05;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 17px;
+    }
+
+    li {
+      margin-bottom: 5px;
+      font-size: 11.5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+    }
+
+    th,
+    td {
+      padding: 7px 8px;
+      border-bottom: 1px solid #e0e3ea;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: #626772;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: #f5f6f8;
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .logo {
+      width: 116px;
+      height: auto;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #111318;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .accent {
+      color: #2354ff;
+    }
+
+    .yellow {
+      background: #ffd21f;
+      color: #111318;
+    }
+
+    .red {
+      background: #ff2028;
+      color: #ffffff;
+    }
+
+    .green {
+      background: #65f20a;
+      color: #111318;
+    }
+
+    .blue {
+      background: #2354ff;
+      color: #ffffff;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: stretch;
+    }
+
+    .hero-card {
+      padding: 22px;
+      border: 1px solid #dfe3ec;
+      border-radius: 16px;
+      background: #f7f8fb;
+    }
+
+    .hero-card.dark {
+      background: #111318;
+      color: #ffffff;
+    }
+
+    .hero-card.dark p,
+    .hero-card.dark li {
+      color: #e7eaf1;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .metric {
+      min-height: 74px;
+      padding: 14px;
+      border-radius: 12px;
+      background: #ffffff;
+      border: 1px solid #dfe3ec;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .metric span {
+      color: #626772;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .canvas {
+      display: grid;
+      grid-template-columns: 1.08fr 1.08fr 1.18fr 1.08fr 1.08fr;
+      grid-template-rows: 1fr 1fr 0.62fr;
+      gap: 7px;
+      min-height: 156mm;
+    }
+
+    .block {
+      padding: 10px 10px 8px;
+      border: 1.2px solid #20242c;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+
+    .block h3 {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 11px;
+      line-height: 1.15;
+    }
+
+    .block h3 span {
+      color: #2354ff;
+      font-size: 10px;
+    }
+
+    .block ul {
+      padding-left: 14px;
+    }
+
+    .block li {
+      font-size: 9.6px;
+      margin-bottom: 4px;
+    }
+
+    .partners {
+      grid-row: 1 / span 2;
+    }
+
+    .value {
+      grid-column: 3;
+      grid-row: 1 / span 2;
+      background: #fff8c8;
+    }
+
+    .segments {
+      grid-column: 5;
+      grid-row: 1 / span 2;
+    }
+
+    .costs {
+      grid-column: 1 / span 2;
+      background: #f7f8fb;
+    }
+
+    .revenue {
+      grid-column: 3 / span 3;
+      background: #f1f7ff;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .three-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .card {
+      padding: 15px;
+      border: 1px solid #dfe3ec;
+      border-radius: 12px;
+      background: #ffffff;
+    }
+
+    .card.soft {
+      background: #f7f8fb;
+    }
+
+    .card.black {
+      background: #111318;
+      color: #ffffff;
+    }
+
+    .card.yellow {
+      background: #ffd21f;
+      color: #111318;
+    }
+
+    .card p,
+    .card li {
+      font-size: 11.6px;
+    }
+
+    .subtitle {
+      max-width: 830px;
+      color: #626772;
+      font-size: 14px;
+    }
+
+    .section-kicker {
+      margin-bottom: 7px;
+      color: #2354ff;
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .price-pill {
+      display: inline-block;
+      min-width: 70px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #111318;
+      color: #ffffff;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .callout {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-left: 6px solid #2354ff;
+      background: #f1f7ff;
+      font-size: 12px;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .step {
+      min-height: 98px;
+      padding: 12px;
+      border-radius: 12px;
+      background: #f7f8fb;
+      border: 1px solid #dfe3ec;
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 7px;
+      color: #2354ff;
+      font-size: 18px;
+    }
+
+    .step p {
+      font-size: 10.8px;
+    }
+
+    .footer-note {
+      position: absolute;
+      right: 12mm;
+      bottom: 7mm;
+      left: 12mm;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      color: #717783;
+      font-size: 9px;
+    }
+
+    .source-list li {
+      font-size: 11px;
+      word-break: break-word;
+    }
+
+    .compact td {
+      padding: 5px 7px;
+      font-size: 10.2px;
+    }
+
+    .compact th {
+      padding: 6px 7px;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      .page {
+        width: auto;
+        min-height: 0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .canvas,
+      .hero-grid,
+      .three-col,
+      .two-col {
+        break-inside: avoid;
+      }
+
+      .footer-note {
+        position: static;
+        margin-top: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="page">
+    <div class="brand-row">
+      <img class="logo" src="../images/w-studio-logo.png" alt="W Studio">
+      <span class="tag yellow">Business Model Canvas | Julio 2026</span>
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <p class="section-kicker">W Studio Learn para colegios internacionales de Costa Rica</p>
+        <h1>Programa extracurricular para formar estudiantes que salgan de la universidad listos para crear empresa.</h1>
+        <p class="subtitle">Business Model Canvas y propuesta comercial para vender las clases de W Studio Learn a colegios privados biling&uuml;es y triling&uuml;es como Anglo American School, Colegio Humboldt-Schule, SEK Costa Rica International School y otros centros educativos de alto nivel en Costa Rica.</p>
+        <div class="metric-grid">
+          <div class="metric"><strong>14</strong><span>Cursos listos</span></div>
+          <div class="metric"><strong>EN / DE / ES</strong><span>Entrega triling&uuml;e</span></div>
+          <div class="metric"><strong>USD 1,138</strong><span>Valor retail total</span></div>
+          <div class="metric"><strong>Inmediata</strong><span>Entrega por plataforma</span></div>
+        </div>
+      </div>
+      <div class="hero-card dark">
+        <span class="tag blue">Tesis comercial</span>
+        <h2>El colegio compra futuro profesional, no solo cursos online.</h2>
+        <p>La oferta convierte el curr&iacute;culo extracurricular en un laboratorio de negocios digitales, IA, dise&ntilde;o, marketing, GitHub, Vercel y web apps. El estudiante aprende antes de la universidad las herramientas que luego puede practicar mientras estudia su carrera.</p>
+        <ul>
+          <li>Para direcci&oacute;n: diferenciaci&oacute;n acad&eacute;mica, innovaci&oacute;n y valor para padres.</li>
+          <li>Para estudiantes: portafolio, emprendimiento y criterio de herramientas modernas.</li>
+          <li>Para padres: preparaci&oacute;n pr&aacute;ctica para empleabilidad, universidad y empresa.</li>
+          <li>Para W Studio: venta B2B recurrente con cohortes por colegio.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      <span>Preparado para W Studio Learn | learn.wstudio3d.com</span>
+      <span>Documento interno de estrategia comercial</span>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="brand-row">
+      <div>
+        <p class="section-kicker">Canvas ejecutivo</p>
+        <h2>Business Model Canvas completo</h2>
+      </div>
+      <img class="logo" src="../images/w-studio-logo.png" alt="W Studio">
+    </div>
+
+    <div class="canvas">
+      <div class="block partners">
+        <h3>Socios clave <span>Key Partners</span></h3>
+        <ul>
+          <li>Colegios privados internacionales: direcci&oacute;n, coordinaci&oacute;n de secundaria, orientaci&oacute;n vocacional, IB/CAS, STEM y emprendimiento.</li>
+          <li>Padres de familia y asociaciones de padres como impulsores de preparaci&oacute;n universitaria y futuro laboral.</li>
+          <li>Plataformas tecnol&oacute;gicas: Firebase, Vercel, PayPal, OpenAI, GitHub, Canva, Envato y ThemeForest.</li>
+          <li>Profesores internos del colegio que puedan acompa&ntilde;ar el club o laboratorio semanal.</li>
+          <li>Universidades, incubadoras, c&aacute;maras empresariales y empresas locales para retos finales y charlas.</li>
+          <li>W Studio como productor, soporte acad&eacute;mico, curador de herramientas y actualizador del contenido.</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h3>Actividades clave <span>Key Activities</span></h3>
+        <ul>
+          <li>Vender licencias institucionales por cohorte, semestre o a&ntilde;o lectivo.</li>
+          <li>Activar accesos por estudiante en Firebase y entregar onboarding en menos de 48 horas.</li>
+          <li>Guiar rutas por nivel: principiante, medio, avanzado y pro.</li>
+          <li>Mantener clases, links, videos, ex&aacute;menes y traducciones EN/DE/ES.</li>
+          <li>Dar soporte al coordinador del colegio y resolver acceso, progreso y pagos.</li>
+          <li>Presentar demo a padres, estudiantes y directores.</li>
+        </ul>
+      </div>
+
+      <div class="block value">
+        <h3>Propuesta de valor <span>Value Proposition</span></h3>
+        <ul>
+          <li>Programa extracurricular triling&uuml;e que prepara a estudiantes para crear empresas digitales vinculadas a lo que estudiar&aacute;n en la universidad.</li>
+          <li>De cero a nivel pro: negocio, marca, Canva, IA, copywriting, video, Envato, ThemeForest, SEO, CRM, GitHub, Vercel, ChatGPT, Codex, Firebase, PayPal, web apps y chatbots.</li>
+          <li>Entrega inmediata sin esperar desarrollo: plataforma online, login, cursos, progreso, ex&aacute;menes y asistente IA libre.</li>
+          <li>El colegio gana diferenciaci&oacute;n y una oferta moderna alineada con futuro de negocios, tecnolog&iacute;a y emprendimiento.</li>
+          <li>El estudiante termina con portafolio, mentalidad empresarial y pr&aacute;ctica real de herramientas.</li>
+          <li>Los padres ven una inversi&oacute;n clara en empleabilidad, universidad y autonom&iacute;a profesional.</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h3>Relaci&oacute;n con clientes <span>Customer Relationships</span></h3>
+        <ul>
+          <li>Venta consultiva B2B con direcci&oacute;n acad&eacute;mica y financiera.</li>
+          <li>Piloto de 4 a 8 semanas para demostrar adopci&oacute;n y resultados.</li>
+          <li>Onboarding a estudiantes y sesi&oacute;n de orientaci&oacute;n para padres.</li>
+          <li>Soporte por correo/WhatsApp para el coordinador del colegio.</li>
+          <li>Reporte mensual de avance por cohorte y recomendaciones de continuidad.</li>
+          <li>Actualizaci&oacute;n anual del programa seg&uacute;n herramientas y mercado.</li>
+        </ul>
+      </div>
+
+      <div class="block segments">
+        <h3>Segmentos de cliente <span>Customer Segments</span></h3>
+        <ul>
+          <li>Comprador principal: colegios privados biling&uuml;es y triling&uuml;es de Costa Rica con secundaria y enfoque internacional.</li>
+          <li>Primeros objetivos: Anglo American School, Colegio Humboldt-Schule, SEK Costa Rica International School.</li>
+          <li>Otros perfiles: colegios con Bachillerato Internacional, STEM, clubes de emprendimiento, tecnolog&iacute;a o liderazgo.</li>
+          <li>Usuarios: estudiantes de 9.&ordm; a 12.&ordm;, especialmente quienes ir&aacute;n a universidad y quieren practicar negocio real.</li>
+          <li>Influenciadores: padres, orientadores, profesores de tecnolog&iacute;a, arte, dise&ntilde;o, negocios, inform&aacute;tica y econom&iacute;a.</li>
+          <li>Pagadores: colegio, familia, asociaci&oacute;n de padres o modelo mixto colegio + estudiante.</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h3>Recursos clave <span>Key Resources</span></h3>
+        <ul>
+          <li>Plataforma W Studio Learn en Vercel con Firebase Auth, Firestore, PayPal y cursos en tres idiomas.</li>
+          <li>14 cursos con lecciones, videos, lecturas, links, ex&aacute;menes y progreso.</li>
+          <li>Marca W Studio, logo, landing internacional y asistente OpenAI.</li>
+          <li>Know-how de marketing digital, IA, web apps, automatizaci&oacute;n y entrega freelance.</li>
+          <li>Relaci&oacute;n directa con directores, coordinadores y padres.</li>
+          <li>Material comercial: PDF, demo, landing, propuesta y plan de piloto.</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h3>Canales <span>Channels</span></h3>
+        <ul>
+          <li>Reuni&oacute;n directa con direcci&oacute;n acad&eacute;mica y rector&iacute;a.</li>
+          <li>Demo privada de learn.wstudio3d.com para coordinadores y padres.</li>
+          <li>PDF ejecutivo con Canvas, precios, ruta y propuesta de piloto.</li>
+          <li>Presentaci&oacute;n de 20 minutos: futuro de negocios, IA y portafolio universitario.</li>
+          <li>LinkedIn, correo institucional, referidos de padres y eventos escolares.</li>
+          <li>Landing p&uacute;blica con checkout y acceso inmediato para estudiantes individuales.</li>
+        </ul>
+      </div>
+
+      <div class="block costs">
+        <h3>Estructura de costos <span>Cost Structure</span></h3>
+        <ul>
+          <li>Hosting y APIs: Vercel, Firebase, OpenAI, dominios y transacciones PayPal.</li>
+          <li>Producci&oacute;n y actualizaci&oacute;n de cursos, traducciones, videos, recursos y ex&aacute;menes.</li>
+          <li>Soporte y administraci&oacute;n de cohortes, accesos y reportes.</li>
+          <li>Ventas B2B: visitas, demos, materiales, seguimiento y propuestas.</li>
+          <li>Licencias/herramientas creativas usadas para ejemplos o producci&oacute;n.</li>
+          <li>Reserva para mejoras: panel institucional, certificados, anal&iacute;ticas y exportaci&oacute;n CSV.</li>
+        </ul>
+      </div>
+
+      <div class="block revenue">
+        <h3>Fuentes de ingresos <span>Revenue Streams</span></h3>
+        <ul>
+          <li>Venta individual por curso: USD 37 a USD 147 seg&uacute;n el curso.</li>
+          <li>Ruta completa retail: USD 1,138 por estudiante si compra los 14 cursos por separado.</li>
+          <li>Paquete institucional recomendado: licencia anual por estudiante para todos los cursos con descuento por volumen.</li>
+          <li>Piloto escolar: precio fijo por cohorte peque&ntilde;a + renovaci&oacute;n semestral o anual.</li>
+          <li>Upsell: sesiones en vivo, mentor&iacute;a de proyectos, demo day, certificados, dashboard institucional y cursos premium.</li>
+          <li>Modelo mixto: colegio paga base de implementaci&oacute;n y familias pagan acceso del estudiante.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="brand-row">
+      <div>
+        <p class="section-kicker">Cliente meta y mensaje</p>
+        <h2>Posicionamiento para colegios privados que hablan ingl&eacute;s, alem&aacute;n y espa&ntilde;ol</h2>
+      </div>
+      <span class="tag red">Venta consultiva</span>
+    </div>
+
+    <div class="three-col">
+      <div class="card soft">
+        <h3>Dolor del colegio</h3>
+        <ul>
+          <li>Necesita diferenciarse ante padres exigentes que comparan programas internacionales.</li>
+          <li>Quiere demostrar innovaci&oacute;n real, no solo tecnolog&iacute;a decorativa.</li>
+          <li>Debe preparar estudiantes para universidad, empleabilidad, IA y emprendimiento.</li>
+          <li>Le cuesta crear internamente un curr&iacute;culo completo de negocios digitales y web apps.</li>
+          <li>Necesita extracurriculares listos, medibles y con bajo riesgo operativo.</li>
+        </ul>
+      </div>
+
+      <div class="card yellow">
+        <h3>Oferta W Studio Learn</h3>
+        <ul>
+          <li>Club extracurricular de futuro de negocios y herramientas digitales.</li>
+          <li>Rutas por nivel con clases online, links de herramientas, videos, lecturas y ex&aacute;menes.</li>
+          <li>Disponible en EN/DE/ES para comunidades biling&uuml;es o triling&uuml;es.</li>
+          <li>Entrega inmediata por plataforma: acceso por estudiante y progreso paso a paso.</li>
+          <li>El estudiante construye criterio, portafolio y mentalidad de empresa.</li>
+        </ul>
+      </div>
+
+      <div class="card black">
+        <h3>Mensaje de venta</h3>
+        <p>“Traemos al colegio un laboratorio extracurricular de emprendimiento digital e inteligencia artificial para que los estudiantes practiquen hoy las herramientas con las que ma&ntilde;ana crear&aacute;n empresas, proyectos universitarios y servicios profesionales.”</p>
+        <ul>
+          <li>Para rector&iacute;a: diferenciaci&oacute;n y reputaci&oacute;n.</li>
+          <li>Para coordinaci&oacute;n: programa listo y evaluable.</li>
+          <li>Para padres: retorno educativo pr&aacute;ctico.</li>
+          <li>Para estudiantes: futuro aplicado desde el colegio.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="two-col" style="margin-top:16px;">
+      <div class="card">
+        <h3>Mapa de compradores dentro del colegio</h3>
+        <table>
+          <thead>
+            <tr><th>Persona</th><th>Qu&eacute; necesita escuchar</th><th>Prueba que se le muestra</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Rector&iacute;a / Direcci&oacute;n</td><td>Diferenciaci&oacute;n, innovaci&oacute;n, reputaci&oacute;n y bajo riesgo.</td><td>Canvas, demo, ruta completa y plan piloto.</td></tr>
+            <tr><td>Coordinaci&oacute;n secundaria / IB</td><td>Objetivos, evaluaci&oacute;n, calendario y soporte.</td><td>Syllabus, ex&aacute;menes, progreso y reportes.</td></tr>
+            <tr><td>Orientaci&oacute;n vocacional</td><td>Preparar carrera universitaria y proyecto de vida.</td><td>Ruta “de estudiante a fundador/freelancer”.</td></tr>
+            <tr><td>Profesores STEM / negocios</td><td>Material listo para acompa&ntilde;ar sin crear todo desde cero.</td><td>Lecciones, links y gu&iacute;as por herramienta.</td></tr>
+            <tr><td>Padres</td><td>Valor claro para futuro laboral, universidad y empresa.</td><td>Demo para padres y ejemplos de proyectos.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Colegios objetivo iniciales</h3>
+        <ul>
+          <li><strong>Anglo American School:</strong> perfil biling&uuml;e, trayectoria, comunidad con inter&eacute;s en preparaci&oacute;n global.</li>
+          <li><strong>Colegio Humboldt-Schule:</strong> comunidad alemana/espa&ntilde;ola con enfoque triling&uuml;e e internacional.</li>
+          <li><strong>SEK Costa Rica International School:</strong> perfil internacional, valores globales y oferta privada de alto nivel.</li>
+          <li><strong>Expansi&oacute;n:</strong> colegios con IB, STEM, tecnolog&iacute;a, liderazgo, emprendimiento o familias con alta expectativa universitaria.</li>
+        </ul>
+        <div class="callout">La primera venta debe enfocarse en un piloto medible de 25 a 40 estudiantes. La segunda venta es la renovaci&oacute;n anual y ampliaci&oacute;n a m&aacute;s niveles.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="brand-row">
+      <div>
+        <p class="section-kicker">Producto y precios</p>
+        <h2>Cat&aacute;logo actual y paquetes institucionales sugeridos</h2>
+      </div>
+      <span class="tag green">Valor retail: USD 1,138</span>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <h3>Precios individuales actuales</h3>
+        <table class="compact">
+          <thead>
+            <tr><th>#</th><th>Curso</th><th>Nivel</th><th>Duraci&oacute;n</th><th>Precio</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Digital Business Foundations</td><td>Beginner</td><td>6h 40m</td><td><span class="price-pill">$37</span></td></tr>
+            <tr><td>2</td><td>Brand Identity Systems</td><td>Beginner</td><td>7h 15m</td><td><span class="price-pill">$47</span></td></tr>
+            <tr><td>3</td><td>Canva for Entrepreneurs</td><td>Beginner</td><td>8h 20m</td><td><span class="price-pill">$47</span></td></tr>
+            <tr><td>4</td><td>AI Content Systems</td><td>Beginner</td><td>7h 45m</td><td><span class="price-pill">$67</span></td></tr>
+            <tr><td>5</td><td>Copywriting and Offer Design</td><td>Beginner</td><td>7h 30m</td><td><span class="price-pill">$67</span></td></tr>
+            <tr><td>6</td><td>Social and Short-Form Video Machine</td><td>Intermediate</td><td>8h 15m</td><td><span class="price-pill">$77</span></td></tr>
+            <tr><td>7</td><td>Envato Creative Asset Workflow</td><td>Intermediate</td><td>8h 30m</td><td><span class="price-pill">$77</span></td></tr>
+            <tr><td>8</td><td>ThemeForest Website Blueprint</td><td>Intermediate</td><td>9h 05m</td><td><span class="price-pill">$87</span></td></tr>
+            <tr><td>9</td><td>SEO, Analytics and Conversion</td><td>Intermediate</td><td>8h 25m</td><td><span class="price-pill">$77</span></td></tr>
+            <tr><td>10</td><td>Email Automation and CRM</td><td>Intermediate</td><td>8h 40m</td><td><span class="price-pill">$87</span></td></tr>
+            <tr><td>11</td><td>GitHub and Vercel Deployment</td><td>Advanced</td><td>9h 20m</td><td><span class="price-pill">$97</span></td></tr>
+            <tr><td>12</td><td>ChatGPT Business Systems</td><td>Advanced</td><td>9h 10m</td><td><span class="price-pill">$97</span></td></tr>
+            <tr><td>13</td><td>Codex Web Builder</td><td>Advanced</td><td>10h 45m</td><td><span class="price-pill">$127</span></td></tr>
+            <tr><td>14</td><td>AI Web Apps and Chatbots</td><td>Pro</td><td>11h 30m</td><td><span class="price-pill">$147</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card soft">
+        <h3>Paquetes para colegios</h3>
+        <table>
+          <thead>
+            <tr><th>Paquete</th><th>Contenido</th><th>Retail</th><th>Precio escolar sugerido</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Principiante</td><td>5 cursos: negocio, marca, Canva, IA, copy.</td><td>USD 265</td><td><strong>USD 149</strong> por estudiante</td></tr>
+            <tr><td>Medio</td><td>5 cursos: video, Envato, ThemeForest, SEO, CRM.</td><td>USD 405</td><td><strong>USD 229</strong> por estudiante</td></tr>
+            <tr><td>Avanzado + Pro</td><td>4 cursos: GitHub, Vercel, ChatGPT, Codex, web apps y chatbots.</td><td>USD 468</td><td><strong>USD 299</strong> por estudiante</td></tr>
+            <tr><td>Ruta completa</td><td>14 cursos, 12 meses de acceso, ex&aacute;menes y asistente IA.</td><td>USD 1,138</td><td><strong>USD 499</strong> por estudiante</td></tr>
+            <tr><td>Cohorte 25-49</td><td>Ruta completa para club escolar.</td><td>USD 1,138</td><td><strong>USD 399</strong> por estudiante</td></tr>
+            <tr><td>Cohorte 50-99</td><td>Ruta completa para programa institucional.</td><td>USD 1,138</td><td><strong>USD 349</strong> por estudiante</td></tr>
+            <tr><td>Cohorte 100+</td><td>Ruta completa para adopci&oacute;n anual por nivel.</td><td>USD 1,138</td><td><strong>USD 299</strong> por estudiante</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <strong>Regla de negociaci&oacute;n:</strong> mantener los precios individuales p&uacute;blicos como ancla de valor y vender al colegio una licencia institucional con descuento por volumen, fecha de inicio clara y entrega inmediata.
+        </div>
+
+        <h3 style="margin-top:14px;">Opciones de facturaci&oacute;n</h3>
+        <ul>
+          <li>Colegio paga todo: una factura institucional por cohorte.</li>
+          <li>Modelo mixto: colegio paga setup/implementaci&oacute;n y padres pagan acceso por estudiante.</li>
+          <li>Compra individual: el estudiante compra cursos separados por PayPal desde la plataforma.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="brand-row">
+      <div>
+        <p class="section-kicker">Entrega inmediata</p>
+        <h2>Implementaci&oacute;n escolar en 10 d&iacute;as</h2>
+      </div>
+      <span class="tag blue">Operaci&oacute;n lista</span>
+    </div>
+
+    <div class="timeline">
+      <div class="step">
+        <strong>01</strong>
+        <h3>Demo</h3>
+        <p>Reuni&oacute;n con direcci&oacute;n, coordinaci&oacute;n y orientaci&oacute;n. Se muestra landing, cursos, login, ex&aacute;menes, idiomas y asistente IA.</p>
+      </div>
+      <div class="step">
+        <strong>02</strong>
+        <h3>Piloto</h3>
+        <p>Se define cohorte inicial, nivel recomendado, calendario de 4 a 8 semanas y responsable interno del colegio.</p>
+      </div>
+      <div class="step">
+        <strong>03</strong>
+        <h3>Activaci&oacute;n</h3>
+        <p>El colegio env&iacute;a lista de correos. W Studio activa accesos en Firebase y confirma ruta de cursos por estudiante.</p>
+      </div>
+      <div class="step">
+        <strong>04</strong>
+        <h3>Onboarding</h3>
+        <p>Sesi&oacute;n inicial para estudiantes: c&oacute;mo entrar, elegir idioma, avanzar lecciones, usar links y completar ex&aacute;menes.</p>
+      </div>
+      <div class="step">
+        <strong>05</strong>
+        <h3>Reporte</h3>
+        <p>Seguimiento mensual con avance, cursos completados, notas de ex&aacute;menes y recomendaciones para siguiente nivel.</p>
+      </div>
+    </div>
+
+    <div class="two-col" style="margin-top:16px;">
+      <div class="card">
+        <h3>Ruta extracurricular recomendada</h3>
+        <table>
+          <thead>
+            <tr><th>Etapa</th><th>Duraci&oacute;n</th><th>Resultado visible</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Fundamentos</td><td>Semanas 1-4</td><td>Idea de negocio, cliente meta, oferta, marca base y tablero de contenidos.</td></tr>
+            <tr><td>Producci&oacute;n digital</td><td>Semanas 5-8</td><td>Kit visual en Canva, contenidos, video corto y biblioteca de recursos.</td></tr>
+            <tr><td>Marketing y sistemas</td><td>Semanas 9-12</td><td>Landing, SEO b&aacute;sico, email/CRM y revisi&oacute;n de conversi&oacute;n.</td></tr>
+            <tr><td>Web + IA avanzada</td><td>Semanas 13-16</td><td>Repositorio GitHub, deploy en Vercel, asistente ChatGPT/Codex y MVP de web app.</td></tr>
+            <tr><td>Demo Day</td><td>Semana 17</td><td>Presentaci&oacute;n de proyecto ante profesores, padres o panel invitado.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card soft">
+        <h3>Qu&eacute; recibe el colegio desde el primer d&iacute;a</h3>
+        <ul>
+          <li>Acceso a plataforma W Studio Learn en dominio vivo.</li>
+          <li>14 cursos en EN/DE/ES organizados por nivel.</li>
+          <li>Bot&oacute;n de ingreso, progreso por clase y ex&aacute;menes finales con nota m&iacute;nima de 70%.</li>
+          <li>Links de herramientas por clase para que el estudiante no busque todo en Google.</li>
+          <li>Asistente IA libre en el landing para orientar estudiantes y padres.</li>
+          <li>Soporte de activaci&oacute;n por correo y lista de estudiantes.</li>
+          <li>Material comercial para explicar el programa a padres.</li>
+        </ul>
+        <div class="callout">Pr&oacute;xima mejora recomendada antes de escalar a 100+ estudiantes: panel institucional con exportaci&oacute;n CSV, certificados PDF y dashboard de cohortes para coordinadores.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="brand-row">
+      <div>
+        <p class="section-kicker">Plan comercial</p>
+        <h2>Ruta para venderlo a los primeros colegios</h2>
+      </div>
+      <span class="tag yellow">Quantum Maximus</span>
+    </div>
+
+    <div class="three-col">
+      <div class="card">
+        <h3>1. Preparar la propuesta</h3>
+        <ul>
+          <li>Usar este PDF como documento ejecutivo.</li>
+          <li>Crear una versi&oacute;n corta de 8-10 slides para rector&iacute;a.</li>
+          <li>Definir un piloto: 25 estudiantes, 8 semanas, ruta principiante + IA.</li>
+          <li>Preparar demo con una cuenta estudiante y una cuenta admin.</li>
+          <li>Definir precio de entrada: USD 149-249 por estudiante para piloto o paquete fijo institucional.</li>
+        </ul>
+      </div>
+
+      <div class="card yellow">
+        <h3>2. Abrir conversaci&oacute;n</h3>
+        <ul>
+          <li>Contacto por direcci&oacute;n acad&eacute;mica, coordinaci&oacute;n secundaria o orientaci&oacute;n vocacional.</li>
+          <li>Asunto sugerido: “Programa extracurricular de IA, emprendimiento y web apps para secundaria”.</li>
+          <li>Primera reuni&oacute;n de 20 minutos: problema, demo, piloto, precio y pr&oacute;ximo paso.</li>
+          <li>Mostrar que ya existe plataforma y entrega inmediata.</li>
+          <li>Proponer demo para padres si el colegio quiere validar demanda.</li>
+        </ul>
+      </div>
+
+      <div class="card black">
+        <h3>3. Cerrar piloto</h3>
+        <ul>
+          <li>Enviar propuesta con alcance, precio, calendario y responsabilidades.</li>
+          <li>Solicitar lista de estudiantes, correos y fecha de onboarding.</li>
+          <li>Activar accesos y confirmar prueba de ingreso.</li>
+          <li>Medir avance semanal y documentar testimonios.</li>
+          <li>Al cierre, vender renovaci&oacute;n anual o expansi&oacute;n a m&aacute;s niveles.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="two-col" style="margin-top:16px;">
+      <div class="card soft">
+        <h3>Indicadores de &eacute;xito del piloto</h3>
+        <table>
+          <thead>
+            <tr><th>M&eacute;trica</th><th>Meta inicial</th><th>Uso comercial</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Activaci&oacute;n</td><td>90% de estudiantes ingresan en semana 1</td><td>Demuestra facilidad de entrega.</td></tr>
+            <tr><td>Avance</td><td>70% completa m&oacute;dulo asignado</td><td>Justifica renovaci&oacute;n.</td></tr>
+            <tr><td>Examen</td><td>70% aprueba con nota m&iacute;nima 70%</td><td>Demuestra aprendizaje medible.</td></tr>
+            <tr><td>Proyecto</td><td>1 entregable por estudiante/equipo</td><td>Muestra evidencia a padres.</td></tr>
+            <tr><td>Satisfacci&oacute;n</td><td>8/10 de estudiantes y padres</td><td>Permite escalar a otro nivel.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Riesgos y respuesta</h3>
+        <ul>
+          <li><strong>“Ya tenemos tecnolog&iacute;a”:</strong> posicionar W Studio como negocio + IA + ejecuci&oacute;n, no como clase de computaci&oacute;n.</li>
+          <li><strong>“No hay presupuesto”:</strong> ofrecer modelo mixto con padres o piloto pagado por estudiante.</li>
+          <li><strong>“El curr&iacute;culo est&aacute; lleno”:</strong> venderlo como extracurricular flexible, club de tarde o proyecto de vacaciones.</li>
+          <li><strong>“Necesitamos control acad&eacute;mico”:</strong> entregar syllabus, ex&aacute;menes, progreso y reporte mensual.</li>
+          <li><strong>“IA genera dudas”:</strong> explicar uso responsable, foco en criterio, verificaci&oacute;n, portafolio y aplicaci&oacute;n profesional.</li>
+        </ul>
+        <div class="callout">Objetivo de 90 d&iacute;as: cerrar 1 piloto, obtener casos/testimonios y usarlo como referencia para vender 3 colegios adicionales.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="brand-row">
+      <div>
+        <p class="section-kicker">Resumen final</p>
+        <h2>Canvas convertido en oferta vendible</h2>
+      </div>
+      <img class="logo" src="../images/w-studio-logo.png" alt="W Studio">
+    </div>
+
+    <div class="two-col">
+      <div class="card yellow">
+        <h3>Oferta final recomendada para presentar</h3>
+        <p><strong>W Studio Future Business Lab</strong>: programa extracurricular triling&uuml;e para estudiantes de secundaria de colegios privados internacionales en Costa Rica. Ense&ntilde;a emprendimiento digital, marketing, dise&ntilde;o, IA, automatizaci&oacute;n, GitHub, Vercel, Codex, web apps y chatbots con cursos online listos, evaluaci&oacute;n y entrega inmediata.</p>
+        <ul>
+          <li>Piloto recomendado: 25 a 40 estudiantes.</li>
+          <li>Duraci&oacute;n inicial: 8 semanas.</li>
+          <li>Precio de entrada: USD 149 a USD 249 por estudiante seg&uacute;n alcance.</li>
+          <li>Ruta anual completa: USD 299 a USD 499 por estudiante seg&uacute;n volumen.</li>
+          <li>Meta: convertir piloto en licencia anual institucional.</li>
+        </ul>
+      </div>
+
+      <div class="card black">
+        <h3>Pr&oacute;ximas piezas comerciales</h3>
+        <ul>
+          <li>Deck de ventas de 8-10 slides para rector&iacute;a.</li>
+          <li>One-page para padres: “Por qu&eacute; tu hijo debe aprender negocios digitales antes de la universidad”.</li>
+          <li>Contrato o propuesta formal con alcance, precio, soporte y privacidad.</li>
+          <li>Formulario de inscripci&oacute;n de estudiantes y plantilla CSV para activaci&oacute;n.</li>
+          <li>Certificado de finalizaci&oacute;n y reporte institucional por cohorte.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card soft" style="margin-top:16px;">
+      <h3>Fuentes y supuestos usados</h3>
+      <ul class="source-list">
+        <li>Datos internos de plataforma: cat&aacute;logo y precios actuales desde <strong>data/courses.json</strong> de W Studio Learn.</li>
+        <li>Anglo American School: sitio oficial <strong>https://anglo.ed.cr/</strong>, perfil biling&uuml;e y trayectoria educativa.</li>
+        <li>Colegio Humboldt-Schule: sitio oficial <strong>https://www.colegiohumboldt.cr/</strong>, escuela alemana oficial en el extranjero, educaci&oacute;n en alem&aacute;n, espa&ntilde;ol e ingl&eacute;s.</li>
+        <li>SEK Costa Rica International School: sitio oficial <strong>https://sekcostarica.com/en/home/</strong>, enfoque internacional y preparaci&oacute;n de estudiantes para futuro global.</li>
+        <li>Los precios institucionales son una recomendaci&oacute;n comercial basada en descuento por volumen sobre el valor retail actual. Deben validarse seg&uacute;n costos de soporte, tama&ntilde;o de cohorte y margen deseado.</li>
+      </ul>
+    </div>
+
+    <div class="footer-note">
+      <span>W Studio Learn | Business Model Canvas para colegios privados internacionales de Costa Rica</span>
+      <span>Versi&oacute;n 1.0</span>
+    </div>
+  </section>
+</body>
+</html>

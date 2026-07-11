@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>W Studio Learn | Pitch B2B para Colegios</title>
+  <meta name="description" content="Pitch B2B rapido de W Studio Learn para vender el Future Business Lab a colegios privados internacionales de Costa Rica.">
+  <style>
+    :root {
+      --ink: #101114;
+      --muted: #5f6570;
+      --line: #e2e6ee;
+      --paper: #ffffff;
+      --soft: #f6f7f9;
+      --red: #ff2028;
+      --yellow: #ffd21f;
+      --green: #65f20a;
+      --blue: #2354ff;
+      --radius: 10px;
+      --shadow: 0 20px 70px rgba(16, 17, 20, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.45;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .shell {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      border-bottom: 1px solid rgba(226, 230, 238, 0.9);
+      background: rgba(255, 255, 255, 0.93);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 72px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .brand img {
+      width: 74px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: end;
+      gap: 8px;
+    }
+
+    .nav-links a,
+    .button,
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      background: var(--soft);
+      color: var(--ink);
+    }
+
+    .button {
+      border: 0;
+      background: var(--ink);
+      color: white;
+    }
+
+    .button-yellow {
+      background: var(--yellow);
+      color: var(--ink);
+    }
+
+    .pill {
+      width: max-content;
+      min-height: 30px;
+      padding: 5px 11px;
+      background: var(--ink);
+      color: white;
+      font-size: 0.7rem;
+    }
+
+    .pill-blue {
+      background: var(--blue);
+    }
+
+    .pill-yellow {
+      background: var(--yellow);
+      color: var(--ink);
+    }
+
+    .pill-green {
+      background: var(--green);
+      color: var(--ink);
+    }
+
+    .pill-red {
+      background: var(--red);
+    }
+
+    .hero {
+      min-height: calc(100vh - 72px);
+      display: grid;
+      align-items: center;
+      padding: 56px 0;
+    }
+
+    .hero-grid,
+    .split-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      gap: 36px;
+      align-items: stretch;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 950;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin-bottom: 18px;
+      font-size: clamp(2.7rem, 6vw, 5.25rem);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      max-width: 820px;
+      margin-bottom: 18px;
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .lead {
+      max-width: 680px;
+      font-size: clamp(1.08rem, 2vw, 1.32rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .promise-card,
+    .card,
+    .quote-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: white;
+      box-shadow: 0 12px 35px rgba(16, 17, 20, 0.06);
+    }
+
+    .promise-card {
+      display: grid;
+      align-content: center;
+      gap: 18px;
+      padding: clamp(24px, 4vw, 42px);
+      background: var(--ink);
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .promise-card p,
+    .promise-card li,
+    .dark-section p,
+    .dark-section li,
+    .dark-section .script {
+      color: #e9edf5;
+    }
+
+    .promise-card h2 {
+      margin-bottom: 0;
+      font-size: clamp(2rem, 4vw, 3.6rem);
+    }
+
+    .section {
+      padding: 78px 0;
+    }
+
+    .section-soft {
+      background: var(--soft);
+    }
+
+    .section-yellow {
+      background: var(--yellow);
+    }
+
+    .dark-section {
+      background: var(--ink);
+      color: white;
+    }
+
+    .section-head {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+
+    .cards-3,
+    .cards-4,
+    .metrics {
+      display: grid;
+      gap: 16px;
+    }
+
+    .cards-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .cards-4,
+    .metrics {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .card {
+      padding: 22px;
+      min-height: 100%;
+    }
+
+    .card-yellow {
+      border-color: rgba(184, 143, 0, 0.28);
+      background: var(--yellow);
+    }
+
+    .card-blue {
+      border-color: var(--blue);
+      background: var(--blue);
+      color: white;
+    }
+
+    .card-green {
+      border-color: var(--green);
+      background: var(--green);
+    }
+
+    .card-dark {
+      border-color: #2d3440;
+      background: #171b22;
+      color: white;
+    }
+
+    .card-blue p,
+    .card-blue li,
+    .card-dark p,
+    .card-dark li {
+      color: #f1f4f9;
+    }
+
+    .card-yellow p,
+    .card-green p {
+      color: #20242c;
+    }
+
+    .metric {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: white;
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .check-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .check-list li {
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: 24px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .check-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.48em;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    .dark-section .check-list li::before {
+      background: var(--green);
+    }
+
+    .promise-card .check-list li,
+    .dark-section .check-list li {
+      color: #edf1f7;
+    }
+
+    .path-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .path-card {
+      min-height: 270px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: white;
+    }
+
+    .path-card strong {
+      display: block;
+      margin-bottom: 16px;
+      color: var(--blue);
+      font-size: 3rem;
+      line-height: 1;
+    }
+
+    .price-table {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .price-row {
+      display: grid;
+      grid-template-columns: minmax(180px, 0.9fr) minmax(0, 1.55fr) minmax(130px, 0.45fr);
+      gap: 16px;
+      align-items: center;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: white;
+    }
+
+    .price-row p {
+      margin: 0;
+      font-size: 0.98rem;
+    }
+
+    .price-tag {
+      justify-self: end;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: white;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .timeline-card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: white;
+    }
+
+    .timeline-card strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--blue);
+      font-size: 1.8rem;
+    }
+
+    .quote-card {
+      padding: 30px;
+      border-left: 8px solid var(--yellow);
+      background: #f7f8fb;
+      font-size: clamp(1.45rem, 3vw, 2.35rem);
+      font-weight: 900;
+      line-height: 1.15;
+    }
+
+    .script {
+      margin-top: 24px;
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      background: var(--yellow);
+      color: var(--ink);
+      font-size: 0.98rem;
+      font-weight: 850;
+    }
+
+    .dark-section .script {
+      background: var(--blue);
+      color: white;
+    }
+
+    .next-actions {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      background: white;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 920px) {
+      .nav-inner,
+      .hero-grid,
+      .split-grid,
+      .next-actions {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-inner {
+        display: grid;
+      }
+
+      .nav-links {
+        justify-content: start;
+      }
+
+      .cards-3,
+      .cards-4,
+      .metrics,
+      .path-grid,
+      .timeline {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .price-row {
+        grid-template-columns: 1fr;
+      }
+
+      .price-tag {
+        justify-self: start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .hero,
+      .section {
+        padding: 48px 0;
+      }
+
+      .cards-3,
+      .cards-4,
+      .metrics,
+      .path-grid,
+      .timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      h1 {
+        font-size: 2.7rem;
+      }
+
+      h2 {
+        font-size: 2.05rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="shell nav-inner">
+      <a class="brand" href="#inicio" aria-label="W Studio Learn Pitch">
+        <img src="https://learn.wstudio3d.com/images/w-studio-logo.png" alt="W Studio">
+        <span>W Studio Learn</span>
+      </a>
+      <nav class="nav-links" aria-label="Pitch">
+        <a href="#problema">Problema</a>
+        <a href="#solucion">Solucion</a>
+        <a href="#ruta">Ruta</a>
+        <a href="#piloto">Piloto</a>
+        <a href="#inversion">Inversion</a>
+        <a href="#cierre">Cierre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="shell hero-grid">
+        <div>
+          <p class="eyebrow">Pitch B2B rapido para colegios</p>
+          <h1>Future Business Lab para colegios internacionales.</h1>
+          <p class="lead">Programa extracurricular trilingue que prepara estudiantes para crear proyectos, empresas y soluciones digitales antes de llegar a la universidad.</p>
+          <div class="hero-actions">
+            <a class="button button-yellow" href="#cierre">Presentar cierre</a>
+            <a class="button" href="#problema">Empezar pitch</a>
+          </div>
+        </div>
+        <aside class="promise-card">
+          <span class="pill pill-blue">La promesa</span>
+          <h2>Un colegio puede vender preparacion para el futuro profesional, no solo actividades extracurriculares.</h2>
+          <ul class="check-list">
+            <li>Diferenciacion academica visible.</li>
+            <li>Valor practico para padres.</li>
+            <li>Portafolio real para estudiantes.</li>
+            <li>Entrega inmediata por plataforma.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="problema">
+      <div class="shell">
+        <div class="section-head">
+          <span class="pill pill-blue">El problema</span>
+          <h2>Los estudiantes llegan a la universidad con talento, pero con poca practica de negocio real.</h2>
+        </div>
+        <div class="cards-3">
+          <article class="card">
+            <h3>Brecha de ejecucion</h3>
+            <p>Saben estudiar, pero no siempre saben convertir una idea o carrera en oferta, proyecto, producto digital o servicio.</p>
+          </article>
+          <article class="card card-yellow">
+            <h3>Herramientas cambiaron</h3>
+            <p>IA, automatizacion, diseno, contenido y web apps ya son parte del trabajo profesional moderno.</p>
+          </article>
+          <article class="card">
+            <h3>Padres quieren valor</h3>
+            <p>Las familias buscan una educacion que se note en portafolio, criterio, empleabilidad y preparacion internacional.</p>
+          </article>
+        </div>
+        <div class="script">Guion rapido: El punto no es agregar otra clase; es cerrar una brecha practica antes de que el estudiante salga del colegio.</div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="oportunidad">
+      <div class="shell split-grid">
+        <div>
+          <span class="pill pill-yellow">Oportunidad B2B</span>
+          <h2>El colegio puede diferenciarse con innovacion medible y lista para ejecutar.</h2>
+          <ul class="check-list">
+            <li>No requiere crear todo el curriculo desde cero.</li>
+            <li>Funciona como club, laboratorio, extracurricular o piloto academico.</li>
+            <li>Puede presentarse a padres como inversion en futuro profesional.</li>
+            <li>Permite reportar progreso, examenes y proyectos visibles.</li>
+          </ul>
+        </div>
+        <article class="card card-yellow">
+          <h3>Mensaje para rectoria</h3>
+          <p>"Traemos al colegio un programa moderno, medible y de bajo riesgo para preparar estudiantes en negocios digitales, IA y emprendimiento aplicado."</p>
+        </article>
+      </div>
+      <div class="shell">
+        <div class="script">Guion rapido: El beneficio para rectoria es diferenciacion; el beneficio para padres es preparacion practica; el beneficio para estudiantes es portafolio.</div>
+      </div>
+    </section>
+
+    <section class="section" id="solucion">
+      <div class="shell">
+        <div class="section-head">
+          <span class="pill pill-green">La solucion</span>
+          <h2>W Studio Learn: plataforma lista con 14 cursos en tres idiomas.</h2>
+        </div>
+        <div class="metrics">
+          <div class="metric"><strong>14</strong><span>Cursos listos</span></div>
+          <div class="metric"><strong>EN / DE / ES</strong><span>Idiomas</span></div>
+          <div class="metric"><strong>70%</strong><span>Nota para aprobar</span></div>
+          <div class="metric"><strong>10 dias</strong><span>Activacion</span></div>
+        </div>
+        <div class="split-grid" style="margin-top: 22px;">
+          <article class="card">
+            <h3>Experiencia del estudiante</h3>
+            <ul class="check-list">
+              <li>Login de estudiante.</li>
+              <li>Clases con videos, lectura, links y practica.</li>
+              <li>Progreso paso a paso.</li>
+              <li>Examenes finales por curso.</li>
+              <li>Asistente IA libre para orientar preguntas.</li>
+            </ul>
+          </article>
+          <article class="card card-yellow">
+            <h3>Entrega inmediata</h3>
+            <p>El colegio activa una cohorte; W Studio entrega la plataforma, el contenido y el acompanamiento inicial.</p>
+          </article>
+        </div>
+        <div class="script">Guion rapido: No estamos vendiendo una idea futura; la plataforma y el contenido ya existen y se pueden activar por cohorte.</div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="ruta">
+      <div class="shell">
+        <div class="section-head">
+          <span class="pill pill-blue">Ruta de aprendizaje</span>
+          <h2>De idea de negocio a web app con IA.</h2>
+        </div>
+        <div class="path-grid">
+          <article class="path-card">
+            <strong>01</strong>
+            <h3>Principiante</h3>
+            <p>Negocio, marca, Canva, contenido con IA, copy y oferta.</p>
+          </article>
+          <article class="path-card">
+            <strong>02</strong>
+            <h3>Medio</h3>
+            <p>Video corto, Envato, ThemeForest, SEO, analytics, email y CRM.</p>
+          </article>
+          <article class="path-card">
+            <strong>03</strong>
+            <h3>Avanzado</h3>
+            <p>GitHub, Vercel, ChatGPT, Codex y despliegue profesional.</p>
+          </article>
+          <article class="path-card">
+            <strong>04</strong>
+            <h3>Pro</h3>
+            <p>Firebase, PayPal, APIs, web apps y chatbots con IA.</p>
+          </article>
+        </div>
+        <div class="script">Guion rapido: La ruta esta pensada para que el estudiante practique hoy lo que luego puede aplicar en la universidad y su carrera.</div>
+      </div>
+    </section>
+
+    <section class="section" id="cliente">
+      <div class="shell">
+        <div class="section-head">
+          <span class="pill pill-red">Para quien</span>
+          <h2>Primer mercado: colegios privados bilingues y trilingues de Costa Rica.</h2>
+        </div>
+        <div class="cards-3">
+          <article class="card">
+            <h3>Comprador</h3>
+            <p>Rectoria, direccion academica, coordinacion de secundaria, IB/CAS, STEM, orientacion vocacional y finanzas.</p>
+          </article>
+          <article class="card card-yellow">
+            <h3>Usuarios</h3>
+            <p>Estudiantes de 9.o a 12.o que quieren llegar a la universidad con criterio de empresa, tecnologia y portafolio.</p>
+          </article>
+          <article class="card">
+            <h3>Influenciadores</h3>
+            <p>Padres, profesores de tecnologia, negocios, arte, diseno, informatica, economia y liderazgo.</p>
+          </article>
+        </div>
+        <article class="card" style="margin-top: 16px;">
+          <ul class="check-list">
+            <li>Primeros objetivos: Anglo American School, Colegio Humboldt-Schule y SEK Costa Rica International School.</li>
+            <li>Expansion: colegios con IB, STEM, emprendimiento o perfil internacional.</li>
+          </ul>
+        </article>
+        <div class="script">Guion rapido: La conversacion se abre con rectoria, pero se cierra cuando padres, coordinacion y estudiantes ven valor claro.</div>
+      </div>
+    </section>
+
+    <section class="section section-yellow" id="piloto">
+      <div class="shell">
+        <div class="section-head">
+          <span class="pill">Piloto recomendado</span>
+          <h2>Piloto de 8 semanas para validar adopcion sin comprometer todo el ano.</h2>
+        </div>
+        <div class="cards-3">
+          <article class="card">
+            <h3>Formato</h3>
+            <p>25 a 40 estudiantes de secundaria, una sesion semanal de acompanamiento y avance online entre sesiones.</p>
+          </article>
+          <article class="card">
+            <h3>Contenido inicial</h3>
+            <p>Idea de negocio, cliente meta, marca, Canva, contenido con IA, oferta y pitch.</p>
+          </article>
+          <article class="card">
+            <h3>Resultado visible</h3>
+            <p>Mini proyecto por estudiante o equipo, examen, avance medible y Demo Day para padres o coordinacion.</p>
+          </article>
+        </div>
+        <div class="script">Guion rapido: El piloto elimina riesgo: en 8 semanas el colegio ve participacion, resultados y reaccion de padres.</div>
+      </div>
+    </section>
+
+    <section class="section" id="inversion">
+      <div class="shell">
+        <div class="section-head">
+          <span class="pill pill-blue">Inversion</span>
+          <h2>Precio claro: descuento institucional sobre valor retail real.</h2>
+        </div>
+        <div class="price-table">
+          <div class="price-row">
+            <strong>Cursos individuales</strong>
+            <p>14 cursos entre USD 37 y USD 147.</p>
+            <span class="price-tag">USD 37-147</span>
+          </div>
+          <div class="price-row">
+            <strong>Ruta completa retail</strong>
+            <p>Todos los cursos comprados por separado.</p>
+            <span class="price-tag">USD 1,138</span>
+          </div>
+          <div class="price-row">
+            <strong>Piloto escolar</strong>
+            <p>8 semanas, cohorte inicial y ruta de arranque.</p>
+            <span class="price-tag">USD 149-249</span>
+          </div>
+          <div class="price-row">
+            <strong>Licencia anual</strong>
+            <p>14 cursos, examenes, progreso y asistente IA.</p>
+            <span class="price-tag">USD 299-499</span>
+          </div>
+        </div>
+        <article class="card card-yellow" style="margin-top: 16px;">
+          <h3>Regla de negociacion</h3>
+          <p>Vender primero el piloto, medir resultados y convertirlo en licencia anual por cohorte.</p>
+        </article>
+        <div class="script">Guion rapido: No se compite por precio de curso; se vende valor institucional, diferenciacion y adopcion medible.</div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="activacion">
+      <div class="shell">
+        <div class="section-head">
+          <span class="pill pill-green">Activacion</span>
+          <h2>Implementacion en 10 dias despues de aprobar el piloto.</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-card">
+            <strong>Dia 1</strong>
+            <p>Aprobar cohorte, alcance, calendario y responsable interno.</p>
+          </article>
+          <article class="timeline-card">
+            <strong>Dias 2-4</strong>
+            <p>Enviar lista de estudiantes, correos e idioma preferido.</p>
+          </article>
+          <article class="timeline-card">
+            <strong>Dias 5-7</strong>
+            <p>Activar accesos, probar login y revisar ruta con coordinacion.</p>
+          </article>
+          <article class="timeline-card">
+            <strong>Dias 8-10</strong>
+            <p>Onboarding, arranque del programa y primer reporte.</p>
+          </article>
+        </div>
+        <div class="script">Guion rapido: El colegio solo debe aprobar el piloto y enviar la lista; W Studio se encarga de la activacion.</div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="cierre">
+      <div class="shell next-actions">
+        <div>
+          <span class="pill pill-yellow">Cierre</span>
+          <h2>Proximo paso: demo privada y definicion del piloto inicial.</h2>
+          <ul class="check-list">
+            <li>Demo de 20 minutos con rectoria y coordinacion.</li>
+            <li>Elegir cohorte piloto de 25 a 40 estudiantes.</li>
+            <li>Definir fecha de inicio y responsable interno.</li>
+            <li>Validar precio por estudiante o presupuesto institucional.</li>
+            <li>Arrancar onboarding en 10 dias.</li>
+          </ul>
+        </div>
+        <article class="card card-yellow">
+          <h3>Frase de cierre</h3>
+          <p>W Studio Learn ayuda al colegio a preparar estudiantes que no solo entren a la universidad, sino que lleguen con criterio para crear proyectos, empresas y soluciones digitales desde el primer ano.</p>
+        </article>
+      </div>
+      <div class="shell">
+        <div class="script">Guion rapido: Si tiene sentido, agendemos la demo privada y definimos una cohorte piloto para iniciar este semestre.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <span>W Studio Learn | Pitch B2B para colegios privados internacionales de Costa Rica</span>
+      <a class="button" href="https://learn.wstudio3d.com/">learn.wstudio3d.com</a>
+    </div>
+  </footer>
+</body>
+</html>
