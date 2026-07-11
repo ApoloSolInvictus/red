@@ -2169,7 +2169,15 @@ textarea {
     order: 3;
     flex: 0 0 100%;
     width: 100%;
-    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 22px;
+    justify-content: flex-start;
+  }
+
+  .nav-links a {
+    min-width: 0;
+    font-size: 0.95rem;
   }
 
   .language-switcher {
