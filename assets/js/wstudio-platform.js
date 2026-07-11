@@ -224,6 +224,7 @@ function renderHeader() {
       <nav class="nav-links" aria-label="Primary">
         <a href="courses.html">${i18n.t("nav.courses")}</a>
         <a href="student.html">${i18n.t("nav.dashboard")}</a>
+        <a href="contact.html">${i18n.t("nav.contact")}</a>
       </nav>
       <div class="nav-actions">
         <div class="language-switcher" aria-label="Language">
@@ -270,6 +271,10 @@ function renderPage() {
 
   if (page === "dashboard") {
     renderDashboardPage();
+  }
+
+  if (page === "contact") {
+    renderContactPage();
   }
 
   i18n.translate(document);
@@ -687,6 +692,62 @@ function scrollAiGuideLog() {
   if (log) {
     log.scrollTop = log.scrollHeight;
   }
+}
+
+function renderContactPage() {
+  const target = document.querySelector("[data-contact]");
+  if (!target) {
+    return;
+  }
+
+  target.innerHTML = `
+    <section class="contact-hero">
+      <div class="site-shell contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow">${i18n.t("contact.eyebrow")}</p>
+          <h1>${i18n.t("contact.title")}</h1>
+          <p>${i18n.t("contact.copy")}</p>
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:info@wstudio3d.com">${i18n.t("contact.emailButton")}</a>
+            <a class="button button-secondary" href="https://wa.me/50661210752?text=Hello%20W%20Studio%2C%20I%20would%20like%20information%20about%20W%20Studio%20Learn%20courses%20and%20institutional%20licenses." target="_blank" rel="noopener">${i18n.t("contact.whatsappButton")}</a>
+          </div>
+        </div>
+        <figure class="contact-visual">
+          <img src="images/contact/wstudio3d-website-preview.png" alt="W Studio 3D website preview">
+          <figcaption>${i18n.t("contact.imageLabel")}</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="site-shell section contact-methods" aria-label="Contact options">
+      <article class="contact-card">
+        <span>01</span>
+        <h2>${i18n.t("contact.emailTitle")}</h2>
+        <p>${i18n.t("contact.emailCopy")}</p>
+        <a href="mailto:info@wstudio3d.com">info@wstudio3d.com</a>
+      </article>
+      <article class="contact-card">
+        <span>02</span>
+        <h2>${i18n.t("contact.whatsappTitle")}</h2>
+        <p>${i18n.t("contact.whatsappCopy")}</p>
+        <a href="https://wa.me/50661210752?text=Hello%20W%20Studio%2C%20I%20would%20like%20information%20about%20W%20Studio%20Learn%20courses%20and%20institutional%20licenses." target="_blank" rel="noopener">+506 6121 0752</a>
+      </article>
+    </section>
+    <section class="contact-license-band">
+      <div class="site-shell license-panel">
+        <div>
+          <p class="eyebrow">${i18n.t("contact.licensesEyebrow")}</p>
+          <h2>${i18n.t("contact.licensesTitle")}</h2>
+          <p>${i18n.t("contact.licensesCopy")}</p>
+        </div>
+        <ul class="license-points">
+          <li>${i18n.t("contact.licensesPoint1")}</li>
+          <li>${i18n.t("contact.licensesPoint2")}</li>
+          <li>${i18n.t("contact.licensesPoint3")}</li>
+        </ul>
+        <p class="license-response">${i18n.t("contact.response")}</p>
+      </div>
+    </section>
+  `;
 }
 
 function renderCoursesPage() {
