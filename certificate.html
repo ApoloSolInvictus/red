@@ -4,11 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#050505">
+  <meta name="application-name" content="W Studio Learn">
   <title>Verify Certificate | W Studio Learn</title>
-  <link rel="icon" href="images/w-studio-logo.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="assets/css/wstudio-platform.css">
 </head>
 <body class="wstudio-app certificate-verify-page">
+  <div class="wstudio-preloader" data-wstudio-preloader aria-hidden="true">
+    <div class="site-name"><span>W STUDIO</span></div>
+    <div class="preloader-gutters">
+      <div class="bar"><div class="inner-bar"></div></div>
+      <div class="bar"><div class="inner-bar"></div></div>
+      <div class="bar"><div class="inner-bar"></div></div>
+      <div class="bar"><div class="inner-bar"></div></div>
+      <div class="bar"><div class="inner-bar"></div></div>
+      <div class="bar"><div class="inner-bar"></div></div>
+      <div class="bar"><div class="inner-bar"></div></div>
+      <div class="bar"><div class="inner-bar"></div></div>
+    </div>
+  </div>
   <main class="site-shell certificate-verify-shell">
     <section class="certificate-verify-card">
       <img src="images/w-studio-logo.png" alt="W Studio">
@@ -22,6 +40,22 @@
       <div class="certificate-verify-result" data-certificate-result>Waiting for certificate ID.</div>
     </section>
   </main>
+
+  <script data-certificate-loader-close>
+    window.addEventListener("load", function () {
+      var preloader = document.querySelector("[data-wstudio-preloader]");
+      if (!preloader) {
+        return;
+      }
+
+      window.setTimeout(function () {
+        preloader.classList.add("is-hidden");
+        window.setTimeout(function () {
+          preloader.hidden = true;
+        }, 900);
+      }, 900);
+    });
+  </script>
   <script>
     (function () {
       const form = document.querySelector("[data-certificate-verify-form]");

@@ -20,8 +20,15 @@ const page = document.body.dataset.page || "home";
 const phaseOrder = ["foundation", "creative", "marketing", "automation", "web", "pro-ai"];
 const siteUrl = "https://learn.wstudio3d.com";
 const socialImageUrl = `${siteUrl}/images/social/learn-social-preview.jpg`;
+const preloaderStartedAt = Date.now();
 
-document.addEventListener("DOMContentLoaded", init);
+document.addEventListener("DOMContentLoaded", () => {
+  window.setTimeout(hideBrandPreloader, 3800);
+  init().catch((error) => {
+    console.error(error);
+    hideBrandPreloader();
+  });
+});
 window.addEventListener("wstudio:language-changed", () => {
   renderHeader();
   renderPage();
@@ -44,6 +51,24 @@ async function init() {
   renderPage();
   await initFirebase();
   setStatus(i18n.t("status.ready"));
+  queueHideBrandPreloader();
+}
+
+function queueHideBrandPreloader() {
+  const wait = Math.max(0, 1400 - (Date.now() - preloaderStartedAt));
+  window.setTimeout(hideBrandPreloader, wait);
+}
+
+function hideBrandPreloader() {
+  const preloader = document.querySelector("[data-wstudio-preloader]");
+  if (!preloader || preloader.classList.contains("is-hidden")) {
+    return;
+  }
+
+  preloader.classList.add("is-hidden");
+  window.setTimeout(() => {
+    preloader.hidden = true;
+  }, 900);
 }
 
 async function loadCatalog() {

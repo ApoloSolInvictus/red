@@ -30,6 +30,106 @@ body.wstudio-app {
   letter-spacing: 0;
 }
 
+.wstudio-preloader {
+  position: fixed;
+  z-index: 999999;
+  inset: 0;
+  overflow: hidden;
+  background: var(--black);
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 0.85s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.45s ease;
+}
+
+.wstudio-preloader.is-hidden {
+  opacity: 0;
+  clip-path: inset(0 0 0 100%);
+  pointer-events: none;
+}
+
+.wstudio-preloader .site-name {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  text-align: center;
+}
+
+.wstudio-preloader .site-name span {
+  color: white;
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.wstudio-preloader .preloader-gutters {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: flex;
+  background: transparent;
+}
+
+.wstudio-preloader .bar {
+  position: relative;
+  overflow: hidden;
+  width: 12.5%;
+  height: 100%;
+}
+
+.wstudio-preloader .inner-bar {
+  position: absolute;
+  inset: 0;
+  background: var(--green);
+  transform: translateX(-105%);
+  animation: wstudio-preloader-bar 1.4s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+}
+
+.wstudio-preloader .bar:nth-child(2) .inner-bar {
+  animation-delay: 0.08s;
+}
+
+.wstudio-preloader .bar:nth-child(3) .inner-bar {
+  animation-delay: 0.16s;
+}
+
+.wstudio-preloader .bar:nth-child(4) .inner-bar {
+  animation-delay: 0.24s;
+}
+
+.wstudio-preloader .bar:nth-child(5) .inner-bar {
+  animation-delay: 0.32s;
+}
+
+.wstudio-preloader .bar:nth-child(6) .inner-bar {
+  animation-delay: 0.4s;
+}
+
+.wstudio-preloader .bar:nth-child(7) .inner-bar {
+  animation-delay: 0.48s;
+}
+
+.wstudio-preloader .bar:nth-child(8) .inner-bar {
+  animation-delay: 0.56s;
+}
+
+@keyframes wstudio-preloader-bar {
+  0% {
+    transform: translateX(-105%);
+  }
+
+  44%,
+  58% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(105%);
+  }
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -2137,6 +2237,10 @@ textarea {
     max-width: 1180px;
   }
 
+  .wstudio-preloader .site-name span {
+    font-size: 40px;
+  }
+
   .nav-shell {
     min-height: 92px;
     gap: 12px;
@@ -2337,6 +2441,19 @@ textarea {
 
   .lesson-player {
     min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wstudio-preloader,
+  .wstudio-preloader .inner-bar {
+    animation: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .wstudio-preloader .inner-bar {
+    transform: translateX(0);
+    opacity: 0.18;
   }
 }
 
