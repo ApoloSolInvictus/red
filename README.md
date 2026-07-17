@@ -45,10 +45,19 @@ PayPal:
 PAYPAL_CLIENT_ID=
 PAYPAL_CLIENT_SECRET=
 PAYPAL_ENV=sandbox
-ADMIN_EMAILS=ronnywoods77@gmail.com
 ```
 
 Use `PAYPAL_ENV=live` only after testing sandbox purchases.
+
+Full-access users:
+
+```text
+ADMIN_EMAILS=ronnywoods77@gmail.com
+PROFESSOR_EMAILS=matiasbermudez115@gmail.com
+FULL_ACCESS_EMAILS=
+```
+
+Ronny Woods and Matias Bermudez are included in the code defaults. Use these environment variables when adding more admins, professors, or internal users who should enter every course without PayPal checkout.
 
 ## Local Checks
 

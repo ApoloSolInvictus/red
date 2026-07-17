@@ -1,6 +1,6 @@
 const admin = require("firebase-admin");
 const { allowCors, readJson, requireMethod, sendError, sendJson } = require("./_lib/http");
-const { isAdminEmail } = require("./_lib/adminAccess");
+const { hasFullCourseAccess } = require("./_lib/adminAccess");
 const { readCatalog } = require("./_lib/courses");
 const { getDb, verifyRequest } = require("./_lib/firebaseAdmin");
 
@@ -21,7 +21,7 @@ function findCourse(catalog, courseId) {
 }
 
 async function hasCourseAccess(token, course) {
-  if (isAdminEmail(token.email)) {
+  if (hasFullCourseAccess(token.email)) {
     return true;
   }
 
