@@ -53,11 +53,11 @@ Full-access users:
 
 ```text
 ADMIN_EMAILS=ronnywoods77@gmail.com
-PROFESSOR_EMAILS=matiasbermudez115@gmail.com,kamilgutierrez4@gmail.com
+PROFESSOR_EMAILS=matiasbermudez115@gmail.com,kamilgutierrez4@gmail.com,proki36@gmail.com
 FULL_ACCESS_EMAILS=
 ```
 
-Ronny Woods, Matias Bermudez, and Kamil Gutierrez are included in the code defaults. Use these environment variables when adding more admins, professors, or internal users who should enter every course without PayPal checkout.
+Ronny Woods, Matias Bermudez, Kamil Gutierrez, and proki36@gmail.com are included in the code defaults. Use these environment variables when adding more admins, professors, or internal users who should enter every course without PayPal checkout.
 
 ## Local Checks
 

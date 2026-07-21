@@ -13,6 +13,11 @@ const DEFAULT_FULL_ACCESS_USERS = [
     email: "kamilgutierrez4@gmail.com",
     role: "professor",
     source: "professor"
+  },
+  {
+    email: "proki36@gmail.com",
+    role: "professor",
+    source: "professor"
   }
 ];
 
